@@ -24,12 +24,13 @@ class CategoryController
         $Category_name = $_POST["category_name"];
         $Category_link = $_POST["category_link"];
         $Active = $_POST["Active"];
-        is_string($Active);
-        //$Active =1;
-        echo $Category_name." ".$Category_link." ".$Active;
-        echo  is_string($Active);
-        die();
+        // is_string($Active);
+        // //$Active =1;
+        // echo $Category_name." ".$Category_link." ".$Active;
+        // echo  is_string($Active);
+        // die();
         $result = $this->CategoryModel->Insert(new Category($Category_id, $Category_name, $Category_link, $Active));
+        // print_r($result);
         if ($result == true)
             header('location: index.php?c=Category&a=View&r=1');
         else

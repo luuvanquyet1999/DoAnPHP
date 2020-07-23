@@ -227,7 +227,7 @@
                                         </tr>
                                         <tr>
                                             <td>active</td>
-                                            <td><input type="text" readonly name="Active" value="1"/></td>
+                                            <td><input type="text"  name="Active" value="1"/></td>
                                         </tr>
                                         <tr>
                                             <td>
