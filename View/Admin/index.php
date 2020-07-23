@@ -68,6 +68,8 @@
                   <ul class="nav child_menu">
                     <li><a href="?c=Slide&a=View">Slide</a></li>
                     <li><a href="?c=Contact&a=View">Liên hệ</a></li>
+                    <li><a href="?c=Category&a=View">Nhóm bài viết</a></li>
+                    <li><a href="?c=Post&a=View">Bài viết</a></li>
                   </ul>
                 </li>
                 <li><a><i class="fa fa-desktop"></i> Quản lý tài khoản <span class="fa fa-chevron-down"></span></a>
@@ -79,7 +81,7 @@
 
               </ul>
             </div>
-           
+
           </div>
           <!-- /sidebar menu -->
 
