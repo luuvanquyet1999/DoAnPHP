@@ -34,25 +34,24 @@ class CategoryModel
     {
         $query = "INSERT INTO lph_Category (CategoryName, CategoryLink, Active) VALUES ('$Category->Category_name','$Category->Category_link','1')";
         $result = $this->mysql->query($query);
-        print_r($result);
         return $result;
     }
     function GetRecordById($Category_id)
     {
-        // $query = "SELECT * FROM lop WHERE MaLop = '$MaLop' LIMIT 1";
-        // $result = $this->mysql->query($query);
-        // $data = $result->fetch_all();
-        // if (count($data)) {
-        //     return new Lop($data[0][0], $data[0][1], $data[0][2]);
-        // }
-        // return null;
+        $query = "SELECT * FROM lph_Category WHERE CategoryId = '$Category_id' AND Active = 1 LIMIT 1";
+        $result = $this->mysql->query($query);
+        $data = $result->fetch_all();
+        if (count($data)) {
+            return new Category($data[0][0], $data[0][1], $data[0][2], $data[0][3]);
+        }
+        return null;
     }
     function Update(Category $Category)
     {
-        // $query = "UPDATE lop SET TenLop = '$lop->TenLop', MaKhoa='$lop->MaKhoa'
-        // WHERE MaLop = '$lop->MaLop'";
-        // $result = $this->mysql->query($query);
-        // return $result;
+        $query = "UPDATE lph_Category SET CategoryName = '$Category->Category_name', CategoryLink='$Category->Category_link'
+        WHERE CategoryId = '$Category->Category_id'";
+        $result = $this->mysql->query($query);
+        return $result;
     }
     function Delete($Category_id)
     {
