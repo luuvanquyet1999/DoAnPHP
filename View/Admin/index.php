@@ -51,13 +51,14 @@ session_start();
           <!-- menu profile quick info -->
           <div class="profile clearfix">
             <div class="profile_pic">
-              <img src="../../View/Admin/images/img.jpg" alt="..." class="img-circle profile_img">
+              <img src="View/Admin/images/img.jpg" alt="..." class="img-circle profile_img">
             </div>
             <div class="profile_info">
               <span>Welcome,</span>
               <?php
-          echo "<h2>" . $_SESSION["username"] . "</h2>";
-            ?>
+// Echo session variables that were set on previous page
+echo "<h2>" . $_SESSION["username"] . ".</h2>";
+?>
             </div>
           </div>
           <!-- /menu profile quick info -->
@@ -123,7 +124,7 @@ session_start();
                 <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
                   <img src="View/Admin/images/img.jpg" alt="">
                   <?php
-                 echo $_SESSION["username"];
+                 echo  $_SESSION["username"] ;
                   ?>
                 </a>
                 <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
