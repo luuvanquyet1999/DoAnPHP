@@ -37,7 +37,7 @@
                                 </li>
                                 <li><a><i class="fa fa-desktop"></i> Quản lý tài khoản <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
-                                        <li><a href="general_elements.html">Tài khoản Admin</a></li>
+                                    <li><a href="?c=useradmin&a=View">Tài khoản Admin</a></li>
                                         <li><a href="media_gallery.html">Tài khoản khách hàng</a></li>
                                     </ul>
                                 </li>
