@@ -11,14 +11,14 @@
 			$date = $_POST["date"];
 
   			//Kiểm tra điều kiện bắt buộc đối với các field không được bỏ trống
-			  if ($username == "" || $password == "" || $confirmpassword == "" || $fullname == "" || $email == "" || $gender=="") {
+			if ($username == "" || $password == "" || $confirmpassword == "" || $fullname == "" || $email == "" || $gender=="") {
 				   echo "bạn vui lòng nhập đầy đủ thông tin";
   			}else{
   					// Kiểm tra tài khoản đã tồn tại chưa
-  					$sql="select * from lph_adiminuser where Username='$username'";
+  					$sql="select * from lph_adiminuser where Username='$username' or Usernameemail = '$email'";
                       $query = $mysqli->query($sql);
 					if(mysqli_num_rows($query)  > 0){
-						echo "<script type='text/javascript'>alert('Tài khoản đã tồn tại');</script>";
+						echo "<script type='text/javascript'>alert('Tài khoản hoặc Email đã tồn tại');</script>";
 					}else{
 						if($password != $confirmpassword){
 							echo "<script type='text/javascript'>alert('Mật khẩu không trùng nhau!!!');</script>";
@@ -31,24 +31,24 @@
 							UsernameFull,
 							UsernameEmail,
 							UserNameGender,
-							DateofBirth
+							DateofBirth,
+							Active
 							) VALUES (
 							'$username',
 							'$password',
 							'$fullname',
 							'$email',
 							'$gender',
-							'$date'
-								)";
+							'$date',
+							'1'	)";
 
 				$result = $mysqli->query($sql1);
-				return $result;
 				   echo "chúc mừng bạn đã đăng ký thành công";
-				   header('Location: login1.php');
-								}
+				   header('Location: index.php?c=Login&a=View&s=susscess');
 							}
-					  }
-	}
+						}
+				}
+		}
 	?>
 <!DOCTYPE HTML>
 <html lang="en">
@@ -62,8 +62,8 @@
 function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- Meta tag Keywords -->
 <!-- css files -->
-<link rel="stylesheet" href="../../asset/build/css/style.css" type="text/css" media="all" /> <!-- Style-CSS --> 
-<link rel="stylesheet" href="../../asset/build/css/font-awesome.css"> <!-- Font-Awesome-Icons-CSS -->
+<link rel="stylesheet" href="asset/build/css/style.css" type="text/css" media="all" /> <!-- Style-CSS --> 
+<link rel="stylesheet" href="asset/build/css/font-awesome.css"> <!-- Font-Awesome-Icons-CSS -->
 <!-- //css files -->
 <!-- online-fonts -->
 <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
@@ -83,9 +83,9 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			<div class="wthree-pro">
 				<h2>Register Quick</h2>
 			</div>
-			<form action="register.php" method="post">
+			<form action="index.php?c=register&a=View" method="post">
 				<div class="pom-agile">
-					<input placeholder="User Name" name="username" class="user" type="text" required="">
+					<input placeholder="User Name" name="username" class="user" type="text" pattern=".{5,12}"   required title="Vui lòng nhập từ 5 đến 12 ký tự" required="">
 				</div>
 				<div class="pom-agile">
 					<input  placeholder="Password" name="password" class="pass" type="password" required="">
@@ -115,9 +115,9 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	</div>
 	<!--//main-->
 	<!--footer-->
-	<div class="footer">
+	<!-- <div class="footer">
 		<p>&copy; 2017 Online Login Form. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
-	</div>
+	</div> -->
 	<!--//footer-->
 </div>
 </body>

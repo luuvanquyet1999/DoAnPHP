@@ -33,18 +33,31 @@ session_start();
                     FROM
 					lph_adiminuser
                      WHERE
-                        Username = '$username' and UsernamePassword='$password'";
-            $query = $mysqli->query($sql);
-            $data = $query->fetch_all();
-			if (count($data)==0) {
-				echo "<script type='text/javascript'>alert('tên đăng nhập hoặc mật khẩu không đúng !');</script>";
+						Username = '$username' and UsernamePassword='$password' and active=1";
+			$sql1 = "SELECT
+			  			*
+		  			FROM
+		 			 lph_adiminuser
+		 			  WHERE
+			 		 Username = '$username' and UsernamePassword='$password' and active=0";
+			$query = $mysqli->query($sql);
+			$query1 = $mysqli->query($sql1);
+			$data = $query->fetch_all();
+			$data1 = $query1->fetch_all();
+			if (count($data1)>0) {
+				echo "<script type='text/javascript'>alert('tên đăng nhập này đã bị khóa !');</script>";
            }
             else{
+				if(count($data)==0){
+				echo "<script type='text/javascript'>alert('tên đăng nhập hoặc mật khẩu không đúng !');</script>";
+				}
+				else{
 				//tiến hành lưu tên đăng nhập vào session để tiện xử lý sau này
 				$_SESSION['username'] = $username;
                 // Thực thi hành động sau khi lưu thông tin vào session
                 // ở đây mình tiến hành chuyển hướng trang web tới một trang gọi là index.php
-                header('Location: index.php?c=AdminIndex&a=View');
+				header('Location: index.php?c=AdminIndex&a=View');
+				}
 			}
 		}
 	}
@@ -90,7 +103,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					<input  placeholder="Password" name="password" class="pass" type="password" required="">
 				</div>
 				<div class="sub-w3l">
-					<h6><a href="#">Forgot Password?</a></h6>
+					<h6><a href="index.php?c=register&a=View">Have you Register?</a></h6>
 					<div class="right-w3l">
 						<input type="submit" name="login" value="Login">
 					</div>
@@ -100,9 +113,9 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	</div>
 	<!--//main-->
 	<!--footer-->
-	<div class="footer">
+	<!-- <div class="footer">
 		<p>&copy; 2017 Online Login Form. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
-	</div>
+	</div> -->
 	<!--//footer-->
 </div>
 </body>
