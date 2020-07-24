@@ -19,6 +19,8 @@
     <link href="asset/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
     <link href="asset/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <link href="asset/vendors/Style.css" rel="stylesheet">
+
     <!-- Datatables -->
 
     <!-- <link href="asset/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
@@ -78,7 +80,6 @@
                     </div>
                 </div>
                 <!-- /sidebar menu -->
-
                 <!-- /menu footer buttons -->
                 <div class="sidebar-footer hidden-small">
                     <a data-toggle="tooltip" data-placement="top" title="Settings">
@@ -129,7 +130,7 @@
                             <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1">
                                 <li class="nav-item">
                                     <a class="dropdown-item">
-                                        <span class="image"><img src="View/Admin/images/img.jpg" alt="Profile Image" /></span>
+                                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
                                         <span>
                                                 <span>John Smith</span>
                                                 <span class="time">3 mins ago</span>
@@ -141,7 +142,7 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="dropdown-item">
-                                        <span class="image"><img src="View/Admin/images/img.jpg" alt="Profile Image" /></span>
+                                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
                                         <span>
                                                 <span>John Smith</span>
                                                 <span class="time">3 mins ago</span>
@@ -153,7 +154,7 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="dropdown-item">
-                                        <span class="image"><img src="View/Admin/images/img.jpg" alt="Profile Image" /></span>
+                                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
                                         <span>
                                                 <span>John Smith</span>
                                                 <span class="time">3 mins ago</span>
@@ -165,7 +166,7 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="dropdown-item">
-                                        <span class="image"><img src="View/Admin/images/img.jpg" alt="Profile Image" /></span>
+                                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
                                         <span>
                                                 <span>John Smith</span>
                                                 <span class="time">3 mins ago</span>
@@ -190,7 +191,6 @@
             </div>
         </div>
         <!-- /top navigation -->
-
         <!-- page content -->
         <div class="right_col" role="main">
             <div class="">
@@ -209,68 +209,39 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="clearfix"></div>
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-12 col-sm-12 ">
-                            <div class="x_panel">
-                                <div class="x_title">
-                                    <a href="?c=Slide&a=Add" class="btn btn-primary">Thêm mới</a>
-                                    <ul class="nav navbar-right panel_toolbox">
-                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                                        </li>
-                                    </ul>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="x_content">
-                                    <div class="row" style="width:100%">
-                                        <div class="col-sm-12">
-                                            <div class="card-box table-responsive">
-                                                <p>
-                                                    <?php
-                                                    if (isset($_GET['r'])) {
-                                                        if ($_GET['r'] == 1) {
-                                                            echo "<script type='text/javascript'>alert('Success');</script>";
-                                                        } else {
-                                                            echo "<script type='text/javascript'>alert('Error');</script>";
-                                                        }
-                                                    }
-                                                    ?>
-                                                </p>
-                                                <table id="datatable" class="table table-striped table-bordered" style="width:100%">
-                                                    <thead>
-                                                    <tr>
-                                                        <th>#</th>
-                                                        <th>STT</th>
-                                                        <th>Image</th>
-                                                        <th>#</th>
-                                                    </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                    </tr>
-                                                    <?php
-                                                    $stt = 1;
-                                                    foreach ($data as $value) {
-                                                        ?>
-                                                        <tr>
-                                                            <td><input type="checkbox" name="slide" value="<?= $value->slide_id ?>" name="slide_id"></td>
-                                                            <td><?= $stt++ ?></td>
-                                                            <td><img src="<?= $value->slide_image ?>"></td>
-                                                            <td>
-                                                                <a href="?c=Slide&a=Delete&slide_id=<?= $value->slide_id ?>" class="btn btn-danger"><i class="fa fa-trash-o "></i></a>
-                                                                <a href="?c=Slide&a=Update&slide_id=<?= $value->slide_id ?>" class="btn btn-primary"><i class="fa fa-eyedropper"></i></a>
-                                                            </td>
-                                                        </tr>
-                                                        <?php
-                                                    }
-                                                    ?>
-                                                    </tbody>
-                                                </table>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="add">
+                                <h3>Thêm Slide</h3>
+                                <form action="index.php?c=Slide&a=SaveAdd" method="post" enctype="multipart/form-data">
+                                    <table>
+                                        <tr hidden>
+                                            <td>Id</td>
+                                            <td><input type="text" readonly name="slide_id" /></td>
+                                        </tr>
+                                        <tr>
+                                            <div class="form-group">
+                                                <label for="slide_image">Vui lòng chọn file</label>
+                                                <input type="file" class="form-control-file" name="slide_image">
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                        </tr>
+                                        <tr hidden>
+                                            <td>active</td>
+                                            <td><input type="text" name="Active" value="1" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <button type="reset" value="submit" class="btn btn-success">Refresh</button>
+                                            </td>
+                                            <td>
+                                                <button type="submit" value="submit" class="btn btn-primary">Lưu</button>
+                                                <a href="index.php?c=Slide&a=View" class="btn btn-warning">Cancel</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
                             </div>
                         </div>
                     </div>

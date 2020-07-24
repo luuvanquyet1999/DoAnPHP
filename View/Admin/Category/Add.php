@@ -212,6 +212,7 @@
                     <div class="clearfix"></div>
                     <div class="container">
                         <div class="row">
+                            <div class="col-3"></div>
                             <div class="col-md-6 col-sm-6">
                                 <div class="add">
                                     <h3>Thêm nhóm bài viết</h3>
@@ -227,7 +228,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Link</td>
-                                                <td><input type="text" name="category_link" class="form-control"/></td>
+                                                <td><input type="text" name="category_link" class="form-control" /></td>
                                             </tr>
                                             <tr hidden>
                                                 <td>active</td>
@@ -246,6 +247,7 @@
                                     </form>
                                 </div>
                             </div>
+                            <div class="col-3"></div>
                         </div>
                     </div>
                 </div>

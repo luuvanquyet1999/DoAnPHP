@@ -2,3 +2,8 @@
 .add{
     background-color:#ffffff;
 }
+.add .table input.content{
+
+border-radius: 7px;
+outline: none;
+}
