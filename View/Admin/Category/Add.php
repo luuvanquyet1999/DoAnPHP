@@ -19,6 +19,8 @@
     <link href="asset/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
     <link href="asset/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <link href="asset/vendors/Style.css" rel="stylesheet">
+
     <!-- Datatables -->
 
     <!-- <link href="asset/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
@@ -211,35 +213,38 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-6 col-sm-6">
-                                <form action="index.php?c=Category&a=SaveAdd" method="post">
-                                    <table>
-                                        <tr>
-                                            <td>id</td>
-                                            <td><input type="text" readonly name="category_id" /></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Name</td>
-                                            <td><input type="text" name="category_name" /></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Link</td>
-                                            <td><input type="text" name="category_link" /></td>
-                                        </tr>
-                                        <tr>
-                                            <td>active</td>
-                                            <td><input type="text" readonly name="Active" value="1"/></td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <button type="reset" value="submit" class="btn btn-success">Refresh</button>
-                                            </td>
-                                            <td>
-                                                <button type="submit" value="submit" class="btn btn-primary">Lưu</button>
-                                                <a href="index.php?c=Category&a=View" class="btn btn-warning">Cancel</a>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </form>
+                                <div class="add">
+                                    <h3>Thêm nhóm bài viết</h3>
+                                    <form action="index.php?c=Category&a=SaveAdd" method="post">
+                                        <table>
+                                            <tr hidden>
+                                                <td>id</td>
+                                                <td><input type="text" readonly name="category_id" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td><input type="text" name="category_name" class="form-control" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Link</td>
+                                                <td><input type="text" name="category_link" class="form-control"/></td>
+                                            </tr>
+                                            <tr hidden>
+                                                <td>active</td>
+                                                <td><input type="text" name="Active" value="1" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <button type="reset" value="submit" class="btn btn-success">Refresh</button>
+                                                </td>
+                                                <td>
+                                                    <button type="submit" value="submit" class="btn btn-primary">Lưu</button>
+                                                    <a href="index.php?c=Category&a=View" class="btn btn-warning">Cancel</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>

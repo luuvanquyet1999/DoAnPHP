@@ -32,8 +32,9 @@ class CategoryModel
     }
     function Insert(Category $Category)
     {
-        $query = "insert into lph_Category (CategoryName, Category_Link, Active) VALUE ('$Category->category_name','$Category->category_link','$Category->Active')";
+        $query = "INSERT INTO lph_Category (CategoryName, CategoryLink, Active) VALUES ('$Category->Category_name','$Category->Category_link','1')";
         $result = $this->mysql->query($query);
+        print_r($result);
         return $result;
     }
     function GetRecordById($Category_id)
