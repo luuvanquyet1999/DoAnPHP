@@ -44,7 +44,7 @@ session_start();
 				$_SESSION['username'] = $username;
                 // Thực thi hành động sau khi lưu thông tin vào session
                 // ở đây mình tiến hành chuyển hướng trang web tới một trang gọi là index.php
-                header('Location: index.php');
+                header('Location: index.php?c=AdminIndex&a=View');
 			}
 		}
 	}
@@ -61,8 +61,8 @@ session_start();
 function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- Meta tag Keywords -->
 <!-- css files -->
-<link rel="stylesheet" href="../../asset/build/css/style.css" type="text/css" media="all" /> <!-- Style-CSS --> 
-<link rel="stylesheet" href="../../asset/build/css/font-awesome.css"> <!-- Font-Awesome-Icons-CSS -->
+<link rel="stylesheet" href="asset/build/css/style.css" type="text/css" media="all" /> <!-- Style-CSS --> 
+<link rel="stylesheet" href="asset/build/css/font-awesome.css"> <!-- Font-Awesome-Icons-CSS -->
 <!-- //css files -->
 <!-- online-fonts -->
 <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
@@ -82,7 +82,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			<div class="wthree-pro">
 				<h2>Login Quick</h2>
 			</div>
-			<form action="login.php" method="post">
+			<form action="index.php?c=login&a=View" method="post">
 				<div class="pom-agile">
 					<input placeholder="User Name" name="username" class="user" type="text" required="">
 				</div>
