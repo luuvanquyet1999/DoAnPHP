@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="UTF-8">
+
     <title>ADMINISTRATOR | Posts</title>
 
     <!-- Bootstrap -->
@@ -19,6 +19,8 @@
     <link href="asset/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
     <link href="asset/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <link href="asset/vendors/Style.css" rel="stylesheet">
+
     <!-- Datatables -->
 
     <!-- <link href="asset/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
@@ -78,7 +80,6 @@
                         </div>
                     </div>
                     <!-- /sidebar menu -->
-
                     <!-- /menu footer buttons -->
                     <div class="sidebar-footer hidden-small">
                         <a data-toggle="tooltip" data-placement="top" title="Settings">
@@ -129,7 +130,7 @@
                                 <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1">
                                     <li class="nav-item">
                                         <a class="dropdown-item">
-                                            <span class="image"><img src="View/Admin/images/img.jpg" alt="Profile Image" /></span>
+                                            <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
                                             <span>
                                                 <span>John Smith</span>
                                                 <span class="time">3 mins ago</span>
@@ -141,7 +142,7 @@
                                     </li>
                                     <li class="nav-item">
                                         <a class="dropdown-item">
-                                            <span class="image"><img src="View/Admin/images/img.jpg" alt="Profile Image" /></span>
+                                            <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
                                             <span>
                                                 <span>John Smith</span>
                                                 <span class="time">3 mins ago</span>
@@ -153,7 +154,7 @@
                                     </li>
                                     <li class="nav-item">
                                         <a class="dropdown-item">
-                                            <span class="image"><img src="View/Admin/images/img.jpg" alt="Profile Image" /></span>
+                                            <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
                                             <span>
                                                 <span>John Smith</span>
                                                 <span class="time">3 mins ago</span>
@@ -165,7 +166,7 @@
                                     </li>
                                     <li class="nav-item">
                                         <a class="dropdown-item">
-                                            <span class="image"><img src="View/Admin/images/img.jpg" alt="Profile Image" /></span>
+                                            <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
                                             <span>
                                                 <span>John Smith</span>
                                                 <span class="time">3 mins ago</span>
@@ -190,13 +191,12 @@
                 </div>
             </div>
             <!-- /top navigation -->
-
             <!-- page content -->
             <div class="right_col" role="main">
                 <div class="">
                     <div class="page-title">
                         <div class="title_left">
-                            <h3>Quản lý bài viết</h3>
+                            <h3>QUẢN LÝ BÀI VIẾT</h3>
                         </div>
                         <div class="title_right">
                             <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
@@ -209,74 +209,57 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="clearfix"></div>
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-12 col-sm-12 ">
-                                <div class="x_panel">
-                                    <div class="x_title">
-                                        <a href="?c=Post&a=Add" class="btn btn-primary">Thêm mới</a>
-                                        <ul class="nav navbar-right panel_toolbox">
-                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                                            </li>
-                                        </ul>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                    <div class="x_content">
-                                        <div class="row" style="width:100%">
-                                            <div class="col-sm-12">
-                                                <div class="card-box table-responsive">
-                                                    <p>
-                                                        <?php
-                                                        if (isset($_GET['r'])) {
-                                                            if ($_GET['r'] == 1) {
-                                                                echo "<script type='text/javascript'>alert('Success');</script>";
-                                                            } else {
-                                                                echo "<script type='text/javascript'>alert('Error');</script>";
-                                                            }
-                                                        }
-                                                        ?>
-                                                    </p>
-                                                    <table id="datatable" class="table table-striped table-bordered" style="width:100%">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>STT</th>
-                                                                <th>Tiêu đề</th>
-                                                                <th>Tóm tắt</th>
-                                                                <th>Nội dung</th>
-                                                                <th>Ngày viết</th>
-                                                                <th>#</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            </tr>
-                                                            <?php
-                                                            $stt = 1;
-                                                            foreach ($data as $value) {
-                                                            ?>
-                                                                <tr>
-                                                                    <td><?= $stt++ ?></td>
-                                                                    <td><?= $value->post_title ?></td>
-                                                                    <td><?= $value->post_summary ?></td>
-                                                                    <td><?= $value->post_content ?></td>
-                                                                    <td><?= $value->post_createdate ?></td>
-                                                                    <td>
-                                                                        <a href="?c=Category&a=Delete&PostID=<?= $value->post_id ?>" class="btn btn-danger"><i class="fa fa-trash-o "></i></a>
-                                                                        <a href="?c=Category&a=Update&PostID=<?= $value->post_id ?>" class="btn btn-primary"><i class="fa fa-eyedropper"></i></a>
-                                                                    </td>
-                                                                </tr>
-                                                            <?php
-                                                            }
-                                                            ?>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <div class="col-2"></div>
+                            <div class="col-md-8 col-sm-8">
+                                <div class="add">
+                                    <h3>Thêm bài viết</h3>
+                                    <form action="index.php?c=Post&a=SaveAdd" method="post" enctype="multipart/form-data">
+                                        <table style="width:95%">
+                                            <tr hidden>
+                                                <td>id</td>
+                                                <td><input type="text" readonly name="post_id" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tiêu đề</td>
+                                                <td><input type="text" name="post_title" class="form-control" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tóm tắt</td>
+                                                <td>
+                                                    <textarea name="post_summary" class="form-control" rows="3" style="width:100%"></textarea>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Nội dung</td>
+                                                <td>
+                                                    <textarea name="post_content" class="form-control" rows="8" style="width:100%"></textarea>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Hình ảnh</td>
+                                                <td><input type="file" name="post_image" class="form-control" /></td>
+                                            </tr>
+                                            <tr hidden>
+                                                <td>active</td>
+                                                <td><input type="text" name="Active" value="1" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <button type="reset" value="submit" class="btn btn-success">Refresh</button>
+                                                </td>
+                                                <td>
+                                                    <button type="submit" value="submit" class="btn btn-primary">Lưu</button>
+                                                    <a href="index.php?c=Post&a=View" class="btn btn-warning">Cancel</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </form>
                                 </div>
                             </div>
+                            <div class="col-2"></div>
                         </div>
                     </div>
                 </div>
