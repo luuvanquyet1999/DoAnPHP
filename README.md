@@ -1,2 +1,2 @@
 # DoAnPHP
-vien xibn chao cac bợn
+viên xin chào các bợn
