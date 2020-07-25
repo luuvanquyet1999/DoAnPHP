@@ -10,7 +10,7 @@ include_once('./View/Admin/checkSession.php');
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="icon" href="View/Admin/images/favicon.ico" type="image/ico" />
     <title>ADMINISTRATOR | Category</title>
 
     <!-- Bootstrap -->
@@ -31,7 +31,7 @@ include_once('./View/Admin/checkSession.php');
 <body class="nav-md">
     <div class="container body">
         <div class="main_container">
-        <?php
+            <?php
             include_once('./View/Admin/Share/header.php');
             ?>
             <!-- page content -->

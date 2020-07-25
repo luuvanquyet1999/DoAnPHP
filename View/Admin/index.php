@@ -22,7 +22,7 @@ if (!isset($_SESSION["username"])) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="View/Admin/images/favicon.ico" type="image/ico" />
 
-  <title>Gentelella Alela! | </title>
+  <title>ADINISTRATOR </title>
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="asset/vendors/bootstrap/dist/css/bootstrap.min.css">
