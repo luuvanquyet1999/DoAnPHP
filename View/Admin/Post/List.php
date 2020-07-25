@@ -89,6 +89,8 @@ include_once('./View/Admin/checkSession.php');
                                                                 <th>Tóm tắt</th>
                                                                 <th>Nội dung</th>
                                                                 <th>Ngày viết</th>
+                                                                <th>Link</th>
+                                                                <th>category id</th>
                                                                 <th>#</th>
                                                             </tr>
                                                         </thead>
@@ -104,6 +106,8 @@ include_once('./View/Admin/checkSession.php');
                                                                     <td><?= $value->post_summary ?></td>
                                                                     <td><?= $value->post_content ?></td>
                                                                     <td><?= $value->post_createdate ?></td>
+                                                                    <td><?= $value->post_link?></td>
+                                                                    <td><?= $value->category_id ?></td>
                                                                     <td>
                                                                         <a href="?c=Category&a=Delete&PostID=<?= $value->post_id ?>" class="btn btn-danger"><i class="fa fa-trash-o "></i></a>
                                                                         <a href="?c=Category&a=Update&PostID=<?= $value->post_id ?>" class="btn btn-primary"><i class="fa fa-eyedropper"></i></a>

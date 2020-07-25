@@ -65,6 +65,25 @@ include_once('./View/Admin/checkSession.php');
                                                 <td><input type="text" readonly name="post_id" /></td>
                                             </tr>
                                             <tr>
+                                                <td>Nhóm bài viết</td>
+                                                <td>
+                                                    <select name="category">
+                                                        <?php
+                                                        $mysql = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
+                                                        $query = "SELECT * FROM lph_category WHERE Active =1";
+                                                        $result = $mysql->query($query);
+                                                        $data = $result->fetch_all();
+                                                        foreach ($data as $value) {
+                                                        ?>
+                                                            <option value="<?= $value[0] ?>"><?= $value[1] ?>
+                                                            <option>
+                                                            <?php
+                                                        }
+                                                            ?>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
                                                 <td>Tiêu đề</td>
                                                 <td><input type="text" name="post_title" class="form-control" /></td>
                                             </tr>
