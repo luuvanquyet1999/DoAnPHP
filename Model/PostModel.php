@@ -42,16 +42,36 @@ class PostModel
     }
     function Insert(Post $post)
     {
-        $query = "INSERT INTO lph_post (PostTitle, PostSummary, PostContent, PostImage, PostCreateDate, PostLink, Active, CategoryId) 
-        VALUES ('$post->post_title','$post->post_summary','$post->post_content','$post->post_image','$post->createdate','$post->post_link','1','$post->category_id')";
+        $query = "INSERT INTO lph_post (PostTitle, PostSummary, PostContent, PostImage, PostCreateDate, CategoryId, PostLink, Active) 
+        VALUES ('$post->post_title','$post->post_summary','$post->post_content','$post->post_image','$post->post_createdate','$post->category_id','$post->post_link','1')";
         $result = $this->mysql->query($query);
 
-        return ($result);
+        return $result;
     }
-    // function GetAllCategory(){
-    //     $query = "SELECT * FROM lph_category";
-    //     $result= $this->mysql->query($query);
-    //     $data = $result->fetch_all();
-    //     print_r($data);
-    // }
+    function GetRecordById($post_id)
+    {
+        $query = "SELECT * FROM lph_post WHERE Active = 1 AND PostId ='$post_id' LIMIT 1";
+        $result = $this->mysql->query($query);
+        $data = $result->fetch_all();
+        // print_r($data);
+        // die();
+        if (count($data)) {
+            return new Post($data[0][0], $data[0][1], $data[0][2], $data[0][3], $data[0][4], $data[0][5], $data[0][6], $data[0][7]);
+        }
+        return null;
+    }
+    function Update(Post $post)
+    {
+        $query = "UPDATE lph_post SET PostTitle='$post->post_title', PostSummary='$post->post_summary', PostContent='$post->post_content',PostImage = '$post->post_image', PostCreateDate='$post->post_createdate', CategoryId='$post->category_id', PostLink='$post->post_link' 
+        WHERE PostId='$post->post_id'";
+        $result = $this->mysql->query($query);
+        return $result;
+    }
+    function Delete($post_id)
+    {
+        $query = "UPDATE lph_post SET Active = 0
+        WHERE PostId = '$post_id'";
+        $result = $this->mysql->query($query);
+        return $result;
+    }
 }

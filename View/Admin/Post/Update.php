@@ -81,16 +81,17 @@ include_once('./View/Admin/checkSession.php');
                             <div class="col-md-8 col-sm-8">
                                 <div class="add">
                                     <h3>Thêm bài viết</h3>
-                                    <form action="index.php?c=Post&a=SaveAdd" method="post" enctype="multipart/form-data">
+                                    <form action="index.php?c=Post&a=SaveUpdate" method="post" enctype="multipart/form-data">
                                         <table style="width:95%">
                                             <tr hidden>
                                                 <td>id</td>
-                                                <td><input type="text" readonly name="post_id" /></td>
+                                                <td><input type="text" readonly name="post_id" value="<?= $post->post_id ?>" /></td>
                                             </tr>
                                             <tr>
                                                 <td>Nhóm bài viết</td>
                                                 <td>
                                                     <select name="category">
+                                                        <!-- <option value=""></option> -->
                                                         <?php
                                                         $mysql = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
                                                         $query = "SELECT * FROM lph_category WHERE Active =1";
@@ -105,18 +106,18 @@ include_once('./View/Admin/checkSession.php');
                                             </tr>
                                             <tr>
                                                 <td>Tiêu đề</td>
-                                                <td><input type="text" name="post_title" class="form-control" /></td>
+                                                <td><input type="text" name="post_title" class="form-control" value="<?= $post->post_title ?>" /></td>
                                             </tr>
                                             <tr>
                                                 <td>Tóm tắt</td>
                                                 <td>
-                                                    <textarea name="post_summary" class="form-control" rows="3" style="width:100%"></textarea>
+                                                    <textarea name="post_summary" class="form-control" rows="3" style="width:100%"><?= $post->post_summary ?></textarea>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>Nội dung</td>
                                                 <td>
-                                                    <textarea name="post_content" class="form-control" rows="8" style="width:100%"></textarea>
+                                                    <textarea name="post_content" class="form-control" rows="8" style="width:100%"><?= $post->post_content ?></textarea>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -133,7 +134,6 @@ include_once('./View/Admin/checkSession.php');
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <button type="reset" value="submit" class="btn btn-success">Refresh</button>
                                                 </td>
                                                 <td>
                                                     <button type="submit" value="submit" class="btn btn-primary">Lưu</button>
