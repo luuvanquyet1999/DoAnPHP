@@ -80,7 +80,7 @@ include_once('./View/Admin/checkSession.php');
                             <div class="col-2"></div>
                             <div class="col-md-8 col-sm-8">
                                 <div class="add">
-                                    <h3>Thêm bài viết</h3>
+                                    <h3>Cập nhật bài viết</h3>
                                     <form action="index.php?c=Post&a=SaveUpdate" method="post" enctype="multipart/form-data">
                                         <table style="width:95%">
                                             <tr hidden>
@@ -91,12 +91,12 @@ include_once('./View/Admin/checkSession.php');
                                                 <td>Nhóm bài viết</td>
                                                 <td>
                                                     <select name="category">
-                                                        <!-- <option value=""></option> -->
                                                         <?php
                                                         $mysql = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
                                                         $query = "SELECT * FROM lph_category WHERE Active =1";
                                                         $result = $mysql->query($query);
-
+                                                       // $data = mysqli_fetch_array($result);
+                                                       
                                                         while ($row = mysqli_fetch_array($result)) {
                                                             echo "<option value='" . $row[0] . "'>" . $row[1] . "</option>";
                                                         }
