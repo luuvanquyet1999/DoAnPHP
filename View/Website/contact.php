@@ -7,23 +7,22 @@
     <title>Đồ Án PHP TEAM LỘC PUHO OFFICAL</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="asset/css_default/img/favicon.ico">
 
     <!-- CSS here -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/ticker-style.css">
-    <link rel="stylesheet" href="assets/css/flaticon.css">
-    <link rel="stylesheet" href="assets/css/slicknav.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/css/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/nice-select.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="asset/css_default/css/bootstrap.min.css">
+    <link rel="stylesheet" href="asset/css_default/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="asset/css_default/css/ticker-style.css">
+    <link rel="stylesheet" href="asset/css_default/css/flaticon.css">
+    <link rel="stylesheet" href="asset/css_default/css/slicknav.css">
+    <link rel="stylesheet" href="asset/css_default/css/animate.min.css">
+    <link rel="stylesheet" href="asset/css_default/css/magnific-popup.css">
+    <link rel="stylesheet" href="asset/css_default/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="asset/css_default/css/themify-icons.css">
+    <link rel="stylesheet" href="asset/css_default/css/slick.css">
+    <link rel="stylesheet" href="asset/css_default/css/nice-select.css">
+    <link rel="stylesheet" href="asset/css_default/css/style.css">
+    <link rel="stylesheet" href="asset/css_default/css/responsive.css">
 </head>
 
 <body>
@@ -33,7 +32,7 @@
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <img src="assets/img/logo/logo3.png" alt="">
+                    <img src="asset/css_default/img/logo/logo3.png" alt="">
                 </div>
             </div>
         </div>
@@ -50,12 +49,12 @@
                             <!-- Logo -->
                             <div class="col-xl-3 col-lg-3 col-md-3 d-none d-md-block">
                                 <div class="logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo4.png" alt=""></a>
+                                    <a href="index.html"><img src="asset/css_default/img/logo/logo4.png" alt=""></a>
                                 </div>
                             </div>
                             <div class="col-xl-9 col-lg-9 col-md-9">
                                 <div class="header-banner f-right ">
-                                    <img src="assets/img/gallery/header_card.png" alt="">
+                                    <img src="asset/css_default/img/gallery/header_card.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -67,7 +66,7 @@
                             <div class="col-xl-8 col-lg-8 col-md-12 header-flex">
                                 <!-- sticky -->
                                 <div class="sticky-logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                    <a href="index.html"><img src="asset/css_default/img/logo/logo.png" alt=""></a>
                                 </div>
                                 <!-- Main-menu -->
                                 <div class="main-menu d-none d-md-block">
@@ -341,16 +340,16 @@
                         <h2 class="contact-title">Liên Lạc</h2>
                     </div>
                     <div class="col-lg-8">
-                        <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                        <form action="index.php?c=contactdefault&a=SendContact" method="post" enctype="multipart/form-data">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder=" Enter Message"></textarea>
+                                        <textarea class="form-control w-100" name="content" id="content" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Content'" placeholder=" Enter Content"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="Enter your name">
+                                        <input class="form-control valid" name="fullname" id="fullname" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your Fullname'" placeholder="Enter your Fullname">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -360,37 +359,45 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder="Enter Subject">
+                                        <input class="form-control" name="title" id="title" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder="Enter Subject">
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group mt-3">
-                                <button type="submit" class="button button-contactForm boxed-btn">Send</button>
+                            <button type="button" value="button" class="btn btn-primary">Lưu</button>
                             </div>
                         </form>
                     </div>
                     <div class="col-lg-3 offset-lg-1">
+                    <?php
+                         $stt = 1;
+                         foreach ($data as $value) {
+                         ?>
                         <div class="media contact-info">
                             <span class="contact-info__icon"><i class="ti-home"></i></span>
                             <div class="media-body">
-                                <h3>33 XVNT, Đà Nẵng</h3>
-
+                            <h3>
+                                <?= $value->contact_address ?>
+                                </h3>
                             </div>
                         </div>
                         <div class="media contact-info">
                             <span class="contact-info__icon"><i class="ti-tablet"></i></span>
                             <div class="media-body">
-                                <h3>+1 253 565 2365</h3>
+                                <h3>+<?= $value->contact_phone ?></h3>
                                 <p>Mở cửa từ thứ 2 đến thứ 6</p>
                             </div>
                         </div>
                         <div class="media contact-info">
                             <span class="contact-info__icon"><i class="ti-email"></i></span>
                             <div class="media-body">
-                                <h3>abc@gmail.com</h3>
+                                <h3><?= $value->contact_email ?></h3>
 
                             </div>
                         </div>
+                         <?php
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -408,7 +415,7 @@
                                 <div class="single-footer-caption mb-30">
                                     <!-- logo -->
                                     <div class="footer-logo">
-                                        <a href="index.html"><img src="assets/img/logo/logo4.png" alt=""></a>
+                                        <a href="index.html"><img src="asset/css_default/img/logo/logo4.png" alt=""></a>
                                     </div>
                                     <div class="footer-tittle">
                                         <div class="footer-pera">
@@ -428,7 +435,7 @@
                                 <!-- Popular post -->
                                 <div class="whats-right-single mb-20">
                                     <div class="whats-right-img">
-                                        <img src="assets/img/gallery/footer_post1.png" alt="">
+                                        <img src="asset/css_default/img/gallery/footer_post1.png" alt="">
                                     </div>
                                     <div class="whats-right-cap">
                                         <h4><a href="details.html">Làm thế nào để tập trung vào công việc</a></h4>
@@ -438,7 +445,7 @@
                                 <!-- Popular post -->
                                 <div class="whats-right-single mb-20">
                                     <div class="whats-right-img">
-                                        <img src="assets/img/gallery/footer_post2.png" alt="">
+                                        <img src="asset/css_default/img/gallery/footer_post2.png" alt="">
                                     </div>
                                     <div class="whats-right-cap">
                                         <h4><a href="details.html">Làm thế nào để tập trung vào công việc</a></h4>
@@ -448,7 +455,7 @@
                                 <!-- Popular post -->
                                 <div class="whats-right-single mb-20">
                                     <div class="whats-right-img">
-                                        <img src="assets/img/gallery/footer_post3.png" alt="">
+                                        <img src="asset/css_default/img/gallery/footer_post3.png" alt="">
                                     </div>
                                     <div class="whats-right-cap">
                                         <h4><a href="details.html">Làm thế nào để tập trung vào công việc</a></h4>
@@ -460,7 +467,7 @@
                         <div class="col-xl-3 col-lg-3 col-md-5 col-sm-7">
                             <div class="single-footer-caption mb-50">
                                 <div class="banner">
-                                    <img src="assets/img/gallery/body_card4.png" alt="">
+                                    <img src="asset/css_default/img/gallery/body_card4.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -504,39 +511,39 @@
 
     <!-- JS here -->
     <!-- All JS Custom Plugins Link Here here -->
-    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="asset/css_default/js/vendor/modernizr-3.5.0.min.js"></script>
 
     <!-- Jquery, Popper, Bootstrap -->
-    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="./assets/js/popper.min.js"></script>
-    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="asset/css_default/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="asset/css_default/js/popper.min.js"></script>
+    <script src="asset/css_default/js/bootstrap.min.js"></script>
     <!-- Jquery Mobile Menu -->
-    <script src="./assets/js/jquery.slicknav.min.js"></script>
+    <script src="asset/css_default/js/jquery.slicknav.min.js"></script>
 
     <!-- Jquery Slick , Owl-Carousel Plugins -->
-    <script src="./assets/js/owl.carousel.min.js"></script>
-    <script src="./assets/js/slick.min.js"></script>
+    <script src="asset/css_default/js/owl.carousel.min.js"></script>
+    <script src="asset/css_default/js/slick.min.js"></script>
 
     <!-- One Page, Animated-HeadLin -->
-    <script src="./assets/js/wow.min.js"></script>
-    <script src="./assets/js/animated.headline.js"></script>
+    <script src="asset/css_default/js/wow.min.js"></script>
+    <script src="asset/css_default/js/animated.headline.js"></script>
 
     <!-- Scrollup, nice-select, sticky -->
-    <script src="./assets/js/jquery.scrollUp.min.js"></script>
-    <script src="./assets/js/jquery.nice-select.min.js"></script>
-    <script src="./assets/js/jquery.sticky.js"></script>
-    <script src="./assets/js/jquery.magnific-popup.js"></script>
+    <script src="asset/css_default/js/jquery.scrollUp.min.js"></script>
+    <script src="asset/css_default/js/jquery.nice-select.min.js"></script>
+    <script src="asset/css_default/js/jquery.sticky.js"></script>
+    <script src="asset/css_default/js/jquery.magnific-popup.js"></script>
 
     <!-- contact js -->
-    <script src="./assets/js/contact.js"></script>
-    <script src="./assets/js/jquery.form.js"></script>
-    <script src="./assets/js/jquery.validate.min.js"></script>
-    <script src="./assets/js/mail-script.js"></script>
-    <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="asset/css_default/js/contact.js"></script>
+    <script src="asset/css_default/js/jquery.form.js"></script>
+    <script src="asset/css_default/js/jquery.validate.min.js"></script>
+    <script src="asset/css_default/js/mail-script.js"></script>
+    <script src="asset/css_default/js/jquery.ajaxchimp.min.js"></script>
 
     <!-- Jquery Plugins, main Jquery -->
-    <script src="./assets/js/plugins.js"></script>
-    <script src="./assets/js/main.js"></script>
+    <script src="asset/css_default/js/plugins.js"></script>
+    <script src="asset/css_default/js/main.js"></script>
 
 </body>
 
