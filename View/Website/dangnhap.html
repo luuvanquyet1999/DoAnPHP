@@ -29,26 +29,31 @@
 
 <body>
 
+    <h2 style="text-align: center;"> Login Form</h2>
+
     <form action="/action_page.php" method="post">
-        <div class="container">
-            <div class="imgcontainer">
-                <img src="assets/img/trending/loc.jpg" alt="Avatar" class="avatar">
-            </div>
 
-            <div class="container">
-                <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required>
+        <div style="width: 600px; height: 350px;" class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
 
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
 
-                <button type="submit">Login</button>
-                <label>
+            <button type="submit">Login</button>
+            <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
-            </div>
         </div>
 
+        <div style="width: 600px; height: 100px;" class="container" style="background-color:#f1f1f1">
+
+            <div class="">
+                <p style="text-align: center;" class="dangnhap">Bạn chưa có tài khoản?</p>
+                <button type="button" class="cancelbtnnt"> <a href="dangki.html">Đăng kí</a></button>
+            </div>
+
+        </div>
     </form>
 
     <!-- Optional JavaScript -->
