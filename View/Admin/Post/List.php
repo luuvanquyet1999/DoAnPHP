@@ -12,6 +12,7 @@ include_once('./View/Admin/checkSession.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
+    <link rel="icon" href="View/Admin/images/favicon.ico" type="image/ico" />
     <title>ADMINISTRATOR | Posts</title>
 
     <!-- Bootstrap -->
@@ -31,7 +32,7 @@ include_once('./View/Admin/checkSession.php');
 <body class="nav-md">
     <div class="container body">
         <div class="main_container">
-        <?php
+            <?php
             include_once('./View/Admin/Share/header.php');
             ?>
             <!-- page content -->
@@ -89,6 +90,8 @@ include_once('./View/Admin/checkSession.php');
                                                                 <th>Tóm tắt</th>
                                                                 <th>Nội dung</th>
                                                                 <th>Ngày viết</th>
+                                                                <th>Link</th>
+                                                                <th>category id</th>
                                                                 <th>#</th>
                                                             </tr>
                                                         </thead>
@@ -104,9 +107,11 @@ include_once('./View/Admin/checkSession.php');
                                                                     <td><?= $value->post_summary ?></td>
                                                                     <td><?= $value->post_content ?></td>
                                                                     <td><?= $value->post_createdate ?></td>
+                                                                    <td><?= $value->post_link ?></td>
+                                                                    <td><?= $value->category_id ?></td>
                                                                     <td>
-                                                                        <a href="?c=Category&a=Delete&PostID=<?= $value->post_id ?>" class="btn btn-danger"><i class="fa fa-trash-o "></i></a>
-                                                                        <a href="?c=Category&a=Update&PostID=<?= $value->post_id ?>" class="btn btn-primary"><i class="fa fa-eyedropper"></i></a>
+                                                                        <a href="?c=Post&a=Delete&PostID=<?= $value->post_id ?>" class="btn btn-danger"><i class="fa fa-trash-o "></i></a>
+                                                                        <a href="?c=Post&a=Update&PostID=<?= $value->post_id ?>" class="btn btn-primary"><i class="fa fa-eyedropper"></i></a>
                                                                     </td>
                                                                 </tr>
                                                             <?php

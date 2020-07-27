@@ -10,7 +10,7 @@ include_once('./View/Admin/checkSession.php');
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="icon" href="View/Admin/images/favicon.ico" type="image/ico" />
     <title>ADMINISTRATOR | Posts</title>
 
     <!-- Bootstrap -->
@@ -28,6 +28,29 @@ include_once('./View/Admin/checkSession.php');
 </head>
 
 <body class="nav-md">
+
+    <script>
+        function getDate() {
+            var today = new Date();
+            var dd = today.getDate();
+            var mm = today.getMonth() + 1; //January is 0!
+            var yyyy = today.getFullYear();
+            if (dd < 10) {
+                dd = '0' + dd
+            }
+            if (mm < 10) {
+                mm = '0' + mm
+            }
+            today = yyyy + '-' + mm + '-' + dd;
+            console.log(today);
+            document.getElementById("date").value = today;
+        }
+
+
+        window.onload = function() {
+            getDate();
+        };
+    </script>
     <div class="container body">
         <div class="main_container">
             <?php
@@ -65,6 +88,22 @@ include_once('./View/Admin/checkSession.php');
                                                 <td><input type="text" readonly name="post_id" /></td>
                                             </tr>
                                             <tr>
+                                                <td>Nhóm bài viết</td>
+                                                <td>
+                                                    <select name="category">
+                                                        <?php
+                                                        $mysql = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
+                                                        $query = "SELECT * FROM lph_category WHERE Active =1";
+                                                        $result = $mysql->query($query);
+
+                                                        while ($row = mysqli_fetch_array($result)) {
+                                                            echo "<option value='" . $row[0] . "'>" . $row[1] . "</option>";
+                                                        }
+                                                        ?>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
                                                 <td>Tiêu đề</td>
                                                 <td><input type="text" name="post_title" class="form-control" /></td>
                                             </tr>
@@ -83,6 +122,10 @@ include_once('./View/Admin/checkSession.php');
                                             <tr>
                                                 <td>Hình ảnh</td>
                                                 <td><input type="file" name="post_image" class="form-control" /></td>
+                                            </tr>
+                                            <tr hidden>
+                                                <td>ngày</td>
+                                                <td><input type="text" name="createday" onload="getDate()" class="form-control" id="date" /></td>
                                             </tr>
                                             <tr hidden>
                                                 <td>active</td>
