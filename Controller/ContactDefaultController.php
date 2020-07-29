@@ -1,20 +1,17 @@
 <?php
 require SYSTEM_PATH . "/Model/ContactDefaultModel.php";
-require SYSTEM_PATH."/Model/ToacsiiModel.php";
 class ContactDefaultController
 {
     private $ContactDefaultModel;
-    private $ToacsiiModel;
     public function __construct()
     {
         $this->ContactDefaultModel = new ContactDefaultModel();
-        $this->ToacsiiModel = new ToacsiiModel();
     }
 
     function View()
     {
         $data = $this->ContactDefaultModel->GetAll();
-        require SYSTEM_PATH . "/View/Website/contact.php";
+        require SYSTEM_PATH . "/View/Admin/ContactDefault/List.php";
     }
   
     function SendContact()

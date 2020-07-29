@@ -85,7 +85,6 @@ include_once('./View/Admin/checkSession.php');
                                                     <table id="datatable" class="table table-striped table-bordered" style="width:100%">
                                                         <thead>
                                                             <tr>
-                                                                <th>#</th>
                                                                 <th>STT</th>
                                                                 <th>Name</th>
                                                                 <th>Link</th>
@@ -99,7 +98,6 @@ include_once('./View/Admin/checkSession.php');
                                                             foreach ($data as $value) {
                                                             ?>
                                                                 <tr>
-                                                                    <td><input type="checkbox" name="category" value="<?= $value->Category_id ?>" name="category_id"></td>
                                                                     <td><?= $stt++ ?></td>
                                                                     <td><?= $value->Category_name ?></td>
                                                                     <td><?= $value->Category_link ?></td>

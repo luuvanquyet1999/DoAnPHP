@@ -1,14 +1,11 @@
 <?php
 require SYSTEM_PATH . "/Model/PostModel.php";
-require SYSTEM_PATH."/Model/ToacsiiModel.php";
 class PostController
 {
     private $PostModel;
-    private $ToacsiiModel;
     public function __construct()
     {
         $this->PostModel = new PostModel();
-        $this->ToacsiiModel = new ToacsiiModel();
     }
 
     function View()
@@ -23,7 +20,7 @@ class PostController
     }
     function SaveAdd()
     {
-
+        session_start();
         $post_id = $_POST["post_id"];
         $post_title = $_POST["post_title"];
         $post_summary = $_POST["post_summary"];

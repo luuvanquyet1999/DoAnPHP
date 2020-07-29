@@ -35,26 +35,7 @@ include_once('./View/Admin/checkSession.php');
 </head>
 
 <body class="nav-md">
-<<<<<<< HEAD
-<div class="container body">
-    <div class="main_container">
-        <?php
-        include_once('./View/Admin/Share/header.php');
-        ?>
 
-        <!-- page content -->
-        <div class="right_col" role="main">
-            <div class="">
-                <div class="page-title">
-                    <div class="title_left">
-                        <h3>Quản lý Slide</h3>
-                    </div>
-                    <div class="title_right">
-                        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search for...">
-                                <span class="input-group-btn">
-=======
     <div class="container body">
         <div class="main_container">
             <?php
@@ -74,7 +55,6 @@ include_once('./View/Admin/checkSession.php');
                                 <div class="input-group">
                                     <input type="text" class="form-control" placeholder="Search for...">
                                     <span class="input-group-btn">
->>>>>>> b72d8c59dd949ed42d72b5592d82802d28fb7d43
                                         <button class="btn btn-secondary" type="button">Go!</button>
                                     </span>
                                 </div>
@@ -113,7 +93,6 @@ include_once('./View/Admin/checkSession.php');
                                                     <table id="datatable" class="table table-striped table-bordered" style="width:100%">
                                                         <thead>
                                                             <tr>
-                                                                <th>#</th>
                                                                 <th>STT</th>
                                                                 <th>Image</th>
                                                                 <th>#</th>
@@ -126,7 +105,6 @@ include_once('./View/Admin/checkSession.php');
                                                             foreach ($data as $value) {
                                                             ?>
                                                                 <tr>
-                                                                    <td><input type="checkbox" name="slide" value="<?= $value->slide_id ?>" name="slide_id"></td>
                                                                     <td><?= $stt++ ?></td>
                                                                     <td><img src="<?= $value->slide_image ?>"></td>
                                                                     <td>
@@ -150,21 +128,12 @@ include_once('./View/Admin/checkSession.php');
                 </div>
             </div>
             <!-- /page content -->
-
-<<<<<<< HEAD
-        <!-- footer content -->
-        <?php
-        include_once('./View/Admin/Share/footer.php');
-        ?>
-        <!-- /footer content -->
-=======
             <!-- footer content -->
             <?php
             include_once('./View/Admin/Share/footer.php');
             ?>
             <!-- /footer content -->
         </div>
->>>>>>> b72d8c59dd949ed42d72b5592d82802d28fb7d43
     </div>
 
     <!-- jQuery -->

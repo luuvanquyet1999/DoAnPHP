@@ -11,7 +11,7 @@ include_once('./View/Admin/checkSession.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="View/Admin/images/favicon.ico" type="image/ico" />
-    <title>ADMINISTRATOR | Contact </title>
+    <title>ADMINISTRATOR | Contact</title>
 
     <!-- Bootstrap -->
     <link href="cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
@@ -46,7 +46,7 @@ include_once('./View/Admin/checkSession.php');
             <div class="">
                 <div class="page-title">
                     <div class="title_left">
-                        <h3>Địa chỉ website</h3>
+                        <h3>Quản lý Liên hệ</h3>
                     </div>
                     <div class="title_right">
                         <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
@@ -66,7 +66,6 @@ include_once('./View/Admin/checkSession.php');
                         <div class="col-md-12 col-sm-12 ">
                             <div class="x_panel">
                                 <div class="x_title">
-                                    <a href="?c=Contact&a=Add" class="btn btn-primary">Thêm mới</a>
                                     <ul class="nav navbar-right panel_toolbox">
                                         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                         </li>
@@ -91,13 +90,11 @@ include_once('./View/Admin/checkSession.php');
                                                 <table id="datatable" class="table table-striped table-bordered" style="width:100%">
                                                     <thead>
                                                     <tr>
-                                                        <th>#</th>
                                                         <th>STT</th>
+                                                        <th>FullName</th>
                                                         <th>Email</th>
-                                                        <th>Phone</th>
-                                                        <th>Địa chỉ</th>
-                                                        <th>Active</th>
-                                                        <th>#</th>
+                                                        <th>Title</th>
+                                                        <th>Content</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
@@ -107,16 +104,11 @@ include_once('./View/Admin/checkSession.php');
                                                     foreach ($data as $value) {
                                                         ?>
                                                         <tr>
-                                                            <td><input type="checkbox" name="contact" value="<?= $value->contact_id ?>" name="contact_id"></td>
                                                             <td><?= $stt++ ?></td>
-                                                            <td><?= $value->contact_email ?></td>
-                                                            <td><?= $value->contact_phone ?></td>
-                                                            <td><?= $value->contact_address ?></td>
-                                                            <td><?= $value->Active ?></td>
-                                                            <td>
-                                                                <a href="?c=Contact&a=Delete&contact_id=<?= $value->contact_id ?>" class="btn btn-danger"><i class="fa fa-trash-o "></i></a>
-                                                                <a href="?c=Contact&a=Update&contact_id=<?= $value->contact_id ?>" class="btn btn-primary"><i class="fa fa-eyedropper"></i></a>
-                                                            </td>
+                                                            <td><?= $value->sendcontact_fullname ?></td>
+                                                            <td><?= $value->sendcontact_email ?></td>
+                                                            <td><?= $value->sendcontact_title ?></td>
+                                                            <td><?= $value->sendcontact_content ?></td>
                                                         </tr>
                                                         <?php
                                                     }
