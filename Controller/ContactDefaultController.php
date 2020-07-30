@@ -20,7 +20,6 @@ class ContactDefaultController
         $fullname = $_POST["fullname"];
         $email = $_POST["email"];
         $title = $_POST["title"];
-        echo $content.$fullname.$email.$title;
         // echo $post_link;
         // die();
         $contact = new ContactDefault($content,$fullname,$email,$title);

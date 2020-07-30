@@ -95,9 +95,9 @@
                                                                 <th>UserName</th>
                                                                 <th>Full Name</th>
                                                                 <th>Email</th>
-                                                                <th>Active</th>
-                                                                <th>Giới tính</th>
                                                                 <th>Ngày Sinh</th>
+                                                                <th>Giới tính</th>
+                                                                <th>Active</th>
                                                                 <th>#</th>
                                                             </tr>
                                                         </thead>
