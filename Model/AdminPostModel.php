@@ -57,7 +57,7 @@ class AdminPostModel
         // print_r($data);
         // die();
         if (count($data)) {
-            return new Post($data[0][0], $data[0][1], $data[0][2], $data[0][3], $data[0][4], $data[0][5], $data[0][6], $data[0][7]);
+            return new Post($data[0][0], $data[0][1], $data[0][2], $data[0][3], $data[0][4], $data[0][5], $data[0][6], $data[0][7],$data[0][8]);
         }
         return null;
     }

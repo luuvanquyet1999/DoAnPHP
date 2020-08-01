@@ -130,11 +130,7 @@
 
                                 <div class="col-12">
                                     <div class="form-group">
-<<<<<<< .mine
                                         <input class="form-control" name="title" id="title" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder="Enter Subject">
-=======
-                                        <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder=" Enter Message"></textarea>
->>>>>>> .theirs
                                     </div>
                                 </div>
 

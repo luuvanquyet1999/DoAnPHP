@@ -11,19 +11,19 @@
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
     <!-- CSS here -->
-    <link rel="stylesheet" href="assets/css/dangnhap.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/ticker-style.css">
-    <link rel="stylesheet" href="assets/css/flaticon.css">
-    <link rel="stylesheet" href="assets/css/slicknav.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/css/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/nice-select.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="asset/css_default/css/dangnhap.css">
+    <link rel="stylesheet" href="asset/css_default/css/bootstrap.min.css">
+    <link rel="stylesheet" href="asset/css_default/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="asset/css_default/css/ticker-style.css">
+    <link rel="stylesheet" href="asset/css_default/css/flaticon.css">
+    <link rel="stylesheet" href="asset/css_default/css/slicknav.css">
+    <link rel="stylesheet" href="asset/css_default/css/animate.min.css">
+    <link rel="stylesheet" href="asset/css_default/css/magnific-popup.css">
+    <link rel="stylesheet" href="asset/css_default/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="asset/css_default/css/themify-icons.css">
+    <link rel="stylesheet" href="asset/css_default/css/slick.css">
+    <link rel="stylesheet" href="asset/css_default/css/nice-select.css">
+    <link rel="stylesheet" href="asset/css_default/css/style.css">
 
 </head>
 
@@ -31,7 +31,7 @@
 
     <h2 style="text-align: center;"> Login Form</h2>
 
-    <form action="/action_page.php" method="post">
+    <form action="index.php?c=LoginDefault&a=View" method="post">
 
         <div style="width: 600px; height: 350px;" class="container">
             <label for="uname"><b>Username</b></label>
@@ -50,7 +50,7 @@
 
             <div class="">
                 <p style="text-align: center;" class="dangnhap">Bạn chưa có tài khoản?</p>
-                <button type="button" class="cancelbtnnt"> <a href="dangki.html">Đăng kí</a></button>
+                <button type="button" class="cancelbtnnt"> <a href="index.php?c=RegisterDefault&a=View">Đăng kí</a></button>
             </div>
 
         </div>
