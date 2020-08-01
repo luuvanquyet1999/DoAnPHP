@@ -1,79 +1,15 @@
-<!DOCTYPE html>
-<html lang="zxx">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="PONIGYM Template">
-    <meta name="keywords" content="PONIGYM, unica, creative, html">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>PONIGYM | Template</title>
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
-
-    <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/themify-icons.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-</head>
-
-<body>
-    <!-- Page Preloder -->
-    <div id="preloder">
-        <div class="loader"></div>
-    </div>
-
-    <!-- Header Section Begin -->
-    <header class="header-section">
-        <div style="background-color: #f9f8fa91" class="container">
-            <div class="nav-menuu">
-                <nav class="mainmenuu mobile-menu">
-                    <ul style="margin:20px;">
-                        <li class="active"><a href="./dangnhap.html">Đăng Nhập</a></li>
-                        <li><a href="./dangki.html">Đăng Kí</a></li>
-                    </ul>
-
-
-                </nav>
-
-
-            </div>
-
-            <div class="nav-menu">
-                <nav class="mainmenu mobile-menu">
-                    <ul style="margin:20px;">
-                        <li class="active"><a href="./index.html">Trang Chủ</a></li>
-                        <li><a href="./Gioithieu.html">Giới Thiệu</a></li>
-                        <li><a href="./Tinmoi.html">Tin Mơi</a></li>
-                        <li><a href="./theloai.html">Thể Loại</a>
-                            <ul class="dropdown">
-                                <li><a href="theloai.html">Thời Trang</a></li>
-                            </ul>
-
-                        </li>
-                        <li><a href="./Lienhe.html">Liên Hệ</a></li>
-
-
-                    </ul>
-
-                </nav>
-                <div class="nav-right search-switch">
-                    <i class="ti-search"></i>
-                </div>
-            </div>
-            <div id="mobile-menu-wrap"></div>
-        </div>
-    </header>
-    <!-- Header End -->
+<?php
+if(!isset($_SESSION)) 
+{ 
+    session_start(); 
+} 
+?>
+<?php
+   include_once('./View/Website2/share/header.php');
+?>
 
     <!-- Site Breadcrumb Begin -->
-    <section class="breadcrumb-section set-bg" data-setbg="img/about-breadcrumb-bg.jpg">
+    <section class="breadcrumb-section set-bg" data-setbg="view/website2/img/about-breadcrumb-bg.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -94,21 +30,28 @@
     <section class="contact-section spad">
         <div class="container">
             <div class="row">
+            <?php
+                         $stt = 1;
+                         foreach ($data as $value) {
+                         ?>
                 <div class="col-lg-4">
                     <div class="contact-info">
                         <i class="ti-location-pin"></i>
-                        <p>33 XVNT- HẢI CHÂU - ĐÀ NẴNG</p>
+                        <p><?= $value->contact_address ?></p>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="contact-info">
                         <i class="ti-email"></i>
                         <ul>
-                            <li><span>Phone:</span> 123-456-789 </li>
-                            <li><span>Mail:</span> locfuho@gmail.com</li>
+                            <li><span>Phone:</span> <?= $value->contact_phone ?> </li>
+                            <li><span>Mail:</span> <?= $value->contact_email ?></li>
                         </ul>
                     </div>
                 </div>
+                <?php
+                        }
+                        ?>
                 <div class="col-lg-4">
                     <div class="contact-info">
                         <i class="ti-timer"></i>
@@ -119,22 +62,24 @@
                     </div>
                 </div>
             </div>
+        
             <div class="contact-form">
                 <div class="section-title">
                     <h2>Leave message</h2>
                     <p>Our staff will call back later and answer your questions.</p>
                 </div>
-                <form action="#">
+                <form action="index.php?c=contactdefault&a=SendContact" method="post" enctype="multipart/form-data">
+
                     <div class="row">
                         <div class="col-lg-6">
-                            <input type="text" placeholder="Your name">
+                            <input type="text" placeholder="Your name" name="fullname">
                         </div>
                         <div class="col-lg-6">
-                            <input type="text" placeholder="Your Email">
+                            <input type="text" placeholder="Your Email" name="email">
                         </div>
                         <div class="col-lg-12 text-center">
-                            <textarea placeholder="Your message"></textarea>
-                            <button type="button">Send Message</button>
+                            <textarea placeholder="Your message" name="content"></textarea>
+                            <button type="button" value="button">Send Message</button>
                         </div>
                     </div>
                 </form>
@@ -184,13 +129,13 @@
     <!-- Search model end -->
 
     <!-- Js Plugins -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/mixitup.min.js"></script>
-    <script src="js/jquery.slicknav.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="view/website2/js/jquery-3.3.1.min.js"></script>
+    <script src="view/website2/js/bootstrap.min.js"></script>
+    <script src="view/website2/js/jquery.magnific-popup.min.js"></script>
+    <script src="view/website2/js/mixitup.min.js"></script>
+    <script src="view/website2/js/jquery.slicknav.js"></script>
+    <script src="view/website2/js/owl.carousel.min.js"></script>
+    <script src="view/website2/js/main.js"></script>
 </body>
 
 </html>
