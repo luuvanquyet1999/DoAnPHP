@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="en">
 
@@ -26,7 +29,59 @@
     <link rel="stylesheet" href="asset/css_default/css/style.css">
 
 </head>
+<?php
+	//Gọi file connection.php ở bài trước
 
+
+	$mysqli = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
+
+
+	// Kiểm tra nếu người dùng đã ân nút đăng nhập thì mới xử lý
+	if (isset($_POST["login"])) {
+		// lấy thông tin người dùng
+		$username = $_POST["username"];
+		$password = $_POST["password"];
+		//làm sạch thông tin, xóa bỏ các tag html, ký tự đặc biệt
+		//mà người dùng cố tình thêm vào để tấn công theo phương thức sql injection
+		$username = strip_tags($username);
+		$username = addslashes($username);
+		$password = strip_tags($password);
+		$password = addslashes($password);
+		if ($username == "" || $password == "") {
+			echo "<script type='text/javascript'>alert('username hoặc password bạn không được để trống!');</script>";
+		} else {
+			$sql = "SELECT
+                        *
+                    FROM
+					lph_customer
+                     WHERE
+                        Username = '$username' and Password='$password' and active=1";
+          
+			$sql1 = "SELECT
+			  			*
+		  			FROM
+		 			 lph_customer
+		 			  WHERE
+                      Username = '$username' and Password='$password' and active=0";
+         
+			$query = $mysqli->query($sql);
+            $query1 = $mysqli->query($sql1);
+			if (mysqli_num_rows($query1) > 0) {
+				echo "<script type='text/javascript'>alert('tên đăng nhập này đã bị khóa !');</script>";
+			} else {
+				if (mysqli_num_rows($query) == 0) {
+					echo "<script type='text/javascript'>alert('tên đăng nhập hoặc mật khẩu không đúng !');</script>";
+				} else {
+					//tiến hành lưu tên đăng nhập vào session để tiện xử lý sau này
+					$_SESSION['websiteusername'] = $username;
+					// Thực thi hành động sau khi lưu thông tin vào session
+					// ở đây mình tiến hành chuyển hướng trang web tới một trang gọi là index.php
+					header('Location: index.php?c=websitecontact&a=View&s=success');
+				}
+			}
+		}
+	}
+	?>
 <body>
 
     <h2 style="text-align: center;"> Login Form</h2>
@@ -35,12 +90,12 @@
 
         <div style="width: 600px; height: 350px;" class="container">
             <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
+            <input type="text" placeholder="Enter Username" name="username" required>
 
             <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
+            <input type="password" placeholder="Enter Password" name="password" required>
 
-            <button type="submit">Login</button>
+            <button type="submit" name="login">Login</button>
             <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>

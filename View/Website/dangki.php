@@ -1,49 +1,7 @@
-<?php
-		//    $mysqli = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
-		// if (isset($_POST["register"])) {
-  		// 	//lấy thông tin từ các form bằng phương thức POST
-  		// 	$username = $_POST["username"];
-		// 	$password = $_POST["password"];
-		// 	$confirmpassword = $_POST["confirmpassword"];
-		// 	$email = $_POST["email"];
-        //     echo $username.$password .$confirmpassword.$email;
-  		// 	// //Kiểm tra điều kiện bắt buộc đối với các field không được bỏ trống
-		// 	// if ($username == "" || $password == "" || $confirmpassword == "" || $email == "") {
-		// 	// 	   echo "bạn vui lòng nhập đầy đủ thông tin";
-  		// 	// }else{
-  		// 	// 		// Kiểm tra tài khoản đã tồn tại chưa
-  		// 	// 		$sql="select * from lph_username where Username='$username' or Usernameemail = '$email'";
-        //     //           $query = $mysqli->query($sql);
-		// 	// 		if(mysqli_num_rows($query)  > 0){
-		// 	// 			echo "<script type='text/javascript'>alert('Tài khoản hoặc Email đã tồn tại');</script>";
-		// 	// 		}else{
-		// 	// 			if($password != $confirmpassword){
-		// 	// 				echo "<script type='text/javascript'>alert('Mật khẩu không trùng nhau!!!');</script>";
-		// 	// 			}
-		// 	// 			else{
-		// 	// 				//thực hiện việc lưu trữ dữ liệu vào db
-		// 	// 				$sql1 = "INSERT INTO lph_adiminuser(
-		// 	// 				Username,
-		// 	// 				UsernamePassword,
-		// 	// 				UsernameEmail
-		// 	// 				) VALUES (
-		// 	// 				'$username',
-		// 	// 				'$password',
-		// 	// 				'$email'	)";
-
-		// 	// 	$result = $mysqli->query($sql1);
-		// 	// 	   echo "chúc mừng bạn đã đăng ký thành công";
-		// 	// 	   header('Location: index.php?c=LoginDefault&a=View&s=susscess');
-		// 	// 				}
-		// 	// 			}
-		// 	// 	}
-		// }
-	?>
-
 <!doctype html>
 <html lang="en">
 
-<head>
+<!-- <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Đồ Án PHP TEAM LỘC PUHO OFFICAL </title>
@@ -51,8 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
-    <!-- CSS here -->
-    <link rel="stylesheet" href="asset/css_default/css/dangki.css">
+    
 
     <link rel="stylesheet" href="asset/css_default/css/dangnhap.css">
     <link rel="stylesheet" href="asset/css_default/css/bootstrap.min.css">
@@ -68,6 +25,17 @@
     <link rel="stylesheet" href="asset/css_default/css/nice-select.css">
     <link rel="stylesheet" href="asset/css_default/css/style.css">
 
+</head> -->
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+	<title>Đồ Án PHP TEAM LỘC PUHO OFFICAL </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="asset/css_default/css/dangki.css">
+	<link href="asset/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="asset/build/css/custom.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="asset/build/css/font-awesome.css"> <!-- Font-Awesome-Icons-CSS -->
+	<!-- //css files -->
+	<!-- online-fonts -->
 </head>
 
 <body>
@@ -87,10 +55,17 @@
             <label for="psw-repeat"><b>Repeat Password</b></label>
             <input type="password" placeholder="Repeat Password" name="confirmpassword" id="psw-repeat" required>
 
+            <label for="username"><b>Phone</b></label>
+            <input type="text" placeholder="Phone" name="phone" id="phone" required>
+
             <label for="email"><b>Email</b></label>
             <input type="email" placeholder="Email" name="email" id="email" required>
 
-            <input type="submit" value="Submit" name="register" class="registerbtn">
+            <div class="sub-w3l">
+						<div class="right-w3l">
+							<input type="submit" value="Register" name="register">
+						</div>
+					</div>
         </div>
     </form>
 
