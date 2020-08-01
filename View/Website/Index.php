@@ -8,23 +8,23 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="view/Website/assets/img/favicon.ico">
 
     <!-- CSS here -->
-    <link rel="stylesheet" href="assets/css_default/css/dangnhap.css">
-    <link rel="stylesheet" href="assets/css_default/css/dangki.css">
-    <link rel="stylesheet" href="assets/css_default/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css_default/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css_default/css/ticker-style.css">
-    <link rel="stylesheet" href="assets/css_default/css/flaticon.css">
-    <link rel="stylesheet" href="assets/css_default/css/slicknav.css">
-    <link rel="stylesheet" href="assets/css_default/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css_default/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css_default/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/css_default/css/themify-icons.css">
-    <link rel="stylesheet" href="assets/css_default/css/slick.css">
-    <link rel="stylesheet" href="assets/css_default/css/nice-select.css">
-    <link rel="stylesheet" href="assets/css_default/css/style.css">
+    <link rel="stylesheet" href="view/Website/assets/css/dangnhap.css">
+    <link rel="stylesheet" href="view/Website/assets/css/dangki.css">
+    <link rel="stylesheet" href="view/Website/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="view/Website/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="view/Website/assets/css/ticker-style.css">
+    <link rel="stylesheet" href="view/Website/assets/css/flaticon.css">
+    <link rel="stylesheet" href="view/Website/assets/css/slicknav.css">
+    <link rel="stylesheet" href="view/Website/assets/css/animate.min.css">
+    <link rel="stylesheet" href="view/Website/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="view/Website/assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="view/Website/assets/css/themify-icons.css">
+    <link rel="stylesheet" href="view/Website/assets/css/slick.css">
+    <link rel="stylesheet" href="view/Website/assets/css/nice-select.css">
+    <link rel="stylesheet" href="view/Website/assets/css/style.css">
 </head>
 
 <body>
@@ -34,7 +34,7 @@
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <img src="assets/img/logo/logo3.png" alt="">
+                    <img src="view/Website/assets/img/logo/logo3.png" alt="">
                 </div>
             </div>
         </div>
@@ -51,12 +51,12 @@
                             <!-- Logo -->
                             <div class="col-xl-3 col-lg-3 col-md-3 d-none d-md-block">
                                 <div class="logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo4.png" alt=""></a>
+                                    <a href="index.html"><img src="view/Website/assets/img/logo/logo4.png" alt=""></a>
                                 </div>
                             </div>
                             <div class="col-xl-9 col-lg-9 col-md-9">
                                 <div class="header-banner f-right ">
-                                    <img src="assets/img/gallery/header_card.png" alt="">
+                                    <img src="./view/Website/assets/img/gallery/header_card.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -68,7 +68,7 @@
                             <div class="col-xl-8 col-lg-8 col-md-12 header-flex">
                                 <!-- sticky -->
                                 <div class="sticky-logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                    <a href="index.html"><img src="view/Website/assets/img/logo/logo.png" alt=""></a>
                                 </div>
                                 <!-- Main-menu -->
                                 <div class="main-menu d-none d-md-block">
@@ -116,7 +116,7 @@
                                 <div class="single-slider">
                                     <div class="trending-top mb-30">
                                         <div class="trend-top-img">
-                                            <img src="assets/img/trending/sontung5.jpg" alt="">
+                                            <img src="view/Website/assets/img/trending/sontung5.jpg" alt="">
                                             <div class="trend-top-cap">
                                                 <span class="bgr" data-animation="fadeInUp" data-delay=".2s" data-duration="1000ms">Business</span>
                                                 <h2><a href="latest_news.html" data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms">Sơn Tùng ra MV Có Chắc Yêu Là Đây</a></h2>
@@ -129,7 +129,7 @@
                                 <div class="single-slider">
                                     <div class="trending-top mb-30">
                                         <div class="trend-top-img">
-                                            <img src="assets/img/trending/sontung5.jpg" alt="">
+                                            <img src="view/Website/assets/img/trending/sontung5.jpg" alt="">
                                             <div class="trend-top-cap">
                                                 <span class="bgr" data-animation="fadeInUp" data-delay=".2s" data-duration="1000ms">Business</span>
                                                 <h2><a href="latest_news.html" data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms">Sơn Tùng ra MV Có Chắc Yêu Là Đây</a></h2>
@@ -142,7 +142,7 @@
                                 <div class="single-slider">
                                     <div class="trending-top mb-30">
                                         <div class="trend-top-img">
-                                            <img src="assets/img/trending/sontung5.jpg" alt="">
+                                            <img src="view/Website/assets/img/trending/sontung5.jpg" alt="">
                                             <div class="trend-top-cap">
                                                 <span class="bgr" data-animation="fadeInUp" data-delay=".2s" data-duration="1000ms">Business</span>
                                                 <h2><a href="latest_news.html" data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms">Sơn Tùng ra MV Có Chắc Yêu Là Đây</a></h2>
@@ -160,7 +160,7 @@
                                 <div class="col-lg-12 col-md-6 col-sm-6">
                                     <div class="trending-top mb-30">
                                         <div class="trend-top-img">
-                                            <img src="assets/img/trending/sontung3.jpg" alt="">
+                                            <img src="view/Website/assets/img/trending/sontung3.jpg" alt="">
                                             <div class="trend-top-cap trend-top-cap2">
                                                 <span class="bgb">FASHION</span>
                                                 <h2><a href="latest_news.html">Phá vỡ hàng loạt kỹ lục</a></h2>
@@ -172,7 +172,7 @@
                                 <div class="col-lg-12 col-md-6 col-sm-6">
                                     <div class="trending-top mb-30">
                                         <div class="trend-top-img">
-                                            <img src="assets/img/trending/sontung2.jpg" alt="">
+                                            <img src="view/Website/assets/img/trending/sontung2.jpg" alt="">
                                             <div class="trend-top-cap trend-top-cap2">
                                                 <span class="bgg">TECH </span>
                                                 <h2><a href="latest_news.html">Tạo ra cơn sốt trong giới trẻ</a></h2>
@@ -184,7 +184,7 @@
                                 <div class="col-lg-12 col-md-6 col-sm-6">
                                     <div class="trending-top mb-30">
                                         <div class="trend-top-img">
-                                            <img src="assets/img/trending/sontung3.jpg" alt="">
+                                            <img src="view/Website/assets/img/trending/sontung3.jpg" alt="">
                                             <div class="trend-top-cap trend-top-cap2">
                                                 <span class="bgb">FASHION</span>
                                                 <h2><a href="latest_news.html">Phá vỡ hàng loạt kỹ lục</a></h2>
@@ -241,7 +241,7 @@
                                                 <div class="col-xl-6 col-lg-12">
                                                     <div class="whats-news-single mb-40 mb-40">
                                                         <div class="whates-img">
-                                                            <img src="assets/img/gallery/whats_news_details1.png" alt="">
+                                                            <img src="view/Website/assets/img/gallery/whats_news_details1.png" alt="">
                                                         </div>
                                                         <div class="whates-caption">
                                                             <h4><a href="latest_news.html">Covid ngày càng phức tạp</a></h4>
@@ -257,7 +257,7 @@
                                                         <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                             <div class="whats-right-single mb-20">
                                                                 <div class="whats-right-img">
-                                                                    <img style="width: 120px; height:118px;" src="assets/img/gallery/thoitrang1.jpg" alt="">
+                                                                    <img style="width: 120px; height:118px;" src="view/Website/assets/img/gallery/thoitrang1.jpg" alt="">
                                                                 </div>
                                                                 <div class="whats-right-cap">
                                                                     <span class="colorb">Thời Trang</span>
@@ -269,7 +269,7 @@
                                                         <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                             <div class="whats-right-single mb-20">
                                                                 <div class="whats-right-img">
-                                                                    <img style="width: 120px; height:118px;" src="assets/img/gallery/thoitrang2.jpg" alt="">
+                                                                    <img style="width: 120px; height:118px;" src="view/Website/assets/img/gallery/thoitrang2.jpg" alt="">
                                                                 </div>
                                                                 <div class="whats-right-cap">
                                                                     <span class="colorb">Thời Trang</span>
@@ -281,7 +281,7 @@
                                                         <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                             <div class="whats-right-single mb-20">
                                                                 <div class="whats-right-img">
-                                                                    <img style="width: 120px; height: 118px;" src="assets/img/gallery/thoitrang4.jpg" alt="">
+                                                                    <img style="width: 120px; height: 118px;" src="view/Website/assets/img/gallery/thoitrang4.jpg" alt="">
                                                                 </div>
                                                                 <div class="whats-right-cap">
                                                                     <span class="colorg">Thời Trang</span>
@@ -293,7 +293,7 @@
                                                         <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                             <div class="whats-right-single mb-20">
                                                                 <div class="whats-right-img">
-                                                                    <img style="width: 120px; height: 118px;" src="assets/img/gallery/thoitrang3.jpg" alt="">
+                                                                    <img style="width: 120px; height: 118px;" src="view/Website/assets/img/gallery/thoitrang3.jpg" alt="">
                                                                 </div>
                                                                 <div class="whats-right-cap">
                                                                     <span class="colorr">Thời Trang</span>
@@ -313,7 +313,7 @@
                                                 <div class="col-xl-6">
                                                     <div class="whats-news-single mb-40">
                                                         <div class="whates-img">
-                                                            <img src="assets/img/gallery/whats_right_img2.png" alt="">
+                                                            <img src="view/Website/assets/img/gallery/whats_right_img2.png" alt="">
                                                         </div>
                                                         <div class="whates-caption">
                                                             <h4><a href="#">Secretart for Economic Air
@@ -330,7 +330,7 @@
                                                         <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                             <div class="whats-right-single mb-20">
                                                                 <div class="whats-right-img">
-                                                                    <img src="assets/img/gallery/whats_right_img1.png" alt="">
+                                                                    <img src="view/Website/assets/img/gallery/whats_right_img1.png" alt="">
                                                                 </div>
                                                                 <div class="whats-right-cap">
                                                                     <span class="colorb">FASHION</span>
@@ -342,7 +342,7 @@
                                                         <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                             <div class="whats-right-single mb-20">
                                                                 <div class="whats-right-img">
-                                                                    <img src="assets/img/gallery/whats_right_img2.png" alt="">
+                                                                    <img src="view/Website/assets/img/gallery/whats_right_img2.png" alt="">
                                                                 </div>
                                                                 <div class="whats-right-cap">
                                                                     <span class="colorb">FASHION</span>
@@ -354,7 +354,7 @@
                                                         <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                             <div class="whats-right-single mb-20">
                                                                 <div class="whats-right-img">
-                                                                    <img src="assets/img/gallery/whats_right_img3.png" alt="">
+                                                                    <img src="view/Website/assets/img/gallery/whats_right_img3.png" alt="">
                                                                 </div>
                                                                 <div class="whats-right-cap">
                                                                     <span class="colorg">FASHION</span>
@@ -366,7 +366,7 @@
                                                         <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                             <div class="whats-right-single mb-20">
                                                                 <div class="whats-right-img">
-                                                                    <img src="assets/img/gallery/whats_right_img4.png" alt="">
+                                                                    <img src="view/Website/assets/img/gallery/whats_right_img4.png" alt="">
                                                                 </div>
                                                                 <div class="whats-right-cap">
                                                                     <span class="colorr">FASHION</span>
@@ -386,7 +386,7 @@
                                                 <div class="col-xl-6">
                                                     <div class="whats-news-single mb-40">
                                                         <div class="whates-img">
-                                                            <img src="assets/img/gallery/whats_right_img4.png" alt="">
+                                                            <img src="view/Website/assets/img/gallery/whats_right_img4.png" alt="">
                                                         </div>
                                                         <div class="whates-caption">
                                                             <h4><a href="#">Secretart for Economic Air
@@ -403,7 +403,7 @@
                                                         <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                             <div class="whats-right-single mb-20">
                                                                 <div class="whats-right-img">
-                                                                    <img src="assets/img/gallery/whats_right_img1.png" alt="">
+                                                                    <img src="view/Website/assets/img/gallery/whats_right_img1.png" alt="">
                                                                 </div>
                                                                 <div class="whats-right-cap">
                                                                     <span class="colorb">FASHION</span>
@@ -415,7 +415,7 @@
                                                         <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                             <div class="whats-right-single mb-20">
                                                                 <div class="whats-right-img">
-                                                                    <img src="assets/img/gallery/whats_right_img2.png" alt="">
+                                                                    <img src="view/Website/assets/img/gallery/whats_right_img2.png" alt="">
                                                                 </div>
                                                                 <div class="whats-right-cap">
                                                                     <span class="colorb">FASHION</span>
@@ -427,7 +427,7 @@
                                                         <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                             <div class="whats-right-single mb-20">
                                                                 <div class="whats-right-img">
-                                                                    <img src="assets/img/gallery/whats_right_img3.png" alt="">
+                                                                    <img src="view/Website/assets/img/gallery/whats_right_img3.png" alt="">
                                                                 </div>
                                                                 <div class="whats-right-cap">
                                                                     <span class="colorg">FASHION</span>
@@ -439,7 +439,7 @@
                                                         <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                             <div class="whats-right-single mb-20">
                                                                 <div class="whats-right-img">
-                                                                    <img src="assets/img/gallery/whats_right_img4.png" alt="">
+                                                                    <img src="view/Website/assets/img/gallery/whats_right_img4.png" alt="">
                                                                 </div>
                                                                 <div class="whats-right-cap">
                                                                     <span class="colorr">FASHION</span>
@@ -459,7 +459,7 @@
                                                 <div class="col-xl-6">
                                                     <div class="whats-news-single mb-40">
                                                         <div class="whates-img">
-                                                            <img src="assets/img/gallery/whats_right_img2.png" alt="">
+                                                            <img src="view/Website/assets/img/gallery/whats_right_img2.png" alt="">
                                                         </div>
                                                         <div class="whates-caption">
                                                             <h4><a href="#">Secretart for Economic Air
@@ -476,7 +476,7 @@
                                                         <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                             <div class="whats-right-single mb-20">
                                                                 <div class="whats-right-img">
-                                                                    <img src="assets/img/gallery/whats_right_img1.png" alt="">
+                                                                    <img src="view/Website/assets/img/gallery/whats_right_img1.png" alt="">
                                                                 </div>
                                                                 <div class="whats-right-cap">
                                                                     <span class="colorb">FASHION</span>
@@ -488,7 +488,7 @@
                                                         <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                             <div class="whats-right-single mb-20">
                                                                 <div class="whats-right-img">
-                                                                    <img src="assets/img/gallery/whats_right_img2.png" alt="">
+                                                                    <img src="view/Website/assets/img/gallery/whats_right_img2.png" alt="">
                                                                 </div>
                                                                 <div class="whats-right-cap">
                                                                     <span class="colorb">FASHION</span>
@@ -500,7 +500,7 @@
                                                         <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                             <div class="whats-right-single mb-20">
                                                                 <div class="whats-right-img">
-                                                                    <img src="assets/img/gallery/whats_right_img3.png" alt="">
+                                                                    <img src="view/Website/assets/img/gallery/whats_right_img3.png" alt="">
                                                                 </div>
                                                                 <div class="whats-right-cap">
                                                                     <span class="colorg">FASHION</span>
@@ -512,7 +512,7 @@
                                                         <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                             <div class="whats-right-single mb-20">
                                                                 <div class="whats-right-img">
-                                                                    <img src="assets/img/gallery/whats_right_img4.png" alt="">
+                                                                    <img src="view/Website/assets/img/gallery/whats_right_img4.png" alt="">
                                                                 </div>
                                                                 <div class="whats-right-cap">
                                                                     <span class="colorr">FASHION</span>
@@ -532,7 +532,7 @@
                                                 <div class="col-xl-6">
                                                     <div class="whats-news-single mb-40">
                                                         <div class="whates-img">
-                                                            <img src="assets/img/gallery/whats_news_details1.png" alt="">
+                                                            <img src="view/Website/assets/img/gallery/whats_news_details1.png" alt="">
                                                         </div>
                                                         <div class="whates-caption">
                                                             <h4><a href="#">Secretart for Economic Air
@@ -549,7 +549,7 @@
                                                         <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                             <div class="whats-right-single mb-20">
                                                                 <div class="whats-right-img">
-                                                                    <img src="assets/img/gallery/whats_right_img1.png" alt="">
+                                                                    <img src="view/Website/assets/img/gallery/whats_right_img1.png" alt="">
                                                                 </div>
                                                                 <div class="whats-right-cap">
                                                                     <span class="colorb">FASHION</span>
@@ -561,7 +561,7 @@
                                                         <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                             <div class="whats-right-single mb-20">
                                                                 <div class="whats-right-img">
-                                                                    <img src="assets/img/gallery/whats_right_img2.png" alt="">
+                                                                    <img src="view/Website/assets/img/gallery/whats_right_img2.png" alt="">
                                                                 </div>
                                                                 <div class="whats-right-cap">
                                                                     <span class="colorb">FASHION</span>
@@ -573,7 +573,7 @@
                                                         <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                             <div class="whats-right-single mb-20">
                                                                 <div class="whats-right-img">
-                                                                    <img src="assets/img/gallery/whats_right_img3.png" alt="">
+                                                                    <img src="view/Website/assets/img/gallery/whats_right_img3.png" alt="">
                                                                 </div>
                                                                 <div class="whats-right-cap">
                                                                     <span class="colorg">FASHION</span>
@@ -585,7 +585,7 @@
                                                         <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10">
                                                             <div class="whats-right-single mb-20">
                                                                 <div class="whats-right-img">
-                                                                    <img src="assets/img/gallery/whats_right_img4.png" alt="">
+                                                                    <img src="view/Website/assets/img/gallery/whats_right_img4.png" alt="">
                                                                 </div>
                                                                 <div class="whats-right-cap">
                                                                     <span class="colorr">FASHION</span>
@@ -617,7 +617,7 @@
                             <!-- Details -->
                             <div class="most-recent mb-40">
                                 <div class="most-recent-img">
-                                    <img src="assets/img/gallery/thoitrang5.jpg" alt="">
+                                    <img src="view/Website/assets/img/gallery/thoitrang5.jpg" alt="">
                                     <div class="most-recent-cap">
                                         <span class="bgbeg">Thời Trang</span>
                                         <h4><a href="latest_news.html">Hôm nay mặc gì ? <br>
@@ -629,7 +629,7 @@
                             <!-- Single -->
                             <div class="most-recent-single">
                                 <div class="most-recent-images">
-                                    <img src="assets/img/gallery/most_recent1.png" alt="">
+                                    <img src="view/Website/assets/img/gallery/most_recent1.png" alt="">
                                 </div>
                                 <div class="most-recent-capt">
                                     <h4><a href="latest_news.html">Bầu cử tống thống mỹ đang dần đến hồi kết</a></h4>
@@ -639,7 +639,7 @@
                             <!-- Single -->
                             <div class="most-recent-single">
                                 <div class="most-recent-images">
-                                    <img src="assets/img/gallery/most_recent2.png" alt="">
+                                    <img src="view/Website/assets/img/gallery/most_recent2.png" alt="">
                                 </div>
                                 <div class="most-recent-capt">
                                     <h4><a href="latest_news.html">Mặc gì khi đi tiệc</a></h4>
@@ -664,7 +664,7 @@
                         <!-- Banner -->
                         <div class="col-lg-3">
                             <div class="home-banner2 d-none d-lg-block">
-                                <img src="assets/img/gallery/body_card2.png" alt="">
+                                <img src="view/Website/assets/img/gallery/body_card2.png" alt="">
                             </div>
                         </div>
                         <div class="col-lg-9">
@@ -684,7 +684,7 @@
                                             <!-- Single -->
                                             <div class="weekly2-single">
                                                 <div class="weekly2-img">
-                                                    <img src="assets/img/gallery/thethao1.jpg" alt="">
+                                                    <img src="view/Website/assets/img/gallery/thethao1.jpg" alt="">
                                                 </div>
                                                 <div class="weekly2-caption">
                                                     <h4><a href="#">Liverpool Lên ngôi vô địch NHA</a></h4>
@@ -694,7 +694,7 @@
                                             <!-- Single -->
                                             <div class="weekly2-single">
                                                 <div class="weekly2-img">
-                                                    <img src="assets/img/gallery/dulich1.jpg" alt="">
+                                                    <img src="view/Website/assets/img/gallery/dulich1.jpg" alt="">
                                                 </div>
                                                 <div class="weekly2-caption">
                                                     <h4><a href="#">Du lịch hè tại Đà Nẳng</a></h4>
@@ -704,7 +704,7 @@
                                             <!-- Single -->
                                             <div class="weekly2-single">
                                                 <div class="weekly2-img">
-                                                    <img style="height: 150px;" src="assets/img/gallery/congnghe1.jpg" alt="">
+                                                    <img style="height: 150px;" src="view/Website/assets/img/gallery/congnghe1.jpg" alt="">
                                                 </div>
                                                 <div class="weekly2-caption">
                                                     <h4><a href="#">Áp dụng công nghe 4.0 vào thực tiển</a></h4>
@@ -714,7 +714,7 @@
                                             <!-- Single -->
                                             <div class="weekly2-single">
                                                 <div class="weekly2-img">
-                                                    <img style="height: 150px;" src="assets/img/gallery/congnghe2.jpg" alt="">
+                                                    <img style="height: 150px;" src="view/Website/assets/img/gallery/congnghe2.jpg" alt="">
                                                 </div>
                                                 <div class="weekly2-caption">
                                                     <h4><a href="#">Những bộ phim đáng để chờ đợi nhất</a></h4>
@@ -749,7 +749,7 @@
                                 <!-- Single -->
                                 <div class="single-recent">
                                     <div class="what-img">
-                                        <img style="height: 240px;" src="assets/img/gallery/thethao3.jpg" alt="">
+                                        <img style="height: 240px;" src="view/Website/assets/img/gallery/thethao3.jpg" alt="">
                                     </div>
                                     <div class="what-cap">
                                         <h4>
@@ -765,7 +765,7 @@
                                 <!-- Single -->
                                 <div class="single-recent">
                                     <div class="what-img">
-                                        <img style="height: 240px;" src="assets/img/gallery/thethao2.jpg" alt="">
+                                        <img style="height: 240px;" src="view/Website/assets/img/gallery/thethao2.jpg" alt="">
                                     </div>
                                     <div class="what-cap">
                                         <h4><a href="latest_news.html">Juventus dẫn đầu bảng xếp hạng.</a></h4>
@@ -776,7 +776,7 @@
                                 <!-- Single -->
                                 <div class="single-recent">
                                     <div class="what-img">
-                                        <img style="height: 240px;" src="assets/img/gallery/thethao4.jpg" alt="">
+                                        <img style="height: 240px;" src="view/Website/assets/img/gallery/thethao4.jpg" alt="">
                                     </div>
                                     <div class="what-cap">
                                         <h4>
@@ -790,7 +790,7 @@
 
                                 <div class="single-recent">
                                     <div class="what-img">
-                                        <img style="height: 240px;" src="assets/img/gallery/thethao4.jpg" alt="">
+                                        <img style="height: 240px;" src="view/Website/assets/img/gallery/thethao4.jpg" alt="">
                                     </div>
                                     <div class="what-cap">
                                         <h4>
@@ -821,29 +821,29 @@
                         <div class="video-items-active">
                             <div class="video-items text-center">
                                 <video controls>
-                                <source src="assets/video/sontung.webm" type="video/mp4">
+                                <source src="view/Website/assets/video/sontung.webm" type="video/mp4">
                                  </video>
                             </div>
                             <div class="video-items text-center">
                                 <video controls>
-                                <source src="assets/video/cr7a.mp4" type="video/mp4">
+                                <source src="view/Website/assets/video/cr7a.mp4" type="video/mp4">
                                                        </video>
                             </div>
                             <div class="video-items text-center">
                                 <video controls>
-                                <source src="assets/video/cr7b.mp4" type="video/mp4">
+                                <source src="view/Website/assets/video/cr7b.mp4" type="video/mp4">
                                 
                             </video>
                             </div>
                             <div class="video-items text-center">
                                 <video controls>
-                                <source src="assets/video/cr7c.mp4" type="video/mp4">
+                                <source src="view/Website/assets/video/cr7c.mp4" type="video/mp4">
                               
                             </video>
                             </div>
                             <div class="video-items text-center">
                                 <video controls>
-                                <source src="assets/video/cr7a.mp4" type="video/mp4">
+                                <source src="view/Website/assets/video/cr7a.mp4" type="video/mp4">
                               
                             </video>
                             </div>
@@ -856,7 +856,7 @@
                             <div class="testmonial-nav text-center">
                                 <div class="single-video">
                                     <video controls>
-                                    <source src="assets/video/cr7a.mp4" type="video/mp4">
+                                    <source src="view/Website/assets/video/cr7a.mp4" type="video/mp4">
                                  
                                 </video>
                                     <div class="video-intro">
@@ -865,7 +865,7 @@
                                 </div>
                                 <div class="single-video">
                                     <video controls>
-                                    <source src="assets/video/cr7b.mp4" type="video/mp4">
+                                    <source src="view/Website/assets/video/cr7b.mp4" type="video/mp4">
                                    
                                 </video>
                                     <div class="video-intro">
@@ -874,7 +874,7 @@
                                 </div>
                                 <div class="single-video">
                                     <video controls>
-                                    <source src="assets/video/cr7c.mp4" type="video/mp4">
+                                    <source src="view/Website/assets/video/cr7c.mp4" type="video/mp4">
                                    
                                 </video>
                                     <div class="video-intro">
@@ -883,7 +883,7 @@
                                 </div>
                                 <div class="single-video">
                                     <video controls>
-                                    <source src="assets/video/cr7c.mp4" type="video/mp4">
+                                    <source src="view/Website/assets/video/cr7c.mp4" type="video/mp4">
                                  
                                 </video>
                                     <div class="video-intro">
@@ -892,7 +892,7 @@
                                 </div>
                                 <div class="single-video">
                                     <video controls>
-                                    <source src="assets/video/cr7b.mp4" type="video/mp4">
+                                    <source src="view/Website/assets/video/cr7b.mp4" type="video/mp4">
                                    
                                 </video>
                                     <div class="video-intro">
@@ -922,7 +922,7 @@
                                         <div class="weekly3-news-active dot-style d-flex">
                                             <div class="weekly3-single">
                                                 <div class="weekly3-img">
-                                                    <img src="assets/img/gallery/concr7.jpg" alt="">
+                                                    <img src="view/Website/assets/img/gallery/concr7.jpg" alt="">
                                                 </div>
                                                 <div class="weekly3-caption">
                                                     <h4><a href="latest_news.html">CR7 nhí , Tài không đợi tuổi</a></h4>
@@ -931,7 +931,7 @@
                                             </div>
                                             <div class="weekly3-single">
                                                 <div class="weekly3-img">
-                                                    <img src="assets/img/gallery/concr7.jpg" alt="">
+                                                    <img src="view/Website/assets/img/gallery/concr7.jpg" alt="">
                                                 </div>
                                                 <div class="weekly3-caption">
                                                     <h4><a href="latest_news.html">CR7 nhí , Tài không đợi tuổi</a></h4>
@@ -940,7 +940,7 @@
                                             </div>
                                             <div class="weekly3-single">
                                                 <div class="weekly3-img">
-                                                    <img src="assets/img/gallery/concr7.jpg" alt="">
+                                                    <img src="view/Website/assets/img/gallery/concr7.jpg" alt="">
                                                 </div>
                                                 <div class="weekly3-caption">
                                                     <h4><a href="latest_news.html">CR7 nhí , Tài không đợi tuổi</a></h4>
@@ -949,7 +949,7 @@
                                             </div>
                                             <div class="weekly3-single">
                                                 <div class="weekly3-img">
-                                                    <img src="assets/img/gallery/concr7.jpg" alt="">
+                                                    <img src="view/Website/assets/img/gallery/concr7.jpg" alt="">
                                                 </div>
                                                 <div class="weekly3-caption">
                                                     <h4><a href="latest_news.html">CR7 nhí , Tài không đợi tuổi</a></h4>
@@ -958,7 +958,7 @@
                                             </div>
                                             <div class="weekly3-single">
                                                 <div class="weekly3-img">
-                                                    <img src="assets/img/gallery/concr7.jpg" alt="">
+                                                    <img src="view/Website/assets/img/gallery/concr7.jpg" alt="">
                                                 </div>
                                                 <div class="weekly3-caption">
                                                     <h4><a href="latest_news.html">CR7 nhí , Tài không đợi tuổi</a></h4>
@@ -981,7 +981,7 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-10 col-md-10">
                         <div class="banner-one">
-                            <img src="assets/img/gallery/body_card3.png" alt="">
+                            <img src="view/Website/assets/img/gallery/body_card3.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -1000,7 +1000,7 @@
                                 <div class="single-footer-caption mb-30">
                                     <!-- logo -->
                                     <div class="footer-logo">
-                                        <a href="index.html"><img src="assets/img/logo/logo4.png" alt=""></a>
+                                        <a href="index.html"><img src="view/Website/assets/img/logo/logo4.png" alt=""></a>
                                     </div>
                                     <div class="footer-tittle">
                                         <div class="footer-pera">
@@ -1020,7 +1020,7 @@
                                 <!-- Popular post -->
                                 <div class="whats-right-single mb-20">
                                     <div class="whats-right-img">
-                                        <img src="assets/img/gallery/footer_post1.png" alt="">
+                                        <img src="view/Website/assets/img/gallery/footer_post1.png" alt="">
                                     </div>
                                     <div class="whats-right-cap">
                                         <h4><a href="latest_news.html">Làm thế nào để tập trung vào công việc</a></h4>
@@ -1030,7 +1030,7 @@
                                 <!-- Popular post -->
                                 <div class="whats-right-single mb-20">
                                     <div class="whats-right-img">
-                                        <img src="assets/img/gallery/footer_post2.png" alt="">
+                                        <img src="view/Website/assets/img/gallery/footer_post2.png" alt="">
                                     </div>
                                     <div class="whats-right-cap">
                                         <h4><a href="latest_news.html">Làm thế nào để tập trung vào công việc</a></h4>
@@ -1040,7 +1040,7 @@
                                 <!-- Popular post -->
                                 <div class="whats-right-single mb-20">
                                     <div class="whats-right-img">
-                                        <img src="assets/img/gallery/footer_post3.png" alt="">
+                                        <img src="view/Website/assets/img/gallery/footer_post3.png" alt="">
                                     </div>
                                     <div class="whats-right-cap">
                                         <h4><a href="latest_news.html">Làm thế nào để tập trung vào công việc</a></h4>
@@ -1052,7 +1052,7 @@
                         <div class="col-xl-3 col-lg-3 col-md-5 col-sm-7">
                             <div class="single-footer-caption mb-50">
                                 <div class="banner">
-                                    <img src="assets/img/gallery/body_card4.png" alt="">
+                                    <img src="view/Website/assets/img/gallery/body_card4.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -1096,39 +1096,39 @@
 
     <!-- JS here -->
 
-    <script src="./assets/css_default/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="/view/Website/assets/js/vendor/modernizr-3.5.0.min.js"></script>
     <!-- Jquery, Popper, Bootstrap -->
-    <script src="./assets/css_default/js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="./assets/css_default/js/popper.min.js"></script>
-    <script src="./assets/css_default/js/bootstrap.min.js"></script>
+    <script src="/view/Website/assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/view/Website/assets/js/popper.min.js"></script>
+    <script src="/view/Website/assets/js/bootstrap.min.js"></script>
     <!-- Jquery Mobile Menu -->
-    <script src="./assets/css_default/js/jquery.slicknav.min.js"></script>
+    <script src="/view/Website/assets/js/jquery.slicknav.min.js"></script>
 
     <!-- Jquery Slick , Owl-Carousel Plugins -->
-    <script src="./assets/css_default/js/owl.carousel.min.js"></script>
-    <script src="./assets/css_default/js/slick.min.js"></script>
+    <script src="/view/Website/assets/js/owl.carousel.min.js"></script>
+    <script src="/view/Website/assets/js/slick.min.js"></script>
     <!-- Date Picker -->
-    <script src="./assets/js/gijgo.min.js"></script>
+    <script src="/asset/js/gijgo.min.js"></script>
     <!-- One Page, Animated-HeadLin -->
-    <script src="./assets/css_default/js/wow.min.js"></script>
-    <script src="./assets/css_default/js/animated.headline.js"></script>
-    <script src="./assets/css_default/js/jquery.magnific-popup.js"></script>
+    <script src="/view/Website/assets/js/wow.min.js"></script>
+    <script src="/view/Website/assets/js/animated.headline.js"></script>
+    <script src="/view/Website/assets/js/jquery.magnific-popup.js"></script>
 
     <!-- Scrollup, nice-select, sticky -->
-    <script src="./assets/css_default/js/jquery.scrollUp.min.js"></script>
-    <script src="./assets/css_default/js/jquery.nice-select.min.js"></script>
-    <script src="./assets/css_default/js/jquery.sticky.js"></script>
+    <script src="/view/Website/assets/js/jquery.scrollUp.min.js"></script>
+    <script src="/view/Website/assets/js/jquery.nice-select.min.js"></script>
+    <script src="/view/Website/assets/js/jquery.sticky.js"></script>
 
     <!-- contact js -->
-    <script src="./assets/css_default/js/contact.js"></script>
-    <script src="./assets/css_default/js/jquery.form.js"></script>
-    <script src="./assets/css_default/js/jquery.validate.min.js"></script>
-    <script src="./assets/css_default/js/mail-script.js"></script>
-    <script src="./assets/css_default/js/jquery.ajaxchimp.min.js"></script>
+    <script src="/view/Website/assets/js/contact.js"></script>
+    <script src="/view/Website/assets/js/jquery.form.js"></script>
+    <script src="/view/Website/assets/js/jquery.validate.min.js"></script>
+    <script src="/view/Website/assets/js/mail-script.js"></script>
+    <script src="/view/Website/assets/js/jquery.ajaxchimp.min.js"></script>
 
     <!-- Jquery Plugins, main Jquery -->
-    <script src="./assets/css_default/js/plugins.js"></script>
-    <script src="./assets/css_default/js/main.js"></script>
+    <script src="/view/Website/assets/js/plugins.js"></script>
+    <script src="/view/Website/assets/js/main.js"></script>
 
 </body>
 

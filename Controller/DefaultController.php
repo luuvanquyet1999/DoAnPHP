@@ -3,6 +3,6 @@ class DefaultController
 {
     function View(){
         
-        require SYSTEM_PATH."/View/website/index.php";
+        require SYSTEM_PATH."/View/website/Index.php";
     }
 }

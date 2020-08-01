@@ -73,10 +73,10 @@ session_start();
 					echo "<script type='text/javascript'>alert('tên đăng nhập hoặc mật khẩu không đúng !');</script>";
 				} else {
 					//tiến hành lưu tên đăng nhập vào session để tiện xử lý sau này
-					$_SESSION['username'] = $username;
+					$_SESSION['websiteusername'] = $username;
 					// Thực thi hành động sau khi lưu thông tin vào session
 					// ở đây mình tiến hành chuyển hướng trang web tới một trang gọi là index.php
-					header('Location: index.php?c=default&a=View');
+					header('Location: index.php?c=websitecontact&a=View&s=success');
 				}
 			}
 		}
