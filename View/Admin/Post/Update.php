@@ -81,7 +81,7 @@ include_once('./View/Admin/checkSession.php');
                             <div class="col-md-8 col-sm-8">
                                 <div class="add">
                                     <h3>Cập nhật bài viết</h3>
-                                    <form action="index.php?c=Post&a=SaveUpdate" method="post" enctype="multipart/form-data">
+                                    <form action="index.php?c=AdminPost&a=SaveUpdate" method="post" enctype="multipart/form-data">
                                         <table style="width:95%">
                                             <tr hidden>
                                                 <td>id</td>
@@ -137,7 +137,7 @@ include_once('./View/Admin/checkSession.php');
                                                 </td>
                                                 <td>
                                                     <button type="submit" value="submit" class="btn btn-primary">Lưu</button>
-                                                    <a href="index.php?c=Post&a=View" class="btn btn-warning">Cancel</a>
+                                                    <a href="index.php?c=AdminPost&a=View" class="btn btn-warning">Cancel</a>
                                                 </td>
                                             </tr>
                                         </table>

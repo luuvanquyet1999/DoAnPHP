@@ -60,7 +60,7 @@ include_once('./View/Admin/checkSession.php');
                             <div class="col-md-12 col-sm-12 ">
                                 <div class="x_panel">
                                     <div class="x_title">
-                                        <a href="?c=Post&a=Add" class="btn btn-primary">Thêm mới</a>
+                                        <a href="?c=AdminPost&a=Add" class="btn btn-primary">Thêm mới</a>
                                         <ul class="nav navbar-right panel_toolbox">
                                             <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                             </li>
@@ -91,7 +91,8 @@ include_once('./View/Admin/checkSession.php');
                                                                 <th>Nội dung</th>
                                                                 <th>Ngày viết</th>
                                                                 <th>Link</th>
-                                                                <th>category id</th>
+                                                                <th>Loại bài</th>
+                                                                <th>Người viết</th>
                                                                 <th>#</th>
                                                             </tr>
                                                         </thead>
@@ -108,10 +109,11 @@ include_once('./View/Admin/checkSession.php');
                                                                     <td><?= $value->post_content ?></td>
                                                                     <td><?= $value->post_createdate ?></td>
                                                                     <td><?= $value->post_link ?></td>
-                                                                    <td><?= $value->category_id ?></td>
+                                                                    <td><?= $value->category_name ?></td>
+                                                                    <td><?= $value->username ?></td>
                                                                     <td>
-                                                                        <a href="?c=Post&a=Delete&PostID=<?= $value->post_id ?>" class="btn btn-danger"><i class="fa fa-trash-o "></i></a>
-                                                                        <a href="?c=Post&a=Update&PostID=<?= $value->post_id ?>" class="btn btn-primary"><i class="fa fa-eyedropper"></i></a>
+                                                                        <a href="?c=AdminPost&a=Delete&PostID=<?= $value->post_id ?>" class="btn btn-danger"><i class="fa fa-trash-o "></i></a>
+                                                                        <a href="?c=AdminPost&a=Update&PostID=<?= $value->post_id ?>" class="btn btn-primary"><i class="fa fa-eyedropper"></i></a>
                                                                     </td>
                                                                 </tr>
                                                             <?php

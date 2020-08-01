@@ -28,10 +28,10 @@
                     </li>
                     <li><a><i class="fa fa-edit"></i> Quản lý Website <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="?c=Slide&a=View">Slide</a></li>
+                            <li><a href="?c=AdminSlide&a=View">Slide</a></li>
                             <li><a href="?c=ContactDefault&a=View">Liên hệ</a></li>
-                            <li><a href="?c=Category&a=View">Nhóm bài viết</a></li>
-                            <li><a href="?c=Post&a=View">Bài viết</a></li>
+                            <!-- <li><a href="?c=AdminCategory&a=View">Nhóm bài viết</a></li> -->
+                            <li><a href="?c=AdminPost&a=View">Bài viết</a></li>
                         </ul>
                     </li>
                     <li><a><i class="fa fa-desktop"></i> Quản lý tài khoản <span class="fa fa-chevron-down"></span></a>
