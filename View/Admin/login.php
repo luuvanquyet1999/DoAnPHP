@@ -53,7 +53,7 @@ session_start();
 				}
 				else{
 				//tiến hành lưu tên đăng nhập vào session để tiện xử lý sau này
-				$_SESSION['username'] = $username;
+				$_SESSION['username'] = $data[0][0];
                 // Thực thi hành động sau khi lưu thông tin vào session
                 // ở đây mình tiến hành chuyển hướng trang web tới một trang gọi là index.php
 				header('Location: index.php?c=AdminIndex&a=View');

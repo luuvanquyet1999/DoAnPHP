@@ -21,6 +21,7 @@ class PostController
     function SaveAdd()
     {
         session_start();
+        $username_id = $_SESSION['username'];
         $post_id = $_POST["post_id"];
         $post_title = $_POST["post_title"];
         $post_summary = $_POST["post_summary"];
@@ -34,10 +35,10 @@ class PostController
         // echo $post_createdate.$category_id;
         // die();
         //$a = strtolower($post_title);
-        $post_link = $this->ToacsiiModel->ToAscii($post_title);
+        $post_link = $post_title;
         // echo $post_link;
         // die();
-        $result = $this->PostModel->Insert(new Post($post_id, $post_title, $post_summary, $post_content, $post_image, $post_createdate, $category_id, $post_link));
+        $result = $this->PostModel->Insert(new Post($post_id, $post_title, $post_summary, $post_content, $post_image, $post_createdate, $category_id, $username_id, $post_link));
         if ($result == true)
             header('location: index.php?c=Post&a=View&r=1');
         else

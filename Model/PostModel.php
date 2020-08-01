@@ -42,8 +42,8 @@ class PostModel
     }
     function Insert(Post $post)
     {
-        $query = "INSERT INTO lph_post (PostTitle, PostSummary, PostContent, PostImage, PostCreateDate, CategoryId, PostLink, Active) 
-        VALUES ('$post->post_title','$post->post_summary','$post->post_content','$post->post_image','$post->post_createdate','$post->category_id','$post->post_link','1')";
+        $query = "INSERT INTO lph_post (PostTitle, PostSummary, PostContent, PostImage, PostCreateDate, CategoryId, UsernameId, PostStatus, Active, PostLink) 
+        VALUES ('$post->post_title','$post->post_summary','$post->post_content','$post->post_image','$post->post_createdate','$post->category_id','$post->username_id','0','1','$post->post_link')";
         $result = $this->mysql->query($query);
 
         return $result;
