@@ -46,16 +46,19 @@ class UserAdminController
         $UserAdmin_password = $_POST["UserAdmin_password"];
         $UserAdmin_dateofbirth = $_POST["UserAdmin_dateofbirth"];
         $Active = $_POST["Active"];
+        // echo $UserAdmin_username ." <br>".$UserAdmin_id ." <br>".$UserAdmin_fullname ." <br>".$UserAdmin_email ." <br>".$UserAdmin_gender
+        //  ."<br> ".$UserAdmin_password."<br> ".$UserAdmin_dateofbirth." <br>".$Active;
       
          $result = $this->UserAdminModel->Update(new UserAdmin($UserAdmin_id,$UserAdmin_fullname,$UserAdmin_email,$UserAdmin_username,$UserAdmin_gender,$UserAdmin_password,$Active,$UserAdmin_dateofbirth));
-        if ($result == true)
-            header('location: index.php?c=UserAdmin&a=View&r=1');
-        else
-            header('location: index.php?c=UserAdmin&a=View&r=0');
+         if ($result == true)
+             header('location: index.php?c=UserAdmin&a=View&r=1');
+         else
+             header('location: index.php?c=UserAdmin&a=View&r=0');
     }
     function Delete()
     {
         $UserAdmin_id = $_GET["UserAdminID"];
+
         $result = $this->UserAdminModel->Delete($UserAdmin_id);
         if ($result == true)
             header('location: index.php?c=UserAdmin&a=View&r=1');
