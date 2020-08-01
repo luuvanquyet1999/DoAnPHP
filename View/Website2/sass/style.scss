@@ -521,7 +521,7 @@ ol {
 	.owl-nav {
 		button[type=button] {
 			position: absolute;
-			left: 65px;
+			left: 13%;
 			top: 50%;
 			-webkit-transform: translateY(-24px);
 			-ms-transform: translateY(-24px);
@@ -532,7 +532,7 @@ ol {
 		}
 		button[type=button].owl-next {
 			left: auto;
-			right: 65px;
+			right: 83%;
 		}
 	}
 }
