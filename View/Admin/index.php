@@ -48,9 +48,9 @@ if (!isset($_SESSION["username"])) {
 <body class="nav-md">
   <div class="container body">
     <div class="main_container">
-    <?php
-            include_once('./View/Admin/Share/header.php');
-            ?>
+      <?php
+      include_once('./View/Admin/Share/header.php');
+      ?>
       <!-- /top navigation -->
 
       <!-- page content -->
@@ -60,19 +60,67 @@ if (!isset($_SESSION["username"])) {
           <div class="tile_count">
             <div class="col-lg-3  tile_stats_count">
               <span class="count_top"><i class="fa fa-user"></i> Total Member</span>
-              <div class="count green">2500</div>
+              <div class="count green">
+                <?php
+                $mysql = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
+                $query = "SELECT count(*) FROM lph_adiminuser WHERE Active =1";
+                $result = $mysql->query($query);
+                while ($row = mysqli_fetch_array($result)) {
+                  if ($row[0] < 10) {
+                    echo '0' . $row[0];
+                  } else
+                    echo $row[0];
+                }
+                ?>
+              </div>
             </div>
             <div class="col-lg-3  tile_stats_count">
               <span class="count_top"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Total Posts</span>
-              <div class="count green">123.50</div>
+              <div class="count green">
+                <?php
+                $mysql = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
+                $query = "SELECT count(*) FROM lph_post WHERE Active =1";
+                $result = $mysql->query($query);
+                while ($row = mysqli_fetch_array($result)) {
+                  if ($row[0] < 10) {
+                    echo '0' . $row[0];
+                  } else
+                    echo $row[0];
+                }
+                ?>
+              </div>
             </div>
             <div class="col-lg-3  tile_stats_count">
               <span class="count_top"><i class="fa fa-user"></i> Total Users</span>
-              <div class="count green">2,500</div>
+              <div class="count green">
+                <?php
+                $mysql = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
+                $query = "SELECT count(*) FROM lph_customer WHERE Active =1";
+                $result = $mysql->query($query);
+                while ($row = mysqli_fetch_array($result)) {
+                  if ($row[0] < 10) {
+                    echo '0' . $row[0];
+                  } else
+                    echo $row[0];
+                }
+                ?>
+              </div>
             </div>
             <div class="col-lg-3  tile_stats_count">
               <span class="count_top"> <i class="fa fa-send"></i> Total Contacts</span>
-              <div class="count green">4,567</div>
+              <div class="count green">
+                <?php
+                $mysql = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
+                $query = "SELECT count(*) FROM lph_sendcontact ";
+                $result = $mysql->query($query);
+                while ($row = mysqli_fetch_array($result)) {
+                  if ($row[0] < 10) {
+                    echo '0' . $row[0];
+                  } else
+                    echo $row[0];
+                }
+                ?>
+              </div>
             </div>
           </div>
         </div>
@@ -133,9 +181,7 @@ if (!isset($_SESSION["username"])) {
                     </div>
                   </div>
                 </div>
-
               </div>
-
               <div class="clearfix"></div>
             </div>
           </div>
@@ -147,8 +193,8 @@ if (!isset($_SESSION["username"])) {
 
       <!-- footer content -->
       <?php
-            include_once('./View/Admin/Share/footer.php');
-            ?>
+      include_once('./View/Admin/Share/footer.php');
+      ?>
 
       <!-- /footer content -->
     </div>
