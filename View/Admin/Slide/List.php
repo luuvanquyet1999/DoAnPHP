@@ -68,7 +68,7 @@ include_once('./View/Admin/checkSession.php');
                             <div class="col-md-12 col-sm-12 ">
                                 <div class="x_panel">
                                     <div class="x_title">
-                                        <a href="?c=Slide&a=Add" class="btn btn-primary">Thêm mới</a>
+                                        <a href="?c=AdminSlide&a=Add" class="btn btn-primary">Thêm mới</a>
                                         <ul class="nav navbar-right panel_toolbox">
                                             <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                             </li>
@@ -108,8 +108,8 @@ include_once('./View/Admin/checkSession.php');
                                                                     <td><?= $stt++ ?></td>
                                                                     <td><img src="<?= $value->slide_image ?>"></td>
                                                                     <td>
-                                                                        <a href="?c=Slide&a=Delete&slide_id=<?= $value->slide_id ?>" class="btn btn-danger"><i class="fa fa-trash-o "></i></a>
-                                                                        <a href="?c=Slide&a=Update&slide_id=<?= $value->slide_id ?>" class="btn btn-primary"><i class="fa fa-eyedropper"></i></a>
+                                                                        <a href="?c=AdminSlide&a=Delete&slide_id=<?= $value->slide_id ?>" class="btn btn-danger"><i class="fa fa-trash-o "></i></a>
+                                                                        <a href="?c=AdminSlide&a=Update&slide_id=<?= $value->slide_id ?>" class="btn btn-primary"><i class="fa fa-eyedropper"></i></a>
                                                                     </td>
                                                                 </tr>
                                                             <?php

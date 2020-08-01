@@ -12,7 +12,7 @@ class Slide{
 
     }
 }
-class SlideModel{
+class AdminSlideModel{
     private $mysql;
 
     public function __construct()

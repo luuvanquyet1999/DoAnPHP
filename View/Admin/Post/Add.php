@@ -8,7 +8,8 @@ include_once('./View/Admin/checkSession.php');
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <html lang ="vi"> -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="View/Admin/images/favicon.ico" type="image/ico" />
     <title>ADMINISTRATOR | Posts</title>
@@ -81,7 +82,7 @@ include_once('./View/Admin/checkSession.php');
                             <div class="col-md-8 col-sm-8">
                                 <div class="add">
                                     <h3>Thêm bài viết</h3>
-                                    <form action="index.php?c=Post&a=SaveAdd" method="post" enctype="multipart/form-data">
+                                    <form action="index.php?c=AdminPost&a=SaveAdd" method="post" enctype="multipart/form-data">
                                         <table style="width:95%">
                                             <tr hidden>
                                                 <td>id</td>
@@ -97,7 +98,7 @@ include_once('./View/Admin/checkSession.php');
                                                         $result = $mysql->query($query);
 
                                                         while ($row = mysqli_fetch_array($result)) {
-                                                            echo "<option value='" . $row[0] . "'>" . $row[1] . "</option>";
+                                                            echo "<option value='" . $row[1] . "'>" . $row[1] . "</option>";
                                                         }
                                                         ?>
                                                     </select>
@@ -137,7 +138,7 @@ include_once('./View/Admin/checkSession.php');
                                                 </td>
                                                 <td>
                                                     <button type="submit" value="submit" class="btn btn-primary">Lưu</button>
-                                                    <a href="index.php?c=Post&a=View" class="btn btn-warning">Cancel</a>
+                                                    <a href="index.php?c=AdminPost&a=View" class="btn btn-warning">Cancel</a>
                                                 </td>
                                             </tr>
                                         </table>

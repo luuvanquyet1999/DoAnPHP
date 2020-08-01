@@ -59,7 +59,7 @@ include_once('./View/Admin/checkSession.php');
                             <div class="col-md-6 col-sm-6">
                                 <div class="add">
                                     <h3>Thêm nhóm bài viết</h3>
-                                    <form action="index.php?c=Category&a=SaveAdd" method="post">
+                                    <form action="index.php?c=AdminCategory&a=SaveAdd" method="post">
                                         <table>
                                             <tr hidden>
                                                 <td>id</td>
@@ -83,7 +83,7 @@ include_once('./View/Admin/checkSession.php');
                                                 </td>
                                                 <td>
                                                     <button type="submit" value="submit" class="btn btn-primary">Lưu</button>
-                                                    <a href="index.php?c=Category&a=View" class="btn btn-warning">Cancel</a>
+                                                    <a href="index.php?c=AdminCategory&a=View" class="btn btn-warning">Cancel</a>
                                                 </td>
                                             </tr>
                                         </table>

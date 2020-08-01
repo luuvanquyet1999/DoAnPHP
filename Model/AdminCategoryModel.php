@@ -13,7 +13,7 @@ class Category
         $this->Active = $Active;
     }
 }
-class CategoryModel
+class AdminCategoryModel
 {
     private $mysql;
     public function __construct()

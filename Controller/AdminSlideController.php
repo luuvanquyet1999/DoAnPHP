@@ -1,12 +1,12 @@
 <?php
-require SYSTEM_PATH . "/Model/SlideModel.php";
-class SlideController
+require SYSTEM_PATH . "/Model/AdminSlideModel.php";
+class AdminSlideController
 {
     private $SlideModel;
 
     public function __construct()
     {
-        $this->SlideModel = new SlideModel();
+        $this->SlideModel = new AdminSlideModel();
     }
     function View()
     {
@@ -36,9 +36,9 @@ class SlideController
             $result = $this->SlideModel->Insert(new Slide($slide_id, $slide_image, $Active));
         }
         if ($result == true)
-            header('location: index.php?c=Slide&a=View&r=1');
+            header('location: index.php?c=AdminSlide&a=View&r=1');
         else
-            header('location: index.php?c=Slide&a=View&r=0');
+            header('location: index.php?c=AdminSlide&a=View&r=0');
 
         require SYSTEM_PATH . "/View/Admin/Slide/Add.php";
     }
@@ -48,9 +48,9 @@ class SlideController
 
         $result = $this->SlideModel->Delete($slide_id);
         if ($result == true)
-            header('location: index.php?c=Slide&a=View&r=1');
+            header('location: index.php?c=AdminSlide&a=View&r=1');
         else
-            header('location: index.php?c=Slide&a=View&r=0');
+            header('location: index.php?c=AdminSlide&a=View&r=0');
     }
     function Update()
     {
@@ -77,9 +77,9 @@ class SlideController
             $result = $this->SlideModel->Update(new Slide($slide_id, $slide_image, $Active));
         }
         if ($result == true)
-            header('location: index.php?c=Slide&a=View&r=1');
+            header('location: index.php?c=AdminSlide&a=View&r=1');
         else
-            header('location: index.php?c=Slide&a=View&r=0');
+            header('location: index.php?c=AdminSlide&a=View&r=0');
     }
 }
 
