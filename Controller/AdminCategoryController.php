@@ -1,12 +1,12 @@
 <?php
-require SYSTEM_PATH . "/Model/CategoryModel.php";
-class CategoryController
+require SYSTEM_PATH . "/Model/AdminCategoryModel.php";
+class AdminCategoryController
 {
     private $CategoryModel;
 
     public function __construct()
     {
-        $this->CategoryModel = new CategoryModel();
+        $this->CategoryModel = new AdminCategoryModel();
     }
     function View()
     {
@@ -27,9 +27,9 @@ class CategoryController
         $result = $this->CategoryModel->Insert(new Category($Category_id, $Category_name, $Category_link, $Active));
 
         if ($result == true)
-            header('location: index.php?c=Category&a=View&r=1');
+            header('location: index.php?c=AdminCategory&a=View&r=1');
         else
-            header('location: index.php?c=Category&a=View&r=0');
+            header('location: index.php?c=AdminCategory&a=View&r=0');
     }
     function Update()
     {
@@ -45,9 +45,9 @@ class CategoryController
         $Active = $_POST["Active"];
         $result = $this->CategoryModel->Update(new Category($Category_id, $Category_name, $Category_name, $Active));
         if ($result == true)
-            header('location: index.php?c=Category&a=View&r=1');
+            header('location: index.php?c=AdminCategory&a=View&r=1');
         else
-            header('location: index.php?c=Category&a=View&r=0');
+            header('location: index.php?c=AdminCategory&a=View&r=0');
     }
     function Delete()
     {
@@ -55,8 +55,8 @@ class CategoryController
 
         $result = $this->CategoryModel->Delete($Category_id);
         if ($result == true)
-            header('location: index.php?c=Category&a=View&r=1');
+            header('location: index.php?c=AdminCategory&a=View&r=1');
         else
-            header('location: index.php?c=Category&a=View&r=0');
+            header('location: index.php?c=AdminCategory&a=View&r=0');
     }
 }

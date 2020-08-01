@@ -67,7 +67,7 @@ include_once('./View/Admin/checkSession.php');
                             <div class="col-md-6 col-sm-6">
                                 <div class="add">
                                     <h3>Update Slide</h3>
-                                    <form action="index.php?c=Slide&a=SaveUpdate" method="post" enctype="multipart/form-data">
+                                    <form action="index.php?c=AdminSlide&a=SaveUpdate" method="post" enctype="multipart/form-data">
                                         <table>
                                             <tr hidden>
                                                 <td>Id</td>
@@ -85,11 +85,8 @@ include_once('./View/Admin/checkSession.php');
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <button type="reset" value="submit" class="btn btn-success">Refresh</button>
-                                                </td>
-                                                <td>
                                                     <button type="submit" value="submit" class="btn btn-primary">Lưu</button>
-                                                    <a href="index.php?c=Slide&a=View" class="btn btn-warning">Cancel</a>
+                                                    <a href="index.php?c=AdminSlide&a=View" class="btn btn-warning">Cancel</a>
                                                 </td>
                                             </tr>
                                         </table>

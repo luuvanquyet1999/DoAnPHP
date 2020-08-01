@@ -10,8 +10,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>ADMINISTRATOR | Category</title>
+    <link rel="icon" href="View/Admin/images/favicon.ico" type="image/ico" />
+    <title>ADMINISTRATOR | Member</title>
 
     <!-- Bootstrap -->
     <link href="cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
@@ -46,7 +46,7 @@
                 <div class="">
                     <div class="page-title">
                         <div class="title_left">
-                            <h3>Quản lý nhóm bài viết</h3>
+                            <h3>Quản lý tài khoản quản trị viên</h3>
                         </div>
                         <div class="title_right">
                             <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
@@ -66,7 +66,7 @@
                             <div class="col-md-12 col-sm-12 ">
                                 <div class="x_panel">
                                     <div class="x_title">
-                                        <a href="?c=Useradmin&a=Add" class="btn btn-primary">Thêm mới</a>
+                                    <a href="index.php?c=register&a=View" class="btn btn-primary">Thêm mới</a>
                                         <ul class="nav navbar-right panel_toolbox">
                                             <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                             </li>
@@ -91,17 +91,13 @@
                                                     <table id="datatable" class="table table-striped table-bordered" style="width:100%">
                                                         <thead>
                                                             <tr>
-                                                                <th>#</th>
                                                                 <th>STT</th>
                                                                 <th>UserName</th>
-                                                                <th>Password</th>
                                                                 <th>Full Name</th>
                                                                 <th>Email</th>
-                                                                <th>Active</th>
-                                                                <th>Giới tính</th>
                                                                 <th>Ngày Sinh</th>
-                                                               
-
+                                                                <th>Giới tính</th>
+                                                                <th>Active</th>
                                                                 <th>#</th>
                                                             </tr>
                                                         </thead>
@@ -112,10 +108,8 @@
                                                             foreach ($data as $value) {
                                                             ?>
                                                                 <tr>
-                                                                    <td><input type="checkbox" name="UserAdmin_id" value="<?= $value->UserAdmin_id ?>" name="UserAdmin_id"></td>
                                                                     <td><?= $stt++ ?></td>
                                                                     <td><?= $value->UserAdmin_username ?></td>
-                                                                    <td><?= $value->UserAdmin_password ?></td>
                                                                     <td><?= $value->UserAdmin_fullname ?></td>
                                                                     <td><?= $value->UserAdmin_email ?></td>
                                                                     <td><?= $value->UserAdmin_dateofbirth ?></td>

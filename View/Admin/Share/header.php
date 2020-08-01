@@ -28,10 +28,10 @@
                     </li>
                     <li><a><i class="fa fa-edit"></i> Quản lý Website <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="?c=Slide&a=View">Slide</a></li>
-                            <li><a href="?c=Contact&a=View">Liên hệ</a></li>
-                            <li><a href="?c=Category&a=View">Nhóm bài viết</a></li>
-                            <li><a href="?c=Post&a=View">Bài viết</a></li>
+                            <li><a href="?c=AdminSlide&a=View">Slide</a></li>
+                            <li><a href="?c=ContactDefault&a=View">Liên hệ</a></li>
+                            <!-- <li><a href="?c=AdminCategory&a=View">Nhóm bài viết</a></li> -->
+                            <li><a href="?c=AdminPost&a=View">Bài viết</a></li>
                         </ul>
                     </li>
                     <li><a><i class="fa fa-desktop"></i> Quản lý tài khoản <span class="fa fa-chevron-down"></span></a>
@@ -40,7 +40,7 @@
                             <li><a href="media_gallery.html">Tài khoản khách hàng</a></li>
                         </ul>
                     </li>
-
+                    <li><a href="?c=Contact&a=View"><i class="fa fa-location-arrow"></i> Thông tin liên hệ</a>
                 </ul>
             </div>
         </div>
@@ -48,15 +48,6 @@
 
         <!-- /menu footer buttons -->
         <div class="sidebar-footer hidden-small">
-            <a data-toggle="tooltip" data-placement="top" title="Settings">
-                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-            </a>
-            <a data-toggle="tooltip" data-placement="top" title="FullScreen">
-                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
-            </a>
-            <a data-toggle="tooltip" data-placement="top" title="Lock">
-                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
-            </a>
             <a data-toggle="tooltip" data-placement="top" title="Logout" href="?c=Login&a=Logout">
                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
             </a>

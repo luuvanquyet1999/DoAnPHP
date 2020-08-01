@@ -60,7 +60,7 @@ include_once('./View/Admin/checkSession.php');
                             <div class="col-md-12 col-sm-12 ">
                                 <div class="x_panel">
                                     <div class="x_title">
-                                        <a href="?c=Category&a=Add" class="btn btn-primary">Thêm mới</a>
+                                        <a href="?c=AdminCategory&a=Add" class="btn btn-primary">Thêm mới</a>
                                         <ul class="nav navbar-right panel_toolbox">
                                             <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                             </li>
@@ -85,7 +85,6 @@ include_once('./View/Admin/checkSession.php');
                                                     <table id="datatable" class="table table-striped table-bordered" style="width:100%">
                                                         <thead>
                                                             <tr>
-                                                                <th>#</th>
                                                                 <th>STT</th>
                                                                 <th>Name</th>
                                                                 <th>Link</th>
@@ -99,13 +98,12 @@ include_once('./View/Admin/checkSession.php');
                                                             foreach ($data as $value) {
                                                             ?>
                                                                 <tr>
-                                                                    <td><input type="checkbox" name="category" value="<?= $value->Category_id ?>" name="category_id"></td>
                                                                     <td><?= $stt++ ?></td>
                                                                     <td><?= $value->Category_name ?></td>
                                                                     <td><?= $value->Category_link ?></td>
                                                                     <td>
-                                                                        <a href="?c=Category&a=Delete&CategoryID=<?= $value->Category_id ?>" class="btn btn-danger"><i class="fa fa-trash-o "></i></a>
-                                                                        <a href="?c=Category&a=Update&CategoryID=<?= $value->Category_id ?>" class="btn btn-primary"><i class="fa fa-eyedropper"></i></a>
+                                                                        <a href="?c=AdminCategory&a=Delete&CategoryID=<?= $value->Category_id ?>" class="btn btn-danger"><i class="fa fa-trash-o "></i></a>
+                                                                        <a href="?c=AdminCategory&a=Update&CategoryID=<?= $value->Category_id ?>" class="btn btn-primary"><i class="fa fa-eyedropper"></i></a>
                                                                     </td>
                                                                 </tr>
                                                             <?php

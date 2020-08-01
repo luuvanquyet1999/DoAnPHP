@@ -77,9 +77,6 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<div class="header-w3l">
 		<h1>Register Form</h1>
 	</div>
-	<div class="back" style="background: #999e9e;width: 150px;height: 50px;position: absolute;border-radius: 12%;left: 3%;">
-		<a href="index.php?c=login&a=View" class="btn btn-secondary" style="font-size: 31px;color: white;text-align: center;">Quay Lại</a>
-	</div>	
 	<!--//header-->
 	<div class="main-content-agile">
 		<div class="sub-main-w3">	
@@ -111,6 +108,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				<div class="sub-w3l">
 					<div class="right-w3l">
 						<input type="submit" value="Submit" name="register">
+						<a href="index.php?c=login&a=View" class="btn btn-primary">Login</a>
 					</div>
 				</div>
 			</form>
