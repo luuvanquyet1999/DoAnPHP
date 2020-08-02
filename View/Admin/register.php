@@ -43,7 +43,7 @@ if (isset($_POST["register"])) {
 
 				$result = $mysqli->query($sql1);
 				echo "chúc mừng bạn đã đăng ký thành công";
-				header('Location: index.php?c=Login&a=View&s=susscess');
+				header('Location: index.php?c=AdminLogin&a=View&s=susscess');
 			}
 		}
 	}
@@ -103,7 +103,7 @@ if (isset($_POST["register"])) {
 					<div class="sub-w3l">
 						<div class="right-w3l">
 							<input type="submit" value="Register" name="register">
-							<a href="index.php?c=login&a=View">Login
+							<a href="index.php?c=AdminLogin&a=View">Login
 								<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
 							</a>
 						</div>

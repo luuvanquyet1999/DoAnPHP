@@ -106,7 +106,7 @@ session_start();
 						<img src="asset/build/images/img-01.png" alt="">
 						<h2>Administrator</h2>
 					</div>
-					<form action="index.php?c=login&a=View" method="post">
+					<form action="index.php?c=AdminLogin&a=View" method="post">
 						<div class="pom-agile">
 							<input placeholder="User Name" name="username" class="user" type="text" required="">
 						</div>

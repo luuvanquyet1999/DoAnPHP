@@ -1,5 +1,5 @@
 <?php
-class LoginController
+class AdminLoginController
 {
     function View(){
         
@@ -8,6 +8,6 @@ class LoginController
     function Logout(){
         session_start(); 
         unset($_SESSION['username']);
-         header('location: index.php?c=Login&a=View&r=1');
+         header('location: index.php?c=AdminLogin&a=View&r=1');
     }
 }
