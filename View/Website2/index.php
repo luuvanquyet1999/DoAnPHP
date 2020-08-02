@@ -1,80 +1,17 @@
-<!DOCTYPE html>
-<html lang="zxx">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="PONIGYM Template">
-    <meta name="keywords" content="PONIGYM, unica, creative, html">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>PONIGYM | Template</title>
-
-    <!-- Css Styles -->
-    <link rel="stylesheet" href="css/dangki.css">
-    <link rel="stylesheet" href="css/dangnhap.css">
-
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/themify-icons.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-</head>
-
-<body>
-    <!-- Page Preloder -->
-    <div id="preloder">
-        <div class="loader"></div>
-    </div>
-
-    <!-- Header Section Begin -->
-    <header class="header-section">
-        <div style="background-color: #f9f8fa91" class="container">
-            <div class="nav-menuu">
-                <nav class="mainmenuu mobile-menu">
-                    <ul style="margin:20px;">
-                        <li class="active"><a href="./dangnhap.html">Đăng Nhập</a></li>
-                        <li><a href="./dangki.html">Đăng Kí</a></li>
-                    </ul>
-
-
-                </nav>
-
-
-            </div>
-
-            <div class="nav-menu">
-                <nav class="mainmenu mobile-menu">
-                    <ul style="margin:20px;">
-                        <li class="active"><a href="./index.html">Trang Chủ</a></li>
-                        <li><a href="./Gioithieu.html">Giới Thiệu</a></li>
-                        <li><a href="./Tinmoi.html">Tin Mơi</a></li>
-                        <li><a href="./theloai.html">Thể Loại</a>
-                            <ul class="dropdown">
-                                <li><a href="thethao.html">Thời Trang</a></li>
-                            </ul>
-
-                        </li>
-                        <li><a href="./Lienhe.html">Liên Hệ</a></li>
-
-
-                    </ul>
-
-                </nav>
-                <div class="nav-right search-switch">
-                    <i class="ti-search"></i>
-                </div>
-            </div>
-            <div id="mobile-menu-wrap"></div>
-        </div>
-    </header>
-    <!-- Header End -->
+<?php
+if(!isset($_SESSION)) 
+{ 
+    session_start(); 
+} 
+?>
+<?php
+   include_once('./View/Website2/share/header.php');
+?>
 
     <!-- Hero Section Begin -->
     <section class="hero-section">
         <div class="hero-items owl-carousel">
-            <div class="single-hero-item set-bg" data-setbg="img/slider-bg-1.jpg">
+            <div class="single-hero-item set-bg" data-setbg="view/website2/img/slider-bg-1.jpg">
                 <div style="background-color: rgba(156, 39, 176, 0.57)" ; class="container">
                     <div class="hero-text">
                         <h4>Trang tin tức nhanh chóng và uy tín</h4>
@@ -83,7 +20,7 @@
                     </div>
                 </div>
             </div>
-            <div class="single-hero-item set-bg" data-setbg="img/slider-bg-2.jpg">
+            <div class="single-hero-item set-bg" data-setbg="view/website2/img/slider-bg-2.jpg">
                 <div style="background-color: rgba(156, 39, 176, 0.57)" ; class="container">
                     <div class="hero-text">
                         <h4>Trang tin tức nhanh chóng và uy tín</h4>
@@ -92,7 +29,7 @@
                     </div>
                 </div>
             </div>
-            <div class="single-hero-item set-bg" data-setbg="img/slider-bg-3.jpg">
+            <div class="single-hero-item set-bg" data-setbg="view/website2/img/slider-bg-3.jpg">
                 <div style="background-color: rgba(156, 39, 176, 0.57)" ; class="container">
                     <div class="hero-text">
                         <h4>Trang tin tức nhanh chóng và uy tín</h4>
@@ -116,25 +53,25 @@
                     </div>
                     <div class="services-items">
                         <div class="single-service-item">
-                            <img src="img/icon-1.png" alt="">
+                            <img src="view/website2/img/icon-1.png" alt="">
                             <h5>Chế độ tập</h5>
                             <p>Tập trong khoảng thời giang nào là hợp lý nhất.
                             </p>
                         </div>
                         <div class="single-service-item color-1">
-                            <img src="img/icon-2.png" alt="">
+                            <img src="view/website2/img/icon-2.png" alt="">
                             <h5>Ăn gì để khỏe</h5>
                             <p>Ăn uống thế nào để cở thể khỏe mạnh.
                             </p>
                         </div>
                         <div class="single-service-item color-2">
-                            <img src="img/icon-3.png" alt="">
+                            <img src="view/website2/img/icon-3.png" alt="">
                             <h5>Healthy</h5>
                             <p> Chế độ dinh dưỡng khi tập.
                             </p>
                         </div>
                         <div class="single-service-item color-3">
-                            <img src="img/icon-4.png" alt="">
+                            <img src="view/website2/img/icon-4.png" alt="">
                             <h5>Yoga</h5>
                             <p>Bài tập giúp cở thể dẻo dai.
                             </p>
@@ -142,7 +79,7 @@
                     </div>
                 </div>
                 <div class="col-lg-5 offset-lg-1">
-                    <div class="service-video set-bg" data-setbg="img/video-bg.jpg">
+                    <div class="service-video set-bg" data-setbg="view/website2/img/video-bg.jpg">
                         <div class="play-btn">
                             <a href="https://www.youtube.com/watch?v=SlPhMPnQ58k" class="service-video-popup"><i
                                     class="fa fa-play"></i></a>
@@ -179,7 +116,7 @@
                                         <div class="single-class-item">
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <img src="img/class/class-1.jpg" alt="">
+                                                    <img src="view/website2/img/class/class-1.jpg" alt="">
                                                 </div>
                                                 <div class="col-lg-5 offset-lg-1">
                                                     <div class="class-text">
@@ -198,7 +135,7 @@
                                         <div class="single-class-item">
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <img src="img/class/class-1.jpg" alt="">
+                                                    <img src="view/website2/img/class/class-1.jpg" alt="">
                                                 </div>
                                                 <div class="col-lg-5 offset-lg-1">
                                                     <div class="class-text">
@@ -218,7 +155,7 @@
                                         <div class="single-class-item">
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <img src="img/class/class-1.jpg" alt="">
+                                                    <img src="view/website2/img/class/class-1.jpg" alt="">
                                                 </div>
                                                 <div class="col-lg-5 offset-lg-1">
                                                     <div class="class-text">
@@ -238,7 +175,7 @@
                                         <div class="single-class-item">
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <img src="img/class/class-1.jpg" alt="">
+                                                    <img src="view/website2/img/class/class-1.jpg" alt="">
                                                 </div>
                                                 <div class="col-lg-5 offset-lg-1">
                                                     <div class="class-text">
@@ -258,7 +195,7 @@
                                         <div class="single-class-item">
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <img src="img/class/class-1.jpg" alt="">
+                                                    <img src="view/website2/img/class/class-1.jpg" alt="">
                                                 </div>
                                                 <div class="col-lg-5 offset-lg-1">
                                                     <div class="class-text">
@@ -278,7 +215,7 @@
                                         <div class="single-class-item">
                                             <div class="row">
                                                 <div class="col-lg-6">
-                                                    <img src="img/class/class-1.jpg" alt="">
+                                                    <img src="view/website2/img/class/class-1.jpg" alt="">
                                                 </div>
                                                 <div class="col-lg-5 offset-lg-1">
                                                     <div class="class-text">
@@ -305,7 +242,7 @@
                                     <li>
                                         <a data-toggle="tab" class="active" href="#class-1" role="tab">
                                             <div class="author-text">
-                                                <img src="img/class/author-1.jpg" alt="">
+                                                <img src="view/website2/img/class/author-1.jpg" alt="">
                                                 <h5>Body building</h5>
                                             </div>
                                         </a>
@@ -313,7 +250,7 @@
                                     <li>
                                         <a data-toggle="tab" href="#class-2" role="tab">
                                             <div class="author-text">
-                                                <img src="img/class/author-2.jpg" alt="">
+                                                <img src="view/website2/img/class/author-2.jpg" alt="">
                                                 <h5>Racing runing</h5>
                                             </div>
                                         </a>
@@ -321,7 +258,7 @@
                                     <li>
                                         <a data-toggle="tab" href="#class-3" role="tab">
                                             <div class="author-text">
-                                                <img src="img/class/author-3.jpg" alt="">
+                                                <img src="view/website2/img/class/author-3.jpg" alt="">
                                                 <h5>Yoga Fitness</h5>
                                             </div>
                                         </a>
@@ -329,7 +266,7 @@
                                     <li>
                                         <a data-toggle="tab" href="#class-4" role="tab">
                                             <div class="author-text">
-                                                <img src="img/class/author-4.jpg" alt="">
+                                                <img src="view/website2/img/class/author-4.jpg" alt="">
                                                 <h5>Kick boxing</h5>
                                             </div>
                                         </a>
@@ -337,7 +274,7 @@
                                     <li>
                                         <a data-toggle="tab" href="#class-5" role="tab">
                                             <div class="author-text">
-                                                <img src="img/class/author-5.jpg" alt="">
+                                                <img src="view/website2/img/class/author-5.jpg" alt="">
                                                 <h5>Cardio workout</h5>
                                             </div>
                                         </a>
@@ -345,7 +282,7 @@
                                     <li>
                                         <a data-toggle="tab" href="#class-6" role="tab">
                                             <div class="author-text">
-                                                <img src="img/class/author-6.jpg" alt="">
+                                                <img src="view/website2/img/class/author-6.jpg" alt="">
                                                 <h5>Martial Arts</h5>
                                             </div>
                                         </a>
@@ -376,7 +313,7 @@
                 <div class="row m-0">
                     <div class="col-lg-4 order-lg-1 p-0">
                         <div class="member-pic first">
-                            <img src="img/4.jpg" alt="">
+                            <img src="view/website2/img/4.jpg" alt="">
                         </div>
                     </div>
                     <div class="col-lg-4 order-lg-2 p-0">
@@ -389,7 +326,7 @@
                     </div>
                     <div class="col-lg-4 order-lg-3 p-0">
                         <div class="member-pic second">
-                            <img src="img/5.jpg" alt="">
+                            <img src="view/website2/img/5.jpg" alt="">
                         </div>
                     </div>
                     <div class="col-lg-4 order-lg-6 p-0">
@@ -402,7 +339,7 @@
                     </div>
                     <div class="col-lg-4 order-lg-5 p-0">
                         <div class="member-pic third">
-                            <img src="img/7.jpg" alt="">
+                            <img src="view/website2/img/7.jpg" alt="">
                         </div>
                     </div>
                     <div class="col-lg-4 order-lg-4 p-0">
@@ -435,7 +372,7 @@
                 <div class="col-lg-4">
                     <div class="latest-items">
                         <div class="latest-pic">
-                            <img src="img/7.jpg" alt="">
+                            <img src="view/website2/img/7.jpg" alt="">
                         </div>
                         <div class="latest-text">
                             <div class="latest-tag">
@@ -453,7 +390,7 @@
                 <div class="col-lg-4">
                     <div class="latest-items">
                         <div class="latest-pic">
-                            <img src="img/5.jpg" alt="">
+                            <img src="view/website2/img/5.jpg" alt="">
                         </div>
                         <div class="latest-text">
                             <div class="latest-tag">
@@ -471,7 +408,7 @@
                 <div class="col-lg-4">
                     <div class="latest-items">
                         <div class="latest-pic">
-                            <img src="img/7.jpg" alt="">
+                            <img src="view/website2/img/7.jpg" alt="">
                         </div>
                         <div class="latest-text">
                             <div class="latest-tag">
@@ -532,13 +469,13 @@
     <!-- Search model end -->
 
     <!-- Js Plugins -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/mixitup.min.js"></script>
-    <script src="js/jquery.slicknav.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="view/website2/js/jquery-3.3.1.min.js"></script>
+    <script src="view/website2/js/bootstrap.min.js"></script>
+    <script src="view/website2/js/jquery.magnific-popup.min.js"></script>
+    <script src="view/website2/js/mixitup.min.js"></script>
+    <script src="view/website2/js/jquery.slicknav.js"></script>
+    <script src="view/website2/js/owl.carousel.min.js"></script>
+    <script src="view/website2/js/main.js"></script>
 </body>
 
 </html>
