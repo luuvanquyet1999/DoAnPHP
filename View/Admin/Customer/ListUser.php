@@ -1,6 +1,7 @@
 <?php
-        include_once('./View/Admin/checkSession.php');
-      ?>
+include_once('./View/Admin/checkSession.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,8 +11,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
     <link rel="icon" href="View/Admin/images/favicon.ico" type="image/ico" />
-    <title>ADMINISTRATOR | Member</title>
+    <title>ADMINISTRATOR | Customer</title>
 
     <!-- Bootstrap -->
     <link href="cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
@@ -22,23 +24,23 @@
     <link href="asset/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
     <link href="asset/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
-   
+    <!-- Datatables -->
+    <!-- Custom Theme Style -->
     <link href="asset/build/css/custom.min.css" rel="stylesheet">
 </head>
 
 <body class="nav-md">
     <div class="container body">
         <div class="main_container">
-        <?php
-        include_once('./View/Admin/Share/header.php');
-      ?>
-
+            <?php
+            include_once('./View/Admin/Share/header.php');
+            ?>
             <!-- page content -->
             <div class="right_col" role="main">
                 <div class="">
                     <div class="page-title">
                         <div class="title_left">
-                            <h3>Quản lý tài khoản quản trị viên</h3>
+                            <h3>Quản lý tài khoản khách hàng</h3>
                         </div>
                     </div>
                     <div class="clearfix"></div>
@@ -47,7 +49,6 @@
                             <div class="col-md-12 col-sm-12 ">
                                 <div class="x_panel">
                                     <div class="x_title">
-                                    <a href="index.php?c=register&a=View" class="btn btn-primary">Thêm mới</a>
                                         <ul class="nav navbar-right panel_toolbox">
                                             <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                             </li>
@@ -73,13 +74,9 @@
                                                         <thead>
                                                             <tr>
                                                                 <th>STT</th>
-                                                                <th>UserName</th>
-                                                                <th>Full Name</th>
+                                                                <th>User name</th>
+                                                                <th>Phone</th>
                                                                 <th>Email</th>
-                                                                <th>Ngày Sinh</th>
-                                                                <th>Giới tính</th>
-                                                                <th>Active</th>
-                                                                <th>#</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -90,16 +87,9 @@
                                                             ?>
                                                                 <tr>
                                                                     <td><?= $stt++ ?></td>
-                                                                    <td><?= $value->UserAdmin_username ?></td>
-                                                                    <td><?= $value->UserAdmin_fullname ?></td>
-                                                                    <td><?= $value->UserAdmin_email ?></td>
-                                                                    <td><?= $value->UserAdmin_dateofbirth ?></td>
-                                                                    <td><?= $value->UserAdmin_gender ?></td>
-                                                                    <td><?= $value->Active ?></td>
-                                                                    <td>
-                                                                        <a href="?c=UserAdmin&a=Delete&UserAdminID=<?= $value->UserAdmin_id ?>" class="btn btn-danger"><i class="fa fa-trash-o "></i></a>
-                                                                        <a href="?c=UserAdmin&a=Update&UserAdminID=<?= $value->UserAdmin_id ?>" class="btn btn-primary"><i class="fa fa-eyedropper"></i></a>
-                                                                    </td>
+                                                                    <td><?= $value->username ?></td>
+                                                                    <td><?= $value->phone ?></td>
+                                                                    <td><?= $value->email ?></td>
                                                                 </tr>
                                                             <?php
                                                             }
@@ -120,8 +110,8 @@
 
             <!-- footer content -->
             <?php
-        include_once('./View/Admin/Share/footer.php');
-      ?>
+            include_once('./View/Admin/Share/footer.php');
+            ?>
             <!-- /footer content -->
         </div>
     </div>
@@ -136,6 +126,7 @@
     <script src="asset/vendors/nprogress/nprogress.js"></script>
     <!-- iCheck -->
     <script src="asset/vendors/iCheck/icheck.min.js"></script>
+
     <script src="asset/vendors/jszip/dist/jszip.min.js"></script>
     <script src="asset/vendors/pdfmake/build/pdfmake.min.js"></script>
     <script src="asset/vendors/pdfmake/build/vfs_fonts.js"></script>

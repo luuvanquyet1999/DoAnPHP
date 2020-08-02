@@ -6,7 +6,8 @@ if(!isset($_SESSION))
 ?>
 <?php
   if(!isset($_SESSION["username"])){
-      echo "<script type='text/javascript'>alert('Vui lòng bạn đăng nhập tài khoản Admin');</script>";
-      header('Location: index.php?c=Login&a=View');
+    echo "<script type='text/javascript'>alert('Vui lòng bạn đăng nhập tài khoản Admin');
+                     window.location='Location: index.php?c=Login&a=View';
+                     </script>";
     }
 ?>

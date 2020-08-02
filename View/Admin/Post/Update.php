@@ -63,16 +63,6 @@ include_once('./View/Admin/checkSession.php');
                         <div class="title_left">
                             <h3>QUẢN LÝ BÀI VIẾT</h3>
                         </div>
-                        <div class="title_right">
-                            <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search for...">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-secondary" type="button">Go!</button>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <div class="clearfix"></div>
                     <div class="container">
@@ -82,65 +72,71 @@ include_once('./View/Admin/checkSession.php');
                                 <div class="add">
                                     <h3>Cập nhật bài viết</h3>
                                     <form action="index.php?c=AdminPost&a=SaveUpdate" method="post" enctype="multipart/form-data">
-                                        <table style="width:95%">
-                                            <tr hidden>
-                                                <td>id</td>
-                                                <td><input type="text" readonly name="post_id" value="<?= $post->post_id ?>" /></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Nhóm bài viết</td>
-                                                <td>
-                                                    <select name="category">
-                                                        <?php
-                                                        $mysql = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
-                                                        $query = "SELECT * FROM lph_category WHERE Active =1";
-                                                        $result = $mysql->query($query);
-                                                       // $data = mysqli_fetch_array($result);
-                                                       
-                                                        while ($row = mysqli_fetch_array($result)) {
-                                                            echo "<option value='" . $row[0] . "'>" . $row[1] . "</option>";
-                                                        }
-                                                        ?>
-                                                    </select>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Tiêu đề</td>
-                                                <td><input type="text" name="post_title" class="form-control" value="<?= $post->post_title ?>" /></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Tóm tắt</td>
-                                                <td>
-                                                    <textarea name="post_summary" class="form-control" rows="3" style="width:100%"><?= $post->post_summary ?></textarea>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Nội dung</td>
-                                                <td>
-                                                    <textarea name="post_content" class="form-control" rows="8" style="width:100%"><?= $post->post_content ?></textarea>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Hình ảnh</td>
-                                                <td><input type="file" name="post_image" class="form-control" /></td>
-                                            </tr>
-                                            <tr hidden>
-                                                <td>ngày</td>
-                                                <td><input type="text" name="createday" onload="getDate()" class="form-control" id="date" /></td>
-                                            </tr>
-                                            <tr hidden>
-                                                <td>active</td>
-                                                <td><input type="text" name="Active" value="1" /></td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                </td>
-                                                <td>
-                                                    <button type="submit" value="submit" class="btn btn-primary">Lưu</button>
-                                                    <a href="index.php?c=AdminPost&a=View" class="btn btn-warning">Cancel</a>
-                                                </td>
-                                            </tr>
-                                        </table>
+
+                                        <div class="form-group row" hidden>
+                                            <label for="colFormLabel" class="col-sm-2 col-form-label col-form-label-lg">ID</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" readonly name="post_id" value="<?= $post->post_id ?>" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label ">Loại bài viết</label>
+                                            <div class="col-sm-10">
+                                                <select name="category">
+                                                    <?php
+                                                    $mysql = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
+                                                    $query = "SELECT * FROM lph_category WHERE Active =1";
+                                                    $result = $mysql->query($query);
+
+                                                    while ($row = mysqli_fetch_array($result)) {
+                                                        echo "<option value='" . $row[1] . "'>" . $row[1] . "</option>";
+                                                    }
+                                                    ?>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="colFormLabel" class="col-sm-2 col-form-label">Tiêu đề</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" name="post_title" class="form-control" value="<?= $post->post_title ?>" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="colFormLabel" class="col-sm-2 col-form-label ">Tóm tắt</label>
+                                            <div class="col-sm-10">
+                                                <textarea name="post_summary" class="form-control" rows="3" style="width:95%"><?= $post->post_summary ?></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="colFormLabel" class="col-sm-2 col-form-label ">Nội dung</label>
+                                            <div class="col-sm-10">
+                                                <textarea name="post_content" class="form-control" rows="8" style="width:95%"><?= $post->post_content ?></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="colFormLabel" class="col-sm-2 col-form-label ">Hình ảnh</label>
+                                            <div class="col-sm-10">
+                                                <input type="file" name="post_image" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row" hidden>
+                                            <label for="colFormLabel" class="col-sm-2 col-form-label ">ngày</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" name="createday" onload="getDate()" class="form-control" id="date" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row" hidden>
+                                            <label for="colFormLabel" class="col-sm-2 col-form-label col-form-label-lg">active</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" name="Active" value="1" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="action">
+                                                <button type="submit" value="submit" class="btn btn-primary">Lưu</button>
+                                                <a href="index.php?c=AdminPost&a=View" class="btn btn-warning">Cancel</a>
+                                            </div>
+                                        </div>
                                     </form>
                                 </div>
                             </div>
