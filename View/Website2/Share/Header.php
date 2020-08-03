@@ -27,7 +27,6 @@
         <div id="preloder">
             <div class="loader"></div>
         </div>
-
         <!-- Header Section Begin -->
         <header class="header-section">
             <div style="margin-left: 100px;" class="logo">
@@ -36,23 +35,15 @@
                 </a>
             </div>
             <div style="margin-left: 103px;" class="container">
-
-
                 <div class="nav-menu">
                     <nav style="background-color: rgba(0,0,0,0.0)" class="mainmenu mobile-menu">
                         <ul style="margin:20px;">
-
-                            <li class="active"><a href="./index.html">Trang Chủ</a></li>
-                            <li><a href="./Gioithieu.html">Giới Thiệu</a></li>
-                            <li><a href="./Tinmoi.html">Tin Mới</a></li>
-                            <li><a href="./theloai.html">Thể Loại</a>
-                                <ul class="dropdown">
-                                    <li><a href="theloai.html">Thời Trang</a></li>
-                                </ul>
-
-                            </li>
-                            <li><a href="./Lienhe.html">Liên Hệ</a></li>
-                            <li><a href="#">|</a></li>
+                            <li class="active"><a href="?c=WebsiteDefault&a=View">Trang Chủ</a></li>
+                            <li><a href="?c=WebsiteGioiThieu&a=View">Giới Thiệu</a></li>
+                            <li><a href="?c=WebsiteTinMoi&a=View">Tin Mới</a></li>
+                            <li><a href="?c=WebsiteTheThao&a=View">Thể Thao</a></li>
+                            <li><a href="?c=WebsiteContact&a=View">Liên Hệ</a></li>
+                            <li><a href="javascript:void(0)">|</a></li>
                             <?php
                             if (!isset($_SESSION["websiteusername"]))
                                 echo "   <li class='active'><a href='index.php?c=LoginDefault&a=View'>Đăng Nhập</a></li>
@@ -62,12 +53,8 @@
                                     "<li><a href='index.php?c=Logindefault&a=Logout'>Đăng Xuất</a></li>";
                             }
                             ?>
-
-
                         </ul>
-
                     </nav>
-
                 </div>
                 <div id="mobile-menu-wrap"></div>
             </div>
