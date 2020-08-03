@@ -42,7 +42,7 @@ body {
     height: 100%;
     font-family: "Roboto", sans-serif;
     -webkit-font-smoothing: antialiased;
-    font-smoothing: antialiased;
+    /* font-smoothing: antialiased; */
     overflow-x: hidden;
 }
 
@@ -407,9 +407,10 @@ ol {
     text-align: right;
 }
 
-.nav-menuu {
+
+/* .nav-menuu {
     float: left;
-}
+} */
 
 .nav-menuu .mainmenuu {
     display: inline-block;
@@ -433,6 +434,8 @@ ol {
     transition: 0.2s;
     display: block;
     font-family: "Oswald", sans-serif;
+    margin-top: 15px;
+    padding-left: 20px;
 }
 
 .nav-menuu .mainmenuu ul li:hover .dropdown {
@@ -497,6 +500,7 @@ ol {
     transition: 0.2s;
     display: block;
     font-family: "Oswald", sans-serif;
+    margin-top: 15px;
 }
 
 .nav-menu .mainmenu ul li:hover .dropdown {
@@ -1396,7 +1400,7 @@ ol {
 -----------------------*/
 
 .breadcrumb-section {
-    height: 250px;
+    height: 350px;
     padding-top: 55px;
 }
 
