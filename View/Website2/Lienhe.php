@@ -7,39 +7,7 @@ if(!isset($_SESSION))
 <?php
    include_once('./View/Website2/share/header.php');
 ?>
-<!-- Header Section Begin -->
-<header class="header-section">
 
-<div style="margin-left: 203px;" class="container">
-
-    <div class="nav-menu">
-        <nav class="mainmenu mobile-menu">
-            <ul style="margin:20px;">
-
-                <li class="active"><a href="./index.html">Trang Chủ</a></li>
-                <li><a href="./Gioithieu.html">Giới Thiệu</a></li>
-                <li><a href="./Tinmoi.html">Tin Mới</a></li>
-                <li><a href="./theloai.html">Thể Loại</a>
-                    <ul class="dropdown">
-                        <li><a href="theloai.html">Thời Trang</a></li>
-                    </ul>
-
-                </li>
-                <li><a href="./Lienhe.html">Liên Hệ</a></li>
-                <li><a href="#">|</a></li>
-                <li class="active"><a href="./dangnhap.php">Đăng Nhập</a></li>
-                <li><a href="./dangki.html">Đăng Kí</a></li>
-
-
-            </ul>
-
-        </nav>
-
-    </div>
-    <div id="mobile-menu-wrap"></div>
-</div>
-</header>
-<!-- Header End -->
 
     <!-- Site Breadcrumb Begin -->
     <section class="breadcrumb-section set-bg" data-setbg="view/website2/img/about-breadcrumb-bg.jpg">
