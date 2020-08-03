@@ -1,5 +1,5 @@
 <?php
-class DefaultController
+class WebsiteDefaultController
 {
     function View(){
         

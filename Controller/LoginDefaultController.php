@@ -8,6 +8,6 @@ class LoginDefaultController
     function Logout(){
         session_start(); 
         unset($_SESSION['websiteusername']);
-         header('location: index.php?c=websitecontact&a=view&s=success');
+        header('location: index.php?c=WebsiteDefault&a=view&s=success');
     }
 }
