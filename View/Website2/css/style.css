@@ -403,9 +403,10 @@ ol {
     display: inline-block;
 }
 
-.nav-menu {
+
+/* .nav-menu {
     text-align: right;
-}
+} */
 
 
 /* .nav-menuu {
@@ -596,7 +597,7 @@ ol {
 
 .hero-items .owl-nav button[type=button] {
     position: absolute;
-    right: 550px;
+    right: 1110px;
     top: 50%;
     -webkit-transform: translateY(-24px);
     -ms-transform: translateY(-24px);
@@ -607,7 +608,6 @@ ol {
 }
 
 .hero-items .owl-nav button[type=button].owl-next {
-    left: 550px;
     right: 65px;
 }
 
@@ -2599,12 +2599,10 @@ ol {
         margin: 0;
     }
     .hero-items .owl-nav button[type=button] {
-        left: 552px;
-        right: 65px;
+        left: 52px;
     }
     .hero-items .owl-nav button[type=button].owl-next {
-        left: 552px;
-        right: 65px;
+        right: 52px;
     }
     .single-hero-item {
         padding-top: 200px;
