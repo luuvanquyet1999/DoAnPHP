@@ -68,7 +68,4 @@ class AdminSlideModel{
         $result = $this->mysql->query($query);
         return $result;
     }
-    function asdsa(){
-        
-    }
 }
