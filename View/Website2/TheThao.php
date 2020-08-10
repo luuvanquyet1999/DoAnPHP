@@ -30,7 +30,7 @@ include_once('./View/Website2/share/header.php');
                 <div class="blog-items">
                     <div class="single-blog-item">
                         <div class="blog-pic">
-                            <img src="View/Website2img/blog-1.jpg" alt="">
+                            <img src="View/Website2/img/blog-1.jpg" alt="">
                         </div>
                         <div class="blog-text">
                             <div class="blog-tag">
@@ -56,7 +56,7 @@ include_once('./View/Website2/share/header.php');
                     </div>
                     <div class="single-blog-item">
                         <div class="blog-pic">
-                            <img src="img/blog-2.jpg" alt="">
+                            <img src="View/Website2/img/blog-2.jpg" alt="">
                         </div>
                         <div class="blog-text">
                             <div class="blog-tag">

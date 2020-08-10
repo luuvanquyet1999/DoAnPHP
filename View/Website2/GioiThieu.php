@@ -22,18 +22,30 @@ include_once('./View/Website2/share/header.php');
         <div class="row">
             <div class="col-lg-5">
                 <div class="about-pic">
-                    <img src="view/Website2/img/about-us.jpg" alt="">
+                    <?php
+                    $mysql = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
+                    $query = "SELECT * FROM lph_introduce";
+                    $result = $mysql->query($query);
+                    while ($row = mysqli_fetch_array($result)) {
+                        echo "<img src='$row[4]'>";
+                    }
+                    ?>
                 </div>
             </div>
             <div class="col-lg-6 offset-lg-1">
                 <div class="about-text">
-                    <div class="section-title">
-                        <h2>Nhiệm Vụ Của Chúng Tôi</h2>
-                        <p>Đạo đức nghề nghiệp của nhà báo là những quy tắc, chuẩn mực quy định thái độ và hành vi ứng xử của nhà báo trong các mối quan hệ nghề nghiệp và xã hội. Đạo đức nghề nghiệp của nhà báo còn gọi là đạo đức nghề báo, đạo đức báo
-                            chí..
-                        </p>
-                    </div>
-                    <p>Đánh giá về báo chí hiện nay, nhiều kết luận trong các văn bản của Đảng đều khẳng định vai trò quan trọng của báo chí với công cuộc phát triển đất nước, đặc biệt là trong công cuộc đổi mới..</p>
+                    <?php
+                    $mysql = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
+                    $query = "SELECT * FROM lph_introduce";
+                    $result = $mysql->query($query);
+                    while ($row = mysqli_fetch_array($result)) {
+                        echo "<div class='section-title'>
+                            <h2>$row[1]</h2>
+                            <p>$row[2]</p>
+                            </div>
+                            <p>$row[3]</p>";
+                    }
+                    ?>
                 </div>
             </div>
         </div>

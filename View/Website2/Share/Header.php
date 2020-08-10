@@ -31,7 +31,7 @@
         <header class="header-section">
             <div style="margin-left: 100px;" class="logo">
                 <a href="./index.html">
-                    <img src="img/logo4.png" alt="">
+                    <img src="View/Website2/img/logo4.png" alt="">
                 </a>
             </div>
             <div style="margin-left: 103px;" class="container">
