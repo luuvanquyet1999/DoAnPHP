@@ -30,7 +30,7 @@
         <!-- Header Section Begin -->
         <header class="header-section">
             <div style="margin-left: 100px;" class="logo">
-                <a href="./index.html">
+                <a href="?c=WebsiteDefault&a=View">
                     <img src="View/Website2/img/logo4.png" alt="">
                 </a>
             </div>
