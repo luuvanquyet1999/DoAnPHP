@@ -20,7 +20,7 @@ class CustomerUserModel
     }
     function GetAll()
     {
-        $query = "SELECT * FROM lph_customer";
+        $query = "SELECT * FROM lph_customer WHERE Active =1";
         $result = $this->mysql->query($query);
         $data = [];
         foreach ($result->fetch_all() as $value) {

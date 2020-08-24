@@ -91,8 +91,8 @@ if (isset($_POST["register"])) {
 					</div>
 					<div class="pom-agile">
 						<!-- <input placeholder="Gender" name="gender" class="pass" type="text" required=""> -->
-						<select name="gender"  class="pass" class="form-control">
-						<option >---Select gender---</option>
+						<select name="gender" class="pass" class="form-control">
+							<option>---Select gender---</option>
 							<option value="0">Nữ</option>
 							<option value="1">Nam</option>
 						</select>

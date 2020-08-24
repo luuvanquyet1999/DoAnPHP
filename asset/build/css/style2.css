@@ -25,10 +25,25 @@ body {
     /* color: rgb(204, 238, 52); */
     font-weight: 800;
     font-family: "Times New Roman", Times, serif;
-    /* text-shadow: rgb(216, 125, 6) 0.1em 0.1em 0.2em; */
     background: linear-gradient(to top left, #ff8a00, #e52e71);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes example {
+    from {
+        background: linear-gradient(to top left, #0f2eca, #d4176e);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    to {
+        background: linear-gradient(to top left, #dbde17, #15c584);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 }
 
 .wrap {
