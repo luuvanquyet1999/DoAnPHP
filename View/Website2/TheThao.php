@@ -30,7 +30,7 @@ include_once('./View/Website2/share/header.php');
                 <div class="blog-items">
                     <div class="single-blog-item">
                         <div class="blog-pic">
-                            <img src="View/Website2img/blog-1.jpg" alt="">
+                            <img src="View/Website2/img/blog-1.jpg" alt="">
                         </div>
                         <div class="blog-text">
                             <div class="blog-tag">
@@ -56,7 +56,7 @@ include_once('./View/Website2/share/header.php');
                     </div>
                     <div class="single-blog-item">
                         <div class="blog-pic">
-                            <img src="img/blog-2.jpg" alt="">
+                            <img src="View/Website2/img/blog-2.jpg" alt="">
                         </div>
                         <div class="blog-text">
                             <div class="blog-tag">
@@ -179,21 +179,9 @@ include_once('./View/Website2/share/header.php');
                             <h2>Liên hệ với chúng tôi</h2>
                             <p></p>
                         </div>
-                        <form action="#">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <input type="text" placeholder="Name">
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="text" placeholder="Email">
-                                </div>
-                                <div class="col-lg-12">
-                                    <input type="text" placeholder="Subject">
-                                    <textarea placeholder="Message"></textarea>
-                                    <button type="submit">Submit <i class="ti-angle-double-right"></i></button>
-                                </div>
-                            </div>
-                        </form>
+                        <?php
+                        include_once('./View/Website2/share/Contact.php');
+                        ?>
                     </div>
                 </div>
             </div>

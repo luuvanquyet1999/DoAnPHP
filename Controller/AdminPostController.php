@@ -32,7 +32,7 @@ class AdminPostController
         $post_image = $path;
         $category_name = $_POST["category"];
         $post_createdate =  $_POST["createday"];
-        // echo $post_createdate.$category_id;
+        // echo $file_name;
         // die();
         //$a = strtolower($post_title);
         $post_link = $post_title;

@@ -1,0 +1,157 @@
+html,
+body {
+    height: 100%;
+}
+
+.app {
+    width: 100%;
+    height: 100%;
+    /* background-image: url('asset/build/images/1.jpg'); */
+    margin: 0 auto;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.wrapper {
+    position: relative;
+    top: 120px;
+    left: 15%;
+}
+
+.wrapper h1 {
+    margin: 0;
+    font-size: 50px;
+    /* color: rgb(204, 238, 52); */
+    font-weight: 800;
+    font-family: "Times New Roman", Times, serif;
+    background: linear-gradient(to top left, #ff8a00, #e52e71);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes example {
+    from {
+        background: linear-gradient(to top left, #0f2eca, #d4176e);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    to {
+        background: linear-gradient(to top left, #dbde17, #15c584);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.wrap {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: -100px 300px 0 300px;
+}
+
+.button {
+    min-width: 200px;
+    min-height: 60px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #313133;
+    background: #4FD1C5;
+    background: linear-gradient(to right, #33ccff 0%, #ff99cc 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px rgba(79, 209, 197, .64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+    z-index: 11;
+}
+
+.button a {
+    width: 100%;
+    height: 100%;
+    z-index: 12;
+    color: white;
+    text-decoration: none;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.button a:hover {
+    text-decoration: none;
+}
+
+
+/* button::before {
+    content: '';
+    border-radius: 1000px;
+    min-width: calc(200px + 11px);
+    min-height: calc(60px + 11px);
+    border: 6px solid #00FFCB;
+    box-shadow: 0 0 60px rgba(0, 255, 203, .64);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+    z-index: -1;
+} */
+
+.button:hover,
+.button:focus {
+    color: #313133;
+    transform: translateY(-6px);
+}
+
+button:hover::before,
+button:focus::before {
+    opacity: 1;
+}
+
+
+/* 
+button::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 6px solid #00FFCB;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+
+
+} */
+
+button:hover::after,
+button:focus::after {
+    animation: none;
+    display: none;
+}
+
+
+/* 
+@keyframes ring {
+    0% {
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+    }
+    100% {
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+    }
+} */

@@ -134,21 +134,9 @@ include_once('./View/Website2/share/header.php');
                             <h2>Liên hệ với chúng tôi</h2>
                             <p></p>
                         </div>
-                        <form action="#">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <input type="text" placeholder="Name">
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="text" placeholder="Email">
-                                </div>
-                                <div class="col-lg-12">
-                                    <input type="text" placeholder="Subject">
-                                    <textarea placeholder="Message"></textarea>
-                                    <button type="submit">Submit <i class="ti-angle-double-right"></i></button>
-                                </div>
-                            </div>
-                        </form>
+                        <?php
+                        include_once('./View/Website2/share/Contact.php');
+                        ?>
                     </div>
                 </div>
             </div>
