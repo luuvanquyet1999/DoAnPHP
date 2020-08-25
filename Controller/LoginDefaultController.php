@@ -1,6 +1,9 @@
 <?php
 class LoginDefaultController
 {
+    function Index(){
+        require SYSTEM_PATH."/index.html";
+    }
     function View(){
         
         require SYSTEM_PATH."/View/website2/dangnhap.php";

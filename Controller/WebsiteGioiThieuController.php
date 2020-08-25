@@ -8,7 +8,8 @@ class WebsiteGioiThieuController
         $this->websitegioithieumodel = new WebsiteGioiThieuModel();
     }
     function View(){
-        //$data= $this->websitegioithieumodel->GetAll();
+        $data= $this->websitegioithieumodel->GetAll();
+        $data1= $this->websitegioithieumodel->GetMember();
         require SYSTEM_PATH."/View/website2/GioiThieu.php";
     }
 }

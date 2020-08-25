@@ -20,34 +20,26 @@ include_once('./View/Website2/share/header.php');
 <section class="about-us-section spad">
     <div class="container">
         <div class="row">
-            <div class="col-lg-5">
-                <div class="about-pic">
-                    <?php
-                    $mysql = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
-                    $query = "SELECT * FROM lph_introduce";
-                    $result = $mysql->query($query);
-                    while ($row = mysqli_fetch_array($result)) {
-                        echo "<img src='$row[4]'>";
-                    }
-                    ?>
+            <?php
+            foreach ($data as $value) {
+            ?>
+                <div class="col-lg-5">
+                    <div class="about-pic">
+                        <img src="<?= $value->image ?>">
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-6 offset-lg-1">
-                <div class="about-text">
-                    <?php
-                    $mysql = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
-                    $query = "SELECT * FROM lph_introduce";
-                    $result = $mysql->query($query);
-                    while ($row = mysqli_fetch_array($result)) {
-                        echo "<div class='section-title'>
-                            <h2>$row[1]</h2>
-                            <p>$row[2]</p>
-                            </div>
-                            <p>$row[3]</p>";
-                    }
-                    ?>
+                <div class="col-lg-6 offset-lg-1">
+                    <div class="about-text">
+                        <div class='section-title'>
+                            <h2><?= $value->title ?></h2>
+                            <p><?= $value->summary ?></p>
+                        </div>
+                        <p><?= $value->content ?></p>
+                    </div>
                 </div>
-            </div>
+            <?php
+            }
+            ?>
         </div>
     </div>
 </section>
@@ -113,70 +105,28 @@ include_once('./View/Website2/share/header.php');
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-3 col-sm-6">
-                <div class="single-trainer-item">
-                    <div class="trainer-pic">
-                        <img src="view/Website2/img/trainer/trainer-1.jpg" alt="">
-                    </div>
-                    <div class="trainer-text">
-                        <h5>Noah Leonard</h5>
-                        <span>Phóng Viên</span>
-                        <div class="trainer-social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
+            <?php
+            foreach ($data1 as $value) {
+            ?>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-trainer-item">
+                        <div class="trainer-pic">
+                            <img src="<?= $value->member_avatar ?>" alt="">
+                        </div>
+                        <div class="trainer-text">
+                            <h5><?= $value->member_name ?></h5>
+                            <span><?= $value->member_job ?></span>
+                            <div class="trainer-social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="single-trainer-item">
-                    <div class="trainer-pic">
-                        <img src="view/Website2/img/trainer/trainer-2.jpg" alt="">
-                    </div>
-                    <div class="trainer-text">
-                        <h5>Noah Leonard</h5>
-                        <span>Quay Phim</span>
-                        <div class="trainer-social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="single-trainer-item">
-                    <div class="trainer-pic">
-                        <img src="view/Website2/img/trainer/trainer-3.jpg" alt="">
-                    </div>
-                    <div class="trainer-text">
-                        <h5>Noah Leonard</h5>
-                        <span>Đạo Diễn</span>
-                        <div class="trainer-social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="single-trainer-item">
-                    <div class="trainer-pic">
-                        <img src="view/Website2/img/trainer/trainer-4.jpg" alt="">
-                    </div>
-                    <div class="trainer-text">
-                        <h5>Noah Leonard</h5>
-                        <span>Thiết Kế</span>
-                        <div class="trainer-social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php
+            }
+            ?>
         </div>
     </div>
 </section>
@@ -192,21 +142,9 @@ include_once('./View/Website2/share/header.php');
                             <h2>Liên hệ với chúng tôi</h2>
                             <p></p>
                         </div>
-                        <form action="#">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <input type="text" placeholder="Name">
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="text" placeholder="Email">
-                                </div>
-                                <div class="col-lg-12">
-                                    <input type="text" placeholder="Subject">
-                                    <textarea placeholder="Message"></textarea>
-                                    <button type="submit">Submit <i class="ti-angle-double-right"></i></button>
-                                </div>
-                            </div>
-                        </form>
+                        <?php
+                        include_once('./View/Website2/share/Contact.php');
+                        ?>
                     </div>
                 </div>
             </div>

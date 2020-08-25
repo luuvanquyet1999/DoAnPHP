@@ -91,9 +91,9 @@ include_once('./View/Admin/checkSession.php');
                                                     <thead>
                                                     <tr>
                                                         <th>STT</th>
-                                                        <th>FullName</th>
+                                                        <th>Name</th>
                                                         <th>Email</th>
-                                                        <th>Title</th>
+                                                        <!-- <th>Title</th> -->
                                                         <th>Content</th>
                                                     </tr>
                                                     </thead>
@@ -107,7 +107,7 @@ include_once('./View/Admin/checkSession.php');
                                                             <td><?= $stt++ ?></td>
                                                             <td><?= $value->sendcontact_fullname ?></td>
                                                             <td><?= $value->sendcontact_email ?></td>
-                                                            <td><?= $value->sendcontact_title ?></td>
+                                                            <!-- <td><?= $value->sendcontact_title ?></td> -->
                                                             <td><?= $value->sendcontact_content ?></td>
                                                         </tr>
                                                         <?php

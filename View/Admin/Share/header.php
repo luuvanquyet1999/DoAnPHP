@@ -41,6 +41,11 @@
                             <li><a href="?c=CustomerUser&a=View">Tài khoản khách hàng</a></li>
                         </ul>
                     </li>
+                    <li><a><i class="fa fa-desktop"></i> Quản lý thành viên <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="?c=AdminMember&a=View">Thành viên</a></li>
+                        </ul>
+                    </li>
                     <li><a href="?c=Contact&a=View"><i class="fa fa-location-arrow"></i> Thông tin liên hệ</a>
                 </ul>
             </div>
