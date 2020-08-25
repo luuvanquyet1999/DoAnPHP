@@ -35,13 +35,11 @@
                 </a>
             </div>
             <div style="margin-left: 103px;" class="container">
-<<<<<<< HEAD
+
 
 
                 <div style="margin: -20px 0 0px 135px;" class="nav-menu">
-=======
-                <div class="nav-menu">
->>>>>>> 70cd280163461a3a65267dce350155d25d729bb4
+
                     <nav style="background-color: rgba(0,0,0,0.0)" class="mainmenu mobile-menu">
                         <ul style="margin:20px;">
                             <li class="active"><a href="?c=WebsiteDefault&a=View">Trang Chủ</a></li>
