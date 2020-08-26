@@ -20,105 +20,65 @@ include_once('./View/Website2/share/header.php');
 <!-- Gallery Section Begin -->
 <section class="gallery-section spad">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <div class="filter-controls">
-                    <ul>
-                        <li class="active" data-filter=".all">Tất Cả</li>
-                        <li data-filter=".fitness">Thể Dục</li>
-                        <li data-filter=".coaching">Gym</li>
-                        <li data-filter=".event">Sức Khỏe</li>
-
-                    </ul>
+        <div class="menu-wrapper">
+            <div class="portfolioFilter">
+                <div class="portfolioFilter-inner">
+                    <a href="javascript:;" data-filter="*" class="current">All</a>
+                    <a href="javascript:;" data-filter=".breakfast">Thế thao</a>
+                    <a href="javascript:;" data-filter=".dessert">Giải trí</a>
+                    <a href="javascript:;" data-filter=".dinner">thời trang</a>
+                    <a href="javascript:;" data-filter=".freshfood">tin nổi bật</a>
                 </div>
             </div>
-        </div>
-        <div class="row gallery-filter">
-            <div class="col-md-8 mix all fitness">
-                <div class="gallery-item">
-                    <div class="gi-img">
-                        <img src="view/Website2/img/gallery/gallery-1.jpg" alt="">
+            <div class="portfolioContainer row">
+                    <div id="" class="col-md-6 col-sm-6 col-xs-12 isotope-item menu-list__product breakfast">
+                        <a href="View/Web/productdetail.php">
+                            <div class="menu-list">
+                                <span class="menu-list-product">
+                                    <img src="View/Website2/img/1.jpg" alt="">
+                                </span>
+                                <h5>tittle the thao</h5>
+                                <p>summary</p>
+                            </div>
+                        </a>
                     </div>
-                    <div class="gi-text">
-                        <h5>Thể Thao</h5>
-                        <span>Luyện tập 30 phút mỗi ngày</span>
+                    <div id="" class="col-md-6 col-sm-6 col-xs-12 isotope-item menu-list__product dessert">
+                        <a href="View/Web/productdetail.php">
+                            <div class="menu-list">
+                                <span class="menu-list-product">
+                                    <img src="View/Website2/img/1.jpg" alt="">
+                                </span>
+                                <h5>tittle giai tri </h5>
+                                <p>summary</p>
+                            </div>
+                        </a>
                     </div>
-                </div>
+                    <div id="" class="col-md-6 col-sm-6 col-xs-12 isotope-item menu-list__product dinner">
+                        <a href="View/Web/productdetail.php">
+                            <div class="menu-list">
+                                <span class="menu-list-product">
+                                    <img src="View/Website2/img/1.jpg" alt="">
+                                </span>
+                                <h5>tittle thời trang</h5>
+                                <p>summary</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div id="" class="col-md-6 col-sm-6 col-xs-12 isotope-item menu-list__product freshfood">
+                        <a href="View/Web/productdetail.php">
+                            <div class="menu-list">
+                                <span class="menu-list-product">
+                                    <img src="View/Website2/img/1.jpg" alt="">
+                                </span>
+                                <h5>tittle tin nổi bật</h5>
+                                <p>summary</p>
+                            </div>
+                        </a>
+                    </div>
             </div>
-            <div class="col-md-4">
-                <div class="row">
-                    <div class="col-lg-12 mix all coaching event">
-                        <div class="gallery-item">
-                            <div class="gi-img">
-                                <img src="view/Website2/img/gallery/gallery-2.jpg" alt="">
-                            </div>
-                            <div class="gi-text">
-                                <h5>Thể Thao</h5>
-                                <span>Thể Thao</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 mix all other fitness">
-                        <div class="gallery-item">
-                            <div class="gi-img">
-                                <img src="view/Website2/img/gallery/gallery-3.jpg" alt="">
-                            </div>
-                            <div class="gi-text">
-                                <h5>Thể Thao</h5>
-                                <span>Luyện tập 30 phút mỗi ngày</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="row">
-                    <div class="col-lg-12 mix all coaching">
-                        <div class="gallery-item">
-                            <div class="gi-img">
-                                <img src="view/Website2/img/gallery/gallery-4.jpg" alt="">
-                            </div>
-                            <div class="gi-text">
-                                <h5>Thể Thao</h5>
-                                <span>Luyện tập 30 phút mỗi ngày</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 mix all other event">
-                        <div class="gallery-item">
-                            <div class="gi-img">
-                                <img src="view/Website2/img/gallery/gallery-5.jpg" alt="">
-                            </div>
-                            <div class="gi-text">
-                                <h5>Thể Thao</h5>
-                                <span>Luyện tập 30 phút mỗi ngày</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mix all coaching fitness">
-                <div class="gallery-item">
-                    <div class="gi-img">
-                        <img src="view/Website2/img/gallery/gallery-6.jpg" alt="">
-                    </div>
-                    <div class="gi-text">
-                        <h5>Thể Thao</h5>
-                        <span>Luyện tập 30 phút mỗi ngày</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 mix all event other">
-                <div class="gallery-item">
-                    <div class="gi-img">
-                        <img src="view/Website2/img/gallery/gallery-7.jpg" alt="">
-                    </div>
-                    <div class="gi-text">
-                        <h5>Thể Thao</h5>
-                        <span>Luyện tập 30 phút mỗi ngày</span>
-                    </div>
-                </div>
-            </div>
+            <!-- <div class="btn-outer">
+                                <a href="#" class="btn-main btn-shadow">Xem Thêm Menu</a>
+                            </div> -->
         </div>
     </div>
 </section>

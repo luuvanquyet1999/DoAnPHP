@@ -2737,5 +2737,47 @@ ol {
     height: 100%;
 }
 
+.portfolioFilter {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-family: 'Graviola-Regular';
+    margin-bottom: 78px;
+}
+
+.portfolioFilter a {
+    display: inline-block;
+    width: auto;
+    text-align: center;
+    padding: 13px 36px;
+    color: #20202f;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    border-radius: 30px;
+}
+
+.portfolioFilter-inner {
+    display: inline-block;
+    width: auto;
+    background: #ffffff;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    border-radius: 30px;
+    -webkit-box-shadow: 0 0 20px 0 #dddcd9;
+    -moz-box-shadow: 0 0 20px 0 #dddcd9;
+    -ms-box-shadow: 0 0 20px 0 #dddcd9;
+    -o-box-shadow: 0 0 20px 0 #dddcd9;
+    box-shadow: 0 0 20px 0 #dddcd9;
+}
+
+.portfolioFilter a.current {
+    background: #20202f;
+    color: #ffffff;
+}
+
 
 /*# sourceMappingURL=style.css.map */
