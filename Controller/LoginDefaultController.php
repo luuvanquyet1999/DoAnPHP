@@ -6,7 +6,7 @@ class LoginDefaultController
     }
     function View(){
         
-        require SYSTEM_PATH."/View/website2/dangnhap.php";
+        require SYSTEM_PATH."/View/website/dangnhap.php";
     }
     function Logout(){
         session_start(); 

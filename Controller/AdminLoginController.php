@@ -2,7 +2,6 @@
 class AdminLoginController
 {
     function View(){
-        
         require SYSTEM_PATH."/View/Admin/login.php";
     }
     function Logout(){

@@ -11,7 +11,7 @@ class WebsiteContactController
     function View()
     {
         $data = $this->WebsiteContactDefaultModel->GetAll();
-        require SYSTEM_PATH . "/View/WebSite2/LienHe.php";
+        require SYSTEM_PATH . "/View/WebSite/LienHe.php";
     }
   
     function SendContact()

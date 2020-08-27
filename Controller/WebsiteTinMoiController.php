@@ -9,7 +9,7 @@ class WebsiteTinMoiController
     }
     function View(){
         $data= $this->WebsiteTinMoiModel->GetAllCategory();
-        require SYSTEM_PATH."/View/Website2/TinMoi.php";
+        require SYSTEM_PATH."/View/Website/TinMoi.php";
     }
 }
 
