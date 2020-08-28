@@ -47,7 +47,7 @@ include_once('./View/website/share/header.php');
                             <div class="menu-list">
                                 <span class="menu-list-product">
                                     <img src="View/website/img/2.jpg" alt="" style="height: 347px;
-}">
+">
                                 </span>
                                 <h5>Sơn Tùng MTP lại lập kỉ lục mới </h5>
                                 <p>LOCFUHO đưa tin chân thật nhất tới khách hàng.</p>
@@ -58,7 +58,7 @@ include_once('./View/website/share/header.php');
                         <a href="View/Web/productdetail.php">
                             <div class="menu-list">
                                 <span class="menu-list-product">
-                                    <img src="View/website/img/3.jpg" alt="">
+                                    <img src="View/website/img/3.jpg" alt="" style="width:560px">
                                 </span>
                                 <h5>Thời trang Sơn Tùng cực ngầu.</h5>
                                 <p>LOCFUHO đưa tin chân thật nhất tới khách hàng.</p>
@@ -69,7 +69,7 @@ include_once('./View/website/share/header.php');
                         <a href="View/Web/productdetail.php">
                             <div class="menu-list">
                                 <span class="menu-list-product">
-                                    <img src="View/website/img/4.jpg" alt="" style="height: 314px;
+                                    <img src="View/website/img/4.jpg" alt="" style="height: 341px;
     width: 600px;">
                                 </span>
                                 <h5>Bayern Munich vô địch châu âu lần thứ 6</h5>
