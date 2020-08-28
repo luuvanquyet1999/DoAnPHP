@@ -10,13 +10,11 @@ include_once('./View/Website/share/header.php');
 <!-- Hero Section Begin -->
 <section class="hero-section">
     <div class="hero-items owl-carousel">
-<<<<<<< HEAD:View/Website2/index.php
-        <div class="single-hero-item set-bg" data-setbg="view/website2/img/slider-bg-1.jpg">
-            <div class="container">
-=======
+
+      
         <div class="single-hero-item set-bg" data-setbg="view/website/img/slider-bg-1.jpg">
-            <div style="background-color: rgba(156, 39, 176, 0.57)" ; class="container">
->>>>>>> 1c1a036d212eaa0c6e91c43981ed33cf10016314:View/Website/index.php
+            <div class="container">
+ 
                 <div class="hero-text">
                     <h4 style="margin-top: 15px;">Trang tin tức nhanh chóng và uy tín</h4>
                     <h1>Chính Xác <span>Trung Thực</span></h1>
@@ -24,27 +22,24 @@ include_once('./View/Website/share/header.php');
                 </div>
             </div>
         </div>
-<<<<<<< HEAD:View/Website2/index.php
-        <div class="single-hero-item set-bg" data-setbg="view/website2/img/slider-bg-2.jpg">
-            <div  class="container">
-=======
+
+       
+
         <div class="single-hero-item set-bg" data-setbg="view/website/img/slider-bg-2.jpg">
-            <div style="background-color: rgba(156, 39, 176, 0.57)" ; class="container">
->>>>>>> 1c1a036d212eaa0c6e91c43981ed33cf10016314:View/Website/index.php
+            <div  class="container">
+
                 <div class="hero-text">
                     <h4 style="margin-top: 15px;">Trang tin tức nhanh chóng và uy tín</h4>
                     <h1>Chính Xác <span>Trung Thực</span></h1>
                     <a href="#" class="primary-btn">Join Us Now</a>
                 </div>
             </div>
-        </div>
-<<<<<<< HEAD:View/Website2/index.php
-        <div class="single-hero-item set-bg" data-setbg="view/website2/img/slider-bg-3.jpg">
-            <div  class="container">
-=======
+</div>
+        
+
         <div class="single-hero-item set-bg" data-setbg="view/website/img/slider-bg-3.jpg">
-            <div style="background-color: rgba(156, 39, 176, 0.57)" ; class="container">
->>>>>>> 1c1a036d212eaa0c6e91c43981ed33cf10016314:View/Website/index.php
+            <div  class="container">
+
                 <div class="hero-text">
                     <h4 style="margin-top: 15px;">Trang tin tức nhanh chóng và uy tín</h4>
                     <h1>Chính Xác <span>Trung Thực</span></h1>
@@ -315,7 +310,7 @@ include_once('./View/Website/share/header.php');
             <div class="row m-0">
                 <div class="col-lg-4 order-lg-1 p-0">
                     <div class="member-pic first">
-                        <img src="view/website/img/4.jpg" alt="">
+                        <img src="view/website/img/5.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-lg-4 order-lg-2 p-0">

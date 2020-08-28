@@ -24,10 +24,10 @@ include_once('./View/website/share/header.php');
             <div class="portfolioFilter">
                 <div class="portfolioFilter-inner">
                     <a href="javascript:;" data-filter="*" class="current">All</a>
-                    <a href="javascript:;" data-filter=".breakfast">Thế thao</a>
-                    <a href="javascript:;" data-filter=".dessert">Giải trí</a>
-                    <a href="javascript:;" data-filter=".dinner">thời trang</a>
-                    <a href="javascript:;" data-filter=".freshfood">tin nổi bật</a>
+                    <a href="javascript:;" data-filter=".breakfast">Thế Thao</a>
+                    <a href="javascript:;" data-filter=".dessert">Giải Trí</a>
+                    <a href="javascript:;" data-filter=".dinner">Thời Trang</a>
+                    <a href="javascript:;" data-filter=".freshfood">Tin Nỗi Bật</a>
                 </div>
             </div>
             <div class="portfolioContainer row">
@@ -37,8 +37,8 @@ include_once('./View/website/share/header.php');
                                 <span class="menu-list-product">
                                     <img src="View/website/img/1.jpg" alt="">
                                 </span>
-                                <h5>tittle the thao</h5>
-                                <p>summary</p>
+                                <h5>Ronaldo nhận danh hiệu bàn thắng đẹp nhất C1</h5>
+                                <p>LOCFUHO đưa tin chân thật nhất tới khách hàng.</p>
                             </div>
                         </a>
                     </div>
@@ -46,10 +46,11 @@ include_once('./View/website/share/header.php');
                         <a href="View/Web/productdetail.php">
                             <div class="menu-list">
                                 <span class="menu-list-product">
-                                    <img src="View/website/img/1.jpg" alt="">
+                                    <img src="View/website/img/2.jpg" alt="" style="height: 347px;
+}">
                                 </span>
-                                <h5>tittle giai tri </h5>
-                                <p>summary</p>
+                                <h5>Sơn Tùng MTP lại lập kỉ lục mới </h5>
+                                <p>LOCFUHO đưa tin chân thật nhất tới khách hàng.</p>
                             </div>
                         </a>
                     </div>
@@ -57,10 +58,10 @@ include_once('./View/website/share/header.php');
                         <a href="View/Web/productdetail.php">
                             <div class="menu-list">
                                 <span class="menu-list-product">
-                                    <img src="View/website/img/1.jpg" alt="">
+                                    <img src="View/website/img/3.jpg" alt="">
                                 </span>
-                                <h5>tittle thời trang</h5>
-                                <p>summary</p>
+                                <h5>Thời trang Sơn Tùng cực ngầu.</h5>
+                                <p>LOCFUHO đưa tin chân thật nhất tới khách hàng.</p>
                             </div>
                         </a>
                     </div>
@@ -68,10 +69,11 @@ include_once('./View/website/share/header.php');
                         <a href="View/Web/productdetail.php">
                             <div class="menu-list">
                                 <span class="menu-list-product">
-                                    <img src="View/website/img/1.jpg" alt="">
+                                    <img src="View/website/img/4.jpg" alt="" style="height: 314px;
+    width: 600px;">
                                 </span>
-                                <h5>tittle tin nổi bật</h5>
-                                <p>summary</p>
+                                <h5>Bayern Munich vô địch châu âu lần thứ 6</h5>
+                                <p>LOCFUHO đưa tin chân thật nhất tới khách hàng.</p>
                             </div>
                         </a>
                     </div>
