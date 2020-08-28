@@ -33,91 +33,28 @@ include_once('./View/Website2/share/header.php');
                 </div>
             </div>
         </div>
-        <div class="row gallery-filter">
-            <div class="col-md-8 mix all fitness">
-                <div class="gallery-item">
-                    <div class="gi-img">
-                        <img src="view/Website2/img/gallery/gallery-1.jpg" alt="">
-                    </div>
-                    <div class="gi-text">
-                        <h5>Thể Thao</h5>
-                        <span>Luyện tập 30 phút mỗi ngày</span>
-                    </div>
-                </div>
+        
+        <div style="    margin-left: 125px" class="row">
+            <div style="    margin-top: 30px;" class="col-6">
+            <div><h3>Thể Thao</h3></div>
+                <a href="?c=WebsiteTheThao&a=View"> <img style="width:400px;" src="https://nld.mediacdn.vn/thumb_w/540/2019/8/3/photo-1-15648212499661517922266.jpg" alt=""></a>
+                
+                
             </div>
-            <div class="col-md-4">
-                <div class="row">
-                    <div class="col-lg-12 mix all coaching event">
-                        <div class="gallery-item">
-                            <div class="gi-img">
-                                <img src="view/Website2/img/gallery/gallery-2.jpg" alt="">
-                            </div>
-                            <div class="gi-text">
-                                <h5>Thể Thao</h5>
-                                <span>Thể Thao</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 mix all other fitness">
-                        <div class="gallery-item">
-                            <div class="gi-img">
-                                <img src="view/Website2/img/gallery/gallery-3.jpg" alt="">
-                            </div>
-                            <div class="gi-text">
-                                <h5>Thể Thao</h5>
-                                <span>Luyện tập 30 phút mỗi ngày</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div style="    margin-top: 30px;" class="col-6">
+            <div><h3>Giai Tri</h3></div>
+                <a href="?c=WebsiteTheThao&a=View"> <img style="width:400px" src="https://nld.mediacdn.vn/thumb_w/540/2019/8/3/photo-1-15648212499661517922266.jpg" alt=""></a>
             </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="row">
-                    <div class="col-lg-12 mix all coaching">
-                        <div class="gallery-item">
-                            <div class="gi-img">
-                                <img src="view/Website2/img/gallery/gallery-4.jpg" alt="">
-                            </div>
-                            <div class="gi-text">
-                                <h5>Thể Thao</h5>
-                                <span>Luyện tập 30 phút mỗi ngày</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 mix all other event">
-                        <div class="gallery-item">
-                            <div class="gi-img">
-                                <img src="view/Website2/img/gallery/gallery-5.jpg" alt="">
-                            </div>
-                            <div class="gi-text">
-                                <h5>Thể Thao</h5>
-                                <span>Luyện tập 30 phút mỗi ngày</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        </div>
+     
+        <div style="    margin-left: 125px" class="row">
+            <div style="    margin-top: 30px;" class="col-6">
+            <div><h3>Công Nghệ</h3></div>
+                <a href="?c=WebsiteTheThao&a=View"> <img style="width:400px" src="https://nld.mediacdn.vn/thumb_w/540/2019/8/3/photo-1-15648212499661517922266.jpg" alt=""></a>
             </div>
-            <div class="col-lg-3 col-md-6 mix all coaching fitness">
-                <div class="gallery-item">
-                    <div class="gi-img">
-                        <img src="view/Website2/img/gallery/gallery-6.jpg" alt="">
-                    </div>
-                    <div class="gi-text">
-                        <h5>Thể Thao</h5>
-                        <span>Luyện tập 30 phút mỗi ngày</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 mix all event other">
-                <div class="gallery-item">
-                    <div class="gi-img">
-                        <img src="view/Website2/img/gallery/gallery-7.jpg" alt="">
-                    </div>
-                    <div class="gi-text">
-                        <h5>Thể Thao</h5>
-                        <span>Luyện tập 30 phút mỗi ngày</span>
-                    </div>
-                </div>
+            <div style="    margin-top: 30px;" class="col-6">
+            <div><h3>Âm Thực</h3></div>
+                <a href="?c=WebsiteTheThao&a=View"> <img style="width:400px" src="https://nld.mediacdn.vn/thumb_w/540/2019/8/3/photo-1-15648212499661517922266.jpg" alt=""></a>
             </div>
         </div>
     </div>

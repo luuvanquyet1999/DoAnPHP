@@ -11,27 +11,27 @@ include_once('./View/Website2/share/header.php');
 <section class="hero-section">
     <div class="hero-items owl-carousel">
         <div class="single-hero-item set-bg" data-setbg="view/website2/img/slider-bg-1.jpg">
-            <div style="background-color: rgba(156, 39, 176, 0.57)" ; class="container">
+            <div class="container">
                 <div class="hero-text">
-                    <h4>Trang tin tức nhanh chóng và uy tín</h4>
+                    <h4 style="margin-top: 15px;">Trang tin tức nhanh chóng và uy tín</h4>
                     <h1>Chính Xác <span>Trung Thực</span></h1>
                     <a href="#" class="primary-btn">Join Us Now</a>
                 </div>
             </div>
         </div>
         <div class="single-hero-item set-bg" data-setbg="view/website2/img/slider-bg-2.jpg">
-            <div style="background-color: rgba(156, 39, 176, 0.57)" ; class="container">
+            <div  class="container">
                 <div class="hero-text">
-                    <h4>Trang tin tức nhanh chóng và uy tín</h4>
+                    <h4 style="margin-top: 15px;">Trang tin tức nhanh chóng và uy tín</h4>
                     <h1>Chính Xác <span>Trung Thực</span></h1>
                     <a href="#" class="primary-btn">Join Us Now</a>
                 </div>
             </div>
         </div>
         <div class="single-hero-item set-bg" data-setbg="view/website2/img/slider-bg-3.jpg">
-            <div style="background-color: rgba(156, 39, 176, 0.57)" ; class="container">
+            <div  class="container">
                 <div class="hero-text">
-                    <h4>Trang tin tức nhanh chóng và uy tín</h4>
+                    <h4 style="margin-top: 15px;">Trang tin tức nhanh chóng và uy tín</h4>
                     <h1>Chính Xác <span>Trung Thực</span></h1>
                     <a href="#" class="primary-btn">Join Us Now</a>
                 </div>

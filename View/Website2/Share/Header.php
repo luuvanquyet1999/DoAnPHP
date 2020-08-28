@@ -29,18 +29,18 @@
         </div>
         <!-- Header Section Begin -->
         <header class="header-section">
-            <div style="margin-left: 100px;" class="logo">
+            <div style="margin-left: 60px; margin-top:-23px;" class="logo">
                 <a href="?c=WebsiteDefault&a=View">
                     <img src="View/Website2/img/logo4.png" alt="">
                 </a>
             </div>
-            <div style="margin-left: 103px;" class="container">
+            <div style="background-color: gray;margin-top:10px"; class="container">
 
 
 
-                <div style="margin: -20px 0 0px 100px;" class="nav-menu">
+                <div style="margin: -5px 0 0px 100px;" class="nav-menu">
 
-                    <nav style="background-color: rgba(0,0,0,0.0)" class="mainmenu mobile-menu">
+                    <nav class="mainmenu mobile-menu">
                         <ul style="margin:20px;">
                             <li class="active"><a href="?c=WebsiteDefault&a=View">Trang Chủ</a></li>
                             <li><a href="?c=WebsiteGioiThieu&a=View">Giới Thiệu</a></li>

@@ -333,11 +333,12 @@ ol {
 
 .header-section {
     padding-top: 35px;
-    position: absolute;
+    margin-bottom: 0px;
     left: 0;
     top: 0;
     width: 100%;
     z-index: 99;
+    background-color: gainsboro;
 }
 
 .header-section.header-normal {
