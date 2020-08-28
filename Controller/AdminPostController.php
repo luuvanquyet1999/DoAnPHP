@@ -32,12 +32,7 @@ class AdminPostController
         $post_image = $path;
         $category_name = $_POST["category"];
         $post_createdate =  $_POST["createday"];
-        // echo $file_name;
-        // die();
-        //$a = strtolower($post_title);
         $post_link = $post_title;
-        // echo $username.$post_title.$post_summary. $post_content. $post_image.$category_name.$post_createdate;
-        // die();
         $result = $this->PostModel->Insert(new Post($post_id, $post_title, $post_summary, $post_content, $post_image, $post_createdate, $category_name, $username, $post_link));
         if ($result == true)
             header('location: index.php?c=AdminPost&a=View&r=1');

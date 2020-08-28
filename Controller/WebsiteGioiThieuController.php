@@ -10,7 +10,7 @@ class WebsiteGioiThieuController
     function View(){
         $data= $this->websitegioithieumodel->GetAll();
         $data1= $this->websitegioithieumodel->GetMember();
-        require SYSTEM_PATH."/View/website2/GioiThieu.php";
+        require SYSTEM_PATH."/View/website/GioiThieu.php";
     }
 }
 

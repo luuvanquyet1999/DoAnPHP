@@ -1,127 +1,169 @@
 <?php
-include_once('./View/Admin/checkSession.php');
+if (!isset($_SESSION)) {
+    session_start();
+}
 ?>
-<!DOCTYPE html>
-<html lang="en">
+<?php
+if (!isset($_SESSION["username"])) {
+    echo "<script type='text/javascript'>alert('Vui lòng bạn đăng nhập tài khoản Admin');</script>";
+    header('Location: index.php?c=Login&a=View');
+}
+?>
+
+<!doctype html>
+<html class="no-js" lang="">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ADMINISTRATOR</title>
+    <meta name="description" content="Ela Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="View/Admin/images/favicon.ico" type="image/ico" />
-    <title>ADMINISTRATOR | Category</title>
-    <meta charset="UTF-8">
-    <!-- Bootstrap -->
-    <link href="cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
-    <link href="asset/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="asset/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <!-- NProgress -->
-    <link href="asset/vendors/nprogress/nprogress.css" rel="stylesheet">
-    <!-- iCheck -->
-    <link href="asset/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
-    <link href="asset/vendors/Style.css" rel="stylesheet">
-    <!-- Custom Theme Style -->
-    <link href="asset/build/css/custom.min.css" rel="stylesheet">
+    <link rel="apple-touch-icon" href="https://i.imgur.com/QRAUqs9.png">
+    <link rel="shortcut icon" href="https://i.imgur.com/QRAUqs9.png">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/css/flag-icon.min.css">
+    <link rel="stylesheet" href="assets/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
+    <link href="https://cdn.jsdelivr.net/npm/chartist@0.11.0/dist/chartist.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/jqvmap@1.5.1/dist/jqvmap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/weathericons@2.1.0/css/weather-icons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.css" rel="stylesheet" />
+
 </head>
 
-<body class="nav-md">
-    <div class="container body">
-        <div class="main_container">
-            <?php
-            include_once('./View/Admin/Share/header.php');
-            ?>
+<body>
+    <?php
+    include_once('./View/Admin/Share/Menu.php');
+    ?>
+    <!-- Right Panel -->
+    <div id="right-panel" class="right-panel">
+        <?php
+        include_once('./View/Admin/Share/header.php');
+        ?>
+        <!-- Content -->
+        <div class="content">
             <!-- page content -->
             <div class="right_col" role="main">
                 <div class="">
                     <div class="page-title">
                         <div class="title_left">
-                            <h3 class=title>Quản lý nhóm bài viết</h3>
-                        </div>
-                        <div class="title_right">
-                            <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search for...">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-secondary" type="button">Go!</button>
-                                    </span>
-                                </div>
-                            </div>
+                            <h3>CẬP NHẬT NHÓM BÀI VIẾT</h3>
                         </div>
                     </div>
                     <div class="clearfix"></div>
                     <div class="container">
                         <div class="row">
-                            <div class="col-3"></div>
-                            <div class="col-md-6 col-sm-6">
-                                <div class="add">
-                                    <h3>Cập nhật</h3>
-                                    <form action="index.php?c=AdminCategory&a=SaveUpdate" method="post">
-                                        <table>
-                                            <tr hidden>
-                                                <td>id</td>
-                                                <td><input type="text" readonly name="category_id" value="<?= $Category->Category_id ?>" /></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Name</td>
-                                                <td><input type="text" name="category_name" value="<?= $Category->Category_name ?>" class="form-control content" /></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Link</td>
-                                                <td><input type="text" name="category_link" value="<?= $Category->Category_link ?>" class="form-control" /></td>
-                                            </tr>
-                                            <tr hidden>
-                                                <td>active</td>
-                                                <td><input type="text" name="Active" value="1" /></td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-
-                                                </td>
-                                                <td>
-                                                    <button type="submit" value="submit" class="btn btn-primary">Lưu</button>
-                                                    <a href="index.php?c=AdminCategory&a=View" class="btn btn-warning">Cancel</a>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </form>
+                            <div class="col-md-12 col-sm-12 ">
+                                <div class="x_panel">
+                                    <div class="x_title">
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="x_content">
+                                        <div class="row" style="width:100%">
+                                            <div class="col-sm-12">
+                                                <form action="index.php?c=AdminCategory&a=SaveUpdate" method="post">
+                                                    <div class="form-group row" hidden>
+                                                        <label for="colFormLabel" class="col-sm-2 col-form-label col-form-label-lg">ID</label>
+                                                        <div class="col-sm-10">
+                                                            <input type="text" readonly name="category_id" value="<?= $Category->Category_id ?>" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label for="colFormLabel" class="col-sm-2 col-form-label">Tên nhóm bài viết</label>
+                                                        <div class="col-sm-10">
+                                                            <input type="text"name="category_name" value="<?= $Category->Category_name ?>" class="form-control" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row" hidden>
+                                                        <label for="colFormLabel" class="col-sm-2 col-form-label ">Link</label>
+                                                        <div class="col-sm-10">
+                                                            <input type="text" name="category_link" value="<?= $Category->Category_link ?>" class="form-control" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row" hidden>
+                                                        <label for="colFormLabel" class="col-sm-2 col-form-label ">Active</label>
+                                                        <div class="col-sm-10">
+                                                            <input type="text" name="Active" class="form-control" value="1" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <div class="action">
+                                                            <button type="submit" value="submit" class="btn btn-primary">Update</button>
+                                                            <a href="index.php?c=AdminCategory&a=View" class="btn btn-warning">Cancel</a>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-3"></div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- /page content -->
-
-            <!-- footer content -->
-            <?php
-            include_once('./View/Admin/Share/footer.php');
-            ?>
-            <!-- /footer content -->
         </div>
+        <!-- /.content -->
+        <div class="clearfix"></div>
+        <?php
+        include_once('./View/Admin/Share/Footer.php');
+        ?>
     </div>
+    <!-- /#right-panel -->
 
-    <!-- jQuery -->
-    <script src="asset/vendors/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="asset/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- FastClick -->
-    <script src="asset/vendors/fastclick/lib/fastclick.js"></script>
-    <!-- NProgress -->
-    <script src="asset/vendors/nprogress/nprogress.js"></script>
-    <!-- iCheck -->
-    <script src="asset/vendors/iCheck/icheck.min.js"></script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
+    <script src="assets/js/main.js"></script>
 
-    <script src="asset/vendors/jszip/dist/jszip.min.js"></script>
-    <script src="asset/vendors/pdfmake/build/pdfmake.min.js"></script>
-    <script src="asset/vendors/pdfmake/build/vfs_fonts.js"></script>
+    <!--  Chart js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.bundle.min.js"></script>
 
-    <!-- Custom Theme Scripts -->
-    <script src="asset/build/js/custom.min.js"></script>
+    <!--Chartist Chart-->
+    <script src="https://cdn.jsdelivr.net/npm/chartist@0.11.0/dist/chartist.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartist-plugin-legend@0.6.2/chartist-plugin-legend.min.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/jquery.flot@0.8.3/jquery.flot.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flot-pie@1.0.0/src/jquery.flot.pie.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flot-spline@0.0.1/js/jquery.flot.spline.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simpleweather@3.1.0/jquery.simpleWeather.min.js"></script>
+    <script src="assets/js/init/weather-init.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.js"></script>
+    <script src="assets/js/init/fullcalendar-init.js"></script>
+    <script src="assets/js/lib/data-table/datatables.min.js"></script>
+    <script src="assets/js/lib/data-table/dataTables.bootstrap.min.js"></script>
+    <script src="assets/js/lib/data-table/dataTables.buttons.min.js"></script>
+    <script src="assets/js/lib/data-table/buttons.bootstrap.min.js"></script>
+    <script src="assets/js/lib/data-table/jszip.min.js"></script>
+    <script src="assets/js/lib/data-table/vfs_fonts.js"></script>
+    <script src="assets/js/lib/data-table/buttons.html5.min.js"></script>
+    <script src="assets/js/lib/data-table/buttons.print.min.js"></script>
+    <script src="assets/js/lib/data-table/buttons.colVis.min.js"></script>
+    <script src="assets/js/init/datatables-init.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#bootstrap-data-table-export').DataTable();
+        });
+    </script>
 </body>
 
 </html>

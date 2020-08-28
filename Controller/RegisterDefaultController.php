@@ -8,7 +8,7 @@ class RegisterDefaultController
         $this->reigsterDefaultModel = new RegisterDefaultModel();
     }
     function View(){
-        require SYSTEM_PATH."/View/Website2/registerdefault.php";
+        require SYSTEM_PATH."/View/Website/registerdefault.php";
     }
     function Register(){
         if (isset($_POST["register"])) {
