@@ -1,39 +1,84 @@
- <!-- Scripts -->
- <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script> 
-    <script src="assets/js/main.js"></script>
-    <script src="asset/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="asset/vendors/fastclick/lib/fastclick.js"></script>
-    <script src="asset/vendors/nprogress/nprogress.js"></script>
-    <script src="asset/vendors/iCheck/icheck.min.js"></script>
-    <script src="asset/vendors/jszip/dist/jszip.min.js"></script>
-    <script src="asset/vendors/pdfmake/build/pdfmake.min.js"></script>
-    <script src="asset/vendors/pdfmake/build/vfs_fonts.js"></script>
-     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartist@0.11.0/dist/chartist.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartist-plugin-legend@0.6.2/chartist-plugin-legend.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery.flot@0.8.3/jquery.flot.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flot-pie@1.0.0/src/jquery.flot.pie.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flot-spline@0.0.1/js/jquery.flot.spline.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/simpleweather@3.1.0/jquery.simpleWeather.min.js"></script>
-    <script src="assets/js/init/weather-init.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.js"></script> 
-    <script src="assets/js/init/fullcalendar-init.js"></script>
-    <script src="assets/js/lib/data-table/datatables.min.js"></script>
-    <script src="assets/js/lib/data-table/dataTables.bootstrap.min.js"></script>
-    <script src="assets/js/lib/data-table/dataTables.buttons.min.js"></script>
-    <script src="assets/js/lib/data-table/buttons.bootstrap.min.js"></script>
-    <script src="assets/js/lib/data-table/jszip.min.js"></script>
-    <script src="assets/js/lib/data-table/vfs_fonts.js"></script>
-    <script src="assets/js/lib/data-table/buttons.html5.min.js"></script>
-    <script src="assets/js/lib/data-table/buttons.print.min.js"></script>
-    <script src="assets/js/lib/data-table/buttons.colVis.min.js"></script>
-    <script src="assets/js/init/datatables-init.js"></script>
-    
+<!-- jQuery -->
+<script src="asset/vendors/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="asset/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<!-- FastClick -->
+<script src="asset/vendors/fastclick/lib/fastclick.js"></script>
+<!-- NProgress -->
+<script src="asset/vendors/nprogress/nprogress.js"></script>
+<!-- Chart.js -->
+<script src="asset/vendors/Chart.js/dist/Chart.min.js"></script>
+<!-- gauge.js -->
+<script src="asset/vendors/gauge.js/dist/gauge.min.js"></script>
+<!-- bootstrap-progressbar -->
+<script src="asset/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+<!-- iCheck -->
+<script src="asset/vendors/iCheck/icheck.min.js"></script>
+<!-- Skycons -->
+<script src="asset/vendors/skycons/skycons.js"></script>
+<!-- Flot -->
+<script src="asset/vendors/Flot/jquery.flot.js"></script>
+<script src="asset/vendors/Flot/jquery.flot.pie.js"></script>
+<script src="asset/vendors/Flot/jquery.flot.time.js"></script>
+<script src="asset/vendors/Flot/jquery.flot.stack.js"></script>
+<script src="asset/vendors/Flot/jquery.flot.resize.js"></script>
+<!-- Flot plugins -->
+<script src="asset/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+<script src="asset/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+<script src="asset/vendors/flot.curvedlines/curvedLines.js"></script>
+<!-- DateJS -->
+<script src="asset/vendors/DateJS/build/date.js"></script>
+<!-- JQVMap -->
+<script src="asset/vendors/jqvmap/dist/jquery.vmap.js"></script>
+<script src="asset/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+<script src="asset/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+<!-- bootstrap-daterangepicker -->
+<script src="asset/vendors/moment/min/moment.min.js"></script>
+<script src="asset/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+<!-- Custom Theme Scripts -->
+<script src="asset/build/js/custom.min.js"></script>
+
+<!-- iCheck -->
+<!-- Datatables -->
+<script src="asset/vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="asset/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="asset/vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+<script src="asset/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+<script src="asset/vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+<script src="asset/vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+<script src="asset/vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+<script src="asset/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+<script src="asset/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+<script src="asset/vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+<script src="asset/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+<script src="asset/vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+<script src="asset/vendors/jszip/dist/jszip.min.js"></script>
+<script src="asset/vendors/pdfmake/build/pdfmake.min.js"></script>
+<script src="asset/vendors/pdfmake/build/vfs_fonts.js"></script>
+
 <!-- page script -->
+	<script src="asset/vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+	<script src="asset/vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
+	<script src="asset/vendors/google-code-prettify/src/prettify.js"></script>
+	<!-- jQuery Tags Input -->
+	<script src="asset/vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+	<!-- Switchery -->
+	<script src="asset/vendors/switchery/dist/switchery.min.js"></script>
+	<!-- Select2 -->
+	<script src="asset/vendors/select2/dist/js/select2.full.min.js"></script>
+	<!-- Parsley -->
+	<script src="asset/vendors/parsleyjs/dist/parsley.min.js"></script>
+	<!-- Autosize -->
+	<script src="asset/vendors/autosize/dist/autosize.min.js"></script>
+	<!-- jQuery autocomplete -->
+	<script src="asset/vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
+	<!-- starrr -->
+    <script src="asset/vendors/starrr/dist/starrr.js"></script>
+    <script src="asset/build/summernote/summernote-bs4.min.js"></script>
+	<!-- Custom Theme Scripts -->
 <script>
-    $(function () {
+    $(function() {
         $("#example1").DataTable({
             "responsive": true,
             "autoWidth": false,
@@ -48,7 +93,9 @@
             "responsive": true,
         });
     });
+
     function fucAlert(id) {
+        debugger;
         Swal.fire({
             title: 'Bạn muốn xóa?',
             text: "Nếu xóa bạn không thể khôi phục nó!",
@@ -63,11 +110,11 @@
                 Swal.fire({
                     position: 'center',
                     icon: 'success',
-                    title: 'Bạn đã chọn xóa!',
+                    title: 'Xóa thành công!',
                     showConfirmButton: false,
                     timer: 1500
-                }).then(function () {
-                    document.getElementById(id).click();
+                }).then(function() {
+                    document.getElementById('xoa'+id).click();
                 });
             }
         });

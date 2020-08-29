@@ -6,35 +6,41 @@ if (!isset($_SESSION)) {
 <?php
 if (!isset($_SESSION["username"])) {
     echo "<script type='text/javascript'>alert('Vui lòng bạn đăng nhập tài khoản Admin');</script>";
-    header('Location: index.php?c=Login&a=View');
+    header('Location: index.php?c=AdminLogin&a=View');
 }
 ?>
-
-<!doctype html>
-<html class="no-js" lang="">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>ADMINISTRATOR | SLIDE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Gentelella Alela! | Slide</title>
+
     <?php
     include 'asset/Scripts/ScriptHeader.php';
     ?>
-
 </head>
 
-<body>
-    <?php
-    include_once('./View/Admin/Share/Menu.php');
-    ?>
-    <!-- Right Panel -->
-    <div id="right-panel" class="right-panel">
-        <?php
-        include_once('./View/Admin/Share/header.php');
-        ?>
-        <!-- Content -->
-        <div class="content">
-            <!-- page content -->
+<body class="nav-md">
+    <div class="container body">
+        <div class="main_container">
+            <!-- menu -->
+            <?php
+            include_once('./View/Admin/Share/Menu.php');
+            ?>
+            <!-- end menu -->
+            <div class="top_nav">
+                <!-- header -->
+                <?php
+                include_once('./View/Admin/Share/Header.php');
+                ?>
+                <!-- end header -->
+            </div>
             <div class="right_col" role="main">
                 <div class="">
                     <div class="page-title">
@@ -66,7 +72,7 @@ if (!isset($_SESSION["username"])) {
                                                         }
                                                         ?>
                                                     </p>
-                                                    <table id="bootstrap-data-table" class="table table-striped table-bordered table-hover">
+                                                    <table id="datatable" class="table table-striped table-bordered">
                                                         <thead class="text-center">
                                                             <tr>
                                                                 <th>STT</th>
@@ -84,8 +90,10 @@ if (!isset($_SESSION["username"])) {
                                                                     <td><?= $stt++ ?></td>
                                                                     <td style="text-align: center;"><img src="<?= $value->slide_image ?>" style="max-width:100%; height:150px"></td>
                                                                     <td>
-                                                                        <a href="?c=AdminSlide&a=Delete&slide_id=<?= $value->slide_id ?>" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
-                                                                        <a href="?c=AdminSlide&a=Update&slide_id=<?= $value->slide_id ?>" class="btn btn-primary"><i class="fas fa-edit"></i></a>
+                                                                        <a class="btn btn-danger" href="javascript:void(0);" onclick="fucAlert(this.id)" id="<?= $value->slide_id ?>"><i class="fa fa-trash"></i></a>
+                                                                        <a hidden href="?c=AdminSlide&a=Delete&slide_id=<?= $value->slide_id ?>" id="xoa<?= $value->slide_id ?>"></a>
+                                                                        <!-- <a href="?c=AdminSlide&a=Delete&slide_id=<?= $value->slide_id ?>" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></a> -->
+                                                                        <a href="?c=AdminSlide&a=Update&slide_id=<?= $value->slide_id ?>" class="btn btn-primary"><i class=" fa fa-edit"></i></a>
                                                                     </td>
                                                                 </tr>
                                                             <?php
@@ -103,26 +111,15 @@ if (!isset($_SESSION["username"])) {
                     </div>
                 </div>
             </div>
-            <!-- /page content -->
+            <!-- footer -->
+            <?php
+            include_once('./View/Admin/Share/Footer.php');
+            ?>
+            <!-- end footer -->
         </div>
-        <!-- /.content -->
-        <div class="clearfix"></div>
         <?php
-        include_once('./View/Admin/Share/Footer.php');
+        include 'asset/Scripts/ScriptFooter.php';
         ?>
-    </div>
-    <!-- /#right-panel -->
-
-    <?php
-    include 'asset/Scripts/ScriptFooter.php';
-    ?>
-
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#bootstrap-data-table-export').DataTable();
-        });
-    </script>
 </body>
 
 </html>

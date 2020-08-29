@@ -112,7 +112,8 @@ if (!isset($_SESSION["username"])) {
                                                     <div class="form-group row">
                                                         <label for="colFormLabel" class="col-sm-2 col-form-label ">Nội dung</label>
                                                         <div class="col-sm-10">
-                                                            <textarea name="post_content" class="form-control" rows="8" style="width:95%"></textarea>
+                                                        <textarea name="post_content" class="textarea form-control" placeholder="Place some text here" ></textarea>
+                                                            <!-- <textarea name="post_content" class="form-control" rows="8" style="width:95%"></textarea> -->
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">

@@ -6,34 +6,41 @@ if (!isset($_SESSION)) {
 <?php
 if (!isset($_SESSION["username"])) {
     echo "<script type='text/javascript'>alert('Vui lòng bạn đăng nhập tài khoản Admin');</script>";
-    header('Location: index.php?c=Login&a=View');
+    header('Location: index.php?c=AdminLogin&a=View');
 }
 ?>
-
-<!doctype html>
-<html class="no-js" lang="">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>ADMINISTRATOR | GIỚI THIỆU</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Gentelella Alela! | Slide</title>
+
     <?php
     include 'asset/Scripts/ScriptHeader.php';
-    ?> 
+    ?>
 </head>
 
-<body>
-    <?php
-    include_once('./View/Admin/Share/Menu.php');
-    ?>
-    <!-- Right Panel -->
-    <div id="right-panel" class="right-panel">
-        <?php
-        include_once('./View/Admin/Share/header.php');
-        ?>
-        <!-- Content -->
-        <div class="content">
-            <!-- page content -->
+<body class="nav-md">
+    <div class="container body">
+        <div class="main_container">
+            <!-- menu -->
+            <?php
+            include_once('./View/Admin/Share/Menu.php');
+            ?>
+            <!-- end menu -->
+            <div class="top_nav">
+                <!-- header -->
+                <?php
+                include_once('./View/Admin/Share/Header.php');
+                ?>
+                <!-- end header -->
+            </div>
             <div class="right_col" role="main">
                 <div class="">
                     <div class="page-title">
@@ -64,13 +71,12 @@ if (!isset($_SESSION["username"])) {
                                                         }
                                                         ?>
                                                     </p>
-                                                    <table id="bootstrap-data-table" class="table table-striped table-bordered table-hover">
+                                                    <table id="datatable" class="table table-striped table-bordered">
                                                         <thead>
                                                             <tr>
                                                                 <th>STT</th>
                                                                 <th>Title</th>
                                                                 <th>Summary</th>
-                                                                <th>Content</th>
                                                                 <th>Image</th>
                                                                 <th>#</th>
                                                             </tr>
@@ -85,12 +91,11 @@ if (!isset($_SESSION["username"])) {
                                                                     <td><?= $stt++ ?></td>
                                                                     <td><?= $value->title ?></td>
                                                                     <td><?= $value->summary ?></td>
-                                                                    <td><?= $value->content ?></td>
                                                                     <td>
-                                                                        <img src="<?= $value->image ?>" style="width:100%; height:200px"/>
+                                                                        <img src="<?= $value->image ?>" style="width:100%; height:200px" />
                                                                     </td>
                                                                     <td>
-                                                                        <a href="?c=AdminGioiThieu&a=Update&intro_id=<?= $value->intro_id ?>" class="btn btn-primary"><i class="fas fa-edit"></i></a>
+                                                                        <a href="?c=AdminGioiThieu&a=Update&intro_id=<?= $value->intro_id ?>" class="btn btn-primary"><i class="fa fa-edit"></i></a>
                                                                     </td>
                                                                 </tr>
                                                             <?php
@@ -108,24 +113,15 @@ if (!isset($_SESSION["username"])) {
                     </div>
                 </div>
             </div>
-            <!-- /page content -->
+            <!-- footer -->
+            <?php
+            include_once('./View/Admin/Share/Footer.php');
+            ?>
+            <!-- end footer -->
         </div>
-        <!-- /.content -->
-        <div class="clearfix"></div>
         <?php
-        include_once('./View/Admin/Share/Footer.php');
+        include 'asset/Scripts/ScriptFooter.php';
         ?>
-    </div>
-    <!-- /#right-panel -->
-
-    <?php
-    include 'asset/Scripts/ScriptFooter.php';
-    ?>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#bootstrap-data-table-export').DataTable();
-        });
-    </script>
 </body>
 
 </html>

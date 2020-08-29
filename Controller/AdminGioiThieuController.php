@@ -23,11 +23,13 @@ class AdminGioiThieuController
         $intro_id = $_POST["intro_id"];
         $title = $_POST["title"];
         $summary = $_POST["summary"];
-        $content = $_POST["content"];
+        $content = $_REQUEST["text"];
         $file_name = $_FILES["image"]["name"];
         move_uploaded_file($_FILES["image"]["tmp_name"], "fileUpload/Introduce/" . $_FILES["image"]["name"]);
         $path = "fileUpload/Introduce/" .$file_name;
         $image = $path;
+        echo $content;
+        die();
         $result = $this->admingioithieumodel->Update(new GioiThieu($intro_id, $title, $summary, $content, $image));
         if ($result == true)
             header('location: index.php?c=AdminGioiThieu&a=View&r=1');
