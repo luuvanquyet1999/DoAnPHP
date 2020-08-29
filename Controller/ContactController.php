@@ -57,4 +57,15 @@ class ContactController{
         else
             header('location: index.php?c=Contact&a=View&r=0');
     }
+    function SendContact()
+    {
+        $content = $_POST["content"];
+        $fullname = $_POST["fullname"];
+        $email = $_POST["email"];
+        $result  =$this->ContactModel->SendContact(new ContactDefault($content, $fullname,$email));
+        if ($result == true)
+            header('location: index.php?c=WebsiteIndex&a=Contact&r=1');
+        else
+            header('location: index.php?c=WebsiteIndex&a=Contact&r=0');
+    }
 }

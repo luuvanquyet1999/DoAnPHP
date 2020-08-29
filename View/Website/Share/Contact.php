@@ -1,4 +1,4 @@
-<form action="index.php?c=contactdefault&a=SendContact" method="post">
+<form action="index.php?c=Contact&a=SendContact" method="post">
     <p>
         <?php
         if (isset($_GET['r'])) {

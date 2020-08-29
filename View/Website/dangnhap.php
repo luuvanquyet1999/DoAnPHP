@@ -63,7 +63,7 @@ if (isset($_POST["login"])) {
                 $_SESSION['websiteusername'] = $username;
                 // Thực thi hành động sau khi lưu thông tin vào session
                 // ở đây mình tiến hành chuyển hướng trang web tới một trang gọi là index.php
-                header('Location: index.php?c=WebsiteDefault&a=View&s=success');
+                header('Location: index.php?c=WebsiteIndex&a=View&s=success');
             }
         }
     }

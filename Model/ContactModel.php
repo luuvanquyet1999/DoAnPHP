@@ -15,6 +15,17 @@ class Contact{
         $this->Active=$Active;
     }
 }
+class ContactDefault{
+    public $sendcontact_content;
+    public $sendcontact_fullname;
+    public $sendcontact_email;
+    function __construct( $sendcontact_content,$sendcontact_fullname,$sendcontact_email)
+    {
+       $this->sendcontact_content=$sendcontact_content;
+       $this->sendcontact_fullname=$sendcontact_fullname;
+       $this->sendcontact_email=$sendcontact_email;
+    }
+}
 class ContactModel{
     private $mysql;
     public function __construct()
@@ -63,6 +74,13 @@ class ContactModel{
                         ContactAdress='$contact->contact_address',
                         Active = '$contact->Active'
                     WHERE ContactId = '$contact->contact_id'";
+        $result = $this->mysql->query($query);
+        return $result;
+    }
+    function SendContact(ContactDefault $contactDefault)
+    {
+        $query = "INSERT INTO lph_sendcontact(Content,Fullname,Email) VALUES ('$contactDefault->sendcontact_content','$contactDefault->sendcontact_fullname',
+                                            '$contactDefault->sendcontact_email')";
         $result = $this->mysql->query($query);
         return $result;
     }
