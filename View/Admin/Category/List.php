@@ -83,7 +83,8 @@ if (!isset($_SESSION["username"])) {
                                                                     <td><?= $stt++ ?></td>
                                                                     <td><?= $value->Category_name ?></td>
                                                                     <td>
-                                                                        <a href="?c=AdminCategory&a=Delete&CategoryID=<?= $value->Category_id ?>" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
+                                                                        <a class="btn btn-danger btn-sm" href="javascript:void(0);" onclick="fucAlert(this.id)" id="<?= $value->Category_id ?>"><i class="fas fa-trash-alt"></i></a>
+                                                                        <a hidden href="?c=AdminCategory&a=Delete&CategoryID=<?= $value->Category_id ?>" id="a<?= $value->Category_id ?>"></a>
                                                                         <a href="?c=AdminCategory&a=Update&CategoryID=<?= $value->Category_id ?>" class="btn btn-primary"><i class="fas fa-edit"></i></a>
                                                                     </td>
                                                                 </tr>
