@@ -67,7 +67,7 @@
                     showConfirmButton: false,
                     timer: 1500
                 }).then(function () {
-                    document.getElementById('a'+id).click();
+                    document.getElementById(id).click();
                 });
             }
         });

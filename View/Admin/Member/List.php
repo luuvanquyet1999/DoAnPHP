@@ -89,7 +89,8 @@ if (!isset($_SESSION["username"])) {
                                                                     </td>
                                                                     <td><?= $value->member_job ?></td>
                                                                     <td>
-                                                                        <a href="?c=AdminMember&a=Delete&member_id=<?= $value->member_id ?>" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
+                                                                        <a class="btn btn-danger btn-sm" href="javascript:void(0);" onclick="fucAlert(this.id)" id="<?= $value->member_id ?>"><i class="fas fa-trash-alt"></i></a>
+                                                                        <a hidden href="?c=AdminMember&a=Delete&member_id=<?= $value->member_id ?>" id="a<?= $value->member_id ?>"></a>
                                                                         <a href="?c=AdminMember&a=Update&member_id=<?= $value->member_id ?>" class="btn btn-primary"><i class="fas fa-edit"></i></a>
                                                                     </td>
                                                                 </tr>

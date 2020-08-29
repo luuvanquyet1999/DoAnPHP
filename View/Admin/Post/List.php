@@ -93,8 +93,7 @@ if (!isset($_SESSION["username"])) {
                                                                     <td><?= $value->category_name ?></td>
                                                                     <td><?= $value->username ?></td>
                                                                     <td>
-                                                                        <a class="btn btn-danger btn-sm" href="javascript:void(0);" onclick="fucAlert(this.id)" id="<?= $value->post_id ?>"><i class="fas fa-trash-alt"></i></a>
-                                                                        <a hidden href="?AdminPost&a=Delete&PostID=<?= $value->post_id ?>" id="a<?= $value->post_id ?>"></a>
+                                                                        <a href="?c=AdminPost&a=Delete&PostID=<?= $value->post_id ?>" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
                                                                         <a href="?c=AdminPost&a=Update&PostID=<?= $value->post_id ?>" class="btn btn-primary"><i class="fas fa-edit"></i></a>
                                                                     </td>
                                                                 </tr>
