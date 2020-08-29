@@ -22,21 +22,6 @@ include_once('./View/website/share/header.php');
 <!-- Site Breadcrumb End -->
 
 <!-- Blog Section Begin -->
-<section class="gallery-section spad">
-    <div class="container">
-        <div class="menu-wrapper">
-            <div class="portfolioFilter">
-                <div class="portfolioFilter-inner">
-                    <a href="?c=WebsiteTinMoi&a=" data-filter=".dessert">All</a>
-                    <a href="?c=WebsiteTheThao&a=View" data-filter="*" class="current">Thế Thao</a>
-                    <a href="?c=WebsiteGiaitri&a=View" data-filter=".dessert">Giải Trí</a>
-                    <a href="?c=WebsiteThoitrang&a=View" data-filter=".dinner">Thời Trang</a>
-                    <a href="?c=Websitetinnoibat&a=View" data-filter=".freshfood">Tin Nỗi Bật</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <section class="blog-section spad">
     <h2 style="text-align: center;margin-bottom: 30px;">Thể Thao Tuần Này Có Gì?</h2>
     <div class="container">

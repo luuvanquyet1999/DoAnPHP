@@ -23,16 +23,16 @@ include_once('./View/website/share/header.php');
         <div class="menu-wrapper">
             <div class="portfolioFilter">
                 <div class="portfolioFilter-inner">
-                    <a href="javascript:;" data-filter="*" class="current">All</a>
-                    <a href="javascript:;" data-filter=".breakfast">Thế Thao</a>
-                    <a href="javascript:;" data-filter=".dessert">Giải Trí</a>
-                    <a href="javascript:;" data-filter=".dinner">Thời Trang</a>
-                    <a href="javascript:;" data-filter=".freshfood">Tin Nỗi Bật</a>
+                    <a href="?c=WebsiteTinMoi&a=View" data-filter="*" class="current">All</a>
+                    <a href="?c=WebsiteTheThao&a=View" data-filter=".breakfast">Thế Thao</a>
+                    <a href="?c=WebsiteGiaitri&a=View" data-filter=".dessert">Giải Trí</a>
+                    <a href="?c=WebsiteThoitrang&a=View" data-filter=".dinner">Thời Trang</a>
+                    <a href="?c=Websitetinnoibat&a=View" data-filter=".freshfood">Tin Nỗi Bật</a>
                 </div>
             </div>
             <div class="portfolioContainer row">
                     <div id="" class="col-md-6 col-sm-6 col-xs-12 isotope-item menu-list__product breakfast">
-                        <a href="View/Web/productdetail.php">
+                        <a href="?c=WebsiteTheThao&a=View">
                             <div class="menu-list">
                                 <span class="menu-list-product">
                                     <img src="View/website/img/1.jpg" alt="">
@@ -43,7 +43,7 @@ include_once('./View/website/share/header.php');
                         </a>
                     </div>
                     <div id="" class="col-md-6 col-sm-6 col-xs-12 isotope-item menu-list__product dessert">
-                        <a href="View/Web/productdetail.php">
+                        <a href="?c=WebsiteGiaitri&a=View">
                             <div class="menu-list">
                                 <span class="menu-list-product">
                                     <img src="View/website/img/2.jpg" alt="" style="height: 347px;
@@ -55,7 +55,7 @@ include_once('./View/website/share/header.php');
                         </a>
                     </div>
                     <div id="" class="col-md-6 col-sm-6 col-xs-12 isotope-item menu-list__product dinner">
-                        <a href="View/Web/productdetail.php">
+                        <a href="?c=WebsiteThoitrang&a=View">
                             <div class="menu-list">
                                 <span class="menu-list-product">
                                     <img src="View/website/img/3.jpg" alt="" style="width:560px">

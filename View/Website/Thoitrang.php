@@ -27,10 +27,10 @@ include_once('./View/website/share/header.php');
         <div class="menu-wrapper">
             <div class="portfolioFilter">
                 <div class="portfolioFilter-inner">
-                    <a href="?c=WebsiteTinMoi&a=" data-filter=".dessert">All</a>
-                    <a href="?c=WebsiteTheThao&a=View" data-filter="*" class="current">Thế Thao</a>
+                    <a href="?c=WebsiteTinMoi&a=View" data-filter=".dessert">All</a>
+                    <a href="?c=WebsiteTheThao&a=View"data-filter=".breakfast">Thế Thao</a>
                     <a href="?c=WebsiteGiaitri&a=View" data-filter=".dessert">Giải Trí</a>
-                    <a href="?c=WebsiteThoitrang&a=View" data-filter=".dinner">Thời Trang</a>
+                    <a href="?c=WebsiteThoitrang&a=View" data-filter="*" class="current">Thời Trang</a>
                     <a href="?c=Websitetinnoibat&a=View" data-filter=".freshfood">Tin Nỗi Bật</a>
                 </div>
             </div>
@@ -38,14 +38,14 @@ include_once('./View/website/share/header.php');
     </div>
 </section>
 <section class="blog-section spad">
-    <h2 style="text-align: center;margin-bottom: 30px;">Thể Thao Tuần Này Có Gì?</h2>
+    <h2 style="text-align: center;margin-bottom: 30px;">Thời Trang Tuần Này Có Gì?</h2>
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
                 <div class="blog-items">
                     <div class="single-blog-item">
                         <div class="blog-pic">
-                            <img src="View/website/img/10jpg.jpg" alt="">
+                            <img src="View/website/img/12.jpg" alt="">
                         </div>
                         <div class="blog-text">
                             <div class="blog-tag">
@@ -62,7 +62,7 @@ include_once('./View/website/share/header.php');
                                 </div>
                             </div>
                             <a href="./blog-details.html">
-                                <h3>Ronaldo giành danh hiệu đẹp nhất c1</h3>
+                                <h3>Sơn Tùng dại diện làm bìa thương hiệu.</h3>
                             </a>
                             <p> Bước đầu là giai đoạn rất quan trọng với người tập thể hình. Đây là giai đoạn kích thích khởi động các cơ, chính vì vậy hãy để cơ luôn trọng trạng thái hoạt động, dù nặng hay nhẹ. Liên tục duy trì 5 – 6 buổi tập / tuần.
                                 Bạn không được phép nghỉ, nghỉ buổi nào bạn cũng đang gián đoạn quá trình quá trình kích thích, khởi động cơ. Tuy nhiên, cũng đừng để cơ quá mệt mỏi, chỉ nên tập 30 phút mỗi ngày....</p>
@@ -71,7 +71,7 @@ include_once('./View/website/share/header.php');
                     </div>
                     <div class="single-blog-item">
                         <div class="blog-pic">
-                            <img src="View/website/img/11.jpg" alt="">
+                            <img src="View/website/img/13.jpg" alt="">
                         </div>
                         <div class="blog-text">
                             <div class="blog-tag">
@@ -175,9 +175,13 @@ include_once('./View/website/share/header.php');
                             </li>
                         </ul>
                     </div>
+                    
                 </div>
+                
             </div>
+            
         </div>
+        
     </div>
 </section>
 <!-- Blog Section End -->

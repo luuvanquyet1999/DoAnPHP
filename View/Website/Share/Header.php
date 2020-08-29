@@ -45,7 +45,7 @@
                             <li class="active"><a href="?c=WebsiteDefault&a=View">Trang Chủ</a></li>
                             <li><a href="?c=WebsiteGioiThieu&a=View">Giới Thiệu</a></li>
                             <li><a href="?c=WebsiteTinMoi&a=View">Bài Viết</a></li>
-                            <li><a href="?c=WebsiteTheThao&a=View">Thể Thao</a></li>
+                            <li><a href="?c=WebsiteTheThao1&a=View">Thể Thao</a></li>
                             <li><a href="?c=WebsiteContact&a=View">Liên Hệ</a></li>
                             <li><a href="javascript:void(0)">|</a></li>
                             <?php
