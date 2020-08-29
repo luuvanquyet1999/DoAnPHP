@@ -24,7 +24,7 @@
           </ul>
         </li>
         <li class="menu-item-has-children dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="pe-7s-users mr-1"></i>Quản lý thành viên</a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="ion ion-person-add mr-1"></i></i>Quản lý thành viên</a>
           <ul class="sub-menu children dropdown-menu">
             <li><i class="fa fa-user"></i><a href="?c=useradmin&a=View">Tài khoản Admin</a></li>
             <li><i class="fa fa-user"></i><a href="?c=AdminMember&a=View">Thành viên nhóm</a></li>
