@@ -119,7 +119,7 @@ if (!isset($_SESSION["username"])) {
     <!-- /#right-panel -->
 
     <?php
-    include 'asset/Scripts/ScriptHeadeFooter.php';
+    include 'asset/Scripts/ScriptFooter.php';
     ?>
     <script type="text/javascript">
         $(document).ready(function() {
