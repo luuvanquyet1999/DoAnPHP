@@ -10,7 +10,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-desktop mr-1"></i>Quản lý website</a>
           <ul class="sub-menu children dropdown-menu">
             <li><i class="fa fa-puzzle-piece"></i><a href="?c=AdminSlide&a=View">Slide</a></li>
-            <li><i class="fa fa-id-badge"></i><a href="?c=ContactDefault&a=View">Liên hệ</a></li>
+            <li><i class="fa fa-id-badge"></i><a href="?c=Contact&a=GetAllContactDefault">Liên hệ</a></li>
             <li><i class="fa fa-bars"></i><a href="?c=AdminGioiThieu&a=View">Giới thiệu</a></li>
             <li><i class="fa fa-user"></i><a href="?c=CustomerUser&a=View">Tài khoản khách hàng</a></li>
             <li><i class="fa fa-location-arrow" aria-hidden="true"></i><a href="?c=Contact&a=View">Thông tin</a></li>

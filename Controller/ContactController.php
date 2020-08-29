@@ -68,4 +68,9 @@ class ContactController{
         else
             header('location: index.php?c=WebsiteIndex&a=Contact&r=0');
     }
+    function GetAllContactDefault()
+    {
+        $data = $this->ContactModel->GetAllContactDefault();
+        require SYSTEM_PATH . "/View/Admin/ContactDefault/List.php";
+    }
 }

@@ -66,6 +66,7 @@ class ContactModel{
         }
         return null;
     }
+
     function Update(Contact $contact)
     {
         $query = "UPDATE lph_contact 
@@ -76,6 +77,16 @@ class ContactModel{
                     WHERE ContactId = '$contact->contact_id'";
         $result = $this->mysql->query($query);
         return $result;
+    }
+    function GetAllContactDefault()
+    {
+        $query = "SELECT * FROM lph_sendcontact ";
+        $result = $this->mysql->query($query);
+        $data = [];
+        foreach ($result->fetch_all() as $value) {
+            array_push($data, new ContactDefault($value[1], $value[2], $value[3], $value[4]));
+        }
+        return $data;
     }
     function SendContact(ContactDefault $contactDefault)
     {

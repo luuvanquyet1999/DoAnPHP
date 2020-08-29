@@ -70,7 +70,6 @@ if (!isset($_SESSION["username"])) {
                                                                 <th>STT</th>
                                                                 <th>Name</th>
                                                                 <th>Email</th>
-                                                                <!-- <th>Title</th> -->
                                                                 <th>Content</th>
                                                             </tr>
                                                         </thead>
@@ -84,7 +83,6 @@ if (!isset($_SESSION["username"])) {
                                                                     <td><?= $stt++ ?></td>
                                                                     <td><?= $value->sendcontact_fullname ?></td>
                                                                     <td><?= $value->sendcontact_email ?></td>
-                                                                    <!-- <td><?= $value->sendcontact_title ?></td> -->
                                                                     <td><?= $value->sendcontact_content ?></td>
                                                                 </tr>
                                                             <?php
