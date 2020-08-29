@@ -27,7 +27,7 @@ include_once('./View/website/share/header.php');
         <div class="menu-wrapper">
             <div class="portfolioFilter">
                 <div class="portfolioFilter-inner">
-                    <a href="?c=WebsiteTinMoi&a=" data-filter=".dessert">All</a>
+                    <a href="?c=WebsiteTinMoi&a=View" data-filter=".dessert">All</a>
                     <a href="?c=WebsiteTheThao&a=View" data-filter="*" class="current">Thế Thao</a>
                     <a href="?c=WebsiteGiaitri&a=View" data-filter=".dessert">Giải Trí</a>
                     <a href="?c=WebsiteThoitrang&a=View" data-filter=".dinner">Thời Trang</a>

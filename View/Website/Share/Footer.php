@@ -28,6 +28,8 @@
 <!-- Js Plugins -->
 <script src="view/website/js/jquery-3.3.1.min.js"></script>
 <script src="view/website/js/bootstrap.min.js"></script>
+<script src="view/website/js/isotope.pkgd.min.js"></script>
+<script src="view/website/js/app.js"></script>
 <script src="view/website/js/jquery.magnific-popup.min.js"></script>
 <script src="view/website/js/mixitup.min.js"></script>
 <script src="view/website/js/jquery.slicknav.js"></script>
