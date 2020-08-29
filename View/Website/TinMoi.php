@@ -30,7 +30,8 @@ include_once('./View/website/share/header.php');
                     <a href="?c=Websitetinnoibat&a=View" data-filter=".freshfood">Tin Nỗi Bật</a>
                 </div>
             </div>
-            <div class="portfolioContainer row">
+            <div style="    margin-right: -10px;
+    margin-left: 191px;" class="portfolioContainer row">
                     <div id="" class="col-md-6 col-sm-6 col-xs-12 isotope-item menu-list__product breakfast">
                         <a href="?c=WebsiteTheThao&a=View">
                             <div class="menu-list">
@@ -46,8 +47,7 @@ include_once('./View/website/share/header.php');
                         <a href="?c=WebsiteGiaitri&a=View">
                             <div class="menu-list">
                                 <span class="menu-list-product">
-                                    <img src="View/website/img/2.jpg" alt="" style="height: 347px;
-">
+                                    <img style="height: 193px;width:70%;" src="View/website/img/2.jpg" alt="">
                                 </span>
                                 <h5>Sơn Tùng MTP lại lập kỉ lục mới </h5>
                                 <p>LOCFUHO đưa tin chân thật nhất tới khách hàng.</p>
@@ -58,7 +58,7 @@ include_once('./View/website/share/header.php');
                         <a href="?c=WebsiteThoitrang&a=View">
                             <div class="menu-list">
                                 <span class="menu-list-product">
-                                    <img src="View/website/img/3.jpg" alt="" style="width:560px">
+                                    <img src="View/website/img/3.jpg" alt="">
                                 </span>
                                 <h5>Thời trang Sơn Tùng cực ngầu.</h5>
                                 <p>LOCFUHO đưa tin chân thật nhất tới khách hàng.</p>
@@ -69,8 +69,8 @@ include_once('./View/website/share/header.php');
                         <a href="View/Web/productdetail.php">
                             <div class="menu-list">
                                 <span class="menu-list-product">
-                                    <img src="View/website/img/4.jpg" alt="" style="height: 341px;
-    width: 600px;">
+                                    <img src="View/website/img/4.jpg" alt="" style="height: 189px;
+    width: 320px" >
                                 </span>
                                 <h5>Bayern Munich vô địch châu âu lần thứ 6</h5>
                                 <p>LOCFUHO đưa tin chân thật nhất tới khách hàng.</p>
