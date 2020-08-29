@@ -1,6 +1,3 @@
-<footer>
-    <div class="pull-right">
-        Gentelella - Bootstrap Admin Template by <a target="_blank" href="https://googlr.com">Locfuho Offical Team</a>
-    </div>
-    <div class="clearfix"></div>
+<footer class="footer text-center">
+    All Rights Reserved by Matrix-admin. Designed and Developed by <a target="_blank" href="https://google.com">Locfuho Offical Team</a>.
 </footer>
