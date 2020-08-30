@@ -1,38 +1,34 @@
-<!-- Left Panel -->
-<aside id="left-panel" class="left-panel">
-  <nav class="navbar navbar-expand-sm navbar-default">
-    <div id="main-menu" class="main-menu collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li class="active">
-          <a href="?c=AdminIndex&a=View"><i class="fa fa-home"></i> Home </a>
-        </li>
-        <li class="menu-item-has-children dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-desktop mr-1"></i>Quản lý website</a>
-          <ul class="sub-menu children dropdown-menu">
-            <li><i class="fa fa-puzzle-piece"></i><a href="?c=AdminSlide&a=View">Slide</a></li>
-            <li><i class="fa fa-id-badge"></i><a href="?c=Contact&a=GetAllContactDefault">Liên hệ</a></li>
-            <li><i class="fa fa-bars"></i><a href="?c=AdminGioiThieu&a=View">Giới thiệu</a></li>
-            <li><i class="fa fa-user"></i><a href="?c=CustomerUser&a=View">Tài khoản khách hàng</a></li>
-            <li><i class="fa fa-location-arrow" aria-hidden="true"></i><a href="?c=Contact&a=View">Thông tin</a></li>
-          </ul>
-        </li>
-        <li class="menu-item-has-children dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-desktop mr-1"></i>Quản lý bài viết</a>
-          <ul class="sub-menu children dropdown-menu">
-            <li><i class="fa fa-puzzle-piece"></i><a href="?c=AdminCategory&a=View">Nhóm bài viết</a></li>
-            <li><i class="fa fa-id-badge"></i><a href="?c=AdminPost&a=View">Bài viết</a></li>
-          </ul>
-        </li>
-        <li class="menu-item-has-children dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="ion ion-person-add mr-1"></i></i>Quản lý thành viên</a>
-          <ul class="sub-menu children dropdown-menu">
-            <li><i class="fa fa-user"></i><a href="?c=useradmin&a=View">Tài khoản Admin</a></li>
-            <li><i class="fa fa-user"></i><a href="?c=AdminMember&a=View">Thành viên nhóm</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <!-- /.navbar-collapse -->
-  </nav>
-</aside>
-<!-- /#left-panel -->
+<aside class="left-sidebar" data-sidebarbg="skin5">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav" class="p-t-30">
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="?c=AdminIndex&a=View" aria-expanded="false"><i class="fa fa-home" aria-hidden="true"></i><span class="hide-menu">Home</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fa fa-desktop" aria-hidden="true"></i><span class="hide-menu">Quản lý website </span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a href="?c=AdminSlide&a=View" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> Silde </span></a></li>
+                                <li class="sidebar-item"><a href="?c=AdminGioiThieu&a=View" class="sidebar-link"><i class="fa fa-book" aria-hidden="true"></i><span class="hide-menu"> Giới thiệu </span></a></li>
+                                <li class="sidebar-item"><a href="?c=Contact&a=GetAllContactDefault" class="sidebar-link"><i class="fa fa-paper-plane" aria-hidden="true"></i><span class="hide-menu"> Liên hệ </span></a></li>
+                                <li class="sidebar-item"><a href="?c=CustomerUser&a=View" class="sidebar-link"><i class="fa fa-user" aria-hidden="true"></i><span class="hide-menu"> Tài khoản khách hàng </span></a></li>
+                                <li class="sidebar-item"><a href="?c=Contact&a=View" class="sidebar-link"><i class="fa fa-address-card" aria-hidden="true"></i><span class="hide-menu"> Thông tin </span></a></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-newspaper"></i><span class="hide-menu">Quản lý bài viết </span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a href="?c=AdminCategory&a=View" class="sidebar-link"><i class="fa fa-object-group" aria-hidden="true"></i><span class="hide-menu"> Nhóm bài viết </span></a></li>
+                                <li class="sidebar-item"><a href="?c=AdminPost&a=View" class="sidebar-link"><i class="fas fa-file-alt"></i><span class="hide-menu"> Bài viết </span></a></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fa fa-users" aria-hidden="true"></i><span class="hide-menu">Quản lý thành viên </span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a href="?c=useradmin&a=View" class="sidebar-link"><i class="fa fa-user" aria-hidden="true"></i><span class="hide-menu"> Tài khoản Admin </span></a></li>
+                                <li class="sidebar-item"><a href="?c=AdminMember&a=View" class="sidebar-link"><i class="fa fa-user" aria-hidden="true"></i><span class="hide-menu"> Thành viên nhóm </span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>

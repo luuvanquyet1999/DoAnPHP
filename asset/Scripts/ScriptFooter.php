@@ -1,53 +1,79 @@
- <!-- Scripts -->
- <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script> 
-    <script src="assets/js/main.js"></script>
-    <script src="asset/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="asset/vendors/fastclick/lib/fastclick.js"></script>
-    <script src="asset/vendors/nprogress/nprogress.js"></script>
-    <script src="asset/vendors/iCheck/icheck.min.js"></script>
-    <script src="asset/vendors/jszip/dist/jszip.min.js"></script>
-    <script src="asset/vendors/pdfmake/build/pdfmake.min.js"></script>
-    <script src="asset/vendors/pdfmake/build/vfs_fonts.js"></script>
-     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartist@0.11.0/dist/chartist.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartist-plugin-legend@0.6.2/chartist-plugin-legend.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery.flot@0.8.3/jquery.flot.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flot-pie@1.0.0/src/jquery.flot.pie.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flot-spline@0.0.1/js/jquery.flot.spline.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/simpleweather@3.1.0/jquery.simpleWeather.min.js"></script>
-    <script src="assets/js/init/weather-init.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.js"></script> 
-    <script src="assets/js/init/fullcalendar-init.js"></script>
-    <script src="assets/js/lib/data-table/datatables.min.js"></script>
-    <script src="assets/js/lib/data-table/dataTables.bootstrap.min.js"></script>
-    <script src="assets/js/lib/data-table/dataTables.buttons.min.js"></script>
-    <script src="assets/js/lib/data-table/buttons.bootstrap.min.js"></script>
-    <script src="assets/js/lib/data-table/jszip.min.js"></script>
-    <script src="assets/js/lib/data-table/vfs_fonts.js"></script>
-    <script src="assets/js/lib/data-table/buttons.html5.min.js"></script>
-    <script src="assets/js/lib/data-table/buttons.print.min.js"></script>
-    <script src="assets/js/lib/data-table/buttons.colVis.min.js"></script>
-    <script src="assets/js/init/datatables-init.js"></script>
-    
-<!-- page script -->
+<script src="asset/assets/libs/jquery/dist/jquery.min.js"></script>
+<script src="asset/assets/libs/popper.js/dist/umd/popper.min.js"></script>
+<script src="asset/assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="asset/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+<script src="asset/assets/extra-libs/sparkline/sparkline.js"></script>
+<script src="asset/dist/js/waves.js"></script>
+<script src="asset/dist/js/sidebarmenu.js"></script>
+<script src="asset/dist/js/custom.min.js"></script>
+<script src="asset/assets/libs/flot/excanvas.js"></script>
+<script src="asset/assets/libs/flot/jquery.flot.js"></script>
+<script src="asset/assets/libs/flot/jquery.flot.pie.js"></script>
+<script src="asset/assets/libs/flot/jquery.flot.time.js"></script>
+<script src="asset/assets/libs/flot/jquery.flot.stack.js"></script>
+<script src="asset/assets/libs/flot/jquery.flot.crosshair.js"></script>
+<script src="asset/assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+<script src="asset/dist/js/pages/chart/chart-page-init.js"></script>
+<script src="asset/assets/libs/inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
+<script src="asset/dist/js/pages/mask/mask.init.js"></script>
+<script src="asset/assets/libs/select2/dist/js/select2.full.min.js"></script>
+<script src="asset/assets/libs/select2/dist/js/select2.min.js"></script>
+<script src="asset/assets/libs/jquery-asColor/dist/jquery-asColor.min.js"></script>
+<script src="asset/assets/libs/jquery-asGradient/dist/jquery-asGradient.js"></script>
+<script src="asset/assets/libs/jquery-asColorPicker/dist/jquery-asColorPicker.min.js"></script>
+<script src="asset/assets/libs/jquery-minicolors/jquery.minicolors.min.js"></script>
+<script src="asset/assets/libs/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script src="asset/assets/libs/quill/dist/quill.min.js"></script>
+<script src="asset/assets/extra-libs/multicheck/datatable-checkbox-init.js"></script>
+<script src="asset/assets/extra-libs/multicheck/jquery.multicheck.js"></script>
+<script src="asset/assets/extra-libs/DataTables/datatables.min.js"></script>
 <script>
-    $(function () {
-        $("#example1").DataTable({
-            "responsive": true,
-            "autoWidth": false,
+    /****************************************
+     *       Basic Table                   *
+     ****************************************/
+    $('#zero_config').DataTable();
+</script>
+<script>
+    //***********************************//
+    // For select 2
+    //***********************************//
+    $(".select2").select2();
+
+    /*colorpicker*/
+    $('.demo').each(function() {
+
+        $(this).minicolors({
+            control: $(this).attr('data-control') || 'hue',
+            position: $(this).attr('data-position') || 'bottom left',
+
+            change: function(value, opacity) {
+                if (!value) return;
+                if (opacity) value += ', ' + opacity;
+                if (typeof console === 'object') {
+                    console.log(value);
+                }
+            },
+            theme: 'bootstrap'
         });
-        $('#example2').DataTable({
-            "paging": true,
-            "lengthChange": false,
-            "searching": false,
-            "ordering": true,
-            "info": true,
-            "autoWidth": false,
-            "responsive": true,
-        });
+
     });
+    /*datwpicker*/
+    jQuery('.mydatepicker').datepicker();
+    jQuery('#datepicker-autoclose').datepicker({
+        autoclose: true,
+        todayHighlight: true
+    });
+    var quill = new Quill('#editor', {
+        theme: 'snow'
+    });
+</script>
+<script>
+    function getVaue() {
+        var cookieValue = $("div[name='editor']").html();
+        //alert(cookieValue);
+        document.getElementById("txtContent").value = cookieValue;
+    }
+
     function fucAlert(id) {
         Swal.fire({
             title: 'Bạn muốn xóa?',
@@ -63,11 +89,11 @@
                 Swal.fire({
                     position: 'center',
                     icon: 'success',
-                    title: 'Bạn đã chọn xóa!',
+                    title: 'Xóa thành công!',
                     showConfirmButton: false,
                     timer: 1500
-                }).then(function () {
-                    document.getElementById('a'+id).click();
+                }).then(function() {
+                    document.getElementById('xoa' + id).click();
                 });
             }
         });
