@@ -609,11 +609,11 @@ ol {
 }
 
 .hero-items .owl-nav button[type=button].owl-next {
-    right: 65px;
+    right: 210px;
 }
 
 .single-hero-item {
-    height: 500px;
+    height: 420px;
     padding-top: 1px;
 }
 
@@ -660,7 +660,7 @@ ol {
 
 .services-section {
     padding-top: 90px;
-    padding-bottom: 115px;
+    padding-bottom: 15px;
 }
 
 .services-items {
@@ -682,6 +682,7 @@ ol {
 
 .services-items .single-service-item.color-2 {
     background: #5acd57;
+    height: 185px;
 }
 
 .services-items .single-service-item.color-3 {
@@ -701,7 +702,7 @@ ol {
 }
 
 .service-video {
-    height: 636px;
+    height: 524px;
 }
 
 .service-video .play-btn {
@@ -783,8 +784,8 @@ ol {
 -----------------------*/
 
 .class-section {
-    padding-top: 75px;
-    padding-bottom: 70px;
+    padding-top: 0px;
+    padding-bottom: 10px;
 }
 
 .class-section .primary-btn {
@@ -1083,7 +1084,7 @@ ol {
 }
 
 .team-members .member-text {
-    padding: 95px 30px 50px 45px;
+    padding: 10px 30px 50px 45px;
     background: #ffffff;
     height: 100%;
     position: relative;
