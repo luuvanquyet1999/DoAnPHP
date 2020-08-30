@@ -39,10 +39,10 @@ class AdminPostController
         $result = $this->PostModel->Insert(new Post($post_id, $post_title, $post_summary, $post_content, $post_image, $post_createdate, $category_name, $username, $post_link));
         // print_r($result);
         // die();
-        // if ($result == true)
-        //     header('location: index.php?c=AdminPost&a=View&r=1');
-        // else
-        //     header('location: index.php?c=AdminPost&a=View&r=0');
+        if ($result == true)
+            header('location: index.php?c=AdminPost&a=View&r=1');
+        else
+            header('location: index.php?c=AdminPost&a=View&r=0');
     }
     function Update()
     {
