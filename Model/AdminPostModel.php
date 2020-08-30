@@ -47,6 +47,9 @@ class AdminPostModel
         $query = "INSERT INTO lph_post (PostTitle, PostSummary, PostContent, PostImage, PostCreateDate, CategoryName, Username, PostStatus, Active, PostLink) 
         VALUES ('$post->post_title','$post->post_summary','$post->post_content','$post->post_image','$post->post_createdate','$post->category_name','$post->username','0','1','$post->post_link')";
         $result = $this->mysql->query($query);
+        print_r($result);
+        die();
+        
         return $result;
     }
     function GetRecordById($post_id)

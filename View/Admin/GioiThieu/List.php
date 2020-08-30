@@ -92,7 +92,7 @@
                                                                     <td><?= $value->title ?></td>
                                                                     <td><?= $value->summary ?></td>
                                                                     <td>
-                                                                        <img src="<?= $value->image ?>" style="width:100%; height:200px" />
+                                                                        <img src="<?= $value->image ?>" style="width:100%; max-height:200px" />
                                                                     </td>
                                                                     <td>
                                                                         <a href="?c=AdminGioiThieu&a=Update&intro_id=<?= $value->intro_id ?>" class="btn btn-primary"><i class="fa fa-edit"></i></a>

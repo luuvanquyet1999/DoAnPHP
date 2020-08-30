@@ -91,7 +91,6 @@
                                                                     <td>
                                                                         <a class="btn btn-danger" href="javascript:void(0);" onclick="fucAlert(this.id)" id="<?= $value->slide_id ?>"><i class="fa fa-trash"></i></a>
                                                                         <a hidden href="?c=AdminSlide&a=Delete&slide_id=<?= $value->slide_id ?>" id="xoa<?= $value->slide_id ?>"></a>
-                                                                        <!-- <a href="?c=AdminSlide&a=Delete&slide_id=<?= $value->slide_id ?>" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></a> -->
                                                                         <a href="?c=AdminSlide&a=Update&slide_id=<?= $value->slide_id ?>" class="btn btn-primary"><i class=" fa fa-edit"></i></a>
                                                                     </td>
                                                                 </tr>

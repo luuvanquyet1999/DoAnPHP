@@ -75,7 +75,7 @@
                                         <div id="editor" name="editor" style="height: 300px; ">
                                             <?= $gioithieu->content ?>
                                         </div>
-                                        <textarea id="txtContent" hidden name="content" class="form-control" rows="8" style="width:95%"></textarea> -->
+                                        <textarea id="txtContent" hidden name="content" class="form-control" rows="8" style="width:95%"></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group row">

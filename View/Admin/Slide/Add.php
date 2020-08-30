@@ -71,7 +71,8 @@
                                 </div>
                                 <div class="form-group row">
                                     <div class="action">
-                                        <button type="submit" value="submit" class="btn btn-primary">Lưu</button>
+                                        <button type="reset" value="submit" class="btn btn-info">Refresh</button>
+                                        <button type="submit" value="submit" class="btn btn-success">Lưu</button>
                                         <a href="index.php?c=AdminSlide&a=View" class="btn btn-warning">Cancel</a>
                                     </div>
                                 </div>
