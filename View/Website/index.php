@@ -12,42 +12,62 @@ include_once('./View/Website/share/header.php');
     <div class="hero-items owl-carousel">
 
       
-        <div class="single-hero-item set-bg" data-setbg="view/website/img/slider-bg-1.jpg">
+        <div class="single-hero-item set-bg" data-setbg="view/website/img/sline.jpg">
             <div class="container">
  
                 <div class="hero-text">
-                    <h4 style="margin-top: 15px;">Trang tin tức nhanh chóng và uy tín</h4>
-                    <h1>Chính Xác <span>Trung Thực</span></h1>
-                    <a href="#" class="primary-btn">Join Us Now</a>
+                    <!-- <h4 style="margin-top: 15px;">Trang tin tức nhanh chóng và uy tín</h4>
+                    <h1>Chính Xác <span>Trung Thực</span></h1> -->
+                    <a style="top:350px" href="?c=WebsiteIndex&a=Gioithieu" class="primary-btn">Join Us Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="single-hero-item set-bg" data-setbg="view/website/img/sline2.jpg">
+            <div class="container">
+ 
+                <div class="hero-text">
+                    <!-- <h4 style="margin-top: 15px;">Trang tin tức nhanh chóng và uy tín</h4>
+                    <h1>Chính Xác <span>Trung Thực</span></h1> -->
+                    <a style="top:350px" href="?c=WebsiteIndex&a=Gioithieu" class="primary-btn">Join Us Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="single-hero-item set-bg" data-setbg="view/website/img/sline3.jpg">
+            <div class="container">
+ 
+                <div class="hero-text">
+                    <!-- <h4 style="margin-top: 15px;">Trang tin tức nhanh chóng và uy tín</h4>
+                    <h1>Chính Xác <span>Trung Thực</span></h1> -->
+                    <a style="top:350px" href="?c=WebsiteIndex&a=Gioithieu" class="primary-btn">Join Us Now</a>
                 </div>
             </div>
         </div>
 
        
 
-        <div class="single-hero-item set-bg" data-setbg="view/website/img/slider-bg-2.jpg">
+        <!-- <div class="single-hero-item set-bg" data-setbg="view/website/img/slider-bg-2.jpg">
             <div  class="container">
 
                 <div class="hero-text">
                     <h4 style="margin-top: 15px;">Trang tin tức nhanh chóng và uy tín</h4>
                     <h1>Chính Xác <span>Trung Thực</span></h1>
-                    <a href="#" class="primary-btn">Join Us Now</a>
+                    <a href="?c=WebsiteIndex&a=Gioithieu" class="primary-btn">Join Us Now</a>
                 </div>
             </div>
 </div>
-        
+         -->
 
-        <div class="single-hero-item set-bg" data-setbg="view/website/img/slider-bg-3.jpg">
+        <!-- <div class="single-hero-item set-bg" data-setbg="view/website/img/slider-bg-3.jpg">
             <div  class="container">
 
                 <div class="hero-text">
                     <h4 style="margin-top: 15px;">Trang tin tức nhanh chóng và uy tín</h4>
                     <h1>Chính Xác <span>Trung Thực</span></h1>
-                    <a href="#" class="primary-btn">Join Us Now</a>
+                    <a href="?c=WebsiteIndex&a=Gioithieu" class="primary-btn">Join Us Now</a>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </section>
 <!-- Hero Section End -->
 
@@ -61,30 +81,34 @@ include_once('./View/Website/share/header.php');
                     <p>Các bài tập thể hình như thế nào cho hiệu quả.</p>
                 </div>
                 <div class="services-items">
+                    <a href="?c=WebsiteTheThao1&a=View">
                     <div class="single-service-item">
                         <img src="view/website/img/icon-1.png" alt="">
                         <h5>Chế độ tập</h5>
                         <p>Tập trong khoảng thời giang nào là hợp lý nhất.
                         </p>
                     </div>
-                    <div class="single-service-item color-1">
+                    </a>
+                   <a href="?c=WebsiteTheThao1&a=View">
+                   <div class="single-service-item color-1">
                         <img src="view/website/img/icon-2.png" alt="">
                         <h5>Ăn gì để khỏe</h5>
                         <p>Ăn uống thế nào để cở thể khỏe mạnh.
                         </p>
                     </div>
-                    <div class="single-service-item color-2">
+                   </a>
+                    <a href="?c=WebsiteTheThao1&a=View"><div class="single-service-item color-2">
                         <img src="view/website/img/icon-3.png" alt="">
                         <h5>Healthy</h5>
                         <p> Chế độ dinh dưỡng khi tập.
                         </p>
-                    </div>
-                    <div class="single-service-item color-3">
+                    </div></a>
+                    <a href="?c=WebsiteTheThao1&a=View"><div class="single-service-item color-3">
                         <img src="view/website/img/icon-4.png" alt="">
                         <h5>Yoga</h5>
                         <p>Bài tập giúp cở thể dẻo dai.
                         </p>
-                    </div>
+                    </div></a>
                 </div>
             </div>
             <div class="col-lg-5 offset-lg-1">
@@ -123,171 +147,17 @@ include_once('./View/Website/share/header.php');
                                             </div>
                                             <div class="col-lg-5 offset-lg-1">
                                                 <div class="class-text">
-                                                    <h3>Sức khỏe</h3>
+                                                    <a href="?c=WebsiteTheThao1&a=View"><h3>Sức Khoỏe</h3></a>
                                                     <p> Tập trung vào tải trọng thấp và chuyển động lặp lại cao, bạn sẽ đốt cháy chất béo, tăng sức mạnh và nhanh chóng sản xuất điều hòa cơ bắp nạc. Tất cả những lợi ích của việc làm việc với trọng lượng
+                                                        trong một hành động được đóng gói, lớp vật lý cao. Thế giới cách nhanh nhất để có được hình dạng. Tìm bài học của bạn Tập trung vào tải trọng thấp và chuyển động lặp lại cao, bạn sẽ đốt cháy chất béo, tăng sức mạnh và nhanh chóng sản xuất điều hòa cơ bắp nạc. Tất cả những lợi ích của việc làm việc với trọng lượng
                                                         trong một hành động được đóng gói, lớp vật lý cao. Thế giới cách nhanh nhất để có được hình dạng. Tìm bài học của bạn
                                                     </p>
-                                                    <a href="#" class="schedule-btn">View Schedule <i class="fa fa-long-arrow-right"></i></a>
+                                                    <a href="?c=WebsiteTheThao1&a=View" class="schedule-btn">View Schedule <i class="fa fa-long-arrow-right"></i></a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade" id="class-2" role="tabpanel">
-                                    <div class="single-class-item">
-                                        <div class="row">
-                                            <div class="col-lg-6">
-                                                <img src="view/website/img/class/class-1.jpg" alt="">
-                                            </div>
-                                            <div class="col-lg-5 offset-lg-1">
-                                                <div class="class-text">
-                                                    <h3>Racing runing</h3>
-                                                    <p>Body Building, the original LES MILLS barbell class, will sculpt, tone and strengthen your entire body, fast! Focusing on low weight loads and high repetition movements, you'll burn fat, gain strength
-                                                        and quickly produce lean body muscle conditioning. All the benefits of working with weighs in one action packed, highly physical class. The world’s fastest way to get in shape. Find your Lessmills
-                                                        Bodypump class here.
-                                                    </p>
-                                                    <a href="#" class="schedule-btn">View Schedule <i class="fa fa-long-arrow-right"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="class-3" role="tabpanel">
-                                    <div class="single-class-item">
-                                        <div class="row">
-                                            <div class="col-lg-6">
-                                                <img src="view/website/img/class/class-1.jpg" alt="">
-                                            </div>
-                                            <div class="col-lg-5 offset-lg-1">
-                                                <div class="class-text">
-                                                    <h3>Yoga Fitness</h3>
-                                                    <p>Body Building, the original LES MILLS barbell class, will sculpt, tone and strengthen your entire body, fast! Focusing on low weight loads and high repetition movements, you'll burn fat, gain strength
-                                                        and quickly produce lean body muscle conditioning. All the benefits of working with weighs in one action packed, highly physical class. The world’s fastest way to get in shape. Find your Lessmills
-                                                        Bodypump class here.
-                                                    </p>
-                                                    <a href="#" class="schedule-btn">View Schedule <i class="fa fa-long-arrow-right"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="class-4" role="tabpanel">
-                                    <div class="single-class-item">
-                                        <div class="row">
-                                            <div class="col-lg-6">
-                                                <img src="view/website/img/class/class-1.jpg" alt="">
-                                            </div>
-                                            <div class="col-lg-5 offset-lg-1">
-                                                <div class="class-text">
-                                                    <h3>Kick boxing</h3>
-                                                    <p>Body Building, the original LES MILLS barbell class, will sculpt, tone and strengthen your entire body, fast! Focusing on low weight loads and high repetition movements, you'll burn fat, gain strength
-                                                        and quickly produce lean body muscle conditioning. All the benefits of working with weighs in one action packed, highly physical class. The world’s fastest way to get in shape. Find your Lessmills
-                                                        Bodypump class here.
-                                                    </p>
-                                                    <a href="#" class="schedule-btn">View Schedule <i class="fa fa-long-arrow-right"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="class-5" role="tabpanel">
-                                    <div class="single-class-item">
-                                        <div class="row">
-                                            <div class="col-lg-6">
-                                                <img src="view/website/img/class/class-1.jpg" alt="">
-                                            </div>
-                                            <div class="col-lg-5 offset-lg-1">
-                                                <div class="class-text">
-                                                    <h3>Cardio workout</h3>
-                                                    <p>Body Building, the original LES MILLS barbell class, will sculpt, tone and strengthen your entire body, fast! Focusing on low weight loads and high repetition movements, you'll burn fat, gain strength
-                                                        and quickly produce lean body muscle conditioning. All the benefits of working with weighs in one action packed, highly physical class. The world’s fastest way to get in shape. Find your Lessmills
-                                                        Bodypump class here.
-                                                    </p>
-                                                    <a href="#" class="schedule-btn">View Schedule <i class="fa fa-long-arrow-right"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="class-6" role="tabpanel">
-                                    <div class="single-class-item">
-                                        <div class="row">
-                                            <div class="col-lg-6">
-                                                <img src="view/website/img/class/class-1.jpg" alt="">
-                                            </div>
-                                            <div class="col-lg-5 offset-lg-1">
-                                                <div class="class-text">
-                                                    <h3>Martial Arts</h3>
-                                                    <p>Body Building, the original LES MILLS barbell class, will sculpt, tone and strengthen your entire body, fast! Focusing on low weight loads and high repetition movements, you'll burn fat, gain strength
-                                                        and quickly produce lean body muscle conditioning. All the benefits of working with weighs in one action packed, highly physical class. The world’s fastest way to get in shape. Find your Lessmills
-                                                        Bodypump class here.
-                                                    </p>
-                                                    <a href="#" class="schedule-btn">View Schedule <i class="fa fa-long-arrow-right"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="class-author">
-                            <ul class="nav" role="tablist">
-                                <li>
-                                    <a data-toggle="tab" class="active" href="#class-1" role="tab">
-                                        <div class="author-text">
-                                            <img src="view/website/img/class/author-1.jpg" alt="">
-                                            <h5>Body building</h5>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a data-toggle="tab" href="#class-2" role="tab">
-                                        <div class="author-text">
-                                            <img src="view/website/img/class/author-2.jpg" alt="">
-                                            <h5>Racing runing</h5>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a data-toggle="tab" href="#class-3" role="tab">
-                                        <div class="author-text">
-                                            <img src="view/website/img/class/author-3.jpg" alt="">
-                                            <h5>Yoga Fitness</h5>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a data-toggle="tab" href="#class-4" role="tab">
-                                        <div class="author-text">
-                                            <img src="view/website/img/class/author-4.jpg" alt="">
-                                            <h5>Kick boxing</h5>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a data-toggle="tab" href="#class-5" role="tab">
-                                        <div class="author-text">
-                                            <img src="view/website/img/class/author-5.jpg" alt="">
-                                            <h5>Cardio workout</h5>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a data-toggle="tab" href="#class-6" role="tab">
-                                        <div class="author-text">
-                                            <img src="view/website/img/class/author-6.jpg" alt="">
-                                            <h5>Martial Arts</h5>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -310,40 +180,44 @@ include_once('./View/Website/share/header.php');
             <div class="row m-0">
                 <div class="col-lg-4 order-lg-1 p-0">
                     <div class="member-pic first">
-                        <img src="view/website/img/5.jpg" alt="">
+                        <a href="?c=WebsiteThoitrang1&a=View"><img src="view/website/img/5.jpg" alt=""></a>
+                        
                     </div>
                 </div>
                 <div class="col-lg-4 order-lg-2 p-0">
                     <div class="member-text">
-                        <span>Sơn Tùng</span>
-                        <h5>Thời trang mới</h5>
-                        <p>Sơn tùng có gu thơi trang cực dể thương trong MV mới của mình!</p>
+                        <a href="?c=WebsiteThoitrang1&a=View"><span>Sơn Tùng</span>
+                        <h5>Thời trang mới</h5></a>
+                        <p>Sơn Tùng M-TP không chỉ thành công trong sự nghiệp ca hát mà còn là đại sứ thương hiệu cho các nhãn hàng lớn. Anh là một trong những ca sĩ sở hữu mức cát xê khủng hiện nay. Chính vì thế, ở tuổi 26 nam ca sĩ có trong tay nhiều tài sản giá trị. Bên trong căn hộ được thiết kế sang trọng, mang phong cách Châu Âu hiện đại. Gam màu chủ đạo là màu trắng và ghi xám rất thích hợp với phong cách của một chàng trai mạnh mẽ, độc lập như Sơn Tùng M-TP.Trong tổ ấm của mình, Sơn Tùng M-TP đều thiết kế từng khu vực theo ý đồ riêng của mình. Đặc biệt, anh còn thiết kế một không gian riêng là nơi lưu giữ lại nhưng bức ảnh kỉ niệm của mình với bạn bè. Sơn tùng có gu thơi trang cực dể thương trong MV mới của mình!</p>
 
                     </div>
                 </div>
                 <div class="col-lg-4 order-lg-3 p-0">
                     <div class="member-pic second">
-                        <img src="view/website/img/5.jpg" alt="">
+                       <a href="?c=WebsiteThoitrang1&a=View"> <img src="view/website/img/5.jpg" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-4 order-lg-6 p-0">
                     <div class="member-text second">
+                        <a href="?c=WebsiteThoitrang1&a=View">
                         <span>Midu</span>
                         <h5>Thời Trang</h5>
-                        <p>Midu cực xinh trong bộ váy hoa sim của mình , Làm cho bao chàng trang phải thổn thức!</p>
+                        </a>
+                        <p>Nổi tiếng là một trong những mỹ nhân không tuổi sở hữu khuôn mặt trong trẻo, ngây thơ như "mối tình đầu", Midu luôn làm mọi người phải xiêu lòng mỗi lần xuất hiện. Dẫu biết nhan sắc của nữ diễn viên vô cùng xuất sắc nhưng mới đây, dân tình còn đỏ mắt ghen tỵ với màn khoe cận cảnh làn da mềm mại, trắng hồng như pha lê của mình. Midu tự hào khoe khéo gương mặt mộc hoàn hảo không chút tì vết làm ai cũng mê mẩn với caption: "Super zoom mặt mộc".Mặt mộc hoàn hảo thế này, chắc hẳn có nàng nào dám đọ với Midu. Zoom cận cảnh vào khuôn mặt, ngũ quan của nữ diễn viên rất hoàn hảo, đến làn da ai nhìn cũng phát mê. Midu cực xinh trong bộ váy hoa sim của mình , Làm cho bao chàng trang phải thổn thức!</p>
 
                     </div>
                 </div>
                 <div class="col-lg-4 order-lg-5 p-0">
                     <div class="member-pic third">
-                        <img src="view/website/img/7.jpg" alt="">
+                       <a href="?c=WebsiteThoitrang1&a=View"><img src="view/website/img/7.jpg" alt=""></a> 
                     </div>
                 </div>
                 <div class="col-lg-4 order-lg-4 p-0">
                     <div class="member-text third">
-                        <span>Midu</span>
-                        <h5>Thời Trang</h5>
-                        <p>Midu cực xinh trong bộ váy hoa sim của mình , Làm cho bao chàng trang phải thổn thức!</p>
+                        <a href="?c=WebsiteThoitrang1&a=View"><span>Sơn Tùng</span>
+                        <h5>Thời Trang</h5></a>
+                        
+                        <p>Sơn Tùng M-TP không chỉ thành công trong sự nghiệp ca hát mà còn là đại sứ thương hiệu cho các nhãn hàng lớn. Anh là một trong những ca sĩ sở hữu mức cát xê khủng hiện nay. Chính vì thế, ở tuổi 26 nam ca sĩ có trong tay nhiều tài sản giá trị. Bên trong căn hộ được thiết kế sang trọng, mang phong cách Châu Âu hiện đại. Gam màu chủ đạo là màu trắng và ghi xám rất thích hợp với phong cách của một chàng trai mạnh mẽ, độc lập như Sơn Tùng M-TP.Trong tổ ấm của mình, Sơn Tùng M-TP đều thiết kế từng khu vực theo ý đồ riêng của mình. Đặc biệt, anh còn thiết kế một không gian riêng là nơi lưu giữ lại nhưng bức ảnh kỉ niệm của mình với bạn bè. Sơn tùng có gu thơi trang cực dể thương trong MV mới của mình.</p>
 
 
                     </div>
@@ -369,7 +243,7 @@ include_once('./View/Website/share/header.php');
             <div class="col-lg-4">
                 <div class="latest-items">
                     <div class="latest-pic">
-                        <img src="view/website/img/7.jpg" alt="">
+                      <a href="?c=WebsiteGiaitri1&a=View"><img src="view/website/img/7.jpg" alt=""></a>  
                     </div>
                     <div class="latest-text">
                         <div class="latest-tag">
@@ -380,14 +254,14 @@ include_once('./View/Website/share/header.php');
                                 <i class="fa fa-comments-o"></i> 6 Comments
                             </div>
                         </div>
-                        <h5><a href="blog-details.html">The Greatist Team's Favorite Leggings With Pockets</a></h5>
+                        <h5><a href="?c=WebsiteGiaitri1&a=View">The Greatist Team's Favorite Leggings With Pockets</a></h5>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="latest-items">
                     <div class="latest-pic">
-                        <img src="view/website/img/5.jpg" alt="">
+                      <a href=""><img src="view/website/img/5.jpg" alt=""></a>  
                     </div>
                     <div class="latest-text">
                         <div class="latest-tag">
@@ -398,14 +272,14 @@ include_once('./View/Website/share/header.php');
                                 <i class="fa fa-comments-o"></i> 6 Comments
                             </div>
                         </div>
-                        <h5><a href="blog-details.html">Everything You Need to Know Before Your First Indoor Cycling Class</a></h5>
+                        <h5><a href="?c=WebsiteGiaitri1&a=View">Everything You Need to Know Before Your First Indoor Cycling Class</a></h5>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="latest-items">
                     <div class="latest-pic">
-                        <img src="view/website/img/7.jpg" alt="">
+                       <a href="?c=WebsiteGiaitri1&a=View"> <img src="view/website/img/7.jpg" alt=""></a>
                     </div>
                     <div class="latest-text">
                         <div class="latest-tag">
@@ -416,7 +290,7 @@ include_once('./View/Website/share/header.php');
                                 <i class="fa fa-comments-o"></i> 6 Comments
                             </div>
                         </div>
-                        <h5><a href="blog-details.html">Run Your Best Race Ever with These 5 Tips for the Perfect Taper</a></h5>
+                        <h5><a href="?c=WebsiteGiaitri1&a=View">Run Your Best Race Ever with These 5 Tips for the Perfect Taper</a></h5>
                     </div>
                 </div>
             </div>
