@@ -11,10 +11,10 @@ include_once('./View/Website/share/header.php');
 <section class="hero-section">
     <div class="hero-items owl-carousel">
 
-      
+
         <div class="single-hero-item set-bg" data-setbg="view/website/img/sline.jpg">
             <div class="container">
- 
+
                 <div class="hero-text">
                     <!-- <h4 style="margin-top: 15px;">Trang tin tức nhanh chóng và uy tín</h4>
                     <h1>Chính Xác <span>Trung Thực</span></h1> -->
@@ -24,7 +24,7 @@ include_once('./View/Website/share/header.php');
         </div>
         <div class="single-hero-item set-bg" data-setbg="view/website/img/sline2.jpg">
             <div class="container">
- 
+
                 <div class="hero-text">
                     <!-- <h4 style="margin-top: 15px;">Trang tin tức nhanh chóng và uy tín</h4>
                     <h1>Chính Xác <span>Trung Thực</span></h1> -->
@@ -34,7 +34,7 @@ include_once('./View/Website/share/header.php');
         </div>
         <div class="single-hero-item set-bg" data-setbg="view/website/img/sline3.jpg">
             <div class="container">
- 
+
                 <div class="hero-text">
                     <!-- <h4 style="margin-top: 15px;">Trang tin tức nhanh chóng và uy tín</h4>
                     <h1>Chính Xác <span>Trung Thực</span></h1> -->
@@ -43,7 +43,7 @@ include_once('./View/Website/share/header.php');
             </div>
         </div>
 
-       
+
 
         <!-- <div class="single-hero-item set-bg" data-setbg="view/website/img/slider-bg-2.jpg">
             <div  class="container">
@@ -82,33 +82,37 @@ include_once('./View/Website/share/header.php');
                 </div>
                 <div class="services-items">
                     <a href="?c=WebsiteTheThao1&a=View">
-                    <div class="single-service-item">
-                        <img src="view/website/img/icon-1.png" alt="">
-                        <h5>Chế độ tập</h5>
-                        <p>Tập trong khoảng thời giang nào là hợp lý nhất.
-                        </p>
-                    </div>
+                        <div class="single-service-item">
+                            <img src="view/website/img/icon-1.png" alt="">
+                            <h5>Chế độ tập</h5>
+                            <p>Tập trong khoảng thời giang nào là hợp lý nhất.
+                            </p>
+                        </div>
                     </a>
-                   <a href="?c=WebsiteTheThao1&a=View">
-                   <div class="single-service-item color-1">
-                        <img src="view/website/img/icon-2.png" alt="">
-                        <h5>Ăn gì để khỏe</h5>
-                        <p>Ăn uống thế nào để cở thể khỏe mạnh.
-                        </p>
-                    </div>
-                   </a>
-                    <a href="?c=WebsiteTheThao1&a=View"><div class="single-service-item color-2">
-                        <img src="view/website/img/icon-3.png" alt="">
-                        <h5>Healthy</h5>
-                        <p> Chế độ dinh dưỡng khi tập.
-                        </p>
-                    </div></a>
-                    <a href="?c=WebsiteTheThao1&a=View"><div class="single-service-item color-3">
-                        <img src="view/website/img/icon-4.png" alt="">
-                        <h5>Yoga</h5>
-                        <p>Bài tập giúp cở thể dẻo dai.
-                        </p>
-                    </div></a>
+                    <a href="?c=WebsiteTheThao1&a=View">
+                        <div class="single-service-item color-1">
+                            <img src="view/website/img/icon-2.png" alt="">
+                            <h5>Ăn gì để khỏe</h5>
+                            <p>Ăn uống thế nào để cở thể khỏe mạnh.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="?c=WebsiteTheThao1&a=View">
+                        <div class="single-service-item color-2">
+                            <img src="view/website/img/icon-3.png" alt="">
+                            <h5>Healthy</h5>
+                            <p> Chế độ dinh dưỡng khi tập.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="?c=WebsiteTheThao1&a=View">
+                        <div class="single-service-item color-3">
+                            <img src="view/website/img/icon-4.png" alt="">
+                            <h5>Yoga</h5>
+                            <p>Bài tập giúp cở thể dẻo dai.
+                            </p>
+                        </div>
+                    </a>
                 </div>
             </div>
             <div class="col-lg-5 offset-lg-1">
@@ -147,20 +151,29 @@ include_once('./View/Website/share/header.php');
                                             </div>
                                             <div class="col-lg-5 offset-lg-1">
                                                 <div class="class-text">
-                                                    <a href="?c=WebsiteTheThao1&a=View"><h3>Sức Khoỏe</h3></a>
-                                                    <p> Tập trung vào tải trọng thấp và chuyển động lặp lại cao, bạn sẽ đốt cháy chất béo, tăng sức mạnh và nhanh chóng sản xuất điều hòa cơ bắp nạc. Tất cả những lợi ích của việc làm việc với trọng lượng
-                                                        trong một hành động được đóng gói, lớp vật lý cao. Thế giới cách nhanh nhất để có được hình dạng. Tìm bài học của bạn Tập trung vào tải trọng thấp và chuyển động lặp lại cao, bạn sẽ đốt cháy chất béo, tăng sức mạnh và nhanh chóng sản xuất điều hòa cơ bắp nạc. Tất cả những lợi ích của việc làm việc với trọng lượng
-                                                        trong một hành động được đóng gói, lớp vật lý cao. Thế giới cách nhanh nhất để có được hình dạng. Tìm bài học của bạn
-                                                    </p>
+                                                    <a href="?c=WebsiteTheThao1&a=View">
+                                                        <h3>Sức Khoỏe</h3>
+                                                    </a>
+
                                                     <a href="?c=WebsiteTheThao1&a=View" class="schedule-btn">View Schedule <i class="fa fa-long-arrow-right"></i></a>
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="row">
+                                            <?php
+                                            $stt = 1;
+                                            foreach ($data as $value) {
+                                            ?>
+                                                <p><?= $value->post_content ?></p>
+                                            <?php
+                                            }
+                                            ?>
+                                        </div>
                                     </div>
                                 </div>
-            </div>
-        </div>
-    </div>
+                            </div>
+                        </div>
+                    </div>
 </section>
 <!-- Class Section End -->
 
@@ -181,27 +194,28 @@ include_once('./View/Website/share/header.php');
                 <div class="col-lg-4 order-lg-1 p-0">
                     <div class="member-pic first">
                         <a href="?c=WebsiteThoitrang1&a=View"><img src="view/website/img/5.jpg" alt=""></a>
-                        
+
                     </div>
                 </div>
                 <div class="col-lg-4 order-lg-2 p-0">
                     <div class="member-text">
                         <a href="?c=WebsiteThoitrang1&a=View"><span>Sơn Tùng</span>
-                        <h5>Thời trang mới</h5></a>
+                            <h5>Thời trang mới</h5>
+                        </a>
                         <p>Sơn Tùng M-TP không chỉ thành công trong sự nghiệp ca hát mà còn là đại sứ thương hiệu cho các nhãn hàng lớn. Anh là một trong những ca sĩ sở hữu mức cát xê khủng hiện nay. Chính vì thế, ở tuổi 26 nam ca sĩ có trong tay nhiều tài sản giá trị. Bên trong căn hộ được thiết kế sang trọng, mang phong cách Châu Âu hiện đại. Gam màu chủ đạo là màu trắng và ghi xám rất thích hợp với phong cách của một chàng trai mạnh mẽ, độc lập như Sơn Tùng M-TP.Trong tổ ấm của mình, Sơn Tùng M-TP đều thiết kế từng khu vực theo ý đồ riêng của mình. Đặc biệt, anh còn thiết kế một không gian riêng là nơi lưu giữ lại nhưng bức ảnh kỉ niệm của mình với bạn bè. Sơn tùng có gu thơi trang cực dể thương trong MV mới của mình!</p>
 
                     </div>
                 </div>
                 <div class="col-lg-4 order-lg-3 p-0">
                     <div class="member-pic second">
-                       <a href="?c=WebsiteThoitrang1&a=View"> <img src="view/website/img/5.jpg" alt=""></a>
+                        <a href="?c=WebsiteThoitrang1&a=View"> <img src="view/website/img/5.jpg" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-4 order-lg-6 p-0">
                     <div class="member-text second">
                         <a href="?c=WebsiteThoitrang1&a=View">
-                        <span>Midu</span>
-                        <h5>Thời Trang</h5>
+                            <span>Midu</span>
+                            <h5>Thời Trang</h5>
                         </a>
                         <p>Nổi tiếng là một trong những mỹ nhân không tuổi sở hữu khuôn mặt trong trẻo, ngây thơ như "mối tình đầu", Midu luôn làm mọi người phải xiêu lòng mỗi lần xuất hiện. Dẫu biết nhan sắc của nữ diễn viên vô cùng xuất sắc nhưng mới đây, dân tình còn đỏ mắt ghen tỵ với màn khoe cận cảnh làn da mềm mại, trắng hồng như pha lê của mình. Midu tự hào khoe khéo gương mặt mộc hoàn hảo không chút tì vết làm ai cũng mê mẩn với caption: "Super zoom mặt mộc".Mặt mộc hoàn hảo thế này, chắc hẳn có nàng nào dám đọ với Midu. Zoom cận cảnh vào khuôn mặt, ngũ quan của nữ diễn viên rất hoàn hảo, đến làn da ai nhìn cũng phát mê. Midu cực xinh trong bộ váy hoa sim của mình , Làm cho bao chàng trang phải thổn thức!</p>
 
@@ -209,14 +223,15 @@ include_once('./View/Website/share/header.php');
                 </div>
                 <div class="col-lg-4 order-lg-5 p-0">
                     <div class="member-pic third">
-                       <a href="?c=WebsiteThoitrang1&a=View"><img src="view/website/img/7.jpg" alt=""></a> 
+                        <a href="?c=WebsiteThoitrang1&a=View"><img src="view/website/img/7.jpg" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-4 order-lg-4 p-0">
                     <div class="member-text third">
                         <a href="?c=WebsiteThoitrang1&a=View"><span>Sơn Tùng</span>
-                        <h5>Thời Trang</h5></a>
-                        
+                            <h5>Thời Trang</h5>
+                        </a>
+
                         <p>Sơn Tùng M-TP không chỉ thành công trong sự nghiệp ca hát mà còn là đại sứ thương hiệu cho các nhãn hàng lớn. Anh là một trong những ca sĩ sở hữu mức cát xê khủng hiện nay. Chính vì thế, ở tuổi 26 nam ca sĩ có trong tay nhiều tài sản giá trị. Bên trong căn hộ được thiết kế sang trọng, mang phong cách Châu Âu hiện đại. Gam màu chủ đạo là màu trắng và ghi xám rất thích hợp với phong cách của một chàng trai mạnh mẽ, độc lập như Sơn Tùng M-TP.Trong tổ ấm của mình, Sơn Tùng M-TP đều thiết kế từng khu vực theo ý đồ riêng của mình. Đặc biệt, anh còn thiết kế một không gian riêng là nơi lưu giữ lại nhưng bức ảnh kỉ niệm của mình với bạn bè. Sơn tùng có gu thơi trang cực dể thương trong MV mới của mình.</p>
 
 
@@ -243,7 +258,7 @@ include_once('./View/Website/share/header.php');
             <div class="col-lg-4">
                 <div class="latest-items">
                     <div class="latest-pic">
-                      <a href="?c=WebsiteGiaitri1&a=View"><img src="view/website/img/7.jpg" alt=""></a>  
+                        <a href="?c=WebsiteGiaitri1&a=View"><img src="view/website/img/7.jpg" alt=""></a>
                     </div>
                     <div class="latest-text">
                         <div class="latest-tag">
@@ -261,7 +276,7 @@ include_once('./View/Website/share/header.php');
             <div class="col-lg-4">
                 <div class="latest-items">
                     <div class="latest-pic">
-                      <a href=""><img src="view/website/img/5.jpg" alt=""></a>  
+                        <a href=""><img src="view/website/img/5.jpg" alt=""></a>
                     </div>
                     <div class="latest-text">
                         <div class="latest-tag">
@@ -279,7 +294,7 @@ include_once('./View/Website/share/header.php');
             <div class="col-lg-4">
                 <div class="latest-items">
                     <div class="latest-pic">
-                       <a href="?c=WebsiteGiaitri1&a=View"> <img src="view/website/img/7.jpg" alt=""></a>
+                        <a href="?c=WebsiteGiaitri1&a=View"> <img src="view/website/img/7.jpg" alt=""></a>
                     </div>
                     <div class="latest-text">
                         <div class="latest-tag">

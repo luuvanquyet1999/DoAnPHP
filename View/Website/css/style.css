@@ -2781,5 +2781,9 @@ ol {
     color: #ffffff;
 }
 
+.ql-tooltip {
+    display: none;
+}
+
 
 /*# sourceMappingURL=style.css.map */

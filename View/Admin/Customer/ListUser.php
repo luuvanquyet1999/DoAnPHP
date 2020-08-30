@@ -1,40 +1,46 @@
-<?php
-if (!isset($_SESSION)) {
-    session_start();
-}
-?>
-<?php
-if (!isset($_SESSION["username"])) {
-    echo "<script type='text/javascript'>alert('Vui lòng bạn đăng nhập tài khoản Admin');</script>";
-    header('Location: index.php?c=Login&a=View');
-}
-?>
-
-<!doctype html>
-<html class="no-js" lang="">
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>ADMINISTRATOR | TÀI KHOẢN KHÁCH HÀNG</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Administrator | Tài khoản khách hàng</title>
     <?php
     include 'asset/Scripts/ScriptHeader.php';
     ?>
+
 </head>
 
 <body>
-    <?php
-    include_once('./View/Admin/Share/Menu.php');
-    ?>
-    <!-- Right Panel -->
-    <div id="right-panel" class="right-panel">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
         <?php
-        include_once('./View/Admin/Share/header.php');
+        include_once('./View/Admin/Share/Header.php');
         ?>
-        <!-- Content -->
-        <div class="content">
-            <!-- page content -->
-            <div class="right_col" role="main">
+        <?php
+        include_once('./View/Admin/Share/Menu.php');
+        ?>
+        <div class="page-wrapper">
+            <div class="container-fluid">
                 <div class="">
                     <div class="page-title">
                         <div class="title_left">
@@ -64,8 +70,8 @@ if (!isset($_SESSION["username"])) {
                                                         }
                                                         ?>
                                                     </p>
-                                                    <table id="bootstrap-data-table" class="table table-striped table-bordered table-hover">
-                                                    <thead>
+                                                    <table id="zero_config" class="table table-striped table-bordered">
+                                                        <thead>
                                                             <tr>
                                                                 <th>STT</th>
                                                                 <th>User name</th>
@@ -100,24 +106,13 @@ if (!isset($_SESSION["username"])) {
                     </div>
                 </div>
             </div>
-            <!-- /page content -->
         </div>
-        <!-- /.content -->
-        <div class="clearfix"></div>
         <?php
         include_once('./View/Admin/Share/Footer.php');
         ?>
-    </div>
-    <!-- /#right-panel -->
-    <?php
-    include 'asset/Scripts/ScriptFooter.php';
-    ?>
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#bootstrap-data-table-export').DataTable();
-        });
-    </script>
+        <?php
+        include 'asset/Scripts/ScriptFooter.php';
+        ?>
 </body>
 
 </html>

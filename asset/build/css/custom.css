@@ -6426,3 +6426,7 @@ footer {
 .action {
     margin: 0 auto;
 }
+
+label.col-form-label {
+    padding-left: 25px;
+}

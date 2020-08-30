@@ -73,7 +73,7 @@
                                 <div class="form-group row mt-2">
                                     <label class="col-sm-2 col-form-label ">Loại bài viết</label>
                                     <div class="col-sm-10">
-                                        <select name="category">
+                                        <select name="category" class="form-control" style="width:95%">
                                             <?php
                                             $mysql = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
                                             $query = "SELECT * FROM lph_category WHERE Active =1";
