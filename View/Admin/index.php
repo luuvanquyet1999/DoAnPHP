@@ -72,15 +72,16 @@
                             <div class="card-body">
                                 <div class="d-md-flex align-items-center">
                                     <div>
-                                        <h4 class="card-title">Site Analysis</h4>
-                                        <h5 class="card-subtitle">Overview of Latest Month</h5>
+                                        <h4 class="card-title">Team Debug</h4>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <!-- column -->
                                     <div class="col-lg-9">
                                         <div class="flot-chart">
-                                            <div class="flot-chart-content" id="flot-line-chart"></div>
+                                            <div class="img">
+                                            <img src="view/Admin/images/team_debug.jpg" alt="">
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-3">
@@ -88,43 +89,77 @@
                                             <div class="col-6">
                                                 <div class="bg-dark p-10 text-white text-center">
                                                     <i class="fa fa-user m-b-5 font-16"></i>
-                                                    <h5 class="m-b-0 m-t-5">2540</h5>
+                                                    <h5 class="m-b-0 m-t-5">
+                                                        <?php
+                                                        $mysql = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
+                                                        $query = "SELECT count(*) FROM lph_adiminuser WHERE Active =1";
+                                                        $result = $mysql->query($query);
+                                                        while ($row = mysqli_fetch_array($result)) {
+                                                            if ($row[0] < 10) {
+                                                                echo '0' . $row[0];
+                                                            } else
+                                                                echo $row[0];
+                                                        }
+                                                        ?>
+                                                    </h5>
                                                     <small class="font-light">Total Users</small>
                                                 </div>
                                             </div>
                                             <div class="col-6">
                                                 <div class="bg-dark p-10 text-white text-center">
-                                                    <i class="fa fa-plus m-b-5 font-16"></i>
-                                                    <h5 class="m-b-0 m-t-5">120</h5>
-                                                    <small class="font-light">New Users</small>
+                                                    <i class="fas fa-newspaper m-b-5 font-16"></i>
+                                                    <h5 class="m-b-0 m-t-5">
+                                                        <?php
+                                                        $mysql = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
+                                                        $query = "SELECT count(*) FROM lph_post WHERE Active =1";
+                                                        $result = $mysql->query($query);
+                                                        while ($row = mysqli_fetch_array($result)) {
+                                                            if ($row[0] < 10) {
+                                                                echo '0' . $row[0];
+                                                            } else
+                                                                echo $row[0];
+                                                        }
+                                                        ?>
+                                                    </h5>
+                                                    <small class="font-light">Total Posts</small>
                                                 </div>
                                             </div>
                                             <div class="col-6 m-t-15">
                                                 <div class="bg-dark p-10 text-white text-center">
-                                                    <i class="fa fa-cart-plus m-b-5 font-16"></i>
-                                                    <h5 class="m-b-0 m-t-5">656</h5>
-                                                    <small class="font-light">Total Shop</small>
+                                                    <i class="fa fa-user m-b-5 font-16"></i>
+                                                    <h5 class="m-b-0 m-t-5">
+                                                        <?php
+                                                        $mysql = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
+                                                        $query = "SELECT count(*) FROM lph_customer WHERE Active =1";
+                                                        $result = $mysql->query($query);
+                                                        while ($row = mysqli_fetch_array($result)) {
+                                                            if ($row[0] < 10) {
+                                                                echo '0' . $row[0];
+                                                            } else
+                                                                echo $row[0];
+                                                        }
+                                                        ?>
+                                                    </h5>
+                                                    <small class="font-light">Total Custome</small>
                                                 </div>
                                             </div>
                                             <div class="col-6 m-t-15">
                                                 <div class="bg-dark p-10 text-white text-center">
-                                                    <i class="fa fa-tag m-b-5 font-16"></i>
-                                                    <h5 class="m-b-0 m-t-5">9540</h5>
-                                                    <small class="font-light">Total Orders</small>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 m-t-15">
-                                                <div class="bg-dark p-10 text-white text-center">
-                                                    <i class="fa fa-table m-b-5 font-16"></i>
-                                                    <h5 class="m-b-0 m-t-5">100</h5>
-                                                    <small class="font-light">Pending Orders</small>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 m-t-15">
-                                                <div class="bg-dark p-10 text-white text-center">
-                                                    <i class="fa fa-globe m-b-5 font-16"></i>
-                                                    <h5 class="m-b-0 m-t-5">8540</h5>
-                                                    <small class="font-light">Online Orders</small>
+                                                    <i class="fa fa-paper-plane m-b-5 font-16"></i>
+                                                    <h5 class="m-b-0 m-t-5">
+                                                        <?php
+                                                        $mysql = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
+                                                        $query = "SELECT count(*) FROM lph_sendcontact ";
+                                                        $result = $mysql->query($query);
+                                                        while ($row = mysqli_fetch_array($result)) {
+                                                            if ($row[0] < 10) {
+                                                                echo '0' . $row[0];
+                                                            } else
+                                                                echo $row[0];
+                                                        }
+                                                        ?>
+                                                    </h5>
+                                                    <small class="font-light">Total Contacts</small>
                                                 </div>
                                             </div>
                                         </div>

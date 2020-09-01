@@ -10,13 +10,24 @@ class AdminPostController
 
     function View()
     {
-        $data = $this->PostModel->GetAll();
-        require SYSTEM_PATH . "/View/Admin/Post/List.php";
+        session_start();
+        if (isset($_SESSION['username'])) {
+            $user = $_SESSION['username'];
+            $data = $this->PostModel->GetAll();
+            require SYSTEM_PATH . "/View/Admin/Post/List.php";
+        } else {
+            require_once SYSTEM_PATH . "/View/Admin/Login.php";
+        }
     }
     function Add()
     {
-        //$data = $this->PostModel->GetAllCategory();
-        require SYSTEM_PATH . "/View/Admin/Post/Add.php";
+        session_start();
+        if (isset($_SESSION['username'])) {
+            $user = $_SESSION['username'];
+            require SYSTEM_PATH . "/View/Admin/Post/Add.php";
+        } else {
+            require_once SYSTEM_PATH . "/View/Admin/Login.php";
+        }
     }
     function SaveAdd()
     {
@@ -46,9 +57,15 @@ class AdminPostController
     }
     function Update()
     {
-        $post_id = $_GET["PostID"];
-        $post = $this->PostModel->GetRecordById($post_id);
-        require SYSTEM_PATH . "/View/Admin/Post/Update.php";
+        session_start();
+        if (isset($_SESSION['username'])) {
+            $user = $_SESSION['username'];
+            $post_id = $_GET["PostID"];
+            $post = $this->PostModel->GetRecordById($post_id);
+            require SYSTEM_PATH . "/View/Admin/Post/Update.php";
+        } else {
+            require_once SYSTEM_PATH . "/View/Admin/Login.php";
+        }
     }
     function SaveUpdate()
     {

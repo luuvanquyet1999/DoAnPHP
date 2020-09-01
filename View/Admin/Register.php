@@ -1,3 +1,54 @@
+<?php
+$mysqli = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
+if (isset($_POST["register"])) {
+    //lấy thông tin từ các form bằng phương thức POST
+    $username = $_POST["user"];
+    $password = $_POST["pass"];
+    $confirmpassword = $_POST["confimpassword"];
+    $fullname = $_POST["fullname"];
+    $email = $_POST["email"];
+    $gender = $_POST["gioitinh"];
+    $date = $_POST["dateofbirth"];
+
+    //Kiểm tra điều kiện bắt buộc đối với các field không được bỏ trống
+    if ($username == "" || $password == "" || $confirmpassword == "" || $fullname == "" || $email == "" || $gender == "") {
+        echo "bạn vui lòng nhập đầy đủ thông tin";
+    } else {
+        // Kiểm tra tài khoản đã tồn tại chưa
+        $sql = "select * from lph_adiminuser where Username='$username' or Usernameemail = '$email'";
+        $query = $mysqli->query($sql);
+        if (mysqli_num_rows($query)  > 0) {
+            echo "<script type='text/javascript'>alert('Tài khoản hoặc Email đã tồn tại');</script>";
+        } else {
+            if ($password != $confirmpassword) {
+                echo "<script type='text/javascript'>alert('Mật khẩu không trùng nhau!!!');</script>";
+            } else {
+                //thực hiện việc lưu trữ dữ liệu vào db
+                $sql1 = "INSERT INTO lph_adiminuser(
+							Username,
+							UsernamePassword,
+							UsernameFull,
+							UsernameEmail,
+							UserNameGender,
+							DateofBirth,
+							Active
+							) VALUES (
+							'$username',
+							'$password',
+							'$fullname',
+							'$email',
+							'$gender',
+							'$date',
+							'1'	)";
+
+                $result = $mysqli->query($sql1);
+                echo "chúc mừng bạn đã đăng ký thành công";
+                header('Location: index.php?c=AdminIndex&a=View&s=susscess');
+            }
+        }
+    }
+}
+?>
 <!DOCTYPE html>
 <html dir="ltr">
 
@@ -13,7 +64,7 @@
     <title>REGISTER</title>
     <!-- Custom CSS -->
     <link href="asset/dist/css/style.min.css" rel="stylesheet">
-  
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </head>
 
 <body>
@@ -27,39 +78,62 @@
                 <div class="lds-pos"></div>
             </div>
         </div>
-      
+
         <div class="auth-wrapper d-flex no-block justify-content-center align-items-center bg-dark">
-            <div class="auth-box bg-dark border-top border-secondary">
+            <div class="auth-box bg-dark border-top border-secondary mt-0">
                 <div>
-                    <div class="text-center p-t-20 p-b-20">
+                    <div class="text-center p-b-20">
                         <span class="db"><img src="asset/assets/images/logo.png" alt="logo" /></span>
                     </div>
-                    <form class="form-horizontal m-t-20" action="index.html">
+                    <form class="form-horizontal m-t-20 " method="post" action="index.php?c=Register&a=View">
                         <div class="row p-b-30">
                             <div class="col-12">
+                                <input hidden type="text" name="id" class="form-control form-control-lg" readonly>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-info text-white" id="basic-addon1"><i class="ti-user"></i></span>
+                                    </div>
+                                    <input type="text" name="fullname" class="form-control form-control-lg" placeholder="Full name" aria-label="Username" aria-describedby="basic-addon1" required>
+                                </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text bg-success text-white" id="basic-addon1"><i class="ti-user"></i></span>
                                     </div>
-                                    <input type="text" class="form-control form-control-lg" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" required>
+                                    <input type="text" name="user" class="form-control form-control-lg" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" required>
                                 </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text bg-danger text-white" id="basic-addon1"><i class="ti-email"></i></span>
                                     </div>
-                                    <input type="text" class="form-control form-control-lg" placeholder="Email Address" aria-label="Username" aria-describedby="basic-addon1" required>
+                                    <input type="email" name="email" class="form-control form-control-lg" placeholder="Email Address" aria-label="Username" aria-describedby="basic-addon1" required>
                                 </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text bg-warning text-white" id="basic-addon2"><i class="ti-pencil"></i></span>
                                     </div>
-                                    <input type="text" class="form-control form-control-lg" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" required>
+                                    <input type="password" name="pass" class="form-control form-control-lg" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" required>
                                 </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text bg-info text-white" id="basic-addon2"><i class="ti-pencil"></i></span>
                                     </div>
-                                    <input type="text" class="form-control form-control-lg" placeholder=" Confirm Password" aria-label="Password" aria-describedby="basic-addon1" required>
+                                    <input type="password" name="confimpass" class="form-control form-control-lg" placeholder=" Confirm Password" aria-label="Password" aria-describedby="basic-addon1" required>
+                                </div>
+                                <span class="text-light">Date of Birth:</span>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-primary text-white" id="basic-addon2"><i class="ti-pencil"></i></span>
+                                    </div>
+                                    <input type="date" name="dateofbirth" class="form-control form-control-lg" placeholder="DateOfBirth" aria-describedby="basic-addon1" required>
+                                </div>
+                                <div class="input-group text-light gender">
+                                    <span>Gender:
+                                        <input type="radio" id="male" name="gender" value="0">
+                                        <label for="male" class="mr-4">Nữ</label>
+                                        <input type="radio" id="female" name="gender" value="1">
+                                        <label for="female">Nam</label>
+                                    </span>
+                                    <input hidden type="text" value="0" name="gioitinh" id="gioitinh">
                                 </div>
                             </div>
                         </div>
@@ -70,7 +144,7 @@
                                         <button class="btn btn-block btn-lg btn-info" type="submit">Sign Up</button>
                                     </div>
                                     <div class="p-t-20">
-                                        <a class="btn btn-success btn-block btn-lg" href="?c=AdminLogin&a=View"> Sign In</a>
+                                        <a class="btn btn-success btn-block btn-lg" href="?c=AdminIndex&a=View"> Sign In</a>
                                     </div>
                                 </div>
                             </div>
@@ -91,9 +165,18 @@
     <!-- This page plugin js -->
     <!-- ============================================================== -->
     <script>
-    $('[data-toggle="tooltip"]').tooltip();
-    $(".preloader").fadeOut();
+        $('[data-toggle="tooltip"]').tooltip();
+        $(".preloader").fadeOut();
+
+
+        $(document).ready(function() {
+            $('.gender input[type="radio"]').click(function() {
+                var selectedOption = $("input:radio[name=gender]:checked").val()
+                document.getElementById("gioitinh").value = selectedOption;
+            });
+        });
     </script>
+
 </body>
 
 </html>

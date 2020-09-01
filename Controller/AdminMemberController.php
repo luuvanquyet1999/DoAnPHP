@@ -10,12 +10,24 @@ class AdminMemberController
 
     function View()
     {
-        $data = $this->AdminMemberModel->GetAll();
-        require SYSTEM_PATH . "/View/Admin/Member/List.php";
+        session_start();
+        if (isset($_SESSION['username'])) {
+            $user = $_SESSION['username'];
+            $data = $this->AdminMemberModel->GetAll();
+            require SYSTEM_PATH . "/View/Admin/Member/List.php";
+        } else {
+            require_once SYSTEM_PATH . "/View/Admin/Login.php";
+        }
     }
     function Add()
     {
-        require SYSTEM_PATH . "/View/Admin/Member/Add.php";
+        session_start();
+        if (isset($_SESSION['username'])) {
+            $user = $_SESSION['username'];
+            require SYSTEM_PATH . "/View/Admin/Member/Add.php";
+        } else {
+            require_once SYSTEM_PATH . "/View/Admin/Login.php";
+        }
     }
     function SaveAdd()
     {
@@ -39,9 +51,15 @@ class AdminMemberController
     }
     function Update()
     {
-        $member_id = $_GET["member_id"];
-        $member = $this->AdminMemberModel->GetRecordById($member_id);
-        require SYSTEM_PATH . "/View/Admin/Member/Update.php";
+        session_start();
+        if (isset($_SESSION['username'])) {
+            $user = $_SESSION['username'];
+            $member_id = $_GET["member_id"];
+            $member = $this->AdminMemberModel->GetRecordById($member_id);
+            require SYSTEM_PATH . "/View/Admin/Member/Update.php";
+        } else {
+            require_once SYSTEM_PATH . "/View/Admin/Login.php";
+        }
     }
     function SaveUpdate()
     {

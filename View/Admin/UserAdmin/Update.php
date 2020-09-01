@@ -54,49 +54,59 @@
                                     </div>
                                     <div class="x_content">
                                         <div class="row" style="width:100%">
-                                            <form action="index.php?c=UserAdmin&a=SaveUpdate" method="post" enctype="multipart/form-data" style="width:100%">
-                                                <div class="form-group" hidden>
-                                                    <label for="exampleInputEmail1">id</label>
-                                                    <input type="text" value="<?= $UserAdmin->UserAdmin_id ?>" readonly name="UserAdmin_id" class="form-control" name="" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                                </div>
-                                                <div class="form-group" style="width:50%">
-                                                    <label for="exampleInputEmail1">UserName</label>
-                                                    <input type="text" value="<?= $UserAdmin->UserAdmin_username ?>" readonly name="UserAdmin_username" class="form-control" name="" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                                </div>
-                                                <div class="form-group" style="width:50%">
-                                                    <label for="exampleInputPassword1">Password</label>
-                                                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password" value="<?= $UserAdmin->UserAdmin_password ?>" name="UserAdmin_password">
-                                                </div>
-                                                <div class="form-group" style="width:50%">
-                                                    <label for="exampleInputEmail1">FullName</label>
-                                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?= $UserAdmin->UserAdmin_fullname ?>" name="UserAdmin_fullname">
-                                                </div>
-                                                <div class="form-group" style="width:50%">
-                                                    <label for="exampleInputEmail1">Email</label>
-                                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?= $UserAdmin->UserAdmin_email ?>" name="UserAdmin_email">
-                                                </div>
-                                                <div class="form-group" style="width:50%">
-                                                    <label for="exampleInputEmail1">Gender</label>
-                                                    <select name="UserAdmin_gender" id="cars" class="form-control">
-                                                        <option value="0">Nữ</option>
-                                                        <option value="1">Nam</option>
-                                                    </select>
-                                                    <!-- <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?= $UserAdmin->UserAdmin_gender ?>" name="UserAdmin_gender"> -->
-                                                </div>
-                                                <div class="form-group" style="width:50%" hidden>
-                                                    <label for="exampleInputEmail1">Active</label>
-                                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?= $UserAdmin->Active ?>" name="Active">
-                                                </div>
-                                                <div class="form-group" style="width:50%">
-                                                    <label for="exampleInputEmail1">DateOfbirth</label>
-                                                    <input type="date" min="1990-01-01" max="2020-01-01" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?= $UserAdmin->UserAdmin_dateofbirth ?>" name="UserAdmin_dateofbirth">
-                                                </div>
-                                                <div class="form-group row">
-                                                    <button type="submit" class="btn btn-success">Update</button>
-                                                    <a href="index.php?c=UserAdmin&a=View" class="btn btn-warning">Cancel</a>
-                                                </div>
+                                            <div class="col-md-8 ">
+                                                <form action="index.php?c=UserAdmin&a=SaveUpdate" method="post" enctype="multipart/form-data" style="width:100%">
+                                                    <div class="form-group" hidden>
+                                                        <label for="exampleInputEmail1">id</label>
+                                                        <input type="text" value="<?= $UserAdmin->UserAdmin_id ?>" readonly name="UserAdmin_id" class="form-control" name="" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                    </div>
+                                                    <div class="form-group" >
+                                                        <label for="exampleInputEmail1">UserName</label>
+                                                        <input type="text" value="<?= $UserAdmin->UserAdmin_username ?>" readonly name="UserAdmin_username" class="form-control" name="" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                    </div>
+                                                    <div class="form-group" >
+                                                        <label for="exampleInputPassword1">Password</label>
+                                                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password" value="<?= $UserAdmin->UserAdmin_password ?>" name="UserAdmin_password">
+                                                    </div>
+                                                    <div class="form-group" >
+                                                        <label for="exampleInputEmail1">FullName</label>
+                                                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?= $UserAdmin->UserAdmin_fullname ?>" name="UserAdmin_fullname">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="exampleInputEmail1">Email</label>
+                                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?= $UserAdmin->UserAdmin_email ?>" name="UserAdmin_email">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="exampleInputEmail1">Gender</label>
+                                                        <select name="UserAdmin_gender" id="cars" class="form-control">
+                                                            <option value="0">Nữ</option>
+                                                            <option value="1">Nam</option>
+                                                        </select>
+                                                        <!-- <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?= $UserAdmin->UserAdmin_gender ?>" name="UserAdmin_gender"> -->
+                                                    </div>
+                                                    <div class="form-group"  hidden>
+                                                        <label for="exampleInputEmail1">Active</label>
+                                                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?= $UserAdmin->Active ?>" name="Active">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="exampleInputEmail1">DateOfbirth</label>
+                                                        <input type="date" min="1990-01-01" max="2020-01-01" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?= $UserAdmin->UserAdmin_dateofbirth ?>" name="UserAdmin_dateofbirth">
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <button type="submit" class="btn btn-success">Update</button>
+                                                        <a href="index.php?c=UserAdmin&a=View" class="btn btn-warning">Cancel</a>
+                                                    </div>
 
-                                            </form>
+                                                </form>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="card card-hover text-center" style="background: transparent;">
+                                                    <div class="card-img">
+                                                        <img src="View/Admin/images/user.png" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
