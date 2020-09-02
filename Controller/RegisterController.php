@@ -2,6 +2,6 @@
 class RegisterController
 {
     function View(){
-        require SYSTEM_PATH."/View/Admin/register.php";
+        require SYSTEM_PATH."/View/Admin/Register.php";
     }
 }

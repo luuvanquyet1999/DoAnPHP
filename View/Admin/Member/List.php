@@ -1,44 +1,50 @@
-<?php
-if (!isset($_SESSION)) {
-    session_start();
-}
-?>
-<?php
-if (!isset($_SESSION["username"])) {
-    echo "<script type='text/javascript'>alert('Vui lòng bạn đăng nhập tài khoản Admin');</script>";
-    header('Location: index.php?c=Login&a=View');
-}
-?>
-
-<!doctype html>
-<html class="no-js" lang="">
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>ADMINISTRATOR | THÀNH VIÊN NHÓM</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Administrator | Thành viên nhóm</title>
     <?php
     include 'asset/Scripts/ScriptHeader.php';
-    ?> 
+    ?>
+
 </head>
 
 <body>
-    <?php
-    include_once('./View/Admin/Share/Menu.php');
-    ?>
-    <!-- Right Panel -->
-    <div id="right-panel" class="right-panel">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
         <?php
-        include_once('./View/Admin/Share/header.php');
+        include_once('./View/Admin/Share/Header.php');
         ?>
-        <!-- Content -->
-        <div class="content">
-            <!-- page content -->
-            <div class="right_col" role="main">
+        <?php
+        include_once('./View/Admin/Share/Menu.php');
+        ?>
+        <div class="page-wrapper">
+            <div class="container-fluid">
                 <div class="">
                     <div class="page-title">
                         <div class="title_left">
-                            <h3>QUẢN LÝ TÀI THÀNH VIÊN NHÓM</h3>
+                            <h3>QUẢN LÝ THÀNH VIÊN NHÓM</h3>
                         </div>
                     </div>
                     <div class="clearfix"></div>
@@ -47,7 +53,7 @@ if (!isset($_SESSION["username"])) {
                             <div class="col-md-12 col-sm-12 ">
                                 <div class="x_panel">
                                     <div class="x_title">
-                                    <a href="?c=AdminMember&a=Add" class="btn btn-primary mt-2">Thêm mới</a>
+                                        <a href="?c=AdminMember&a=Add" class="btn btn-primary mt-2">Thêm mới</a>
                                         <div class="clearfix"></div>
                                     </div>
                                     <div class="x_content">
@@ -65,8 +71,8 @@ if (!isset($_SESSION["username"])) {
                                                         }
                                                         ?>
                                                     </p>
-                                                    <table id="bootstrap-data-table" class="table table-striped table-bordered table-hover">
-                                                    <thead>
+                                                    <table id="zero_config" class="table table-striped table-bordered">
+                                                        <thead>
                                                             <tr>
                                                                 <th>STT</th>
                                                                 <th>Name</th>
@@ -90,7 +96,7 @@ if (!isset($_SESSION["username"])) {
                                                                     <td><?= $value->member_job ?></td>
                                                                     <td>
                                                                         <a class="btn btn-danger btn-sm" href="javascript:void(0);" onclick="fucAlert(this.id)" id="<?= $value->member_id ?>"><i class="fas fa-trash-alt"></i></a>
-                                                                        <a hidden href="?c=AdminMember&a=Delete&member_id=<?= $value->member_id ?>" id="a<?= $value->member_id ?>"></a>
+                                                                        <a hidden href="?c=AdminMember&a=Delete&member_id=<?= $value->member_id ?>" id="xoa<?= $value->member_id ?>"></a>
                                                                         <a href="?c=AdminMember&a=Update&member_id=<?= $value->member_id ?>" class="btn btn-primary"><i class="fas fa-edit"></i></a>
                                                                     </td>
                                                                 </tr>
@@ -109,25 +115,13 @@ if (!isset($_SESSION["username"])) {
                     </div>
                 </div>
             </div>
-            <!-- /page content -->
         </div>
-        <!-- /.content -->
-        <div class="clearfix"></div>
         <?php
         include_once('./View/Admin/Share/Footer.php');
         ?>
-    </div>
-    <!-- /#right-panel -->
-
-    <?php
-    include 'asset/Scripts/ScriptFooter.php';
-    ?>
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#bootstrap-data-table-export').DataTable();
-        });
-    </script>
+        <?php
+        include 'asset/Scripts/ScriptFooter.php';
+        ?>
 </body>
 
 </html>

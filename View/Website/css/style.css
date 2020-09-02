@@ -2343,6 +2343,7 @@ Created:
         /*---------------------
   Contact Section
 -----------------------*/
+<<<<<<< HEAD
         
         .contact-section {
             padding-top: 80px;
@@ -2722,3 +2723,394 @@ Created:
             /* padding-top: 0px; */
             height: 200px;
         }
+=======
+
+.contact-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.contact-section .contact-info {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-section .contact-info i {
+    color: #f34e3a;
+    font-size: 48px;
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
+.contact-section .contact-info p {
+    font-size: 18px;
+    color: #191919;
+}
+
+.contact-section .contact-info ul li {
+    list-style: none;
+    font-size: 18px;
+    color: #191919;
+    line-height: 28px;
+}
+
+.contact-section .contact-info ul li span {
+    color: #9a9a9a;
+}
+
+.contact-section .contact-form {
+    padding-top: 35px;
+}
+
+.contact-section .contact-form .section-title {
+    text-align: center;
+}
+
+.contact-section .contact-form .section-title h2 {
+    margin-bottom: 28px;
+}
+
+.contact-section .contact-form .section-title h2:before {
+    display: none;
+}
+
+.contact-section .contact-form input {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #e1e1e1;
+    padding-left: 25px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: #9a9a9a;
+}
+
+.contact-section .contact-form textarea {
+    width: 100%;
+    height: 150px;
+    border: 1px solid #e1e1e1;
+    padding-left: 25px;
+    padding-top: 12px;
+    resize: none;
+    margin-bottom: 45px;
+    font-size: 14px;
+    color: #9a9a9a;
+}
+
+.contact-section .contact-form button {
+    font-size: 14px;
+    font-family: "Oswald", sans-serif;
+    color: #ffffff;
+    background: #f34e3a;
+    border: 1px solid #f34e3a;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 13px 35px 14px 37px;
+    position: relative;
+    cursor: pointer;
+}
+
+
+/*--------------------------------- Responsive Media Quaries -----------------------------*/
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width: 1170px;
+    }
+}
+
+
+/* Medium Device = 1200px */
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .latest-items .latest-text .latest-tag .tag-comments {
+        margin-left: 15px;
+    }
+    .team-members .member-text {
+        padding: 40px 30px 40px 45px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .class-section .primary-btn {
+        margin-bottom: 20px;
+        float: none;
+    }
+    .services-items {
+        margin-bottom: 20px;
+    }
+    .team-members .member-pic:before {
+        top: auto;
+        bottom: -60px;
+        left: 50%;
+        margin-left: -35px;
+    }
+    .team-members .member-pic.third:before {
+        left: 50%;
+    }
+    .footer-form {
+        padding: 50px 80px 45px 80px;
+    }
+    .register .copyright {
+        margin-right: 30px;
+    }
+    .about-us-section .about-pic {
+        margin-bottom: 30px;
+    }
+    .about-page-trainer .single-trainer-item {
+        margin-bottom: 40px;
+    }
+    .blog-sidebar .sidebar-recent {
+        padding-top: 40px;
+    }
+    .blog-details .bd-text .bd-video .video-bg {
+        margin-bottom: 30px;
+    }
+    .team-section .primary-btn {
+        float: none;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Tablet Device = 768px */
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .nav-menu .mainmenu ul li {
+        margin-right: 25px;
+    }
+    .nav-menu .nav-right {
+        margin-left: 0px;
+    }
+    .header-section.header-normal .nav-menu .mainmenu ul li {
+        margin-right: 20px;
+    }
+}
+
+
+/* Wide Mobile = 480px */
+
+@media only screen and (max-width: 767px) {
+    .slicknav_menu {
+        display: block;
+        background: transparent;
+        padding: 0;
+    }
+    .nav-menu .mainmenu {
+        display: none;
+    }
+    .nav-menu {
+        position: relative;
+    }
+    .nav-right {
+        position: absolute;
+        right: 110px;
+        top: 7px;
+    }
+    .slicknav_btn {
+        margin: 0;
+    }
+    .slicknav_nav {
+        padding: 15px 10px;
+        background: #222;
+    }
+    .slicknav_nav a {
+        padding: 10px 10px;
+        margin: 0;
+    }
+    .slicknav_nav a:hover {
+        border-radius: 0;
+        background: #f34a3a;
+        color: #fff;
+    }
+    .slicknav_nav ul {
+        margin: 0;
+    }
+    .hero-items .owl-nav button[type=button] {
+        left: 52px;
+    }
+    .hero-items .owl-nav button[type=button].owl-next {
+        right: 52px;
+    }
+    .single-hero-item {
+        padding-top: 200px;
+    }
+    .register .copyright {
+        margin-right: 0;
+        float: none;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .register .footer-widget {
+        float: none;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .register .footer-links {
+        float: none;
+        text-align: center;
+    }
+    .register .footer-links a:first-child {
+        margin-left: 0;
+    }
+    .header-normal .slicknav_btn {
+        margin-top: 31px;
+        margin-bottom: 30px;
+    }
+    .header-section.header-normal .nav-menu .nav-right {
+        position: absolute;
+        top: 0;
+        right: 110px;
+    }
+    .filter-controls ul li {
+        margin-right: 30px;
+        margin-bottom: 10px;
+    }
+    .trainer-schedule.class-timetable .section-title .nav-controls ul li,
+    .class-timetable.choseus-section .section-title .nav-controls ul li,
+    .class-timetable.about-page-trainer .section-title .nav-controls ul li {
+        margin-right: 25px;
+        margin-bottom: 10px;
+    }
+    .blog-items {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .blog-sidebar {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .about-us-section .about-pic {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .about-text {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .blog-details {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .blog-details .bd-info .bi-social a {
+        margin-left: 15px;
+    }
+}
+
+
+/* Small Device = 320px */
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+    .single-hero-item .hero-text h1 {
+        font-size: 75px;
+    }
+    .services-items .single-service-item {
+        width: 100%;
+        margin-right: 0;
+    }
+    .map-location .map-widget {
+        left: 2%;
+    }
+    .map-location .map-widget .map-address {
+        width: 309px;
+    }
+    .map-location .map-widget .map-address ul {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+    .footer-form {
+        padding: 10px 20px 10px 20px;
+    }
+    .blog-items .single-blog-item .blog-text .blog-tag .post-info {
+        float: none;
+    }
+    .blog-items .single-blog-item .blog-text .blog-tag .tag-details {
+        float: none;
+    }
+    .blog-details .bd-text .blog-tag .post-info {
+        float: none;
+    }
+    .blog-details .bd-text .blog-tag .tag-details {
+        float: none;
+    }
+    .blog-details .bd-info .bi-tags {
+        float: none;
+    }
+    .blog-details .bd-info .bi-social {
+        float: none;
+    }
+    .blog-details .bd-comments .comments-item .avatar-text .reply-btn.primary-btn {
+        padding: 5px 10px;
+        position: relative;
+        margin-top: 20px;
+    }
+    .blog-details .bd-comments .comments-item .avatar-pic {
+        float: none;
+        margin-bottom: 20px;
+    }
+    .blog-details .bd-comments .comments-item .avatar-text {
+        padding-left: 0;
+    }
+    .blog-details .bd-comments .comments-item .avatar-text:before {
+        display: none;
+    }
+}
+
+.trainer-pic {
+    height: 300px;
+}
+
+.trainer-pic img {
+    max-width: 100%;
+    height: 100%;
+}
+
+.portfolioFilter {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-family: 'Graviola-Regular';
+    margin-bottom: 78px;
+}
+
+.portfolioFilter a {
+    display: inline-block;
+    width: auto;
+    text-align: center;
+    padding: 13px 36px;
+    color: #20202f;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    border-radius: 30px;
+}
+
+.portfolioFilter-inner {
+    display: inline-block;
+    width: auto;
+    background: #ffffff;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    border-radius: 30px;
+    -webkit-box-shadow: 0 0 20px 0 #dddcd9;
+    -moz-box-shadow: 0 0 20px 0 #dddcd9;
+    -ms-box-shadow: 0 0 20px 0 #dddcd9;
+    -o-box-shadow: 0 0 20px 0 #dddcd9;
+    box-shadow: 0 0 20px 0 #dddcd9;
+}
+
+.portfolioFilter a.current {
+    background: #20202f;
+    color: #ffffff;
+}
+
+.ql-tooltip {
+    display: none;
+}
+
+
+/*# sourceMappingURL=style.css.map */
+>>>>>>> ed9e417e63bfc9bce26601284cb4c8d002bb5c5c

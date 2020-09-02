@@ -10,9 +10,14 @@ class UserAdminController
     }
     function View()
     {
-        //$Category = new CategoryModel();
-        $data = $this->UserAdminModel->GetAll();
-        require SYSTEM_PATH . "/View/Admin/UserAdmin/List.php";
+        session_start();
+        if (isset($_SESSION['username'])) {
+            $user = $_SESSION['username'];
+            $data = $this->UserAdminModel->GetAll();
+            require SYSTEM_PATH . "/View/Admin/UserAdmin/List.php";
+        } else {
+            require_once SYSTEM_PATH . "/View/Admin/Login.php";
+        }
     }
     // function Add()
     // {
@@ -32,9 +37,15 @@ class UserAdminController
     // }
     function Update()
     {
-        $UserAdmin_id = $_GET["UserAdminID"];
-        $UserAdmin = $this->UserAdminModel->GetRecordById($UserAdmin_id);
-        require SYSTEM_PATH . "/View/Admin/UserAdmin/Update.php";
+        session_start();
+        if (isset($_SESSION['username'])) {
+            $user = $_SESSION['username'];
+            $UserAdmin_id = $_GET["UserAdminID"];
+            $UserAdmin = $this->UserAdminModel->GetRecordById($UserAdmin_id);
+            require SYSTEM_PATH . "/View/Admin/UserAdmin/Update.php";
+        } else {
+            require_once SYSTEM_PATH . "/View/Admin/Login.php";
+        }
     }
     function SaveUpdate()
     {
@@ -48,12 +59,12 @@ class UserAdminController
         $Active = $_POST["Active"];
         // echo $UserAdmin_username ." <br>".$UserAdmin_id ." <br>".$UserAdmin_fullname ." <br>".$UserAdmin_email ." <br>".$UserAdmin_gender
         //  ."<br> ".$UserAdmin_password."<br> ".$UserAdmin_dateofbirth." <br>".$Active;
-      
-         $result = $this->UserAdminModel->Update(new UserAdmin($UserAdmin_id,$UserAdmin_fullname,$UserAdmin_email,$UserAdmin_username,$UserAdmin_gender,$UserAdmin_password,$Active,$UserAdmin_dateofbirth));
-         if ($result == true)
-             header('location: index.php?c=UserAdmin&a=View&r=1');
-         else
-             header('location: index.php?c=UserAdmin&a=View&r=0');
+
+        $result = $this->UserAdminModel->Update(new UserAdmin($UserAdmin_id, $UserAdmin_fullname, $UserAdmin_email, $UserAdmin_username, $UserAdmin_gender, $UserAdmin_password, $Active, $UserAdmin_dateofbirth));
+        if ($result == true)
+            header('location: index.php?c=UserAdmin&a=View&r=1');
+        else
+            header('location: index.php?c=UserAdmin&a=View&r=0');
     }
     function Delete()
     {

@@ -2,7 +2,7 @@
     <nav class="navbar top-navbar navbar-expand-md navbar-dark">
         <div class="navbar-header" data-logobg="skin5">
             <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
-            <a class="navbar-brand" href="?c=AdminIndex&a=View">
+            <a class="navbar-brand" href="?c=AdminIndex&a=trangchu">
                 <b class="logo-icon p-l-10">
                     <img src="asset/assets/images/logo-icon.png" alt="homepage" class="light-logo" />
                 </b>
@@ -20,8 +20,9 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="asset/assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31"></a>
                     <div class="dropdown-menu dropdown-menu-right user-dd animated">
-                        <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i> My Profile</a>
-                        <a class="dropdown-item" href="javascript:void(0)"><i class="fa fa-power-off m-r-5 m-l-5"></i> Logout</a>
+                        <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i> Xin chào, <?php echo '<b>' .$user.'</b>' ?></a>
+                        <a class="dropdown-item" href="?c=AdminIndex&a=Profile"><i class="ti-user m-r-5 m-l-5"></i> My Profile</a>
+                        <a class="dropdown-item" href="?c=AdminIndex&a=Logout"><i class="fa fa-power-off m-r-5 m-l-5"></i> Logout</a>
                     </div>
                 </li>
             </ul>

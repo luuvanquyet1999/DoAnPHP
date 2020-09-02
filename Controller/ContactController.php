@@ -1,6 +1,7 @@
 <?php
 require SYSTEM_PATH . "/Model/ContactModel.php";
-class ContactController{
+class ContactController
+{
     private $LienHeModel;
     public function __construct()
     {
@@ -8,12 +9,24 @@ class ContactController{
     }
     function View()
     {
-        $data = $this->ContactModel->GetAll();
-        require SYSTEM_PATH . "/View/Admin/Contact/List.php";
+        session_start();
+        if (isset($_SESSION['username'])) {
+            $user = $_SESSION['username'];
+            $data = $this->ContactModel->GetAll();
+            require SYSTEM_PATH . "/View/Admin/Contact/List.php";
+        } else {
+            require_once SYSTEM_PATH . "/View/Admin/Login.php";
+        }
     }
     function Add()
     {
-        require SYSTEM_PATH . "/View/Admin/Contact/Add.php";
+        session_start();
+        if (isset($_SESSION['username'])) {
+            $user = $_SESSION['username'];
+            require SYSTEM_PATH . "/View/Admin/Contact/Add.php";
+        } else {
+            require_once SYSTEM_PATH . "/View/Admin/Login.php";
+        }
     }
     function SaveAdd()
     {
@@ -21,8 +34,8 @@ class ContactController{
         $contact_email = $_POST["contact_email"];
         $contact_phone = $_POST["contact_phone"];
         $contact_address = $_POST["contact_address"];
-        $Active=$_POST["Active"];
-        $result = $this->ContactModel->Insert(new Contact($contact_id, $contact_email, $contact_phone,$contact_address,$Active));
+        $Active = $_POST["Active"];
+        $result = $this->ContactModel->Insert(new Contact($contact_id, $contact_email, $contact_phone, $contact_address, $Active));
         if ($result == true)
             header('location: index.php?c=Contact&a=View&r=1');
         else
@@ -30,7 +43,7 @@ class ContactController{
     }
     function Delete()
     {
-        $contact_id= $_GET["contact_id"];
+        $contact_id = $_GET["contact_id"];
 
         $result = $this->ContactModel->Delete($contact_id);
         if ($result == true)
@@ -40,9 +53,15 @@ class ContactController{
     }
     function Update()
     {
-        $contact_id = $_GET['contact_id'];
-        $contact = $this->ContactModel->GetById($contact_id);
-        require SYSTEM_PATH . "/View/Admin/Contact/Update.php";
+        session_start();
+        if (isset($_SESSION['username'])) {
+            $user = $_SESSION['username'];
+            $contact_id = $_GET['contact_id'];
+            $contact = $this->ContactModel->GetById($contact_id);
+            require SYSTEM_PATH . "/View/Admin/Contact/Update.php";
+        } else {
+            require_once SYSTEM_PATH . "/View/Admin/Login.php";
+        }
     }
     function SaveUpdate()
     {
@@ -50,8 +69,8 @@ class ContactController{
         $contact_email = $_POST["contact_email"];
         $contact_phone = $_POST["contact_phone"];
         $contact_address = $_POST["contact_address"];
-        $Active=$_POST["Active"];
-        $result = $this->ContactModel->Update(new Contact($contact_id, $contact_email, $contact_phone,$contact_address,$Active));
+        $Active = $_POST["Active"];
+        $result = $this->ContactModel->Update(new Contact($contact_id, $contact_email, $contact_phone, $contact_address, $Active));
         if ($result == true)
             header('location: index.php?c=Contact&a=View&r=1');
         else
@@ -62,7 +81,7 @@ class ContactController{
         $content = $_POST["content"];
         $fullname = $_POST["fullname"];
         $email = $_POST["email"];
-        $result  =$this->ContactModel->SendContact(new ContactDefault($content, $fullname,$email));
+        $result  = $this->ContactModel->SendContact(new ContactDefault($content, $fullname, $email));
         if ($result == true)
             header('location: index.php?c=WebsiteIndex&a=Contact&r=1');
         else
@@ -70,7 +89,13 @@ class ContactController{
     }
     function GetAllContactDefault()
     {
-        $data = $this->ContactModel->GetAllContactDefault();
-        require SYSTEM_PATH . "/View/Admin/ContactDefault/List.php";
+        session_start();
+        if (isset($_SESSION['username'])) {
+            $user = $_SESSION['username'];
+            $data = $this->ContactModel->GetAllContactDefault();
+            require SYSTEM_PATH . "/View/Admin/ContactDefault/List.php";
+        } else {
+            require_once SYSTEM_PATH . "/View/Admin/Login.php";
+        }
     }
 }

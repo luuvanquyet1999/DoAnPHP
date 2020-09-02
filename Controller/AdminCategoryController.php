@@ -10,13 +10,24 @@ class AdminCategoryController
     }
     function View()
     {
-        //$Category = new CategoryModel();
-        $data = $this->CategoryModel->GetAll();
-        require SYSTEM_PATH . "/View/Admin/Category/List.php";
+        session_start();
+        if (isset($_SESSION['username'])) {
+            $user = $_SESSION['username'];
+            $data = $this->CategoryModel->GetAll();
+            require SYSTEM_PATH . "/View/Admin/Category/List.php";
+        } else {
+            require_once SYSTEM_PATH . "/View/Admin/Login.php";
+        }
     }
     function Add()
     {
-        require SYSTEM_PATH . "/View/Admin/Category/Add.php";
+        session_start();
+        if (isset($_SESSION['username'])) {
+            $user = $_SESSION['username'];
+            require SYSTEM_PATH . "/View/Admin/Category/Add.php";
+        } else {
+            require_once SYSTEM_PATH . "/View/Admin/Login.php";
+        }
     }
     function SaveAdd()
     {
@@ -33,9 +44,13 @@ class AdminCategoryController
     }
     function Update()
     {
-        $Category_id = $_GET["CategoryID"];
-        $Category = $this->CategoryModel->GetRecordById($Category_id);
-        require SYSTEM_PATH . "/View/Admin/Category/Update.php";
+        session_start();
+        if (isset($_SESSION['username'])) {
+            $user = $_SESSION['username'];
+            require SYSTEM_PATH . "/View/Admin/Category/Add.php";
+        } else {
+            require_once SYSTEM_PATH . "/View/Admin/Login.php";
+        }
     }
     function SaveUpdate()
     {

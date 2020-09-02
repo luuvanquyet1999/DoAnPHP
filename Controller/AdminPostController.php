@@ -10,13 +10,24 @@ class AdminPostController
 
     function View()
     {
-        $data = $this->PostModel->GetAll();
-        require SYSTEM_PATH . "/View/Admin/Post/List.php";
+        session_start();
+        if (isset($_SESSION['username'])) {
+            $user = $_SESSION['username'];
+            $data = $this->PostModel->GetAll();
+            require SYSTEM_PATH . "/View/Admin/Post/List.php";
+        } else {
+            require_once SYSTEM_PATH . "/View/Admin/Login.php";
+        }
     }
     function Add()
     {
-        //$data = $this->PostModel->GetAllCategory();
-        require SYSTEM_PATH . "/View/Admin/Post/Add.php";
+        session_start();
+        if (isset($_SESSION['username'])) {
+            $user = $_SESSION['username'];
+            require SYSTEM_PATH . "/View/Admin/Post/Add.php";
+        } else {
+            require_once SYSTEM_PATH . "/View/Admin/Login.php";
+        }
     }
     function SaveAdd()
     {
@@ -39,16 +50,22 @@ class AdminPostController
         $result = $this->PostModel->Insert(new Post($post_id, $post_title, $post_summary, $post_content, $post_image, $post_createdate, $category_name, $username, $post_link));
         // print_r($result);
         // die();
-        // if ($result == true)
-        //     header('location: index.php?c=AdminPost&a=View&r=1');
-        // else
-        //     header('location: index.php?c=AdminPost&a=View&r=0');
+        if ($result == true)
+            header('location: index.php?c=AdminPost&a=View&r=1');
+        else
+            header('location: index.php?c=AdminPost&a=View&r=0');
     }
     function Update()
     {
-        $post_id = $_GET["PostID"];
-        $post = $this->PostModel->GetRecordById($post_id);
-        require SYSTEM_PATH . "/View/Admin/Post/Update.php";
+        session_start();
+        if (isset($_SESSION['username'])) {
+            $user = $_SESSION['username'];
+            $post_id = $_GET["PostID"];
+            $post = $this->PostModel->GetRecordById($post_id);
+            require SYSTEM_PATH . "/View/Admin/Post/Update.php";
+        } else {
+            require_once SYSTEM_PATH . "/View/Admin/Login.php";
+        }
     }
     function SaveUpdate()
     {
@@ -69,8 +86,6 @@ class AdminPostController
         // echo $post_id."</br>".$post_title."</br>".$post_summary."</br>".$post_content."</br>".$post_image."</br>".$category_name."</br>".$post_createdate."</br>".$username;
         // die();
         $result = $this->PostModel->Update(new Post($post_id, $post_title, $post_summary, $post_content, $post_image, $post_createdate, $category_name, $username, $post_link));
-        print_r($result);
-        die();
         if ($result == true)
             header('location: index.php?c=AdminPost&a=View&r=1');
         else

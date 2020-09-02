@@ -9,14 +9,26 @@ class AdminGioiThieuController
     }
     function View()
     {
-        $data = $this->admingioithieumodel->GetAll();
-        require SYSTEM_PATH . "/View/Admin/GioiThieu/List.php";
+        session_start();
+        if (isset($_SESSION['username'])) {
+            $user = $_SESSION['username'];
+            $data = $this->admingioithieumodel->GetAll();
+            require SYSTEM_PATH . "/View/Admin/GioiThieu/List.php";
+        } else {
+            require_once SYSTEM_PATH . "/View/Admin/Login.php";
+        }
     }
     function Update()
     {
-        $intro_id = $_GET['intro_id'];
-        $gioithieu = $this->admingioithieumodel->GetRecordById($intro_id);
-        require SYSTEM_PATH . "/View/Admin/GioiThieu/Update.php";
+        session_start();
+        if (isset($_SESSION['username'])) {
+            $user = $_SESSION['username'];
+            $intro_id = $_GET['intro_id'];
+            $gioithieu = $this->admingioithieumodel->GetRecordById($intro_id);
+            require SYSTEM_PATH . "/View/Admin/GioiThieu/Update.php";
+        } else {
+            require_once SYSTEM_PATH . "/View/Admin/Login.php";
+        }
     }
     function SaveUpdate()
     {
@@ -26,7 +38,7 @@ class AdminGioiThieuController
         $content = $_POST["content"];
         $file_name = $_FILES["image"]["name"];
         move_uploaded_file($_FILES["image"]["tmp_name"], "fileUpload/Introduce/" . $_FILES["image"]["name"]);
-        $path = "fileUpload/Introduce/" .$file_name;
+        $path = "fileUpload/Introduce/" . $file_name;
         $image = $path;
         $result = $this->admingioithieumodel->Update(new GioiThieu($intro_id, $title, $summary, $content, $image));
         if ($result == true)

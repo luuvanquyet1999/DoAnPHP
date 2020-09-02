@@ -20,11 +20,13 @@ class LoginModel
 
     public function __construct()
     {
-        $this->mysql = new mysqli(hostname, username, password, dbname);
+        $this->mysql = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
     }
 
-
-    function GetEmailPass($user_email,$user_password)
+    function GetAdmin(){
+        
+    }
+    function GetEmailPass($user_email, $user_password)
     {
         $query = "SELECT
                         user_email,user_password 
