@@ -26,6 +26,7 @@ class AdminMemberModel
     public function __construct()
     {
         $this->mysql = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
+        $this->mysql->query("SET NAMES 'UTF8'");
     }
     function GetAll()
     {
@@ -42,6 +43,7 @@ class AdminMemberModel
         $query = "INSERT INTO lph_member (MemberName, MemberAvartar, MemberJob, MemberFaceBook, MemberInstagram, MemberTwitter) 
         VALUES ('$member->member_name','$member->member_avatar','$member->member_job','$member->member_facebook','$member->member_instagram','$member->member_twitter')";
         $result = $this->mysql->query($query);
+        
         return $result;
     }
     function GetRecordById($member_id)

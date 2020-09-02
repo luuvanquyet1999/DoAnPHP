@@ -47,7 +47,9 @@ class AdminCategoryController
         session_start();
         if (isset($_SESSION['username'])) {
             $user = $_SESSION['username'];
-            require SYSTEM_PATH . "/View/Admin/Category/Add.php";
+            $cate_id = $_GET['CategoryID'];
+            $Category = $this->CategoryModel->GetRecordById($cate_id);
+            require SYSTEM_PATH . "/View/Admin/Category/Update.php";
         } else {
             require_once SYSTEM_PATH . "/View/Admin/Login.php";
         }
