@@ -6,16 +6,22 @@ $controller = $get_controller.'Controller';
 $path_controller = 'Controller/'.$controller.'.php';
 //echo $path_controller;
 if(!file_exists($path_controller)){
-    require_once "./mvc/Bridge.php";
-    $myApp = new App();
+//    die('file không tồn tại!');
+    GetWeb();
 }
-require_once $path_controller;
+//require_once $path_controller;
 if(!class_exists($controller)){
-	die('controller không tồn tại!');
+//	die('controller không tồn tại!');
+    GetWeb();
 }
 $controllerObject = new $controller;
 if(!method_exists($controllerObject, $get_action)){
-	die('action không tồn tại!');
+//	die('action không tồn tại!');
+    GetWeb();
 }
 $controllerObject->{$get_action}();
+    function GetWeb(){
+        require_once "./mvc/Bridge.php";
+        $myApp = new App();
+    }
 ?>

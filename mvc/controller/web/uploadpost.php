@@ -5,7 +5,7 @@ class Uploadpost extends Controller
     function View()
     {
         if (!isset($_SESSION["username"])) {
-            header('Location:/doanphp/login');
+            header('Location:/php/login');
         }
         //kiem tra roles
         $login = $this->getmodel('UserModel');
@@ -14,7 +14,7 @@ class Uploadpost extends Controller
         $data1 = $login->FindUser($_SESSION["username"]);
         foreach ($data1 as $value) {
             if ($value[3] == 0) {
-                header('Location:/doanphp/website');
+                header('Location:/php/website');
             }
         }
         $messeger = '';
@@ -25,7 +25,7 @@ class Uploadpost extends Controller
     {
         $messeger = '';
         if (!isset($_SESSION["username"])) {
-            header('Location:/doanphp/login');
+            header('Location:/php/login');
         }
         //kiem tra roles
         $login = $this->getmodel('UserModel');
@@ -35,7 +35,7 @@ class Uploadpost extends Controller
         $data4=$catelogy->GetCatelogyName();
         foreach ($data1 as $value) {
             if ($value[3] == 0) {
-                header('Location:/doanphp/website');
+                header('Location:/php/website');
             }
         }
         if (isset($_POST["uploadpost"])) {
@@ -62,7 +62,7 @@ class Uploadpost extends Controller
                     if ($data3 == true) {
                         $x =$this->makeLink($posttitle);
                         $messeger='Upload thành công';
-                        header("location:/doanphp/post/$x");
+                        header("location:/php/post/$x");
                     } else {
                         $messeger = 'Upload Không Thành Công';
                     }

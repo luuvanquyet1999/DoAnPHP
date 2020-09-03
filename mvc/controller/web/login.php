@@ -6,7 +6,7 @@ class login extends Controller
     function View()
     {
         if (isset($_SESSION["username"])){
-            header('Location:/doanphp/Website');
+            header('Location:/php/Website');
         }
         $messager="";
         $this->getviewweb('login',$data=[ $messager]);
@@ -37,9 +37,9 @@ class login extends Controller
                        if ($value[2]==1){
                            $_SESSION['username'] = $username;
                            if (!$value[3]==0){
-                               header('Location:/doanphp/uploadpost');
+                               header('Location:/php/uploadpost');
                            }else{
-                               header('Location:/doanphp/website');
+                               header('Location:/php/website');
                                }
                        }else{
                            $messager="Tài khoản đã bị khóa .";
