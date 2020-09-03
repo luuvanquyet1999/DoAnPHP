@@ -58,57 +58,63 @@
                                     </div>
                                     <div class="x_content">
                                         <div class="row" style="width:100%">
-                                        <form action="index.php?c=AdminMember&a=SaveAdd" method="post" enctype="multipart/form-data" style="width:100%">
-                                                    <div class="form-group row" hidden>
-                                                        <label for="colFormLabel" class="col-sm-2 col-form-label col-form-label-lg">ID</label>
-                                                        <div class="col-sm-10">
-                                                            <input type="text" readonly name="member_id" />
-                                                        </div>
+                                            <form action="index.php?c=AdminMember&a=SaveAdd" method="post" enctype="multipart/form-data" style="width:100%">
+                                                <div class="form-group row" hidden>
+                                                    <label for="colFormLabel" class="col-sm-2 col-form-label col-form-label-lg">ID</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" readonly name="member_id" />
                                                     </div>
-                                                    <div class="form-group row mt-2">
-                                                        <label for="colFormLabel" class="col-sm-2 col-form-label">Tên thành viên</label>
-                                                        <div class="col-sm-10">
-                                                            <input type="text" name="member_name" class="form-control" />
-                                                        </div>
+                                                </div>
+                                                <div class="form-group row mt-2">
+                                                    <label for="colFormLabel" class="col-sm-2 col-form-label">Tên thành viên</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" name="member_name" class="form-control" />
                                                     </div>
-                                                    <div class="form-group row">
-                                                        <label for="colFormLabel" class="col-sm-2 col-form-label ">Nghề nghiệp</label>
-                                                        <div class="col-sm-10">
-                                                            <input type="text" name="member_job" class="form-control" />
-                                                        </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="colFormLabel" class="col-sm-2 col-form-label ">Nghề nghiệp</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" name="member_job" class="form-control" />
                                                     </div>
-                                                    <div class="form-group row mt-2">
-                                                        <label for="colFormLabel" class="col-sm-2 col-form-label">Link Facebook</label>
-                                                        <div class="col-sm-10">
-                                                            <input type="text" name="member_facebook" class="form-control" />
-                                                        </div>
+                                                </div>
+                                                <div class="form-group row mt-2">
+                                                    <label for="colFormLabel" class="col-sm-2 col-form-label">Link Facebook</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" name="member_facebook" class="form-control" />
                                                     </div>
-                                                    <div class="form-group row">
-                                                        <label for="colFormLabel" class="col-sm-2 col-form-label ">Link Instagram</label>
-                                                        <div class="col-sm-10">
-                                                            <input type="text" name="member_instagram" class="form-control" />
-                                                        </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="colFormLabel" class="col-sm-2 col-form-label ">Link Instagram</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" name="member_instagram" class="form-control" />
                                                     </div>
-                                                    <div class="form-group row mt-2">
-                                                        <label for="colFormLabel" class="col-sm-2 col-form-label">Link Twitter</label>
-                                                        <div class="col-sm-10">
-                                                            <input type="text" name="member_twitter" class="form-control" />
-                                                        </div>
+                                                </div>
+                                                <div class="form-group row mt-2">
+                                                    <label for="colFormLabel" class="col-sm-2 col-form-label">Link Twitter</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" name="member_twitter" class="form-control" />
                                                     </div>
-                                                    <div class="form-group row">
-                                                        <label for="colFormLabel" class="col-sm-2 col-form-label ">Avatar</label>
-                                                        <div class="col-sm-10">
-                                                            <input type="file" name="member_avatar" />
-                                                        </div>
+                                                </div>
+                                                <div class="form-group row mt-2">
+                                                    <label for="colFormLabel" class="col-sm-2 col-form-label">Mô tả</label>
+                                                    <div class="col-sm-10">
+                                                        <textarea name="member_desc" rows="3" class="form-control"></textarea>
                                                     </div>
-                                                    <div class="form-group row">
-                                                        <div class="action">
-                                                            <button type="reset" value="submit" class="btn btn-info">Refresh</button>
-                                                            <button type="submit" value="submit" class="btn btn-success">Lưu</button>
-                                                            <a href="index.php?c=AdminMember&a=View" class="btn btn-warning">Cancel</a>
-                                                        </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="colFormLabel" class="col-sm-2 col-form-label ">Avatar</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="file" name="member_avatar" />
                                                     </div>
-                                                </form>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="action">
+                                                        <button type="reset" value="submit" class="btn btn-info">Refresh</button>
+                                                        <button type="submit" value="submit" class="btn btn-success">Lưu</button>
+                                                        <a href="index.php?c=AdminMember&a=View" class="btn btn-warning">Cancel</a>
+                                                    </div>
+                                                </div>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>

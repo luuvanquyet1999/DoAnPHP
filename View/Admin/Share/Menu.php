@@ -22,7 +22,7 @@
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fa fa-users" aria-hidden="true"></i><span class="hide-menu">Quản lý thành viên </span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item"><a href="?c=useradmin&a=View" class="sidebar-link"><i class="fa fa-user" aria-hidden="true"></i><span class="hide-menu"> Tài khoản Admin </span></a></li>
+                                <li class="sidebar-item"><a href="?c=UserAdmin&a=View" class="sidebar-link"><i class="fa fa-user" aria-hidden="true"></i><span class="hide-menu"> Tài khoản Admin </span></a></li>
                                 <li class="sidebar-item"><a href="?c=AdminMember&a=View" class="sidebar-link"><i class="fa fa-user" aria-hidden="true"></i><span class="hide-menu"> Thành viên nhóm </span></a></li>
                             </ul>
                         </li>

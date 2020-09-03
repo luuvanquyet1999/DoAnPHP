@@ -94,6 +94,12 @@
                                                         <input type="text" name="member_twitter" class="form-control" value="<?= $member->member_twitter ?>"/>
                                                     </div>
                                                 </div>
+                                                <div class="form-group row mt-2">
+                                                    <label for="colFormLabel" class="col-sm-2 col-form-label">Mô tả</label>
+                                                    <div class="col-sm-10">
+                                                        <textarea name="member_desc" rows="3" class="form-control" value="<?= $member->member_desc ?>"></textarea>
+                                                    </div>
+                                                </div>
                                                 <div class="form-group row">
                                                     <label for="colFormLabel" class="col-sm-2 col-form-label ">Avatar</label>
                                                     <div class="col-sm-10">

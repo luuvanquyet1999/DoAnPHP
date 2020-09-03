@@ -8,7 +8,8 @@ class Member
     public $member_facebook;
     public $member_instagram;
     public $member_twitter;
-    function __construct($member_id, $member_name, $member_avatar, $member_job,$member_facebook, $member_instagram, $member_twitter)
+    public $member_desc;
+    function __construct($member_id, $member_name, $member_avatar, $member_job,$member_facebook, $member_instagram, $member_twitter, $member_desc)
     {
         $this->member_id = $member_id;
         $this->member_name = $member_name;
@@ -17,6 +18,7 @@ class Member
         $this->member_facebook = $member_facebook;
         $this->member_instagram = $member_instagram;
         $this->member_twitter = $member_twitter;
+        $this->member_desc = $member_desc;
     }
 }
 class AdminMemberModel
@@ -34,14 +36,14 @@ class AdminMemberModel
         $result = $this->mysql->query($query);
         $data = [];
         foreach ($result->fetch_all() as $value) {
-            array_push($data, new Member($value[0], $value[1], $value[2], $value[3],$value[4], $value[5], $value[6]));
+            array_push($data, new Member($value[0], $value[1], $value[2], $value[3],$value[4], $value[5], $value[6],$value[7]));
         }
         return $data;
     }
     function Insert(Member $member)
     {
-        $query = "INSERT INTO lph_member (MemberName, MemberAvartar, MemberJob, MemberFaceBook, MemberInstagram, MemberTwitter) 
-        VALUES ('$member->member_name','$member->member_avatar','$member->member_job','$member->member_facebook','$member->member_instagram','$member->member_twitter')";
+        $query = "INSERT INTO lph_member (MemberName, MemberAvartar, MemberJob, MemberFaceBook, MemberInstagram, MemberTwitter,MemberDesc) 
+        VALUES ('$member->member_name','$member->member_avatar','$member->member_job','$member->member_facebook','$member->member_instagram','$member->member_twitter','$member->member_desc')";
         $result = $this->mysql->query($query);
         
         return $result;
@@ -54,7 +56,7 @@ class AdminMemberModel
         // print_r($data);
         // die();
         if (count($data)) {
-            return new Member($data[0][0], $data[0][1], $data[0][2], $data[0][3],$data[0][4], $data[0][5], $data[0][6]);
+            return new Member($data[0][0], $data[0][1], $data[0][2], $data[0][3],$data[0][4], $data[0][5], $data[0][6],$data[0][7]);
         }
         return null;
     }
@@ -66,7 +68,8 @@ class AdminMemberModel
             MemberJob='$member->member_job',
             MemberFaceBook='$member->member_facebook', 
             MemberInstagram='$member->member_instagram',
-            MemberTwitter='$member->member_twitter'
+            MemberTwitter='$member->member_twitter',
+            MemberDesc='$member->member_desc'
         WHERE MemberId='$member->member_id'";
         $result = $this->mysql->query($query);
         return $result;

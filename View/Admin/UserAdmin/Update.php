@@ -13,10 +13,20 @@
     <?php
     include 'asset/Scripts/ScriptHeader.php';
     ?>
-
+    <script src="asset/assets/libs/jquery/dist/jquery.min.js"></script>
 </head>
 
 <body>
+    <script>
+        window.onload = function() {
+            var a = document.getElementById("gioitinh").value;
+            if (a == "1") {
+                document.getElementById("female").checked = true;
+            } else {
+                document.getElementById("male").checked = true;
+            }
+        };
+    </script>
     <div class="preloader">
         <div class="lds-ripple">
             <div class="lds-pos"></div>
@@ -60,15 +70,15 @@
                                                         <label for="exampleInputEmail1">id</label>
                                                         <input type="text" value="<?= $UserAdmin->UserAdmin_id ?>" readonly name="UserAdmin_id" class="form-control" name="" id="exampleInputEmail1" aria-describedby="emailHelp">
                                                     </div>
-                                                    <div class="form-group" >
+                                                    <div class="form-group">
                                                         <label for="exampleInputEmail1">UserName</label>
                                                         <input type="text" value="<?= $UserAdmin->UserAdmin_username ?>" readonly name="UserAdmin_username" class="form-control" name="" id="exampleInputEmail1" aria-describedby="emailHelp">
                                                     </div>
-                                                    <div class="form-group" >
+                                                    <div class="form-group">
                                                         <label for="exampleInputPassword1">Password</label>
-                                                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password" value="<?= $UserAdmin->UserAdmin_password ?>" name="UserAdmin_password">
+                                                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" value="<?= $UserAdmin->UserAdmin_password ?>" name="UserAdmin_password">
                                                     </div>
-                                                    <div class="form-group" >
+                                                    <div class="form-group">
                                                         <label for="exampleInputEmail1">FullName</label>
                                                         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?= $UserAdmin->UserAdmin_fullname ?>" name="UserAdmin_fullname">
                                                     </div>
@@ -76,15 +86,15 @@
                                                         <label for="exampleInputEmail1">Email</label>
                                                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?= $UserAdmin->UserAdmin_email ?>" name="UserAdmin_email">
                                                     </div>
-                                                    <div class="form-group">
-                                                        <label for="exampleInputEmail1">Gender</label>
-                                                        <select name="UserAdmin_gender" id="cars" class="form-control">
-                                                            <option value="0">Nữ</option>
-                                                            <option value="1">Nam</option>
-                                                        </select>
-                                                        <!-- <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?= $UserAdmin->UserAdmin_gender ?>" name="UserAdmin_gender"> -->
+                                                    <div class="form-group gender">
+                                                        <label for="exampleInputEmail1" class="mr-3">Gender</label>
+                                                        <input type="radio" id="male" name="gender" value="0">
+                                                        <label for="male" class="mr-4">Nữ</label>
+                                                        <input type="radio" id="female" name="gender" value="1">
+                                                        <label for="female">Nam</label>
+                                                        <input hidden type="text" name="gioitinh" id="gioitinh" value="<?= $UserAdmin->UserAdmin_gender ?>">
                                                     </div>
-                                                    <div class="form-group"  hidden>
+                                                    <div class="form-group" hidden>
                                                         <label for="exampleInputEmail1">Active</label>
                                                         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?= $UserAdmin->Active ?>" name="Active">
                                                     </div>
@@ -122,6 +132,14 @@
         <?php
         include 'asset/Scripts/ScriptFooter.php';
         ?>
+        <script>
+            $(document).ready(function() {
+                $('.gender input[type="radio"]').click(function() {
+                    var selectedOption = $("input:radio[name=gender]:checked").val()
+                    document.getElementById("gioitinh").value = selectedOption;
+                });
+            });
+        </script>
 </body>
 
 </html>
