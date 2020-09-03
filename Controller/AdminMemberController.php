@@ -37,13 +37,14 @@ class AdminMemberController
         $member_facebook = $_POST["member_facebook"];
         $member_instagram = $_POST["member_instagram"];
         $member_twitter = $_POST["member_twitter"];
+        $member_desc = $_POST["member_desc"];
         $file_name = $_FILES["member_avatar"]["name"];
         move_uploaded_file($_FILES["member_avatar"]["tmp_name"], "fileUpload/Member/" . $_FILES["member_avatar"]["name"]);
         $path = "fileUpload/Member/" . $file_name;
         $member_avatar = $path;
         // echo $member_id.$member_name.$member_job. $member_avatar. $file_name;
         // die();
-        $result = $this->AdminMemberModel->Insert(new Member($member_id, $member_name, $member_avatar, $member_job, $member_facebook, $member_instagram, $member_twitter));
+        $result = $this->AdminMemberModel->Insert(new Member($member_id, $member_name, $member_avatar, $member_job, $member_facebook, $member_instagram, $member_twitter,$member_desc));
         if ($result == true)
             header('location: index.php?c=AdminMember&a=View&r=1');
         else
@@ -69,13 +70,14 @@ class AdminMemberController
         $member_facebook = $_POST["member_facebook"];
         $member_instagram = $_POST["member_instagram"];
         $member_twitter = $_POST["member_twitter"];
+        $member_desc = $_POST["member_desc"];
         $file_name = $_FILES["member_avatar"]["name"];
         move_uploaded_file($_FILES["member_avatar"]["tmp_name"], "fileUpload/Member/" . $_FILES["member_avatar"]["name"]);
         $path = "fileUpload/Member/" . $file_name;
         $member_avatar = $path;
         // echo $member_id.$member_name.$member_job. $member_avatar. $file_name;
         // die();
-        $result = $this->AdminMemberModel->Update(new Member($member_id, $member_name, $member_avatar, $member_job, $member_facebook, $member_instagram, $member_twitter));
+        $result = $this->AdminMemberModel->Update(new Member($member_id, $member_name, $member_avatar, $member_job, $member_facebook, $member_instagram, $member_twitter,$member_desc));
         if ($result == true)
             header('location: index.php?c=AdminMember&a=View&r=1');
         else

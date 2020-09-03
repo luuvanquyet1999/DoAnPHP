@@ -36,7 +36,7 @@ class AdminIndexController
         $pass = $_POST['pass'];
         $result = $this->indexModel->loginRecord($user, $pass);
         if ($result == 0) {
-            header('location:index.php?c=AdminIndex&a=view');
+            header('location:index.php?c=AdminIndex&a=View');
         } else {
             header('location:index.php?c=AdminIndex&a=trangchu');
             $_SESSION['username'] = $user;

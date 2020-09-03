@@ -53,7 +53,7 @@ class UserAdminController
         $UserAdmin_id = $_POST["UserAdmin_id"];
         $UserAdmin_fullname = $_POST["UserAdmin_fullname"];
         $UserAdmin_email = $_POST["UserAdmin_email"];
-        $UserAdmin_gender = $_POST["UserAdmin_gender"];
+        $UserAdmin_gender = $_POST["gioitinh"];
         $UserAdmin_password = $_POST["UserAdmin_password"];
         $UserAdmin_dateofbirth = $_POST["UserAdmin_dateofbirth"];
         $Active = $_POST["Active"];
