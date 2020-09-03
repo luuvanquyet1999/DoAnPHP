@@ -1,3 +1,3 @@
 <?php
-define('CSSDIR', 'http://localhost/php/public/');
-define('Home', 'http://localhost/php/');
+define('CSSDIR', 'http://localhost/doanphp/public/');
+define('Home', 'http://localhost/doanphp/');

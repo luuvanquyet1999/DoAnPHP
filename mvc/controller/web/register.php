@@ -23,7 +23,7 @@ class register extends Controller{
                 }else{
                     $register->InsertUser($username,$password,$fullname,$gender);
                     $_SESSION['username'] = $username;
-                    header('Location:/php/website');
+                    header('Location:/doanphp/website');
                 }
 
             }else{

@@ -4,6 +4,6 @@ class logout{
     function View()
     {
         session_unset();
-        header("location:/php/login");
+        header("location:/doanphp/login");
     }
 }
