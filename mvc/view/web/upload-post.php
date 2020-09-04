@@ -117,7 +117,7 @@ include_once './mvc/view/checkSeseson.php';
     $(document).ready(function() {
         $('#summernote').summernote({
             height: 300,
-            width :  // set editor height
+            // set editor height
             minHeight: null,             // set minimum height of editor
             maxHeight: null,             // set maximum height of editor
             focus: true                  // set focus to editable area after initializing summernote

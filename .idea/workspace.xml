@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="17c2b371-4641-4c12-aa57-bdca905b3122" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/view/web/singer-post.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/view/web/singer-post.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mvc/view/web/upload-post.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/view/web/upload-post.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +65,7 @@
       <option name="presentableId" value="Default" />
       <updated>1599186614866</updated>
       <workItem from="1599186616096" duration="11759000" />
-      <workItem from="1599203099335" duration="16050000" />
+      <workItem from="1599203099335" duration="16400000" />
     </task>
     <servers />
   </component>
