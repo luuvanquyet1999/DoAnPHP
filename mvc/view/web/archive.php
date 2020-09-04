@@ -81,7 +81,7 @@
                             <!-- Post Contetnt -->
                             <div class="post-content">
                                 <div class="post-meta">
-                                    <a href="<?php echo Home;?>post/<?= makeLink($value[0])?>"><?= $value[2]?></a>
+                                    <a href="<?php echo Home;?>post/<?= makeLink($value[0])?>"><?= SetDate($value[2])?></a>
                                     <a href="<?php echo Home;?>post/<?= makeLink($value[0])?>"><?= $value[0]?></a>
                                 </div>
                                 <a href="<?php echo Home;?>post/<?= makeLink($value[3])?>" class="post-title"><?= $value[3]?></a>

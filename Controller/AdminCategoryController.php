@@ -10,7 +10,6 @@ class AdminCategoryController
     }
     function View()
     {
-        session_start();
         if (isset($_SESSION['username'])) {
             $user = $_SESSION['username'];
             $data = $this->CategoryModel->GetAll();
@@ -21,7 +20,6 @@ class AdminCategoryController
     }
     function Add()
     {
-        session_start();
         if (isset($_SESSION['username'])) {
             $user = $_SESSION['username'];
             require SYSTEM_PATH . "/View/Admin/Category/Add.php";

@@ -6,7 +6,7 @@
             <nav class="classy-navbar justify-content-between" id="magNav">
 
                 <!-- Nav brand -->
-                <a href="<?php echo Home; ?>website" class="nav-brand"><img
+                <a href="<?php echo Home; ?>WebsiteHome" class="nav-brand"><img
                             src="<?php echo CSSDIR ?>img/core-img/logo4.png" alt=""></a>
 
                 <!-- Navbar Toggler -->
@@ -26,11 +26,11 @@
                         <!-- Nav Start -->
                         <div class="classynav">
                             <ul>
-                                <li class="active"><a href="<?php echo Home; ?>website">Trang Chủ</a></li>
+                                <li class="active"><a href="<?php echo Home; ?>WebsiteHome">Trang Chủ</a></li>
                                 <li><a href="<?php echo Home; ?>archive">Bài Viết</a></li>
                                 <li><a href="#">Trang</a>
                                     <ul class="dropdown">
-                                        <li><a href="<?php echo Home; ?>website">Trang Chủ</a></li>
+                                        <li><a href="<?php echo Home; ?>WebsiteHome">Trang Chủ</a></li>
                                         <li><a href="archive">Bài viết</a></li>
                                         <li><a href="<?php echo Home; ?>post">Đọc ngay</a></li>
                                         <li><a href="<?php echo Home; ?>about">Đội ngũ</a></li>

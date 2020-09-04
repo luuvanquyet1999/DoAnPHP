@@ -9,7 +9,6 @@ class LoginDefaultController
         require SYSTEM_PATH."/View/website/dangnhap.php";
     }
     function Logout(){
-        session_start(); 
         unset($_SESSION['websiteusername']);
         header('location: index.php?c=WebsiteIndex&a=view&s=success');
     }
