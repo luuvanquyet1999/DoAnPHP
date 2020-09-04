@@ -51,26 +51,26 @@ class AdminIndexController
     }
     function SignUp()
     {
-        // $id = $_POST["id"];
-        // $fullname = $_POST["fullname"];
-        // $user = $_POST["user"];
-        // $email = $_POST["email"];
-        // $pass = $_POST["pass"];
-        // $confimpass = $_POST["confimpass"];
-        // $dateofbirth = $_POST["dateofbirth"];
-        // $gioitinh = $_POST["gioitinh"];
-        // // echo $fullname.$user.$pass.$confimpass.$dateofbirth.$gioitinh;
-        // // die();
-        // if ($pass == $confimpass) {
-        //     $result = $this->adminModel->registerRecord(new Admin($id, $user, $pass, $fullname, $gioitinh, $email, $dateofbirth));
-        //     if ($result == true) {
-        //         header('location:index.php?c=AdminIndex&a=View');
-        //     } else {
-        //         header('location:index.php?c=AdminIndex&a=register');
-        //     }
-        // } else {
-        //     header('location:index.php?c=AdminIndex&a=register');
-        // }
+        $id = $_POST["id"];
+        $fullName = $_POST["fullname"];
+        $userName = $_POST["user"];
+        $email = $_POST["email"];
+        $passWord = $_POST["pass"];
+        $confimpass = $_POST["confimpass"];
+        $DateofBirth = $_POST["dateofbirth"];
+        $genDer = $_POST["gioitinh"];
+        // echo $fullname.$user.$pass.$confimpass.$dateofbirth.$gioitinh.$email;
+        // die();
+        if ($passWord == $confimpass) {
+            $result = $this->indexModel->registerRecord(new Admin($id, $userName, $passWord, $fullName, $genDer, $email, $DateofBirth));
+            if ($result == true) {
+                header('location:index.php?c=AdminIndex&a=View&r=2');
+            } else {
+                header('location:index.php?c=AdminIndex&a=register&r=0');
+            }
+        } else {
+            header('location:index.php?c=AdminIndex&a=register&r=0');
+        }
         //require SYSTEM_PATH . "/View/Admin/register.php";
     }
     function Profile()

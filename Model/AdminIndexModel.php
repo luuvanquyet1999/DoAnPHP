@@ -30,18 +30,22 @@ class AdminIndexModel
     function registerRecord(Admin $admin)
     {
         $query = "Select * from lph_adiminuser where Username ='$admin->userName'";
-        $check = $this->mysqli->query("$query");
+        $check = $this->mysql->query("$query");
         $array = $check->fetch_all();
         if (count($array)) {
             return false;
         } else {
-            $checkEmail = $this->mysqli->query("select * from lph_adiminuser where UsernameEmail ='$admin->email'");
+            $checkEmail = $this->mysql->query("select * from lph_adiminuser where UsernameEmail ='$admin->email'");
             $count = $checkEmail->fetch_all();
             if (count($count)) {
                 return false;
             } else {
-                $result = $this->mysqli->query("Insert into lph_adiminuser(UsernameFull,UsernameEmail,Username,UsernameGender,UsernamePassword,Active,DateOfBirth) value ('$admin->fullName','$admin->email','$admin->user','$admin->gioitinh','$admin->pass','1','$admin->DateofBirth')");
+                $sql1 = "INSERT INTO lph_adiminuser(Username,UsernamePassword,UsernameFull,UsernameEmail,UsernameGender,DateOfBirth,Active) 
+                VALUES ('$admin->userName','$admin->passWord','$admin->fullName','$admin->email','$admin->genDer','$admin->DateofBirth','1')";
+                $result = $this->mysql->query($sql1);
                 return $result;
+                // print_r($result);
+                // die();
             }
         }
     }
@@ -51,7 +55,7 @@ class AdminIndexModel
         $result = $this->mysql->query($query);
         return $result;
     }
-    
+
     function getPassword($user)
     {
         $query = "select * from tdb_adminuser where username = '$user'";
@@ -86,7 +90,8 @@ class AdminIndexModel
         $query = "update tdb_adminuser set password ='$pass' where email ='$email'";
         $this->mysqli->query($query);
     }
-    function UpdateProfile($user){
+    function UpdateProfile($user)
+    {
         $query = "SELECT * FROM lph_adiminuser WHERE Username = '$user' AND Active = 1 LIMIT 1";
         $result = $this->mysql->query($query);
         // $data = $result->fetch_all();
@@ -95,7 +100,7 @@ class AdminIndexModel
         //     print_r($data);
         //     die();
         // }
-       
+
         return $result;
     }
 }

@@ -1,54 +1,3 @@
-<?php
-$mysqli = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
-if (isset($_POST["register"])) {
-    //lấy thông tin từ các form bằng phương thức POST
-    $username = $_POST["user"];
-    $password = $_POST["pass"];
-    $confirmpassword = $_POST["confimpassword"];
-    $fullname = $_POST["fullname"];
-    $email = $_POST["email"];
-    $gender = $_POST["gioitinh"];
-    $date = $_POST["dateofbirth"];
-
-    //Kiểm tra điều kiện bắt buộc đối với các field không được bỏ trống
-    if ($username == "" || $password == "" || $confirmpassword == "" || $fullname == "" || $email == "" || $gender == "") {
-        echo "bạn vui lòng nhập đầy đủ thông tin";
-    } else {
-        // Kiểm tra tài khoản đã tồn tại chưa
-        $sql = "select * from lph_adiminuser where Username='$username' or Usernameemail = '$email'";
-        $query = $mysqli->query($sql);
-        if (mysqli_num_rows($query)  > 0) {
-            echo "<script type='text/javascript'>alert('Tài khoản hoặc Email đã tồn tại');</script>";
-        } else {
-            if ($password != $confirmpassword) {
-                echo "<script type='text/javascript'>alert('Mật khẩu không trùng nhau!!!');</script>";
-            } else {
-                //thực hiện việc lưu trữ dữ liệu vào db
-                $sql1 = "INSERT INTO lph_adiminuser(
-							Username,
-							UsernamePassword,
-							UsernameFull,
-							UsernameEmail,
-							UserNameGender,
-							DateofBirth,
-							Active
-							) VALUES (
-							'$username',
-							'$password',
-							'$fullname',
-							'$email',
-							'$gender',
-							'$date',
-							'1'	)";
-
-                $result = $mysqli->query($sql1);
-                echo "chúc mừng bạn đã đăng ký thành công";
-                header('Location: index.php?c=AdminIndex&a=View&s=susscess');
-            }
-        }
-    }
-}
-?>
 <!DOCTYPE html>
 <html dir="ltr">
 
@@ -85,7 +34,18 @@ if (isset($_POST["register"])) {
                     <div class="text-center p-b-20">
                         <span class="db"><img src="asset/assets/images/logo.png" alt="logo" /></span>
                     </div>
-                    <form class="form-horizontal m-t-20 " method="post" action="index.php?c=Register&a=View">
+                    <form class="form-horizontal m-t-20 " method="post" action="index.php?c=AdminIndex&a=SignUp">
+                        <p>
+                            <?php
+                            if (isset($_GET['r'])) {
+                                if ($_GET['r'] == 1) {
+                                    echo "<script type='text/javascript'>alert('Success. Xin mời đăng nhập vào hệ thống!');</script>";
+                                } else {
+                                    echo "<script type='text/javascript'>alert('Error. Dữ liệu nhập không đúng hoặc đã tồn tại username!');</script>";
+                                }
+                            }
+                            ?>
+                        </p>
                         <div class="row p-b-30">
                             <div class="col-12">
                                 <input hidden type="text" name="id" class="form-control form-control-lg" readonly>
@@ -93,31 +53,31 @@ if (isset($_POST["register"])) {
                                     <div class="input-group-prepend">
                                         <span class="input-group-text bg-info text-white" id="basic-addon1"><i class="ti-user"></i></span>
                                     </div>
-                                    <input type="text" name="fullname" class="form-control form-control-lg" placeholder="Full name" aria-label="Username" aria-describedby="basic-addon1" required>
+                                    <input type="text" autocomplete="off" name="fullname" class="form-control form-control-lg" placeholder="Full name" aria-label="Username" aria-describedby="basic-addon1" required>
                                 </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text bg-success text-white" id="basic-addon1"><i class="ti-user"></i></span>
                                     </div>
-                                    <input type="text" name="user" class="form-control form-control-lg" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" required>
+                                    <input type="text" autocomplete="off" name="user" class="form-control form-control-lg" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" required>
                                 </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text bg-danger text-white" id="basic-addon1"><i class="ti-email"></i></span>
                                     </div>
-                                    <input type="email" name="email" class="form-control form-control-lg" placeholder="Email Address" aria-label="Username" aria-describedby="basic-addon1" required>
+                                    <input type="email" autocomplete="off" name="email" class="form-control form-control-lg" placeholder="Email Address" aria-label="Username" aria-describedby="basic-addon1" required>
                                 </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text bg-warning text-white" id="basic-addon2"><i class="ti-pencil"></i></span>
                                     </div>
-                                    <input type="password" name="pass" class="form-control form-control-lg" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" required>
+                                    <input type="password" autocomplete="off" name="pass" class="form-control form-control-lg" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" required>
                                 </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text bg-info text-white" id="basic-addon2"><i class="ti-pencil"></i></span>
                                     </div>
-                                    <input type="password" name="confimpass" class="form-control form-control-lg" placeholder=" Confirm Password" aria-label="Password" aria-describedby="basic-addon1" required>
+                                    <input type="password" autocomplete="off" name="confimpass" class="form-control form-control-lg" placeholder=" Confirm Password" aria-label="Password" aria-describedby="basic-addon1" required>
                                 </div>
                                 <span class="text-light">Date of Birth:</span>
                                 <div class="input-group mb-3">

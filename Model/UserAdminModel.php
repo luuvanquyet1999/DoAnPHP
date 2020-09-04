@@ -39,7 +39,7 @@ class UserAdminModel
                     UsernamePassword,(CASE
         WHEN Active =1 THEN 'Hiển thị'
         WHEN Active =0 THEN 'Ẩn'
-    END) as Active,DateOfBirth FROM lph_adiminuser WHERE Active ='1'";
+    END) as Active,DateOfBirth FROM lph_adiminuser WHERE Active ='1' ORDER BY UsernameId desc";
         $result = $this->mysql->query($query);
         $data = [];
         foreach ($result->fetch_all() as $value) {
