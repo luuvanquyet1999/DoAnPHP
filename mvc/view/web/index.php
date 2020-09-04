@@ -235,7 +235,7 @@ include_once './mvc/view/checkSeseson.php';
                         <!-- Post Contetnt -->
                         <div class="post-content">
                             <div class="post-meta">
-                                <a href="<?php echo Home; ?>archive/<?= makeLink($value[0]) ?>"><?= $value[2] ?></a>
+                                <a href="<?php echo Home; ?>archive/<?= makeLink($value[0]) ?>"><?=SetDate($value[2]) ?></a>
                                 <a href="<?php echo Home; ?>archive/<?= makeLink($value[0]) ?>"><?= $value[0] ?></a>
                             </div>
                             <a href="<?php echo Home; ?>post/<?= makeLink($value[3]) ?>"
@@ -270,7 +270,7 @@ include_once './mvc/view/checkSeseson.php';
                         <!-- Post Contetnt -->
                         <div class="post-content">
                             <div class="post-meta">
-                                <a href="<?php echo Home; ?>archive/<?= makeLink($value[0]) ?>"><?= $value[2] ?></a>
+                                <a href="<?php echo Home; ?>archive/<?= makeLink($value[0]) ?>"><?= SetDate($value[2]) ?></a>
                                 <a href="<?php echo Home; ?>archive/<?= makeLink($value[0]) ?>"><?= $value[0] ?></a>
                             </div>
                             <a href="<?php echo Home; ?>archive/<?= makeLink($value[3]) ?>"

@@ -26,6 +26,7 @@ class post extends Controller
     }
     function BaiViet($value){
         $x= $this->Repaid($value);
+        echo $x;
         $post= $this->getmodel('PostModel');
         $about= $this->getmodel('AboutModel');
         $user= $this->getmodel('UserModel');

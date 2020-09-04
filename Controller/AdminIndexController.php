@@ -20,13 +20,12 @@ class AdminIndexController
     }
     function trangchu()
     {
-        session_start();
         if (isset($_SESSION['username'])) {
             $user = $_SESSION['username'];
             // $totalMember = $this ->adminModel ->CountMember();
             // $totalFeedBack = $this ->feedbackModel ->CountFeedBack();
             // $totalProduct = $this ->productModel ->CountProduct();
-            require_once SYSTEM_PATH . "/View/Admin/Index.php";
+            require_once SYSTEM_PATH . "/View/Admin/index.php";
         } else {
             require_once SYSTEM_PATH . "/View/Admin/Login.php";
         }

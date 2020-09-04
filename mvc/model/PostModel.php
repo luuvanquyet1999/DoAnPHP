@@ -1,5 +1,7 @@
 <?php
-class Post1{
+
+class Post1
+{
     public $post_id;
     public $post_title;
     public $post_summary;
@@ -10,7 +12,8 @@ class Post1{
     public $category_name;
     public $username;
     public $post_info;
-    function __construct($post_id, $post_title, $post_summary, $post_content, $post_image, $post_date, $category_name, $username, $post_link,$post_info)
+
+    function __construct($post_id, $post_title, $post_summary, $post_content, $post_image, $post_date, $category_name, $username, $post_link, $post_info)
     {
         $this->post_id = $post_id;
         $this->post_title = $post_title;
@@ -30,7 +33,9 @@ class PostModel extends DB
 {
     function GetCategories()
     {
-        $query = "SELECT CategoryName, COUNT(*) c FROM lph_post GROUP BY CategoryName  HAVING c > 0 order by c desc";
+        $query = "SELECT CategoryName, COUNT(*) c FROM lph_post 
+WHERE Active = 1
+GROUP BY CategoryName  HAVING c > 0 order by c desc";
         $result = $this->mysql->query($query);
         $data = [];
         while ($row = mysqli_fetch_array($result)) {
@@ -42,9 +47,7 @@ class PostModel extends DB
     function GetTrending()
     {
         $query = "SELECT PostTitle , CategoryName ,PostImage
-                        FROM lph_post
-                        WHERE
-                    PostInfo = 'Xu hướng'";
+                FROM lph_post WHERE PostInfo = 'Xu hướng' AND Active = 1";
         $result = $this->mysql->query($query);
         $data = [];
         while ($row = mysqli_fetch_array($result)) {
@@ -58,7 +61,7 @@ class PostModel extends DB
         $query = "SELECT PostTitle ,PostImage
                         FROM lph_post
                         WHERE
-                    PostInfo = 'Hot'";
+                    PostInfo = 'Hot' AND Active = 1";
         $result = $this->mysql->query($query);
         $data = [];
         while ($row = mysqli_fetch_array($result)) {
@@ -69,7 +72,10 @@ class PostModel extends DB
 
     function GetDanhChoBan()
     {
-        $query = "SELECT CategoryName ,PostImage ,PostCreateDate, PostTitle ,PostSummary FROM lph_post ORDER BY PostId DESC LIMIT 1";
+        $query = "SELECT CategoryName ,PostImage ,PostCreateDate, PostTitle ,PostSummary 
+FROM lph_post 
+WHERE Active =1
+ORDER BY PostId DESC LIMIT 1";
         $result = $this->mysql->query($query);
         $data = [];
         while ($row = mysqli_fetch_array($result)) {
@@ -81,7 +87,7 @@ class PostModel extends DB
     function GetMoiNhat()
     {
         $query = "SELECT CategoryName ,PostImage ,PostCreateDate, PostTitle ,PostSummary
-                FROM lph_post
+                FROM lph_post WHERE Active =1
                     ORDER BY PostId DESC";
         $result = $this->mysql->query($query);
         $data = [];
@@ -94,7 +100,7 @@ class PostModel extends DB
     function GetThoiTrang()
     {
         $query = "SELECT CategoryName ,PostImage ,PostCreateDate, PostTitle ,PostSummary FROM lph_post  WHERE
-                    CategoryName = 'Thời Trang' ORDER BY PostId DESC";
+                    CategoryName = 'Thời Trang' AND Active =1 ORDER BY PostId DESC";
         $result = $this->mysql->query($query);
         $data = [];
         while ($row = mysqli_fetch_array($result)) {
@@ -106,7 +112,7 @@ class PostModel extends DB
     function GetTheThao()
     {
         $query = "SELECT CategoryName ,PostImage ,PostCreateDate, PostTitle ,PostSummary FROM lph_post  WHERE
-                    CategoryName = 'Thể Thao' ORDER BY PostId DESC";
+                    CategoryName = 'Thể Thao' AND Active =1  ORDER BY PostId DESC";
         $result = $this->mysql->query($query);
         $data = [];
         while ($row = mysqli_fetch_array($result)) {
@@ -114,11 +120,12 @@ class PostModel extends DB
         }
         return $data;
     }
+
     // get/archive/
     function GetArchive($value)
     {
         $query = "SELECT CategoryName ,PostImage ,PostCreateDate, PostTitle ,PostSummary FROM lph_post  WHERE
-                    CategoryName = '$value' ORDER BY PostId DESC";
+                    CategoryName = '$value' AND Active =1 ORDER BY PostId DESC";
         $result = $this->mysql->query($query);
         $data = [];
         while ($row = mysqli_fetch_array($result)) {
@@ -126,17 +133,21 @@ class PostModel extends DB
         }
         return $data;
     }
+
     //get /post
     function GetPost()
     {
-        $query = "SELECT PostImage,PostCreateDate,CategoryName,PostTitle,PostContent,Username FROM lph_post ORDER BY PostId DESC LIMIT 1";
+        $query = "SELECT  PostImage,PostCreateDate,CategoryName,PostTitle,PostContent,Username FROM lph_post 
+                    WHERE Active =1
+                    ORDER BY PostId DESC LIMIT 1";
         $result = $this->mysql->query($query);
         $data = [];
         while ($row = mysqli_fetch_array($result)) {
-            array_push($data, [$row[0], $row[1], $row[2], $row[3], $row[4],$row[5]]);
+            array_push($data, [$row[0], $row[1], $row[2], $row[3], $row[4], $row[5]]);
         }
         return $data;
     }
+
     // get/post/baiviet
     function GetBaiViet($value)
     {
@@ -145,25 +156,31 @@ class PostModel extends DB
         $result = $this->mysql->query($query);
         $data = [];
         while ($row = mysqli_fetch_array($result)) {
-            array_push($data, [$row[0], $row[1], $row[2], $row[3], $row[4],$row[5]]);
+            array_push($data, [$row[0], $row[1], $row[2], $row[3], $row[4], $row[5]]);
         }
         return $data;
     }
-    function  InserPost($posttitle,$postsummary,$postconcent,$postimg,$postcatelogy,$username){
-            $query="INSERT INTO lph_post (PostTitle, PostSummary, PostContent, PostImage, PostCreateDate, CategoryName, Username, PostStatus, Active) 
-        VALUES ('$posttitle','$postsummary','$postconcent','$postimg',NOW(),'$postcatelogy','$username',0,1)";
-            $result = $this->mysql->query($query);
-            return $result;
-    }
-    function GetTitLe($value){
-        echo $value;
-        $query="SELECT PostTitle FROM lph_post WHERE PostTitle='$value'";
+
+    function InserPost($posttitle, $postsummary, $postconcent, $postimg, $postcatelogy, $username,$postlink)
+    {
+        $query = "INSERT INTO lph_post (PostTitle, PostSummary, PostContent, PostImage, PostCreateDate, CategoryName, Username,
+                            PostStatus, Active,PostLink) 
+        VALUES ('$posttitle','$postsummary','$postconcent'
+        ,'$postimg',NOW(),'$postcatelogy','$username',0,1,'$postlink')";
         $result = $this->mysql->query($query);
-        $data='';
-        if($result->num_rows == 0) {
-           $data =0;
-        }else{
-            $data =1;
+        return $result;
+    }
+
+    function GetTitLe($value)
+    {
+        echo $value;
+        $query = "SELECT PostTitle FROM lph_post WHERE PostTitle='$value' AND Active =1";
+        $result = $this->mysql->query($query);
+        $data = '';
+        if ($result->num_rows == 0) {
+            $data = 0;
+        } else {
+            $data = 1;
         }
         return $data;
     }
