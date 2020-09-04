@@ -20,32 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17c2b371-4641-4c12-aa57-bdca905b3122" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Model/DB.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fileUpload/Post/aston-martin-db5-junior-8_kgxy.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fileUpload/Post/chiec-u-noi-dang-bi-gio-bao-thoi-dat-vao-noi-cac-tau-ngam-va-tau-ho-ve-dang-neo-dau-1599187555-width1004height565-auto-crop.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fileUpload/Post/xene.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/AdminCategoryModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/AdminCategoryModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/AdminGioiThieuModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/AdminGioiThieuModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/AdminIndexModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/AdminIndexModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/AdminMemberModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/AdminMemberModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/AdminPostModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/AdminPostModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/AdminSlideModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/AdminSlideModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/ContactModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/ContactModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/CustomerUserModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/CustomerUserModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/UserAdminModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/UserAdminModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index2.php" beforeDir="false" afterPath="$PROJECT_DIR$/index2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/controller/web/WebsiteHome.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/controller/web/WebsiteHome.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/controller/web/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/controller/web/post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/controller/web/uploadpost.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/controller/web/uploadpost.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/model/AboutModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/model/AboutModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/model/PostModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/model/PostModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/view/web/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/view/web/about.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/view/web/archive.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/view/web/archive.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/view/web/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/view/web/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mvc/view/web/singer-post.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/view/web/singer-post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/view/web/upload-post.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/view/web/upload-post.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +66,7 @@
       <option name="presentableId" value="Default" />
       <updated>1599186614866</updated>
       <workItem from="1599186616096" duration="11759000" />
-      <workItem from="1599203099335" duration="13192000" />
+      <workItem from="1599203099335" duration="16050000" />
     </task>
     <servers />
   </component>

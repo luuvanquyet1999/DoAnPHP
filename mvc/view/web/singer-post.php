@@ -63,12 +63,13 @@ include_once './mvc/view/setlink.php';
 <section class="post-details-area">
     <div class="container">
         <div class="row justify-content-center">
-            <!-- Post Details Content Area -->
+
             <div class="col-12 col-xl-8">
+
                 <?php
                 foreach ($data[1] as $value) {
                 ?>
-                <div class="post-details-content bg-white mb-30 p-30 box-shadow">
+                <div class="post-details-content bg-white p-30 box-shadow" style="overflow: auto">
                     <div class="blog-thumb mb-30">
                         <img src="<?php echo Home;?><?= $value[0]?>" alt="">
                     </div>
@@ -84,19 +85,12 @@ include_once './mvc/view/setlink.php';
                             </p>
                         </div>
 
-
-                        <!-- Like Dislike Share -->
-                        <div class="like-dislike-share my-5">
-                            <h4 class="share">240<span>Share</span></h4>
-                            <a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i> Share on Facebook</a>
-                            <a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i> Share on Twitter</a>
-                        </div>
-
-                        <!-- Post Author -->
-                        <?php
-                        foreach ($data[5] as $value) {
+                    </div>
+                    <?php
+                    foreach ($data[5] as $value) {
                         ?>
-                        <div class="post-author d-flex align-items-center">
+
+                        <div class="post-author d-flex align-items-center col-8 col-xl-8">
                             <div class="post-author-thumb">
                                 <img src="<?php echo Home;?><?= $value[1]?>" alt="">
                             </div>
@@ -105,15 +99,18 @@ include_once './mvc/view/setlink.php';
                                 <p><?= $value[2]?></p>
                             </div>
                         </div>
-                            <?php
-                        }
-                        ?>
-                    </div>
+                        <div class="like-dislike-share my-5">
+                            <h4 class="share">240<span>Share</span></h4>
+                            <a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i> Share on Facebook</a>
+                            <a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i> Share on Twitter</a>
+                        </div>
+                        <?php
+                    }
+                    ?>
                 </div>
                     <?php
                 }
                 ?>
-
                 <!-- Related Post Area -->
                 <div class="related-post-area bg-white mb-30 px-30 pt-30 box-shadow">
                     <!-- Section Title -->
