@@ -13,7 +13,7 @@
     <?php
     include 'asset/Scripts/ScriptHeader.php';
     ?>
-
+    <link rel="stylesheet" href="asset/summernote/summernote-bs4.css">
 </head>
 
 <body>
@@ -99,11 +99,8 @@
                                 </div>
                                 <div class="form-group row">
                                     <label for="colFormLabel" class="col-sm-2 col-form-label ">Nội dung</label>
-                                    <div class="col-sm-9">
-                                        <div id="editor" name="editor" style="height: 300px; ">
-                                            <?= $post->post_content ?>
-                                        </div>
-                                        <textarea hidden id="txtContent" name="post_content" class="form-control" rows="8" style="width:95%"></textarea>
+                                    <div class="col-sm-10">
+                                        <textarea name="content" class="textarea form-control" placeholder="Place some text here" style="width:95%"><?= $post->post_content ?></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -126,7 +123,7 @@
                                 </div>
                                 <div class="form-group row">
                                     <div class="action">
-                                        <button type="submit" onclick="getVaue()"  value="submit" class="btn btn-success">Update</button>
+                                        <button type="submit" value="submit" class="btn btn-success">Update</button>
                                         <a href="index.php?c=AdminPost&a=View" class="btn btn-warning">Cancel</a>
                                     </div>
                                 </div>
@@ -142,6 +139,13 @@
         <?php
         include 'asset/Scripts/ScriptFooter.php';
         ?>
+        <script src="asset/summernote/summernote-bs4.min.js"></script>
+        <script>
+            $(function() {
+                // Summernote
+                $('.textarea').summernote()
+            })
+        </script>
 </body>
 
 </html>

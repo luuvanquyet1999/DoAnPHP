@@ -74,7 +74,7 @@ class AdminPostController
         $post_id = $_POST["post_id"];
         $post_title = $_POST["post_title"];
         $post_summary = $_POST["post_summary"];
-        $post_content = $_POST["post_content"];
+        $post_content = $_POST["content"];
         $file_name = $_FILES["post_image"]["name"];
         move_uploaded_file($_FILES["post_image"]["tmp_name"], "fileUpload/Post/" . $_FILES["post_image"]["name"]);
         $path = "fileUpload/Post/" . $file_name;
