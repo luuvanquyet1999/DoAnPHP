@@ -1,11 +1,14 @@
 <?php
 require SYSTEM_PATH . "/Model/AdminPostModel.php";
+//require SYSTEM_PATH."Model/setlink.php";
 class AdminPostController
 {
     private $PostModel;
+    //private $setlink;
     public function __construct()
     {
         $this->PostModel = new AdminPostModel();
+        //$this->setlink = new setlink();
     }
 
     function View()
@@ -31,7 +34,7 @@ class AdminPostController
     }
     function SaveAdd()
     {
-        session_start();
+        //session_start();
         $username = $_SESSION['username'];
         // $username = "quyết";
         $post_id = $_POST["post_id"];
@@ -44,7 +47,9 @@ class AdminPostController
         $post_image = $path;
         $category_name = $_POST["category"];
         $post_createdate =  $_POST["createday"];
-        $post_link = $post_title;
+        $post_link = $this->PostModel->makeLink($post_title);
+        // echo $post_link;
+        // die();
         // echo $post_id . "</br>" . $post_title . "</br>" . $post_summary . "</br>" . $post_content . "</br>" . $post_image . "</br>" . $category_name . "</br>" . $post_createdate . "</br>" . $username;
         // die();
         $result = $this->PostModel->Insert(new Post($post_id, $post_title, $post_summary, $post_content, $post_image, $post_createdate, $category_name, $username, $post_link));
@@ -68,7 +73,7 @@ class AdminPostController
     }
     function SaveUpdate()
     {
-        session_start();
+        //session_start();
         $username = $_SESSION['username'];
         //$username = "quyết";
         $post_id = $_POST["post_id"];
@@ -81,7 +86,7 @@ class AdminPostController
         $post_image = $path;
         $category_name = $_POST["category"];
         $post_createdate =  $_POST["createday"];
-        $post_link = $_POST["post_title"];
+        $post_link = $this->PostModel->makeLink($post_title);
         // echo $post_id."</br>".$post_title."</br>".$post_summary."</br>".$post_content."</br>".$post_image."</br>".$category_name."</br>".$post_createdate."</br>".$username;
         // die();
         $result = $this->PostModel->Update(new Post($post_id, $post_title, $post_summary, $post_content, $post_image, $post_createdate, $category_name, $username, $post_link));
@@ -89,7 +94,6 @@ class AdminPostController
             header('location: index.php?c=AdminPost&a=View&r=1');
         else
             header('location: index.php?c=AdminPost&a=View&r=0');
-        //}
     }
     function Delete()
     {
