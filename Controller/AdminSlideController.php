@@ -90,6 +90,8 @@ class AdminSlideController
             //tạo đường dẫn lưu file trên host:
             $path = "fileUpload/Slide/" . $file_name;
             $slide_image = $path;
+            // echo $slide_image;
+            // die();
             //upload nội dung file từ đường dẫn tạm vào đường dẫn vừa tạo:
             move_uploaded_file($file_tmp, $path);
             $result = $this->SlideModel->Update(new Slide($slide_id, $slide_image, $Active));

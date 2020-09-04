@@ -17,6 +17,27 @@
 </head>
 
 <body>
+    <style>
+        .btn-chang {
+            padding: 5px;
+            border: 0;
+            margin-left: 2px;
+            margin-right: 2px;
+            background-color: transparent;
+        }
+    </style>
+    <script>
+        function showPreview1(input) {
+            if (input.files && input.files[0]) {
+                var filerdr = new FileReader();
+                filerdr.onload = function(e) {
+                    $('#imgPreview1').attr('src', e.target.result);
+                }
+                filerdr.readAsDataURL(input.files[0]);
+            }
+        }
+        
+    </script>
     <div class="preloader">
         <div class="lds-ripple">
             <div class="lds-pos"></div>
@@ -50,9 +71,11 @@
                                 </div>
                                 <div class="form-group row">
                                     <label for="colFormLabel" class="col-sm-3 col-form-label ">Hình ảnh</label>
-                                    <div class="col-sm-9">
-                                        <input type="file" class="form-control-file" name="slide_image">
-                                        <img class="imageShow" id="showImage" style="width: 150px" max-height="100%" src="<?= $slide->slide_image ?>" />
+                                    <div class="col-sm-9" id="up1">
+                                        <input type="file" hidden class="form-control-file" name="slide_image" onchange="showPreview1(this)">
+                                        <button type="button" class="btn-chang" onclick="clickavatar1()">
+                                            <img id="imgPreview1" src="<?= $slide->slide_image ?>" style="max-width: 100%; height: 200px" />
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="form-group row" hidden>
@@ -79,7 +102,11 @@
         <?php
         include 'asset/Scripts/ScriptFooter.php';
         ?>
-
+        <script type="text/javascript">
+            function clickavatar1() {
+                $("#up1 input[type=file]").click();
+            }
+        </script>
 </body>
 
 </html>
