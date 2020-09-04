@@ -20,7 +20,7 @@ class AdminPostController
     }
     function Add()
     {
-        session_start();
+        //session_start();
         if (isset($_SESSION['username'])) {
             $user = $_SESSION['username'];
             $result = $this->PostModel->GetCategory();
@@ -55,7 +55,7 @@ class AdminPostController
     }
     function Update()
     {
-        session_start();
+        //session_start();
         if (isset($_SESSION['username'])) {
             $user = $_SESSION['username'];
             $post_id = $_GET["PostID"];
