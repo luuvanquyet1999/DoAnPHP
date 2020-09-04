@@ -74,7 +74,7 @@ include_once './mvc/view/setlink.php';
                     </div>
                     <div class="blog-content">
                         <div class="post-meta">
-                            <a href="<?php echo Home;?>post/<?= makeLink($value[6])?>"><?=SetDate($value[1])?></a>
+                            <a href="<?php echo Home;?>post/<?= makeLink($value[2])?>"><?=SetDate($value[1])?></a>
                             <a href="<?php echo Home;?>post/<?= makeLink($value[2])?>"><?=$value[2]?></a>
                         </div>
                         <h4 class="post-title"><?=$value[3]?></h4>
@@ -284,7 +284,22 @@ include_once './mvc/view/setlink.php';
             <!-- Sidebar Widget -->
             <div class="col-12 col-md-6 col-lg-5 col-xl-4">
                 <div class="sidebar-area bg-white mb-30 box-shadow">
+                    <!-- Sidebar Widget -->
+                    <div class="single-sidebar-widget p-30">
+                        <!-- Social Followers Info -->
+                        <div class="social-followers-info">
+                            <!-- Facebook -->
+                            <a href="#" class="facebook-fans"><i class="fa fa-facebook"></i> 4,360 <span>Fans</span></a>
+                            <!-- Twitter -->
+                            <a href="#" class="twitter-followers"><i class="fa fa-twitter"></i> 3,280 <span>Followers</span></a>
+                            <!-- YouTube -->
+                            <a href="#" class="youtube-subscribers"><i class="fa fa-youtube"></i> 1250 <span>Subscribers</span></a>
+                            <!-- Google -->
+                            <a href="#" class="google-followers"><i class="fa fa-google-plus"></i> 4,230 <span>Followers</span></a>
+                        </div>
+                    </div>
 
+                    <!-- Sidebar Widget -->
                     <div class="single-sidebar-widget p-30">
                         <!-- Section Title -->
                         <div class="section-heading">
@@ -307,34 +322,34 @@ include_once './mvc/view/setlink.php';
 
                     <!-- Sidebar Widget -->
                     <div class="single-sidebar-widget">
-                        <a href="#" class="add-img"><img src="public/img/bg-img/myteam.jpg" alt=""></a>
+                        <a href="#" class="add-img"><img src="<?php echo CSSDIR?>img/bg-img/add2.png" alt=""></a>
                     </div>
 
                     <!-- Sidebar Widget -->
                     <div class="single-sidebar-widget p-30">
                         <!-- Section Title -->
                         <div class="section-heading">
-                            <h5>Subscribe</h5>
+                            <h5>Hot Channels</h5>
                         </div>
 
-                        <!-- Single YouTube Channel -->
                         <?php
                         $stt = 1;
                         foreach ($data[4] as $value) {
                             ?>
                             <div class="single-youtube-channel d-flex">
                                 <div class="youtube-channel-thumbnail">
-                                    <img src="<?php echo Home; ?><?= $value[1] ?>" alt="">
+                                    <img src="<?php echo Home;?><?= $value->member_avatar ?>" alt="">
                                 </div>
                                 <div class="youtube-channel-content">
-                                    <a href="single-post.html" class="channel-title"><?= $value[0] ?></a>
-                                    <a href="<?=$value[3]?>" class="btn subscribe-btn"><i class="fa fa-facebook" aria-hidden="true"></i>
-                                        Subscribe</a>
+                                    <a href="single-post.html" class="channel-title"><?= $value->member_name ?></a>
+                                    <a href="#" class="btn subscribe-btn"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Subscribe</a>
                                 </div>
                             </div>
                             <?php
                         }
                         ?>
+
+
                     </div>
 
                     <!-- Sidebar Widget -->
