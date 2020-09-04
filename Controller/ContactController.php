@@ -33,8 +33,9 @@ class ContactController
         $contact_email = $_POST["contact_email"];
         $contact_phone = $_POST["contact_phone"];
         $contact_address = $_POST["contact_address"];
+        $contact_comment = $_POST["contact_comment"];
         $Active = $_POST["Active"];
-        $result = $this->ContactModel->Insert(new Contact($contact_id, $contact_email, $contact_phone, $contact_address, $Active));
+        $result = $this->ContactModel->Insert(new Contact($contact_id, $contact_email, $contact_phone, $contact_address, $Active, $contact_comment));
         if ($result == true)
             header('location: index.php?c=Contact&a=View&r=1');
         else
@@ -68,8 +69,9 @@ class ContactController
         $contact_email = $_POST["contact_email"];
         $contact_phone = $_POST["contact_phone"];
         $contact_address = $_POST["contact_address"];
+        $contact_comment = $_POST["contact_comment"];
         $Active = $_POST["Active"];
-        $result = $this->ContactModel->Update(new Contact($contact_id, $contact_email, $contact_phone, $contact_address, $Active));
+        $result = $this->ContactModel->Update(new Contact($contact_id, $contact_email, $contact_phone, $contact_address, $Active,$contact_comment));
         if ($result == true)
             header('location: index.php?c=Contact&a=View&r=1');
         else

@@ -7,14 +7,15 @@ class Contact
     public $contact_phone;
     public $contact_address;
     public $Active;
-
-    function  __construct($contact_id, $contact_email, $contact_phone, $contact_address, $Active)
+    public $contact_comment;
+    function  __construct($contact_id, $contact_email, $contact_phone, $contact_address, $Active, $contact_comment)
     {
         $this->contact_id = $contact_id;
         $this->contact_email = $contact_email;
         $this->contact_phone = $contact_phone;
         $this->contact_address = $contact_address;
         $this->Active = $Active;
+        $this->contact_comment =  $contact_comment;
     }
 }
 class ContactDefault
@@ -43,7 +44,7 @@ class ContactModel extends DB
         $result = $this->mysql->query($query);
         $data = [];
         foreach ($result->fetch_all() as $value) {
-            array_push($data, new Contact($value[0], $value[1], $value[2], $value[3], $value[4]));
+            array_push($data, new Contact($value[0], $value[1], $value[2], $value[3], $value[4], $value[6]));
         }
         return $data;
     }
@@ -67,7 +68,7 @@ class ContactModel extends DB
         $result = $this->mysql->query($query);
         $data = $result->fetch_all();
         if (count($data)) {
-            return new Contact($data[0][0], $data[0][1], $data[0][2], $data[0][3], $data[0][4]);
+            return new Contact($data[0][0], $data[0][1], $data[0][2], $data[0][3], $data[0][4], $data[0][6]);
         }
         return null;
     }
@@ -78,7 +79,8 @@ class ContactModel extends DB
                     SET ContactEmail = '$contact->contact_email' ,
                         ContactPhone='$contact->contact_phone',
                         ContactAdress='$contact->contact_address',
-                        Active = '$contact->Active'
+                        Active = '$contact->Active',
+                        Comment = '$contact->contact_comment'
                     WHERE ContactId = '$contact->contact_id'";
         $result = $this->mysql->query($query);
         return $result;
