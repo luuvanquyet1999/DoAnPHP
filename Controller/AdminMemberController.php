@@ -20,7 +20,7 @@ class AdminMemberController
     }
     function Add()
     {
-        session_start();
+        //session_start();
         if (isset($_SESSION['username'])) {
             $user = $_SESSION['username'];
             require SYSTEM_PATH . "/View/Admin/Member/Add.php";
@@ -51,7 +51,7 @@ class AdminMemberController
     }
     function Update()
     {
-        session_start();
+        //session_start();
         if (isset($_SESSION['username'])) {
             $user = $_SESSION['username'];
             $member_id = $_GET["member_id"];

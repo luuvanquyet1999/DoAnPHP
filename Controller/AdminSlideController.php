@@ -20,7 +20,7 @@ class AdminSlideController
     }
     function Add()
     {
-        session_start();
+        //session_start();
         if (isset($_SESSION['username'])) {
             $user = $_SESSION['username'];
             $data = $this->SlideModel->GetAll();
@@ -66,7 +66,7 @@ class AdminSlideController
     }
     function Update()
     {
-        session_start();
+        //session_start();
         if (isset($_SESSION['username'])) {
             $user = $_SESSION['username'];
             $slide_id = $_GET['slide_id'];

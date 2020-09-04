@@ -46,7 +46,7 @@ class AdminIndexController
     }
     function logout()
     {
-        session_start();
+        //session_start();
         unset($_SESSION['username']);
         session_destroy();
         require_once SYSTEM_PATH . "/View/Admin/login.php";
@@ -77,7 +77,7 @@ class AdminIndexController
     }
     function Profile()
     {
-        session_start();
+        //session_start();
         if (isset($_SESSION['username'])) {
             $user = $_SESSION['username'];
             $id = $this->indexModel->UpdateProfile($user);

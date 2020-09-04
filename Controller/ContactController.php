@@ -19,7 +19,7 @@ class ContactController
     }
     function Add()
     {
-        session_start();
+        //session_start();
         if (isset($_SESSION['username'])) {
             $user = $_SESSION['username'];
             require SYSTEM_PATH . "/View/Admin/Contact/Add.php";
@@ -52,7 +52,7 @@ class ContactController
     }
     function Update()
     {
-        session_start();
+        //session_start();
         if (isset($_SESSION['username'])) {
             $user = $_SESSION['username'];
             $contact_id = $_GET['contact_id'];
@@ -88,7 +88,7 @@ class ContactController
     }
     function GetAllContactDefault()
     {
-        session_start();
+        //session_start();
         if (isset($_SESSION['username'])) {
             $user = $_SESSION['username'];
             $data = $this->ContactModel->GetAllContactDefault();

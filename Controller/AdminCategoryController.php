@@ -42,7 +42,7 @@ class AdminCategoryController
     }
     function Update()
     {
-        session_start();
+        //session_start();
         if (isset($_SESSION['username'])) {
             $user = $_SESSION['username'];
             $cate_id = $_GET['CategoryID'];

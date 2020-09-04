@@ -1,38 +1,41 @@
 <?php
-class Contact{
+class Contact
+{
     public $contact_id;
     public $contact_email;
     public $contact_phone;
     public $contact_address;
     public $Active;
 
-    function  __construct($contact_id,$contact_email,$contact_phone,$contact_address,$Active)
+    function  __construct($contact_id, $contact_email, $contact_phone, $contact_address, $Active)
     {
-        $this->contact_id=$contact_id;
-        $this->contact_email=$contact_email;
-        $this->contact_phone=$contact_phone;
-        $this->contact_address=$contact_address;
-        $this->Active=$Active;
+        $this->contact_id = $contact_id;
+        $this->contact_email = $contact_email;
+        $this->contact_phone = $contact_phone;
+        $this->contact_address = $contact_address;
+        $this->Active = $Active;
     }
 }
-class ContactDefault{
+class ContactDefault
+{
     public $sendcontact_content;
     public $sendcontact_fullname;
     public $sendcontact_email;
-    function __construct( $sendcontact_content,$sendcontact_fullname,$sendcontact_email)
+    function __construct($sendcontact_content, $sendcontact_fullname, $sendcontact_email)
     {
-       $this->sendcontact_content=$sendcontact_content;
-       $this->sendcontact_fullname=$sendcontact_fullname;
-       $this->sendcontact_email=$sendcontact_email;
+        $this->sendcontact_content = $sendcontact_content;
+        $this->sendcontact_fullname = $sendcontact_fullname;
+        $this->sendcontact_email = $sendcontact_email;
     }
 }
-class ContactModel{
-    private $mysql;
-    public function __construct()
-    {
-        $this->mysql = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
-        $this->mysql->query("SET NAMES 'UTF8'");
-    }
+class ContactModel extends DB
+{
+    // private $mysql;
+    // public function __construct()
+    // {
+    //     $this->mysql = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
+    //     $this->mysql->query("SET NAMES 'UTF8'");
+    // }
     function GetAll()
     {
         $query = "SELECT * FROM lph_contact ";

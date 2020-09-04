@@ -13,14 +13,14 @@ class Category
         $this->Active = $Active;
     }
 }
-class AdminCategoryModel
+class AdminCategoryModel extends DB
 {
-    private $mysql;
-    public function __construct()
-    {
-        $this->mysql = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
-        $this->mysql->query("SET NAMES 'UTF8'");
-    }
+    // private $mysql;
+    // public function __construct()
+    // {
+    //     $this->mysql = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
+    //     $this->mysql->query("SET NAMES 'UTF8'");
+    // }
     function GetAll()
     {
         $query = "SELECT * FROM lph_Category WHERE Active ='1'";

@@ -9,7 +9,7 @@ class UserAdmin
     public $UserAdmin_password;
     public $UserAdmin_dateofbirth;
     public $Active;
-    function __construct($UserAdmin_id, $UserAdmin_fullname, $UserAdmin_email, $UserAdmin_username,$UserAdmin_gender,$UserAdmin_password,$Active,$UserAdmin_dateofbirth)
+    function __construct($UserAdmin_id, $UserAdmin_fullname, $UserAdmin_email, $UserAdmin_username, $UserAdmin_gender, $UserAdmin_password, $Active, $UserAdmin_dateofbirth)
     {
         $this->UserAdmin_id = $UserAdmin_id;
         $this->UserAdmin_fullname = $UserAdmin_fullname;
@@ -19,17 +19,16 @@ class UserAdmin
         $this->UserAdmin_password = $UserAdmin_password;
         $this->Active = $Active;
         $this->UserAdmin_dateofbirth = $UserAdmin_dateofbirth;
-
     }
 }
-class UserAdminModel
+class UserAdminModel extends DB
 {
-    private $mysql;
-    public function __construct()
-    {
-        $this->mysql = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
-        $this->mysql->query("SET NAMES 'UTF8'");
-    }
+    // private $mysql;
+    // public function __construct()
+    // {
+    //     $this->mysql = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
+    //     $this->mysql->query("SET NAMES 'UTF8'");
+    // }
     function GetAll()
     {
         $query = "	SELECT UsernameId,UsernameFull,UsernameEmail,Username,(CASE
@@ -48,7 +47,7 @@ class UserAdminModel
         return $data;
     }
 
-   
+
     function GetRecordById($UserAdmin_id)
     {
         $query = "SELECT * FROM lph_adiminuser WHERE UsernameId = '$UserAdmin_id' AND Active = 1 LIMIT 1";

@@ -9,7 +9,7 @@ class AdminGioiThieuController
     }
     function View()
     {
-        session_start();
+        //session_start();
         if (isset($_SESSION['username'])) {
             $user = $_SESSION['username'];
             $data = $this->admingioithieumodel->GetAll();
@@ -20,7 +20,7 @@ class AdminGioiThieuController
     }
     function Update()
     {
-        session_start();
+        //session_start();
         if (isset($_SESSION['username'])) {
             $user = $_SESSION['username'];
             $intro_id = $_GET['intro_id'];

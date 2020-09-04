@@ -25,14 +25,14 @@ class Post
         $this->post_link = $post_link;
     }
 }
-class AdminPostModel
+class AdminPostModel extends DB
 {
-    private $mysql;
-    public function __construct()
-    {
-        $this->mysql = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
-        $this->mysql->query("SET NAMES 'UTF8'");
-    }
+    // private $mysql;
+    // public function __construct()
+    // {
+    //     $this->mysql = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
+    //     $this->mysql->query("SET NAMES 'UTF8'");
+    // }
     function GetAll()
     {
         $query = "SELECT * FROM lph_post WHERE Active = 1 ORDER BY PostId DESC";

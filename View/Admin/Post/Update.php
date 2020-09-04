@@ -88,7 +88,7 @@
                                 <div class="form-group row">
                                     <label for="colFormLabel" class="col-sm-2 col-form-label">Tiêu đề</label>
                                     <div class="col-sm-10">
-                                        <input type="text" name="post_title" class="form-control" value="<?= $post->post_title ?>" />
+                                        <input type="text" name="post_title" class="form-control" value="<?= $post->post_title ?>" style="width:95%" />
                                     </div>
                                 </div>
                                 <div class="form-group row">
