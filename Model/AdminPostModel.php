@@ -1,4 +1,5 @@
 <?php
+include_once './Model/DB.php';
 class Post
 {
     public $post_id;

@@ -20,32 +20,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17c2b371-4641-4c12-aa57-bdca905b3122" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/index2.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvc/core/Index.php.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLinters/jshint.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/AdminCategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/AdminCategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/AdminIndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/AdminIndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/AdminMemberController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/AdminMemberController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/AdminPostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/AdminPostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/AdminSlideController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/AdminSlideController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/ContactController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/CustomerUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/CustomerUserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/LoginDefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/LoginDefaultController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/UserAdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/UserAdminController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/DB.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fileUpload/Post/aston-martin-db5-junior-8_kgxy.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fileUpload/Post/chiec-u-noi-dang-bi-gio-bao-thoi-dat-vao-noi-cac-tau-ngam-va-tau-ho-ve-dang-neo-dau-1599187555-width1004height565-auto-crop.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fileUpload/Post/xene.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/AdminCategoryModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/AdminCategoryModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/AdminGioiThieuModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/AdminGioiThieuModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/AdminIndexModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/AdminIndexModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/AdminMemberModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/AdminMemberModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/AdminPostModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/AdminPostModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/AdminSlideModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/AdminSlideModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/ContactModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/ContactModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/CustomerUserModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/CustomerUserModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/UserAdminModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/UserAdminModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/controller/web/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/controller/web/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index2.php" beforeDir="false" afterPath="$PROJECT_DIR$/index2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/controller/web/WebsiteHome.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/controller/web/WebsiteHome.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mvc/controller/web/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/controller/web/post.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mvc/controller/web/uploadpost.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/controller/web/uploadpost.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/core/App.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/core/App.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/model/AboutModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/model/AboutModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mvc/model/PostModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/model/PostModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/view/checkSeseson.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/view/checkSeseson.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/view/pages/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/view/pages/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/view/web/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/view/web/about.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mvc/view/web/archive.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/view/web/archive.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mvc/view/web/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/view/web/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/view/web/singer-post.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/view/web/singer-post.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +74,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -87,7 +88,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599186614866</updated>
-      <workItem from="1599186616096" duration="4846000" />
+      <workItem from="1599186616096" duration="11759000" />
+      <workItem from="1599203099335" duration="13192000" />
     </task>
     <servers />
   </component>
@@ -104,11 +106,23 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="668" y="324" key="NewPhpFileDialog" timestamp="1599187505174">
+    <state x="563" y="147" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599215925998">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="668" y="324" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1599187505174" />
+    <state x="563" y="147" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1599215925998" />
+    <state x="655" y="123" key="NewPhpClassDialog" timestamp="1599216265045">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="655" y="123" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1599216265045" />
+    <state x="668" y="324" key="NewPhpFileDialog" timestamp="1599215677378">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="668" y="324" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1599215677378" />
   </component>
 </project>

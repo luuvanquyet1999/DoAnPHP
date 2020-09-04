@@ -81,10 +81,10 @@
                             <!-- Post Contetnt -->
                             <div class="post-content">
                                 <div class="post-meta">
-                                    <a href="<?php echo Home;?>post/<?= makeLink($value[0])?>"><?= SetDate($value[2])?></a>
+                                    <a href="<?php echo Home;?>post/<?=($value[5])?>"><?= SetDate($value[2])?></a>
                                     <a href="<?php echo Home;?>post/<?= makeLink($value[0])?>"><?= $value[0]?></a>
                                 </div>
-                                <a href="<?php echo Home;?>post/<?= makeLink($value[3])?>" class="post-title"><?= $value[3]?></a>
+                                <a href="<?php echo Home;?>post/<?= ($value[5])?>" class="post-title"><?= $value[3]?></a>
                                 <!-- Post Meta -->
                                 <div class="post-meta-2">
                                     <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
@@ -102,21 +102,6 @@
 
             <div class="col-12 col-md-6 col-lg-5 col-xl-4">
                 <div class="sidebar-area bg-white mb-30 box-shadow">
-                    <!-- Sidebar Widget -->
-                    <div class="single-sidebar-widget p-30">
-                        <!-- Social Followers Info -->
-                        <div class="social-followers-info">
-                            <!-- Facebook -->
-                            <a href="#" class="facebook-fans"><i class="fa fa-facebook"></i> 4,360 <span>Fans</span></a>
-                            <!-- Twitter -->
-                            <a href="#" class="twitter-followers"><i class="fa fa-twitter"></i> 3,280 <span>Followers</span></a>
-                            <!-- YouTube -->
-                            <a href="#" class="youtube-subscribers"><i class="fa fa-youtube"></i> 1250 <span>Subscribers</span></a>
-                            <!-- Google -->
-                            <a href="#" class="google-followers"><i class="fa fa-google-plus"></i> 4,230 <span>Followers</span></a>
-                        </div>
-                    </div>
-
                     <!-- Sidebar Widget -->
                     <div class="single-sidebar-widget p-30">
                         <!-- Section Title -->
@@ -142,21 +127,6 @@
                     <div class="single-sidebar-widget">
                         <a href="#" class="add-img"><img src="img/bg-img/add2.png" alt=""></a>
                     </div>
-                    <div class="single-sidebar-widget p-30">
-                        <!-- Section Title -->
-                        <div class="section-heading">
-                            <h5>Newsletter</h5>
-                        </div>
-
-                        <div class="newsletter-form">
-                            <p>Subscribe our newsletter gor get notification about new updates, information discount, etc.</p>
-                            <form action="#" method="get">
-                                <input type="search" name="widget-search" placeholder="Enter your email">
-                                <button type="submit" class="btn mag-btn w-100">Subscribe</button>
-                            </form>
-                        </div>
-
-                    </div>
                     <!-- Sidebar Widget -->
                     <div class="single-sidebar-widget p-30">
                         <!-- Section Title -->
@@ -171,11 +141,12 @@
                             ?>
                             <div class="single-youtube-channel d-flex">
                                 <div class="youtube-channel-thumbnail">
-                                    <img src="<?php echo Home;?><?= $value->member_avatar ?>" alt="">
+                                    <img src="<?php echo Home; ?><?= $value[1] ?>" alt="">
                                 </div>
                                 <div class="youtube-channel-content">
-                                    <a href="single-post.html" class="channel-title"><?= $value->member_name ?></a>
-                                    <a href="#" class="btn subscribe-btn"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Subscribe</a>
+                                    <a href="single-post.html" class="channel-title"><?= $value[0] ?></a>
+                                    <a href="<?=$value[3]?>" class="btn subscribe-btn"><i class="fa fa-facebook" aria-hidden="true"></i>
+                                        Subscribe</a>
                                 </div>
                             </div>
                             <?php

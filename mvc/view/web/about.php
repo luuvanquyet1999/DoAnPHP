@@ -87,10 +87,10 @@ include_once './mvc/view/checkSeseson.php';
                         <?php
                         $stt = 1;
                         foreach ($data[1] as $value) {
-                        ?>
+                            ?>
                             <div class="single-team-member d-flex align-items-center">
                                 <div class="team-member-thumbnail">
-                                    <img src="<?= $value->member_avatar ?>">
+                                    <img src="<?php echo Home; ?><?= $value[1] ?>" alt="">
                                     <div class="social-btn">
                                         <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                                         <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
@@ -98,9 +98,9 @@ include_once './mvc/view/checkSeseson.php';
                                     </div>
                                 </div>
                                 <div class="team-member-content">
-                                    <h6><?= $value->member_name ?></h6>
-                                    <span><?= $value->member_job ?></span>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur mauris id scelerisque eleifend. Nunc vestibulum cursea quam at scelerisque.</p>
+                                    <h6><?=$value[0]?></h6>
+                                    <span><?=$value[2]?></span>
+                                    <p><?=$value[4]?></p>
                                 </div>
                             </div>
                             <?php

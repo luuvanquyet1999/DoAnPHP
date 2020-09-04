@@ -6,7 +6,7 @@ $controller = $get_controller.'Controller';
 $path_controller = 'Controller/'.$controller.'.php';
 //echo $path_controller;
 if(!file_exists($path_controller)){
-    header("location:/WebsiteHome");
+    header("location:/doanphp/WebsiteHome");
 }
 require_once $path_controller;
 if(!class_exists($controller)){

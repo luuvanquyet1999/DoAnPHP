@@ -59,10 +59,10 @@ class Uploadpost extends Controller
                     //upload nội dung file từ đường dẫn tạm vào đường dẫn vừa tạo:
                     move_uploaded_file($file_tmp, $path);
                     $postlink = $this->makeLink($posttitle);
-                    $data3 = $post->InserPost($posttitle, $postsummary, $postconcent, $postimg, $postcatelogy, $username,$posttitle);
+                    $data3 = $post->InserPost($posttitle, $postsummary, $postconcent, $postimg, $postcatelogy, $username,$postlink);
                     if ($data3 == true) {
                         $messeger='Upload thành công';
-                        header("location:/doanphp/post/$postlink");
+                        header("location:/doanphp/uploadpost");
                     } else {
                         $messeger = 'Upload Không Thành Công';
                     }

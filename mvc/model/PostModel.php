@@ -31,6 +31,8 @@ class Post1
 
 class PostModel extends DB
 {
+
+    //website home
     function GetCategories()
     {
         $query = "SELECT CategoryName, COUNT(*) c FROM lph_post 
@@ -44,32 +46,42 @@ GROUP BY CategoryName  HAVING c > 0 order by c desc";
         return $data;
     }
 
-    function GetTrending()
+    function XuHuong()
     {
-        $query = "SELECT PostTitle , CategoryName ,PostImage
+        $query = "SELECT PostTitle , CategoryName ,PostImage ,PostLink
                 FROM lph_post WHERE PostInfo = 'Xu hướng' AND Active = 1";
         $result = $this->mysql->query($query);
         $data = [];
         while ($row = mysqli_fetch_array($result)) {
-            array_push($data, [$row[0], $row[1], $row[2]]);
+            array_push($data, [$row[0], $row[1], $row[2],$row[3]]);
         }
         return $data;
     }
 
-    function GetMostPopular()
+    function GetPhoBien()
     {
-        $query = "SELECT PostTitle ,PostImage
+        $query = "SELECT PostTitle ,PostImage ,PostLink
                         FROM lph_post
                         WHERE
                     PostInfo = 'Hot' AND Active = 1";
         $result = $this->mysql->query($query);
         $data = [];
         while ($row = mysqli_fetch_array($result)) {
-            array_push($data, [$row[0], $row[1]]);
+            array_push($data, [$row[0], $row[1],$row[2]]);
         }
         return $data;
     }
-
+    function GetTinMoi()
+    {
+        $query = "SELECT CategoryName ,PostImage ,PostCreateDate, PostTitle ,PostSummary ,PostLink  FROM lph_post 
+WHERE Active = 1 ORDER BY PostId DESC LIMIT 5 ";
+        $result = $this->mysql->query($query);
+        $data = [];
+        while ($row = mysqli_fetch_array($result)) {
+            array_push($data, [$row[0], $row[1], $row[2], $row[3], $row[4],$row[5]]);
+        }
+        return $data;
+    }
     function GetDanhChoBan()
     {
         $query = "SELECT CategoryName ,PostImage ,PostCreateDate, PostTitle ,PostSummary 
@@ -83,12 +95,11 @@ ORDER BY PostId DESC LIMIT 1";
         }
         return $data;
     }
-
-    function GetMoiNhat()
+    function GetDanhChoBan2()
     {
-        $query = "SELECT CategoryName ,PostImage ,PostCreateDate, PostTitle ,PostSummary
-                FROM lph_post WHERE Active =1
-                    ORDER BY PostId DESC";
+        $query = "SELECT CategoryName ,PostImage ,PostCreateDate, PostTitle ,PostSummary ,PostLink  FROM lph_post 
+WHERE Active = 1
+GROUP BY CategoryName  ORDER BY PostId DESC LIMIT 10";
         $result = $this->mysql->query($query);
         $data = [];
         while ($row = mysqli_fetch_array($result)) {
@@ -96,40 +107,57 @@ ORDER BY PostId DESC LIMIT 1";
         }
         return $data;
     }
-
     function GetThoiTrang()
     {
-        $query = "SELECT CategoryName ,PostImage ,PostCreateDate, PostTitle ,PostSummary FROM lph_post  WHERE
+        $query = "SELECT CategoryName ,PostImage ,PostCreateDate, PostTitle ,PostSummary,PostLink FROM lph_post  WHERE
                     CategoryName = 'Thời Trang' AND Active =1 ORDER BY PostId DESC";
         $result = $this->mysql->query($query);
         $data = [];
         while ($row = mysqli_fetch_array($result)) {
-            array_push($data, [$row[0], $row[1], $row[2], $row[3], $row[4]]);
+            array_push($data, [$row[0], $row[1], $row[2], $row[3], $row[4],$row[5]]);
         }
         return $data;
     }
 
     function GetTheThao()
     {
-        $query = "SELECT CategoryName ,PostImage ,PostCreateDate, PostTitle ,PostSummary FROM lph_post  WHERE
+        $query = "SELECT CategoryName ,PostImage ,PostCreateDate, PostTitle ,PostSummary ,PostLink FROM lph_post  WHERE
                     CategoryName = 'Thể Thao' AND Active =1  ORDER BY PostId DESC";
         $result = $this->mysql->query($query);
         $data = [];
         while ($row = mysqli_fetch_array($result)) {
-            array_push($data, [$row[0], $row[1], $row[2], $row[3], $row[4]]);
+            array_push($data, [$row[0], $row[1], $row[2], $row[3], $row[4],$row[5]]);
         }
         return $data;
     }
 
+    //end website home
+
+
+    function GetMoiNhat()
+    {
+        $query = "SELECT CategoryName ,PostImage ,PostCreateDate, PostTitle ,PostSummary ,PostLink
+                FROM lph_post WHERE Active =1
+                    ORDER BY PostId DESC ";
+        $result = $this->mysql->query($query);
+        $data = [];
+        while ($row = mysqli_fetch_array($result)) {
+            array_push($data, [$row[0], $row[1], $row[2], $row[3], $row[4],$row[5]]);
+        }
+        return $data;
+    }
+
+
+
     // get/archive/
     function GetArchive($value)
     {
-        $query = "SELECT CategoryName ,PostImage ,PostCreateDate, PostTitle ,PostSummary FROM lph_post  WHERE
+        $query = "SELECT CategoryName ,PostImage ,PostCreateDate, PostTitle ,PostSummary ,PostLink FROM lph_post  WHERE
                     CategoryName = '$value' AND Active =1 ORDER BY PostId DESC";
         $result = $this->mysql->query($query);
         $data = [];
         while ($row = mysqli_fetch_array($result)) {
-            array_push($data, [$row[0], $row[1], $row[2], $row[3], $row[4]]);
+            array_push($data, [$row[0], $row[1], $row[2], $row[3], $row[4],$row[5]]);
         }
         return $data;
     }
@@ -137,13 +165,13 @@ ORDER BY PostId DESC LIMIT 1";
     //get /post
     function GetPost()
     {
-        $query = "SELECT  PostImage,PostCreateDate,CategoryName,PostTitle,PostContent,Username FROM lph_post 
+        $query = "SELECT  PostImage,PostCreateDate,CategoryName,PostTitle,PostContent,Username,PostLink FROM lph_post 
                     WHERE Active =1
                     ORDER BY PostId DESC LIMIT 1";
         $result = $this->mysql->query($query);
         $data = [];
         while ($row = mysqli_fetch_array($result)) {
-            array_push($data, [$row[0], $row[1], $row[2], $row[3], $row[4], $row[5]]);
+            array_push($data, [$row[0], $row[1], $row[2], $row[3], $row[4], $row[5],$row[6]]);
         }
         return $data;
     }
@@ -152,7 +180,7 @@ ORDER BY PostId DESC LIMIT 1";
     function GetBaiViet($value)
     {
         $query = "SELECT PostImage,PostCreateDate,CategoryName,PostTitle,PostContent ,Username FROM lph_post 
-                    WHERE PostTitle='$value' ORDER BY PostId DESC LIMIT 1 ";
+                    WHERE PostLink='$value' ORDER BY PostId DESC LIMIT 1 ";
         $result = $this->mysql->query($query);
         $data = [];
         while ($row = mysqli_fetch_array($result)) {

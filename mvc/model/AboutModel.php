@@ -17,11 +17,11 @@ class  About1{
 class  AboutModel extends DB{
     function GetAll()
     {
-        $query = "SELECT * FROM lph_member";
+        $query = "SELECT MemberName , MemberAvartar , MemberJob , MemberFaceBook ,MemberDesc FROM lph_member";
         $result = $this->mysql->query($query);
         $data = [];
-        foreach ($result->fetch_all() as $value) {
-            array_push($data, new About1($value[0], $value[1], $value[2], $value[3]));
+        while ($row = mysqli_fetch_array($result)) {
+            array_push($data, [$row[0], $row[1], $row[2], $row[3],$row[4]]);
         }
         return $data;
     }
