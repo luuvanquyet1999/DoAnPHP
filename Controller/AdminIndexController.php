@@ -1,11 +1,14 @@
 <?php
 require SYSTEM_PATH . "/Model/AdminIndexModel.php";
+require SYSTEM_PATH . "/Model/UserAdminModel.php";
 class AdminIndexController
 {
     private $indexModel;
+    private $UserAdminModel;
     function __construct()
     {
         $this->indexModel = new AdminIndexModel();
+        $this->UserAdminModel = new UserAdminModel();
     }
     function View()
     {
@@ -78,9 +81,11 @@ class AdminIndexController
         session_start();
         if (isset($_SESSION['username'])) {
             $user = $_SESSION['username'];
-            $result = $this->indexModel->UpdateProfile($user);
-            die();
-            require_once SYSTEM_PATH . "/View/Admin/profile.php";
+            $id = $this->indexModel->UpdateProfile($user);
+            //die();
+            $UserAdmin = $this->UserAdminModel->GetRecordById($id);
+            require SYSTEM_PATH . "/View/Admin/UserAdmin/Update.php";
+            //require_once SYSTEM_PATH . "/View/Admin/profile.php";
         } else {
             require_once SYSTEM_PATH . "/View/Admin/Login.php";
         }

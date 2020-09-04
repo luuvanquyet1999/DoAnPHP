@@ -87,14 +87,10 @@ class AdminPostModel
         $result = $this->mysql->query($query);
         return $result;
     }
-    function GetPost()
+    function GetCategory()
     {
-        $query = "SELECT * FROM lph_post WHERE PostId = 17";
+        $query = "SELECT * FROM lph_category WHERE Active =1";
         $result = $this->mysql->query($query);
-        $data = [];
-        foreach ($result->fetch_all() as $value) {
-            array_push($data, new Post($value[0], $value[1], $value[2], $value[3], $value[4], $value[5], $value[6], $value[7], $value[10]));
-        }
-        return $data;
+        return $result;
     }
 }

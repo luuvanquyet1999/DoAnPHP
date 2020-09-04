@@ -63,16 +63,16 @@
         autoclose: true,
         todayHighlight: true
     });
-    var quill = new Quill('#editor', {
-        theme: 'snow'
-    });
+    // var quill = new Quill('#editor', {
+    //     theme: 'snow'
+    // });
 </script>
 <script>
-    function getVaue() {
-        var cookieValue = $("div[name='editor']").html();
-        //alert(cookieValue);
-        document.getElementById("txtContent").value = cookieValue;
-    }
+    // function getVaue() {
+    //     var cookieValue = $("div[name='editor']").html();
+    //     //alert(cookieValue);
+    //     document.getElementById("txtContent").value = cookieValue;
+    // }
 
     function fucAlert(id) {
         Swal.fire({

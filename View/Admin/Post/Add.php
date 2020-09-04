@@ -13,8 +13,7 @@
     <?php
     include 'asset/Scripts/ScriptHeader.php';
     ?>
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    <link rel="stylesheet" href="asset/summernote/summernote-bs4.css">
 </head>
 
 <body>
@@ -74,10 +73,6 @@
                                     <div class="col-sm-10">
                                         <select name="category" class="form-control" style="width:95%">
                                             <?php
-                                            $mysql = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
-                                            $query = "SELECT * FROM lph_category WHERE Active =1";
-                                            $result = $mysql->query($query);
-
                                             while ($row = mysqli_fetch_array($result)) {
                                                 echo "<option value='" . $row[1] . "'>" . $row[1] . "</option>";
                                             }
@@ -99,12 +94,9 @@
                                 </div>
                                 <div class="form-group row">
                                     <label for="colFormLabel" class="col-sm-2 col-form-label ">Nội dung</label>
-                                    <div class="col-sm-9">
-                                        <div id="editor" name="editor" style="height: 300px; ">
-                                        </div>
-                                        <textarea id="txtContent" hidden name="post_content" class="form-control" rows="8" style="width:95%"></textarea>
+                                    <div class="col-sm-10">
+                                        <textarea name="content" class="textarea form-control"  placeholder="Place some text here" style="width:95%"></textarea>
                                     </div>
-                                    <!-- <textarea name="summernote" id="summernote" class="form-control" cols="30" rows="10" required></textarea> -->
                                 </div>
                                 <div class="form-group row">
                                     <label for="colFormLabel" class="col-sm-2 col-form-label ">Hình ảnh</label>
@@ -127,7 +119,7 @@
                                 <div class="form-group row">
                                     <div class="action">
                                         <button type="reset" value="submit" class="btn btn-info">Refresh</button>
-                                        <button type="submit" onclick="getVaue()" value="submit" class="btn btn-success">Lưu</button>
+                                        <button type="submit" value="submit" class="btn btn-success">Lưu</button>
                                         <a href="index.php?c=AdminPost&a=View" class="btn btn-warning">Cancel</a>
                                     </div>
                                 </div>
@@ -143,7 +135,13 @@
         <?php
         include 'asset/Scripts/ScriptFooter.php';
         ?>
-        
+        <script src="asset/summernote/summernote-bs4.min.js"></script>
+        <script>
+            $(function() {
+                // Summernote
+                $('.textarea').summernote()
+            })
+        </script>
 </body>
 
 </html>

@@ -24,6 +24,7 @@ class AdminPostController
         session_start();
         if (isset($_SESSION['username'])) {
             $user = $_SESSION['username'];
+            $result = $this->PostModel->GetCategory();
             require SYSTEM_PATH . "/View/Admin/Post/Add.php";
         } else {
             require_once SYSTEM_PATH . "/View/Admin/Login.php";
@@ -31,21 +32,21 @@ class AdminPostController
     }
     function SaveAdd()
     {
-        //session_start();
-        //$username = $_SESSION['username'];
-        $username = "quyết";
+        session_start();
+        $username = $_SESSION['username'];
+        // $username = "quyết";
         $post_id = $_POST["post_id"];
         $post_title = $_POST["post_title"];
         $post_summary = $_POST["post_summary"];
-        $post_content = $_POST["post_content"];
+        $post_content = $_POST["content"];
         $file_name = $_FILES["post_image"]["name"];
         move_uploaded_file($_FILES["post_image"]["tmp_name"], "fileUpload/Post/" . $_FILES["post_image"]["name"]);
         $path = "fileUpload/Post/" . $file_name;
         $post_image = $path;
         $category_name = $_POST["category"];
         $post_createdate =  $_POST["createday"];
-        $post_link = $post_title;
-        // echo $post_id."</br>".$post_title."</br>".$post_summary."</br>".$post_content."</br>".$post_image."</br>".$category_name."</br>".$post_createdate."</br>".$username;
+        $post_link =$post_title;
+        // echo $post_id . "</br>" . $post_title . "</br>" . $post_summary . "</br>" . $post_content . "</br>" . $post_image . "</br>" . $category_name . "</br>" . $post_createdate . "</br>" . $username;
         // die();
         $result = $this->PostModel->Insert(new Post($post_id, $post_title, $post_summary, $post_content, $post_image, $post_createdate, $category_name, $username, $post_link));
         // print_r($result);
@@ -62,6 +63,7 @@ class AdminPostController
             $user = $_SESSION['username'];
             $post_id = $_GET["PostID"];
             $post = $this->PostModel->GetRecordById($post_id);
+            $result = $this->PostModel->GetCategory();
             require SYSTEM_PATH . "/View/Admin/Post/Update.php";
         } else {
             require_once SYSTEM_PATH . "/View/Admin/Login.php";
@@ -69,9 +71,9 @@ class AdminPostController
     }
     function SaveUpdate()
     {
-        //session_start();
-        //$username = $_SESSION['username'];
-        $username = "quyết";
+        session_start();
+        $username = $_SESSION['username'];
+        //$username = "quyết";
         $post_id = $_POST["post_id"];
         $post_title = $_POST["post_title"];
         $post_summary = $_POST["post_summary"];

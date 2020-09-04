@@ -75,10 +75,9 @@
                                     <div class="col-sm-10">
                                         <select name="category" class="form-control" style="width:95%">
                                             <?php
-                                            $mysql = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
-                                            $query = "SELECT * FROM lph_category WHERE Active =1";
-                                            $result = $mysql->query($query);
-
+                                            // $mysql = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
+                                            // $query = "SELECT * FROM lph_category WHERE Active =1";
+                                            // $result = $mysql->query($query);
                                             while ($row = mysqli_fetch_array($result)) {
                                                 echo "<option value='" . $row[1] . "'>" . $row[1] . "</option>";
                                             }

@@ -94,13 +94,15 @@ class AdminIndexModel
     {
         $query = "SELECT * FROM lph_adiminuser WHERE Username = '$user' AND Active = 1 LIMIT 1";
         $result = $this->mysql->query($query);
-        // $data = $result->fetch_all();
+        $data = $result->fetch_all();
+        $id = $data[0][0];
+        // echo $id;
+        // die();
         // if (count($data)) {
         //     return new Admin($data[0][0], $data[0][1], $data[0][2], $data[0][3], $data[0][4], $data[0][5], $data[0][6]);
         //     print_r($data);
-        //     die();
+        //     die();  
         // }
-
-        return $result;
+        return $id;
     }
 }
