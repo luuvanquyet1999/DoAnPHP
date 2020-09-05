@@ -70,8 +70,21 @@ include_once './mvc/view/checkSeseson.php';
                         <div class="section-heading">
                             <h5>About Us</h5>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur mauris id scelerisque eleifend. Nunc vestibulum cursus quam at scelerisque. Aliquam quis varius orci, vel tincidunt est. Proin ac tincidunti, atmots interdum erat. Maecenas neque lorem, aliquet in tempus non, efficitur ac neque.</p>
-                        <p>Phasellus elefend odio quis dolor pretium condimentu. Morbi quis mauris ipsum urna eu fermentum bentons Suspendisse auctor magna ac porta ornare. Fusce finibus nibh at lacinia lobortis.</p>
+                        <p>Ngành báo chí (tiếng Anh là Journalism) là ngành học chuyên đào tạo những sinh viên có đủ kỹ năng, kiến thức, năng lực thực hiện quyền và trách nhiệm của người làm báo trong xã hội. Giúp sinh viên nhận thức trách nhiệm xã hội, luật pháp, đạo đức của nhà báo để phục vụ trong các cơ quan Báo chí, Tạp chí của Nhà nước.
+
+Ngành báo chí trang bị kiến thức cơ bản về lĩnh vực Báo chí, về nguyên tắc hành nghề, kỹ năng tác nghiệp, cách thức ứng xử chuẩn mực về pháp luật và đạo đức nghề nghiệp. Giúp sinh viên nắm được các khuynh hướng vận động phát triển của ngành, phương hướng tiếp cận, xử lý, nghiên cứu một cách có hệ thống.
+Sinh viên học ngành Báo chí được rèn luyện kỹ năng nghề nghiệp như: Khả năng tư duy lí luận, khoa học thực tiễn trong việc tham mưu, quản lý cơ quan báo chí. Biết cách tổ chức công việc hiệu quả, tự hoạt động độc lập trong phát hiện, khai thác thông tin.
+Ngành Báo chí giáo dục sinh viên về ý thức tự giác nghề nghiệp, có bản lĩnh chính trị vững vàng, phẩm chất đạo đức tốt, ý thức phục vụ nhân dân, và thái độ làm việc nghiêm túc, đúng đắn.
+Học ngành Báo chí giúp sinh viên hiểu được yêu cầu về tính chính xác cao, tính công bằng và trung thực trong báo chí và vận dụng các yêu cầu này trong quá trình tác nghiệp báo chí.
+Bên cạnh đó, ngành Báo chí còn đào tạo khả năng tư duy, sáng tạo tác phẩm báo chí cho sinh viên như: Báo in, báo truyền hình, báo phát thanh... Và cách thẩm định nguồn thông tin nhanh, chính xác nhất.
+Ngành Báo chí cung cấp kiến thức về nguyên tắc trình bày trong việc thiết kế báo in, website, hay xây dựng kịch bản một cách hoàn thiện về một chương trình phát thanh, truyền hình.
+Theo học ngành Báo chí, sinh viên được đào tạo chuyên sâu về các chuyên ngành: Báo in, Báo chí đa phương tiện, Báo phát thanh, Báo truyền hình, Báo mạng điện tử, Ảnh báo chí, Quay phim truyền hình....</p>
+                        <p>Có 4 chuyên ngành cơ bản được giảng dạy trong các cơ sở đào tạo này, là Báo viết và Báo ảnh, Phát thanh và Truyền hình… Tuy nhiên ở 2 trường ĐH Khoa học Xã hội và Nhân văn ở TP.HCM và Hà Nội, sinh viên thường học chung các chuyên ngành này đến khi ra trường tuỳ từng khả năng của mỗi người mà đi làm báo viết, báo nói hay báo hình... và khi đó phải tự học hỏi và đào tạo chuyên sâu hơn cho chính bản thân mình. .</p>
+                        <p>Muốn theo học ngành báo thì điều đầu tiên là phải có khả năng viết báo và lòng yêu nghề. TS Nguyễn Đức Nghĩa, Phó Giám đốc ĐH Quốc gia TP.HCM khuyên, "nghề báo yêu cầu những người có kiến thức xã hội sâu rộng, óc quan sát và phán đoán tốt, năng lực giao tiếp nhất định, chưa nói đến các năng lực làm việc khác. Rất nhiều nhà báo giỏi không phải tốt nghiệp từ ngành báo chí.
+
+Như vậy, nếu thí sinh thích nghề báo và thấy đủ năng lực thì hãy nộp đơn thi báo chí. Việc học và việc trở thành nhà báo được xã hội công nhận là cả một quá trình phấn đấu".
+
+ Theo TS Nghĩa, báo chí hiện tại đang là một ngành "hot" trong xu hướng chọn nghề của giới trẻ. Thống kê các kỳ thi tuyển sinh đại học mấy năm gần đây cho thấy ngành báo chí có điểm chuẩn luôn thuộc top cao nhất trong khối ngành C và D. Số hồ sơ đâm đơn vào các khoa đào tạo báo chí luôn rất cao và dự kiến trong những năm tới vẫn thu hút nhiều thí sinh.</p>
                         <ul>
                             <li><i class="fa fa-check"></i> Vivamus starlord finibus, dictum massa eget, suscipit metus nami at tristique elit started.</li>
                             <li><i class="fa fa-check"></i> Cras ipsum libero, suscipit vitamin tellus vitae, feugiat ultricies purus praesent gamora.</li>
