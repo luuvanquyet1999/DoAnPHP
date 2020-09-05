@@ -9,8 +9,8 @@ class ContactController
     }
     function View()
     {
-        if (isset($_SESSION['username'])) {
-            $user = $_SESSION['username'];
+        if (isset($_SESSION['userAdmin'])) {
+            $user = $_SESSION['userAdmin'];
             $data = $this->ContactModel->GetAll();
             require SYSTEM_PATH . "/View/Admin/Contact/List.php";
         } else {
@@ -20,8 +20,8 @@ class ContactController
     function Add()
     {
         //session_start();
-        if (isset($_SESSION['username'])) {
-            $user = $_SESSION['username'];
+        if (isset($_SESSION['userAdmin'])) {
+            $user = $_SESSION['userAdmin'];
             require SYSTEM_PATH . "/View/Admin/Contact/Add.php";
         } else {
             require_once SYSTEM_PATH . "/View/Admin/Login.php";
@@ -54,8 +54,8 @@ class ContactController
     function Update()
     {
         //session_start();
-        if (isset($_SESSION['username'])) {
-            $user = $_SESSION['username'];
+        if (isset($_SESSION['userAdmin'])) {
+            $user = $_SESSION['userAdmin'];
             $contact_id = $_GET['contact_id'];
             $contact = $this->ContactModel->GetById($contact_id);
             require SYSTEM_PATH . "/View/Admin/Contact/Update.php";
@@ -93,8 +93,8 @@ class ContactController
     function GetAllContactDefault()
     {
         //session_start();
-        if (isset($_SESSION['username'])) {
-            $user = $_SESSION['username'];
+        if (isset($_SESSION['userAdmin'])) {
+            $user = $_SESSION['userAdmin'];
             $data = $this->ContactModel->GetAllContactDefault();
             require SYSTEM_PATH . "/View/Admin/ContactDefault/List.php";
         } else {

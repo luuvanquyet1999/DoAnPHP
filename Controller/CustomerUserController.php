@@ -9,8 +9,8 @@ class CustomerUserController
     }
     function View()
     {
-        if (isset($_SESSION['username'])) {
-            $user = $_SESSION['username'];
+        if (isset($_SESSION['userAdmin'])) {
+            $user = $_SESSION['userAdmin'];
             $data = $this->customermodel->GetAll();
             require SYSTEM_PATH . "/View/Admin/Customer/ListUser.php";
         } else {

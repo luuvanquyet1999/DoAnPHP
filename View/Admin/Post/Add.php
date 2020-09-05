@@ -38,7 +38,11 @@
             if (mm < 10) {
                 mm = '0' + mm
             }
-            today = yyyy + '-' + mm + '-' + dd;
+            var minutes = today.getMinutes()
+            if(minutes <10){
+                minutes = '0'+minutes;
+            }
+            today = yyyy + '-' + mm + '-' + dd +' '+today.getHours()+':'+minutes+':'+today.getSeconds();
             console.log(today);
             document.getElementById("date").value = today;
         }

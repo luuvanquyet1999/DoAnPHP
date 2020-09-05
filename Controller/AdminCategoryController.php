@@ -10,8 +10,8 @@ class AdminCategoryController
     }
     function View()
     {
-        if (isset($_SESSION['username'])) {
-            $user = $_SESSION['username'];
+        if (isset($_SESSION['userAdmin'])) {
+            $user = $_SESSION['userAdmin'];
             $data = $this->CategoryModel->GetAll();
             require SYSTEM_PATH . "/View/Admin/Category/List.php";
         } else {
@@ -20,8 +20,8 @@ class AdminCategoryController
     }
     function Add()
     {
-        if (isset($_SESSION['username'])) {
-            $user = $_SESSION['username'];
+        if (isset($_SESSION['userAdmin'])) {
+            $user = $_SESSION['userAdmin'];
             require SYSTEM_PATH . "/View/Admin/Category/Add.php";
         } else {
             require_once SYSTEM_PATH . "/View/Admin/Login.php";
@@ -43,8 +43,8 @@ class AdminCategoryController
     function Update()
     {
         //session_start();
-        if (isset($_SESSION['username'])) {
-            $user = $_SESSION['username'];
+        if (isset($_SESSION['userAdmin'])) {
+            $user = $_SESSION['userAdmin'];
             $cate_id = $_GET['CategoryID'];
             $Category = $this->CategoryModel->GetRecordById($cate_id);
             require SYSTEM_PATH . "/View/Admin/Category/Update.php";

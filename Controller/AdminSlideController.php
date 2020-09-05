@@ -10,8 +10,8 @@ class AdminSlideController
     }
     function View()
     {
-        if (isset($_SESSION['username'])) {
-            $user = $_SESSION['username'];
+        if (isset($_SESSION['userAdmin'])) {
+            $user = $_SESSION['userAdmin'];
             $data = $this->SlideModel->GetAll();
             require SYSTEM_PATH . "/View/Admin/Slide/List.php";
         } else {
@@ -21,8 +21,8 @@ class AdminSlideController
     function Add()
     {
         //session_start();
-        if (isset($_SESSION['username'])) {
-            $user = $_SESSION['username'];
+        if (isset($_SESSION['userAdmin'])) {
+            $user = $_SESSION['userAdmin'];
             $data = $this->SlideModel->GetAll();
             require SYSTEM_PATH . "/View/Admin/Slide/Add.php";
         } else {
@@ -67,8 +67,8 @@ class AdminSlideController
     function Update()
     {
         //session_start();
-        if (isset($_SESSION['username'])) {
-            $user = $_SESSION['username'];
+        if (isset($_SESSION['userAdmin'])) {
+            $user = $_SESSION['userAdmin'];
             $slide_id = $_GET['slide_id'];
             $slide = $this->SlideModel->GetById($slide_id);
             require SYSTEM_PATH . "/View/Admin/Slide/Update.php";

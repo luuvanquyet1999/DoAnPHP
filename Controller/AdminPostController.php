@@ -13,8 +13,8 @@ class AdminPostController
 
     function View()
     {
-        if (isset($_SESSION['username'])) {
-            $user = $_SESSION['username'];
+        if (isset($_SESSION['userAdmin'])) {
+            $user = $_SESSION['userAdmin'];
             $data = $this->PostModel->GetAll();
             require SYSTEM_PATH . "/View/Admin/Post/List.php";
         } else {
@@ -24,8 +24,8 @@ class AdminPostController
     function Add()
     {
         //session_start();
-        if (isset($_SESSION['username'])) {
-            $user = $_SESSION['username'];
+        if (isset($_SESSION['userAdmin'])) {
+            $user = $_SESSION['userAdmin'];
             $result = $this->PostModel->GetCategory();
             require SYSTEM_PATH . "/View/Admin/Post/Add.php";
         } else {
@@ -35,7 +35,7 @@ class AdminPostController
     function SaveAdd()
     {
         //session_start();
-        $username = $_SESSION['username'];
+        $username = $_SESSION['userAdmin'];
         // $username = "quyết";
         $post_id = $_POST["post_id"];
         $post_title = $_POST["post_title"];
@@ -61,8 +61,8 @@ class AdminPostController
     function Update()
     {
         //session_start();
-        if (isset($_SESSION['username'])) {
-            $user = $_SESSION['username'];
+        if (isset($_SESSION['userAdmin'])) {
+            $user = $_SESSION['userAdmin'];
             $post_id = $_GET["PostID"];
             $post = $this->PostModel->GetRecordById($post_id);
             $result = $this->PostModel->GetCategory();
@@ -74,7 +74,7 @@ class AdminPostController
     function SaveUpdate()
     {
         //session_start();
-        $username = $_SESSION['username'];
+        $username = $_SESSION['userAdmin'];
         //$username = "quyết";
         $post_id = $_POST["post_id"];
         $post_title = $_POST["post_title"];

@@ -10,8 +10,8 @@ class UserAdminController
     }
     function View()
     {
-        if (isset($_SESSION['username'])) {
-            $user = $_SESSION['username'];
+        if (isset($_SESSION['userAdmin'])) {
+            $user = $_SESSION['userAdmin'];
             $data = $this->UserAdminModel->GetAll();
             require SYSTEM_PATH . "/View/Admin/UserAdmin/List.php";
         } else {
@@ -37,8 +37,8 @@ class UserAdminController
     function Update()
     {
         //session_start();
-        if (isset($_SESSION['username'])) {
-            $user = $_SESSION['username'];
+        if (isset($_SESSION['userAdmin'])) {
+            $user = $_SESSION['userAdmin'];
             $UserAdmin_id = $_GET["UserAdminID"];
             $UserAdmin = $this->UserAdminModel->GetRecordById($UserAdmin_id);
             require SYSTEM_PATH . "/View/Admin/UserAdmin/Update.php";

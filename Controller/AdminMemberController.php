@@ -10,8 +10,8 @@ class AdminMemberController
 
     function View()
     {
-        if (isset($_SESSION['username'])) {
-            $user = $_SESSION['username'];
+        if (isset($_SESSION['userAdmin'])) {
+            $user = $_SESSION['userAdmin'];
             $data = $this->AdminMemberModel->GetAll();
             require SYSTEM_PATH . "/View/Admin/Member/List.php";
         } else {
@@ -21,8 +21,8 @@ class AdminMemberController
     function Add()
     {
         //session_start();
-        if (isset($_SESSION['username'])) {
-            $user = $_SESSION['username'];
+        if (isset($_SESSION['userAdmin'])) {
+            $user = $_SESSION['userAdmin'];
             require SYSTEM_PATH . "/View/Admin/Member/Add.php";
         } else {
             require_once SYSTEM_PATH . "/View/Admin/Login.php";

@@ -10,8 +10,8 @@ class AdminGioiThieuController
     function View()
     {
         //session_start();
-        if (isset($_SESSION['username'])) {
-            $user = $_SESSION['username'];
+        if (isset($_SESSION['userAdmin'])) {
+            $user = $_SESSION['userAdmin'];
             $data = $this->admingioithieumodel->GetAll();
             require SYSTEM_PATH . "/View/Admin/GioiThieu/List.php";
         } else {
@@ -21,8 +21,8 @@ class AdminGioiThieuController
     function Update()
     {
         //session_start();
-        if (isset($_SESSION['username'])) {
-            $user = $_SESSION['username'];
+        if (isset($_SESSION['userAdmin'])) {
+            $user = $_SESSION['userAdmin'];
             $intro_id = $_GET['intro_id'];
             $gioithieu = $this->admingioithieumodel->GetRecordById($intro_id);
             require SYSTEM_PATH . "/View/Admin/GioiThieu/Update.php";

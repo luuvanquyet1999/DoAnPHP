@@ -17,22 +17,52 @@
 </head>
 
 <body>
-    <!-- ============================================================== -->
-    <!-- Preloader - style you can find in spinners.css -->
-    <!-- ============================================================== -->
+    <style>
+        #box-modal {
+            width: 864px;
+            height: 250px;
+            display: block;
+            position: fixed;
+            top: 20%;
+            left: 19%;
+            border-radius: 16px;
+            animation-name: modal;
+            animation-duration: 2s;
+            z-index: 1000;
+            background-color: #e0e0e0;
+            outline: none;
+        }
+
+        #box-modal #btnTieptuc {
+            position: absolute;
+            right: 7%;
+            bottom: 13%;
+            background-color: azure;
+            color: green;
+            font-weight: bold;
+        }
+
+        @keyframes modal {
+            from {
+                top: 0%;
+                left: 19%;
+            }
+
+            to {
+                top: 20%;
+                left: 19%;
+            }
+        }
+    </style>
     <div class="preloader">
         <div class="lds-ripple">
             <div class="lds-pos"></div>
             <div class="lds-pos"></div>
         </div>
     </div>
-    <!-- ============================================================== -->
-    <!-- Main wrapper - style you can find in pages.scss -->
-    <!-- ============================================================== -->
+
     <div id="main-wrapper">
-        <!-- ============================================================== -->
-        <!-- Topbar header - style you can find in pages.scss -->
-        <!-- ============================================================== -->
+
         <?php
         include_once('./View/Admin/Share/Header.php');
         ?>
@@ -77,7 +107,7 @@
                                                                     <th>STT</th>
                                                                     <th>Name</th>
                                                                     <th>Email</th>
-                                                                    <th>Content</th>
+                                                                    <th>#</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
@@ -90,35 +120,11 @@
                                                                         <td><?= $stt++ ?></td>
                                                                         <td><?= $value->sendcontact_fullname ?></td>
                                                                         <td><?= $value->sendcontact_email ?></td>
-                                                                        <td><a href="?c=Contact&a=UpdateActive&Id=<?= $value->sendcontact_id ?>" class="btn btn-primary" id="<?= $value->sendcontact_id ?>" data-toggle="modal" data-target="#exampleModal" onclick="checkid('<?= $value->sendcontact_fullname ?>','<?= $value->sendcontact_email ?>','<?= $value->sendcontact_content ?>')"><?= $value->hidden ?></a></td>
+                                                                        <td>
+                                                                            <a href="javascript:void(0)" class="btn btn-primary" id="<?= $value->sendcontact_id ?>" onclick="setHidden(this.id); checkid('<?= $value->sendcontact_fullname ?>','<?= $value->sendcontact_email ?>','<?= $value->sendcontact_content ?>')"><?= $value->hidden ?></a>
+                                                                            <a hidden href="?c=Contact&a=UpdateActive&Id=<?= $value->sendcontact_id ?>" id="xoa<?= $value->sendcontact_id ?>">ẩn</a>
+                                                                        </td>
                                                                     </tr>
-                                                                    <script>
-                                                                        function checkid(name, email, content) {
-                                                                            document.getElementById('name').innerHTML = 'Họ và tên :' + name;
-                                                                            document.getElementById('email').innerHTML = 'Email :' + email;
-                                                                            document.getElementById('content').innerHTML = 'Nội dung :' + content;
-                                                                        }
-                                                                    </script>
-                                                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                                        <div class="modal-dialog" role="document">
-                                                                            <div class="modal-content">
-                                                                                <div class="modal-header">
-                                                                                    <h5 class="modal-title" id="exampleModalLabel">Liên hệ</h5>
-                                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                                        <span aria-hidden="true">&times;</span>
-                                                                                    </button>
-                                                                                </div>
-                                                                                <div class="modal-body">
-                                                                                    <p id="name"></p>
-                                                                                    <p id="email"></p>
-                                                                                    <p id="content"></p>
-                                                                                </div>
-                                                                                <div class="modal-footer">
-                                                                                    <a href="?c=Contact&a=UpdateActive&Id=<?= $value->sendcontact_id ?>" class="btn btn-secondary">Close</a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
                                                                 <?php
                                                                 }
                                                                 ?>
@@ -143,7 +149,30 @@
         include 'asset/Scripts/ScriptFooter.php';
         ?>
         <!-- Modal -->
+        <script>
+            function checkid(name, email, content) {
+                document.getElementById('name').innerHTML = 'Họ và tên :' + name;
+                document.getElementById('email').innerHTML = 'Email :' + email;
+                document.getElementById('content').innerHTML = 'Nội dung :' + content;
+            }
 
+            function setHidden(id) {
+                document.getElementById("box-modal").style.display = "block";
+                document.getElementById("btnTieptuc").addEventListener("click", function() {
+                    document.getElementById("box-modal").style.display = "none";
+                    document.getElementById('xoa' + id).click();
+                });
+            }
+        </script>
+        <div id="box-modal" style="display: none;">
+            <h3 class="text-center m-auto pt-3">CHI TIẾT LIÊN HỆ</h3>
+            <div class="modal-body">
+                <p id="name"></p>
+                <p id="email"></p>
+                <p id="content"></p>
+            </div>
+            <a id="btnTieptuc" href="javascript:void(0)" class="btn btn-primary">Đóng</a>
+        </div>
 </body>
 
 </html>

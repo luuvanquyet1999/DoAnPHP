@@ -20,8 +20,8 @@ class AdminIndexController
     }
     function trangchu()
     {
-        if (isset($_SESSION['username'])) {
-            $user = $_SESSION['username'];
+        if (isset($_SESSION['userAdmin'])) {
+            $user = $_SESSION['userAdmin'];
             // $totalMember = $this ->adminModel ->CountMember();
             // $totalFeedBack = $this ->feedbackModel ->CountFeedBack();
             // $totalProduct = $this ->productModel ->CountProduct();
@@ -38,7 +38,7 @@ class AdminIndexController
         $pass = $_POST['pass'];
         $result = $this->indexModel->loginRecord($user, $pass);
         if (mysqli_num_rows($result) > 0) {
-            $_SESSION['username'] = $user;
+            $_SESSION['userAdmin'] = $user;
             header('location:index.php?c=AdminIndex&a=trangchu');
         } else {
             header('location:index.php?c=AdminIndex&a=View&r=0');
@@ -47,7 +47,7 @@ class AdminIndexController
     function logout()
     {
         //session_start();
-        unset($_SESSION['username']);
+        unset($_SESSION['userAdmin']);
         session_destroy();
         require_once SYSTEM_PATH . "/View/Admin/login.php";
     }
@@ -78,8 +78,8 @@ class AdminIndexController
     function Profile()
     {
         //session_start();
-        if (isset($_SESSION['username'])) {
-            $user = $_SESSION['username'];
+        if (isset($_SESSION['userAdmin'])) {
+            $user = $_SESSION['userAdmin'];
             $id = $this->indexModel->UpdateProfile($user);
             //die();
             $UserAdmin = $this->UserAdminModel->GetRecordById($id);
