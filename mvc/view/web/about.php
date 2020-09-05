@@ -85,12 +85,6 @@ Theo học ngành Báo chí, sinh viên được đào tạo chuyên sâu về c
 Như vậy, nếu thí sinh thích nghề báo và thấy đủ năng lực thì hãy nộp đơn thi báo chí. Việc học và việc trở thành nhà báo được xã hội công nhận là cả một quá trình phấn đấu".
 
  Theo TS Nghĩa, báo chí hiện tại đang là một ngành "hot" trong xu hướng chọn nghề của giới trẻ. Thống kê các kỳ thi tuyển sinh đại học mấy năm gần đây cho thấy ngành báo chí có điểm chuẩn luôn thuộc top cao nhất trong khối ngành C và D. Số hồ sơ đâm đơn vào các khoa đào tạo báo chí luôn rất cao và dự kiến trong những năm tới vẫn thu hút nhiều thí sinh.</p>
-                        <ul>
-                            <li><i class="fa fa-check"></i> Vivamus starlord finibus, dictum massa eget, suscipit metus nami at tristique elit started.</li>
-                            <li><i class="fa fa-check"></i> Cras ipsum libero, suscipit vitamin tellus vitae, feugiat ultricies purus praesent gamora.</li>
-                            <li><i class="fa fa-check"></i> Proin ex sem, ultrices drax the sit amet, facilisis destroyer et odio profession risusest.</li>
-                            <li><i class="fa fa-check"></i> Morbi maximus mauris eget groot dignissim, in laoreet justo facilisis.</li>
-                        </ul>
                         <img class="mt-15" src="<?php echo CSSDIR?>img/bg-img/myteam.jpg" alt="">
 
                         <!-- Team Member Area -->
