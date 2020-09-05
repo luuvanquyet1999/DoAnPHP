@@ -37,11 +37,11 @@ class AdminIndexController
         $user = $_POST['user'];
         $pass = $_POST['pass'];
         $result = $this->indexModel->loginRecord($user, $pass);
-        if ($result == 0) {
-            header('location:index.php?c=AdminIndex&a=View');
-        } else {
-            header('location:index.php?c=AdminIndex&a=trangchu');
+        if (mysqli_num_rows($result) > 0) {
             $_SESSION['username'] = $user;
+            header('location:index.php?c=AdminIndex&a=trangchu');
+        } else {
+            header('location:index.php?c=AdminIndex&a=View&r=0');
         }
     }
     function logout()
