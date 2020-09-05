@@ -57,19 +57,25 @@
                                 <div class="form-group row mt-2">
                                     <label for="colFormLabel" class="col-sm-2 col-form-label col-form-label-lg">Email</label>
                                     <div class="col-sm-10">
-                                        <input type="text" value="<?= $contact->contact_email ?>" name="contact_email" class="form-control" />
+                                        <input type="text" value="<?= $contact->contact_email ?>" name="contact_email" class="form-control" style="width:95%" />
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="colFormLabel" class="col-sm-2 col-form-label col-form-label-lg">Phone</label>
                                     <div class="col-sm-10">
-                                        <input type="text" value="<?= $contact->contact_phone ?>" name="contact_phone" class="form-control" />
+                                        <input type="text" value="<?= $contact->contact_phone ?>" name="contact_phone" class="form-control" style="width:95%"/>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="colFormLabel" class="col-sm-2 col-form-label col-form-label-lg">Address</label>
                                     <div class="col-sm-10">
-                                        <td><input type="text" value="<?= $contact->contact_address ?>" name="contact_address" class="form-control" />
+                                        <input type="text" value="<?= $contact->contact_address ?>" name="contact_address" class="form-control" style="width:95%"/>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="colFormLabel" class="col-sm-2 col-form-label col-form-label-lg">Description</label>
+                                    <div class="col-sm-10">
+                                      <textarea name="contact_comment" class="form-control" rows="8" style="width:95%"><?= $contact->contact_comment ?></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group row" hidden>

@@ -1,4 +1,5 @@
 <?php
+include_once './Model/DB.php';
 class GioiThieu
 {
     public $intro_id;

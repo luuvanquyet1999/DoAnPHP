@@ -25,13 +25,11 @@ class post extends Controller
         $this->getviewweb('singer-post',$data=[$data1,$data2,$data3,$data4,$data5,$data6]);
     }
     function BaiViet($value){
-        $x= $this->Repaid($value);
-        echo $x;
         $post= $this->getmodel('PostModel');
         $about= $this->getmodel('AboutModel');
         $user= $this->getmodel('UserModel');
         $data1= $post-> GetCategories();
-        $data2=$post->GetBaiViet($x);
+        $data2=$post->GetBaiViet($value);
         $data3="";
         $data4="";
         if (empty($data2)){

@@ -17,22 +17,33 @@
 </head>
 
 <body>
-    <!-- ============================================================== -->
-    <!-- Preloader - style you can find in spinners.css -->
-    <!-- ============================================================== -->
+    <style>
+        .btn-chang {
+            padding: 5px;
+            border: 0;
+            margin-left: 2px;
+            margin-right: 2px;
+            background-color: transparent;
+        }
+    </style>
+    <script>
+        function showPreview1(input) {
+            if (input.files && input.files[0]) {
+                var filerdr = new FileReader();
+                filerdr.onload = function(e) {
+                    $('#imgPreview1').attr('src', e.target.result);
+                }
+                filerdr.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
     <div class="preloader">
         <div class="lds-ripple">
             <div class="lds-pos"></div>
             <div class="lds-pos"></div>
         </div>
     </div>
-    <!-- ============================================================== -->
-    <!-- Main wrapper - style you can find in pages.scss -->
-    <!-- ============================================================== -->
     <div id="main-wrapper">
-        <!-- ============================================================== -->
-        <!-- Topbar header - style you can find in pages.scss -->
-        <!-- ============================================================== -->
         <?php
         include_once('./View/Admin/Share/Header.php');
         ?>
@@ -103,8 +114,11 @@
                                                 </div>
                                                 <div class="form-group row">
                                                     <label for="colFormLabel" class="col-sm-2 col-form-label ">Avatar</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="file" name="member_avatar" />
+                                                    <div class="col-sm-10" id="up1">
+                                                        <input type="file" hidden class="form-control-file" name="member_avatar" onchange="showPreview1(this)">
+                                                        <button type="button" class="btn-chang" onclick="clickavatar1()">
+                                                            <img id="imgPreview1" src="images/up-img.png" style="max-width: 100%; height: 200px" />
+                                                        </button>
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -130,6 +144,11 @@
         <?php
         include 'asset/Scripts/ScriptFooter.php';
         ?>
+        <script type="text/javascript">
+            function clickavatar1() {
+                $("#up1 input[type=file]").click();
+            }
+        </script>
 </body>
 
 </html>

@@ -13,26 +13,37 @@
     <?php
     include 'asset/Scripts/ScriptHeader.php';
     ?>
-
+    <link rel="stylesheet" href="asset/summernote/summernote-bs4.css">
 </head>
 
 <body>
-    <!-- ============================================================== -->
-    <!-- Preloader - style you can find in spinners.css -->
-    <!-- ============================================================== -->
+    <style>
+        .btn-chang {
+            padding: 5px;
+            border: 0;
+            margin-left: 2px;
+            margin-right: 2px;
+            background-color: transparent;
+        }
+    </style>
+    <script>
+        function showPreview1(input) {
+            if (input.files && input.files[0]) {
+                var filerdr = new FileReader();
+                filerdr.onload = function(e) {
+                    $('#imgPreview1').attr('src', e.target.result);
+                }
+                filerdr.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
     <div class="preloader">
         <div class="lds-ripple">
             <div class="lds-pos"></div>
             <div class="lds-pos"></div>
         </div>
     </div>
-    <!-- ============================================================== -->
-    <!-- Main wrapper - style you can find in pages.scss -->
-    <!-- ============================================================== -->
     <div id="main-wrapper">
-        <!-- ============================================================== -->
-        <!-- Topbar header - style you can find in pages.scss -->
-        <!-- ============================================================== -->
         <?php
         include_once('./View/Admin/Share/Header.php');
         ?>
@@ -72,26 +83,21 @@
                                 <div class="form-group row">
                                     <label for="colFormLabel" class="col-sm-2 col-form-label ">Nội dung</label>
                                     <div class="col-sm-10">
-                                        <div id="editor" name="editor" style="height: 300px; ">
-                                            <?= $gioithieu->content ?>
-                                        </div>
-                                        <textarea id="txtContent" hidden name="content" class="form-control" rows="8" style="width:95%"></textarea>
+                                        <textarea name="content" class="textarea form-control" placeholder="Place some text here" style="width:95%"><?= $gioithieu->content ?></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="colFormLabel" class="col-sm-2 col-form-label ">Hình ảnh</label>
-                                    <div class="col-sm-10">
-                                        <div class="input-group">
-                                            <div class="custom-file">
-                                                <input type="file" name="image" class="custom-file-input" id="exampleInputFile">
-                                                <label class="custom-file-label" for="exampleInputFile"><?= $gioithieu->image ?></label>
-                                            </div>
-                                        </div>
+                                    <div class="col-sm-10" id="up1">
+                                        <input type="file" hidden class="form-control-file" name="image" onchange="showPreview1(this)">
+                                        <button type="button" class="btn-chang" onclick="clickavatar1()">
+                                            <img id="imgPreview1" src="<?= $gioithieu->image ?>" style="max-width: 100%; height: 200px" />
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="action">
-                                        <button type="submit" onclick="getVaue()" value="submit" class="btn btn-primary">Update</button>
+                                        <button type="submit" value="submit" class="btn btn-primary">Update</button>
                                         <a href="index.php?c=AdminGioiThieu&a=View" class="btn btn-warning">Cancel</a>
                                     </div>
                                 </div>
@@ -107,6 +113,18 @@
         <?php
         include 'asset/Scripts/ScriptFooter.php';
         ?>
+        <script src="asset/summernote/summernote-bs4.min.js"></script>
+        <script type="text/javascript">
+            function clickavatar1() {
+                $("#up1 input[type=file]").click();
+            }
+        </script>
+        <script>
+            $(function() {
+                // Summernote
+                $('.textarea').summernote()
+            })
+        </script>
 </body>
 
 </html>

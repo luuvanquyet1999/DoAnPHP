@@ -17,6 +17,15 @@
 </head>
 
 <body>
+    <style>
+        .btn-chang {
+            padding: 5px;
+            border: 0;
+            margin-left: 2px;
+            margin-right: 2px;
+            background-color: transparent;
+        }
+    </style>
     <script>
         function getDate() {
             var today = new Date();
@@ -36,6 +45,17 @@
         window.onload = function() {
             getDate();
         };
+    </script>
+    <script>
+        function showPreview1(input) {
+            if (input.files && input.files[0]) {
+                var filerdr = new FileReader();
+                filerdr.onload = function(e) {
+                    $('#imgPreview1').attr('src', e.target.result);
+                }
+                filerdr.readAsDataURL(input.files[0]);
+            }
+        }
     </script>
     <div class="preloader">
         <div class="lds-ripple">
@@ -95,13 +115,16 @@
                                 <div class="form-group row">
                                     <label for="colFormLabel" class="col-sm-2 col-form-label ">Nội dung</label>
                                     <div class="col-sm-10">
-                                        <textarea name="content" class="textarea form-control"  placeholder="Place some text here" style="width:95%"></textarea>
+                                        <textarea name="content" class="textarea form-control" placeholder="Place some text here" style="width:95%"></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="colFormLabel" class="col-sm-2 col-form-label ">Hình ảnh</label>
-                                    <div class="col-sm-10">
-                                        <input type="file" name="post_image" />
+                                    <div class="col-sm-10" id="up1">
+                                        <input type="file" hidden name="post_image" onchange="showPreview1(this)" />
+                                        <button type="button" class="btn-chang" onclick="clickavatar1()">
+                                            <img id="imgPreview1" src="images/up-img.png" style="max-width: 100%; height: 200px" />
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="form-group row" hidden>
@@ -141,6 +164,11 @@
                 // Summernote
                 $('.textarea').summernote()
             })
+        </script>
+        <script type="text/javascript">
+            function clickavatar1() {
+                $("#up1 input[type=file]").click();
+            }
         </script>
 </body>
 

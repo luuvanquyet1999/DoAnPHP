@@ -42,14 +42,14 @@ include_once './mvc/view/checkSeseson.php';
                 <h5>Tin mới</h5>
             </div>
             <?php
-            foreach ($data[4] as $value) {
+            foreach ($data[2] as $value) {
                 ?>
                 <div class="single-blog-post d-flex">
                     <div class="post-thumbnail">
                         <img src="<?php echo Home; ?><?= $value[1] ?>" alt="">
                     </div>
                     <div class="post-content">
-                        <a href="<?php echo Home; ?>post/<?= makeLink($value[3]) ?>"
+                        <a href="<?php echo Home; ?>post/<?= ($value[5]) ?>"
                            class="post-title"><?= $value[3] ?></a>
                     </div>
                 </div>
@@ -73,14 +73,14 @@ include_once './mvc/view/checkSeseson.php';
 
             <!-- Single Blog Post -->
             <?php
-            foreach ($data[2] as $value) {
+            foreach ($data[8] as $value) {
                 ?>
                 <div class="single-blog-post d-flex">
                     <div class="post-thumbnail">
                         <img src="<?php echo Home; ?><?= $value[1] ?>" alt="">
                     </div>
                     <div class="post-content">
-                        <a href="<?php echo Home; ?>post/<?= makeLink($value[0]) ?>"><?= $value[0] ?></a>
+                        <a href="<?php echo Home; ?>post/<?= ($value[2]) ?>"><?= $value[0] ?></a>
                     </div>
                 </div>
                 <?php
@@ -112,7 +112,7 @@ include_once './mvc/view/checkSeseson.php';
                         <div class="post-content">
                             <a href="<?php echo Home; ?>archive/<?= makeLink($value[1]) ?>"
                                class="post-cata"><?= $value[1] ?></a>
-                            <a href="<?php echo Home; ?>post/<?= makeLink($value[0]) ?>"
+                            <a href="<?php echo Home; ?>post/<?=($value[3]) ?>"
                                class="post-title"><?= $value[0] ?></a>
                         </div>
                     </div>
@@ -224,7 +224,7 @@ include_once './mvc/view/checkSeseson.php';
                 <!-- Single Featured Post -->
                 <?php
                 $stt = 1;
-                foreach ($data[7] as $value) {
+                foreach ($data[6] as $value) {
                     ?>
                     <div class="single-featured-post">
                         <!-- Thumbnail -->
@@ -238,7 +238,7 @@ include_once './mvc/view/checkSeseson.php';
                                 <a href="<?php echo Home; ?>archive/<?= makeLink($value[0]) ?>"><?=SetDate($value[2]) ?></a>
                                 <a href="<?php echo Home; ?>archive/<?= makeLink($value[0]) ?>"><?= $value[0] ?></a>
                             </div>
-                            <a href="<?php echo Home; ?>post/<?= makeLink($value[3]) ?>"
+                            <a href="<?php echo Home; ?>post/<?= ($value[5]) ?>"
                                class="post-title"><?= $value[3] ?></a>
                             <p><?= $value[4] ?></p>
                         </div>
@@ -259,7 +259,7 @@ include_once './mvc/view/checkSeseson.php';
                 <!-- Single Featured Post -->
                 <?php
                 $stt = 1;
-                foreach ($data[8] as $value) {
+                foreach ($data[7] as $value) {
                     ?>
                     <div class="single-featured-post">
                         <!-- Thumbnail -->
@@ -273,7 +273,7 @@ include_once './mvc/view/checkSeseson.php';
                                 <a href="<?php echo Home; ?>archive/<?= makeLink($value[0]) ?>"><?= SetDate($value[2]) ?></a>
                                 <a href="<?php echo Home; ?>archive/<?= makeLink($value[0]) ?>"><?= $value[0] ?></a>
                             </div>
-                            <a href="<?php echo Home; ?>archive/<?= makeLink($value[3]) ?>"
+                            <a href="<?php echo Home; ?>archive/<?= ($value[5]) ?>"
                                class="post-title"><?= $value[3] ?></a>
                             <p><?= $value[4] ?></p>
                         </div>
@@ -327,15 +327,15 @@ include_once './mvc/view/checkSeseson.php';
             <!-- Single YouTube Channel -->
             <?php
             $stt = 1;
-            foreach ($data[6] as $value) {
+            foreach ($data[9] as $value) {
                 ?>
                 <div class="single-youtube-channel d-flex">
                     <div class="youtube-channel-thumbnail">
-                        <img src="<?php echo Home; ?><?= $value->member_avatar ?>" alt="">
+                        <img src="<?php echo Home; ?><?= $value[1] ?>" alt="">
                     </div>
                     <div class="youtube-channel-content">
-                        <a href="single-post.html" class="channel-title"><?= $value->member_name ?></a>
-                        <a href="#" class="btn subscribe-btn"><i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                        <a href="single-post.html" class="channel-title"><?= $value[0] ?></a>
+                        <a href="<?=$value[3]?>" class="btn subscribe-btn"><i class="fa fa-facebook" aria-hidden="true"></i>
                             Subscribe</a>
                     </div>
                 </div>
