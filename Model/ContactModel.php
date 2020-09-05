@@ -21,13 +21,26 @@ class ContactDefault
     public $sendcontact_content;
     public $sendcontact_fullname;
     public $sendcontact_email;
-    function __construct($sendcontact_content, $sendcontact_fullname, $sendcontact_email)
+    public $hidden;
+    function __construct($sendcontact_content, $sendcontact_fullname, $sendcontact_email,$hidden)
     {
         $this->sendcontact_content = $sendcontact_content;
         $this->sendcontact_fullname = $sendcontact_fullname;
         $this->sendcontact_email = $sendcontact_email;
+        $this->hidden = $hidden;
     }
 }
+class ShowContact
+{
+    public $sendcontact_id;
+    public $hidden;
+    function __construct($sendcontact_id,$hidden)
+    {
+        $this->sendcontact_id = $sendcontact_id;
+        $this->hidden = $hidden;
+    }
+}
+
 class ContactModel extends DB
 {
     // private $mysql;
@@ -84,7 +97,11 @@ class ContactModel extends DB
     }
     function GetAllContactDefault()
     {
-        $query = "SELECT * FROM lph_sendcontact ";
+        $query = "SELECT SendContactId,Content,Fullname,Email,case WHEN hidden = 1 then 'Đã xem'
+        WHEN hidden = 0 then 'Xem'
+        end as hidden
+        FROM lph_sendcontact 
+        ORDER BY hidden asc, SendContactId DESC";
         $result = $this->mysql->query($query);
         $data = [];
         foreach ($result->fetch_all() as $value) {
@@ -99,4 +116,5 @@ class ContactModel extends DB
         $result = $this->mysql->query($query);
         return $result;
     }
+    
 }

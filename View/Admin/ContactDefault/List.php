@@ -70,6 +70,7 @@
                                                         }
                                                         ?>
                                                     </p>
+                                                    <form action="list.php" method="post">
                                                     <table id="zero_config" class="table table-striped table-bordered">
                                                     <thead>
                                                             <tr>
@@ -89,13 +90,41 @@
                                                                     <td><?= $stt++ ?></td>
                                                                     <td><?= $value->sendcontact_fullname ?></td>
                                                                     <td><?= $value->sendcontact_email ?></td>
-                                                                    <td><?= $value->sendcontact_content ?></td>
+                                                                    <td><a class="btn btn-primary" id='button' data-toggle="modal" data-target="#exampleModal" onclick="checkid('<?= $value->sendcontact_fullname ?>','<?= $value->sendcontact_email ?>','<?= $value->sendcontact_content ?>')"><?= $value->hidden ?></a></td>
                                                                 </tr>
+                                                                <script>
+                                                                    function checkid(name,email,content){
+                                                                       document.getElementById('name').innerHTML =  'Họ và tên :'+ name;
+                                                                       document.getElementById('email').innerHTML ='Email :'+ email;
+                                                                       document.getElementById('content').innerHTML ='Nội dung :'+ content;
+                                                                    }
+                                                                </script>
+                                                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Liên hệ</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+         <p id="name"></p>
+          <p id="email"></p>
+         <p id="content"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
                                                             <?php
                                                             }
                                                             ?>
                                                         </tbody>
                                                     </table>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
@@ -113,6 +142,8 @@
         <?php
         include 'asset/Scripts/ScriptFooter.php';
         ?>
+        <!-- Modal -->
+
 </body>
 
 </html>

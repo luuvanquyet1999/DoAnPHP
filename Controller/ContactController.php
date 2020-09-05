@@ -80,12 +80,14 @@ class ContactController
         $content = $_POST["content"];
         $fullname = $_POST["fullname"];
         $email = $_POST["email"];
-        $result  = $this->ContactModel->SendContact(new ContactDefault($content, $fullname, $email));
+        $hidden = 0;
+        $result  = $this->ContactModel->SendContact(new ContactDefault($content, $fullname, $email, $hidden));
         if ($result == true)
             header('location: index.php?c=WebsiteIndex&a=Contact&r=1');
         else
             header('location: index.php?c=WebsiteIndex&a=Contact&r=0');
     }
+  
     function GetAllContactDefault()
     {
         //session_start();
