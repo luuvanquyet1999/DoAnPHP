@@ -20,12 +20,14 @@ class Contact
 }
 class ContactDefault
 {
+    public $sendcontact_id;
     public $sendcontact_content;
     public $sendcontact_fullname;
     public $sendcontact_email;
     public $hidden;
-    function __construct($sendcontact_content, $sendcontact_fullname, $sendcontact_email,$hidden)
+    function __construct($sendcontact_id,$sendcontact_content, $sendcontact_fullname, $sendcontact_email,$hidden)
     {
+        $this->sendcontact_id = $sendcontact_id;
         $this->sendcontact_content = $sendcontact_content;
         $this->sendcontact_fullname = $sendcontact_fullname;
         $this->sendcontact_email = $sendcontact_email;
@@ -108,7 +110,7 @@ class ContactModel extends DB
         $result = $this->mysql->query($query);
         $data = [];
         foreach ($result->fetch_all() as $value) {
-            array_push($data, new ContactDefault($value[1], $value[2], $value[3], $value[4]));
+            array_push($data, new ContactDefault($value[0],$value[1], $value[2], $value[3], $value[4]));
         }
         return $data;
     }
@@ -119,5 +121,11 @@ class ContactModel extends DB
         $result = $this->mysql->query($query);
         return $result;
     }
-    
+    function UpdateActive($contact_id)
+    {
+        $query = "UPDATE lph_sendcontact SET hidden ='1'
+        WHERE SendContactId = '$contact_id'";
+        $result = $this->mysql->query($query);
+        return $result;
+    }
 }

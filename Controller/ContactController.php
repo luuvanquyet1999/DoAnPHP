@@ -71,25 +71,25 @@ class ContactController
         $contact_address = $_POST["contact_address"];
         $contact_comment = $_POST["contact_comment"];
         $Active = $_POST["Active"];
-        $result = $this->ContactModel->Update(new Contact($contact_id, $contact_email, $contact_phone, $contact_address, $Active,$contact_comment));
+        $result = $this->ContactModel->Update(new Contact($contact_id, $contact_email, $contact_phone, $contact_address, $Active, $contact_comment));
         if ($result == true)
             header('location: index.php?c=Contact&a=View&r=1');
         else
             header('location: index.php?c=Contact&a=View&r=0');
     }
-    function SendContact()
-    {
-        $content = $_POST["content"];
-        $fullname = $_POST["fullname"];
-        $email = $_POST["email"];
-        $hidden = 0;
-        $result  = $this->ContactModel->SendContact(new ContactDefault($content, $fullname, $email, $hidden));
-        if ($result == true)
-            header('location: index.php?c=WebsiteIndex&a=Contact&r=1');
-        else
-            header('location: index.php?c=WebsiteIndex&a=Contact&r=0');
-    }
-  
+    // function SendContact()
+    // {
+    //     $content = $_POST["content"];
+    //     $fullname = $_POST["fullname"];
+    //     $email = $_POST["email"];
+    //     $hidden = 0;
+    //     $result  = $this->ContactModel->SendContact(new ContactDefault($content, $fullname, $email, $hidden));
+    //     if ($result == true)
+    //         header('location: index.php?c=WebsiteIndex&a=Contact&r=1');
+    //     else
+    //         header('location: index.php?c=WebsiteIndex&a=Contact&r=0');
+    // }
+
     function GetAllContactDefault()
     {
         //session_start();
@@ -100,5 +100,14 @@ class ContactController
         } else {
             require_once SYSTEM_PATH . "/View/Admin/Login.php";
         }
+    }
+    function UpdateActive()
+    {
+        $contact_id = $_GET["Id"];
+        $result = $this->ContactModel->UpdateActive($contact_id);
+        // if ($result == true)
+        //     header('location: index.php?c=Contact&a=GetAllContactDefault&r=1');
+        // else
+        header('location: index.php?c=Contact&a=GetAllContactDefault');
     }
 }
