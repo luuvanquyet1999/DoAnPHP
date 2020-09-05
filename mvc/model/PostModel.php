@@ -198,10 +198,19 @@ GROUP BY CategoryName  ORDER BY PostId DESC LIMIT 10";
         $result = $this->mysql->query($query);
         return $result;
     }
-
+    function GetBaiVietTT($value){
+            $query = "SELECT PostImage , PostTitle,PostLink FROM lph_post  WHERE
+                    CategoryName = '$value' AND Active =1 ORDER BY PostId DESC LIMIT 5";
+        $result = $this->mysql->query($query);
+        $data = [];
+        while ($row = mysqli_fetch_array($result)) {
+            array_push($data, [$row[0], $row[1], $row[2]]);
+        }
+        return $data;
+    }
+    // get/post/baiviet
     function GetTitLe($value)
     {
-        echo $value;
         $query = "SELECT PostTitle FROM lph_post WHERE PostTitle='$value' AND Active =1";
         $result = $this->mysql->query($query);
         $data = '';

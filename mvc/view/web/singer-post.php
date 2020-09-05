@@ -90,11 +90,11 @@ include_once './mvc/view/setlink.php';
                     foreach ($data[5] as $value) {
                         ?>
 
-                        <div class="post-author d-flex align-items-center col-8 col-xl-8">
+                        <div class="post-author d-flex align-items-center col-12 col-xl-12">
                             <div class="post-author-thumb">
                                 <img src="<?php echo Home;?><?= $value[1]?>" alt="">
                             </div>
-                            <div class="post-author-desc pl-4">
+                            <div class="post-author-desc pl-4 ">
                                 <a href="#" class="author-name"><?= $value[0]?></a>
                                 <p><?= $value[2]?></p>
                             </div>
@@ -115,18 +115,20 @@ include_once './mvc/view/setlink.php';
                 <div class="related-post-area bg-white mb-30 px-30 pt-30 box-shadow">
                     <!-- Section Title -->
                     <div class="section-heading">
-                        <h5>Related Post</h5>
+                        <h5>Bài viết tương tự</h5>
                     </div>
 
                     <div class="row">
-                        <!-- Single Blog Post -->
+                        <?php
+                        foreach ($data[6] as $value) {
+                        ?>
                         <div class="col-12 col-md-6 col-lg-4">
                             <div class="single-blog-post style-4 mb-30">
                                 <div class="post-thumbnail">
-                                    <img src="<?php echo CSSDIR?>img/bg-img/29.jpg" alt="">
+                                    <img src="<?php echo Home;?><?=$value[0]?>" alt="">
                                 </div>
                                 <div class="post-content">
-                                    <a href="single-post.html" class="post-title">Dentists Are Smiling Over Painless Veneer</a>
+                                    <a href="<?php echo Home;?><?= $value[2]?>" class="post-title"><?=$value[1]?></a>
                                     <div class="post-meta d-flex">
                                         <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
                                         <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
@@ -135,43 +137,9 @@ include_once './mvc/view/setlink.php';
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Single Blog Post -->
-                        <div class="col-12 col-md-6 col-lg-4">
-                            <div class="single-blog-post style-4 mb-30">
-                                <div class="post-thumbnail">
-                                    <img src="<?php echo CSSDIR?>img/bg-img/30.jpg" alt="">
-                                    <a href="video-post.html" class="video-play"><i class="fa fa-play"></i></a>
-                                    <span class="video-duration">09:27</span>
-                                </div>
-                                <div class="post-content">
-                                    <a href="single-post.html" class="post-title">Will The Democrats Be Able To Reverse</a>
-                                    <div class="post-meta d-flex">
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Blog Post -->
-                        <div class="col-12 col-md-6 col-lg-4">
-                            <div class="single-blog-post style-4 mb-30">
-                                <div class="post-thumbnail">
-                                    <img src="<?php echo CSSDIR?>img/bg-img/28.jpg" alt="">
-                                </div>
-                                <div class="post-content">
-                                    <a href="single-post.html" class="post-title">A Guide To Rocky Mountain Vacations</a>
-                                    <div class="post-meta d-flex">
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                            <?php
+                        }
+                        ?>
                     </div>
                 </div>
 
@@ -258,22 +226,20 @@ include_once './mvc/view/setlink.php';
 
                     <!-- Reply Form -->
                     <div class="contact-form-area">
-                        <form action="#" method="post">
-                            <div class="row">
-                                <div class="col-12 col-lg-6">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name*" required>
-                                </div>
-                                <div class="col-12 col-lg-6">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email*" required>
-                                </div>
-                                <div class="col-12">
-                                    <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Message*" required></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn mag-btn mt-30" type="submit">Submit Comment</button>
-                                </div>
+                        <form method="POST" id="comment_form">
+                            <div class="form-group">
+                                <input type="text" name="comment_name" id="comment_name" class="form-control" placeholder="Enter Name" />
+                            </div>
+                            <div class="form-group">
+                                <textarea name="comment_content" id="comment_content" class="form-control" placeholder="Enter Comment" rows="5"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <input type="hidden" name="comment_id" id="comment_id" value="0" />
+                                <input type="submit" name="submit" id="submit" class="btn mag-btn mt-30" type="submit" value="Submit" />
                             </div>
                         </form>
+                        <span id="comment_message"></span>
+                        <br />
                     </div>
                 </div>
             </div>
@@ -326,27 +292,27 @@ include_once './mvc/view/setlink.php';
                     <div class="single-sidebar-widget p-30">
                         <!-- Section Title -->
                         <div class="section-heading">
-                            <h5>Hot Channels</h5>
+                            <h5>Subscribe</h5>
                         </div>
 
+                        <!-- Single YouTube Channel -->
                         <?php
                         $stt = 1;
                         foreach ($data[4] as $value) {
                             ?>
                             <div class="single-youtube-channel d-flex">
                                 <div class="youtube-channel-thumbnail">
-                                    <img src="<?php echo Home;?><?= $value->member_avatar ?>" alt="">
+                                    <img src="<?php echo Home; ?><?= $value[1] ?>" alt="">
                                 </div>
                                 <div class="youtube-channel-content">
-                                    <a href="single-post.html" class="channel-title"><?= $value->member_name ?></a>
-                                    <a href="#" class="btn subscribe-btn"><i class="fa fa-play-circle-o" aria-hidden="true"></i> Subscribe</a>
+                                    <a href="single-post.html" class="channel-title"><?= $value[0] ?></a>
+                                    <a href="<?=$value[3]?>" class="btn subscribe-btn"><i class="fa fa-facebook" aria-hidden="true"></i>
+                                        Subscribe</a>
                                 </div>
                             </div>
                             <?php
                         }
                         ?>
-
-
                     </div>
 
                     <!-- Sidebar Widget -->
@@ -372,5 +338,4 @@ include_once './mvc/view/setlink.php';
 <?php require_once './mvc/view/pages/footer.php'; ?>
 <?php require_once './mvc/view/script.php'?>
 </body>
-
 </html>

@@ -20,8 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17c2b371-4641-4c12-aa57-bdca905b3122" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/mvc/controller/web/admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvc/controller/web/fetch_comment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/view/web/upload-post.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/view/web/upload-post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fileUpload/Member/huyentri.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/fileUpload/Member/huyentri.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/controller/web/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/controller/web/post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/model/PostModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/model/PostModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/view/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/view/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/view/web/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/view/web/about.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/view/web/singer-post.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/view/web/singer-post.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,8 +61,15 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/mvc/view/web" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Xam pp\htdocs\DoAnPHP\mvc\view\web" />
+      <recent name="D:\Xam pp\htdocs\DoAnPHP\mvc\view\pages" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -66,6 +81,11 @@
       <updated>1599186614866</updated>
       <workItem from="1599186616096" duration="11759000" />
       <workItem from="1599203099335" duration="16400000" />
+      <workItem from="1599225920229" duration="5951000" />
+      <workItem from="1599277184834" duration="1051000" />
+      <workItem from="1599280703743" duration="6950000" />
+      <workItem from="1599289227418" duration="2742000" />
+      <workItem from="1599310085613" duration="483000" />
     </task>
     <servers />
   </component>
@@ -88,17 +108,21 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="526" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599310249533">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="526" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1599310249533" />
     <state x="563" y="147" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599215925998">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="563" y="147" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1599215925998" />
-    <state x="655" y="123" key="NewPhpClassDialog" timestamp="1599216265045">
+    <state x="655" y="123" key="NewPhpClassDialog" timestamp="1599310261024">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="655" y="123" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1599216265045" />
-    <state x="668" y="324" key="NewPhpFileDialog" timestamp="1599215677378">
+    <state x="655" y="123" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1599310261024" />
+    <state x="946" y="255" key="NewPhpFileDialog" timestamp="1599283811086">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="668" y="324" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1599215677378" />
+    <state x="946" y="255" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1599283811086" />
   </component>
 </project>

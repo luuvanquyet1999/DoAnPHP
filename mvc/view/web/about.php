@@ -1,5 +1,5 @@
 <?php
-include_once './mvc/view/config.php';
+include_once 'config.php';
 include_once './mvc/view/setlink.php';
 include_once './mvc/view/checkSeseson.php';
 ?>
