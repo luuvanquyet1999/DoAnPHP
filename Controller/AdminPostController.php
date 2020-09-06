@@ -52,7 +52,7 @@ class AdminPostController
         // die();
         // echo $post_id . "</br>" . $post_title . "</br>" . $post_summary . "</br>" . $post_content . "</br>" . $post_image . "</br>" . $category_name . "</br>" . $post_createdate . "</br>" . $username;
         // die();
-        $result = $this->PostModel->Insert(new Post($post_id, $post_title, $post_summary, $post_content, $post_image, $post_createdate, $category_name, $username, $post_link));
+        $result = $this->PostModel->Insert(new Post($post_id, $post_title, $post_summary, $post_content, $post_image, $post_createdate, $category_name, $username, $post_link, 0));
         if ($result == true)
             header('location: index.php?c=AdminPost&a=View&r=1');
         else
@@ -89,7 +89,7 @@ class AdminPostController
         $post_link = $this->PostModel->makeLink($post_title);
         // echo $post_id."</br>".$post_title."</br>".$post_summary."</br>".$post_content."</br>".$post_image."</br>".$category_name."</br>".$post_createdate."</br>".$username;
         // die();
-        $result = $this->PostModel->Update(new Post($post_id, $post_title, $post_summary, $post_content, $post_image, $post_createdate, $category_name, $username, $post_link));
+        $result = $this->PostModel->Update(new Post($post_id, $post_title, $post_summary, $post_content, $post_image, $post_createdate, $category_name, $username, $post_link,0));
         if ($result == true)
             header('location: index.php?c=AdminPost&a=View&r=1');
         else
@@ -104,5 +104,45 @@ class AdminPostController
             header('location: index.php?c=AdminPost&a=View&r=1');
         else
             header('location: index.php?c=AdminPost&a=View&r=0');
+    }
+    //Func cập nhật tình trạng
+    //---thêm vào bài phổ biến
+    function UpdateHot(){
+        if (!empty($_POST['duyet']))
+        {
+            if(!empty($_POST['array'])) {
+                foreach($_POST['array'] as $value){
+                    $result = $this->PostModel->UpdateHot($value);
+                    if ($result == true)
+                    {
+                        header('location:index.php?c=AdminPost&a=View&r=1');
+                    }else{
+                        header('location:index.php?c=AdminPost&a=View&r=0');
+                    }
+                }
+            }
+            else{
+                header('location:index.php?c=AdminPost&a=View&r=2');
+            }
+        }else{
+            $this->UpdateHot2();
+        }
+    }
+    //---xóa khỏi bài phổ biến
+    function UpdateHot2()
+    {
+        if(!empty($_POST['array'])) {
+            foreach($_POST['array'] as $value){
+                $result = $this->PostModel->XoaHot($value);
+                if ($result == true)
+                {
+                    header('location:index.php?c=AdminPost&a=View&r=1');
+                }else{
+                    header('location:index.php?c=AdminPost&a=View&r=0');
+                }
+            }
+        }else{
+            header('location:index.php?c=AdminPost&a=View&r=2');
+        }
     }
 }

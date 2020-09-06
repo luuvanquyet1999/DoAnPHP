@@ -11,9 +11,10 @@ class Post
     public $category_name;
     public $username;
     public $post_link;
+    public $post_hot;
 
 
-    function __construct($post_id, $post_title, $post_summary, $post_content, $post_image, $post_createdate, $category_name, $username, $post_link)
+    function __construct($post_id, $post_title, $post_summary, $post_content, $post_image, $post_createdate, $category_name, $username, $post_link,$post_hot)
     {
         $this->post_id = $post_id;
         $this->post_title = $post_title;
@@ -24,6 +25,7 @@ class Post
         $this->category_name = $category_name;
         $this->username = $username;
         $this->post_link = $post_link;
+        $this->post_hot = $post_hot;
     }
 }
 class AdminPostModel extends DB
@@ -40,18 +42,17 @@ class AdminPostModel extends DB
         $result = $this->mysql->query($query);
         $data = [];
         foreach ($result->fetch_all() as $value) {
-            array_push($data, new Post($value[0], $value[1], $value[2], $value[3], $value[4], $value[5], $value[6], $value[7], $value[10]));
+            array_push($data, new Post($value[0], $value[1], $value[2], $value[3], $value[4], $value[5], $value[6], $value[7], $value[10], $value[12]));
         }
         return $data;
     }
     function Insert(Post $post)
     {
-        $query = "INSERT INTO lph_post (PostTitle, PostSummary, PostContent, PostImage, PostCreateDate, CategoryName, Username, PostStatus, Active, PostLink) 
-        VALUES ('$post->post_title','$post->post_summary','$post->post_content','$post->post_image','$post->post_createdate','$post->category_name','$post->username','0','1','$post->post_link')";
+        $query = "INSERT INTO lph_post (PostTitle, PostSummary, PostContent, PostImage, PostCreateDate, CategoryName, Username, PostStatus, Active, PostLink, PostHot) 
+        VALUES ('$post->post_title','$post->post_summary','$post->post_content','$post->post_image','$post->post_createdate','$post->category_name','$post->username','0','1','$post->post_link',0)";
         $result = $this->mysql->query($query);
-        print_r($result);
-        die();
-
+        // print_r($result);
+        // die();
         return $result;
     }
     function GetRecordById($post_id)
@@ -62,7 +63,7 @@ class AdminPostModel extends DB
         // print_r($data);
         // die();
         if (count($data)) {
-            return new Post($data[0][0], $data[0][1], $data[0][2], $data[0][3], $data[0][4], $data[0][5], $data[0][6], $data[0][7], $data[0][8]);
+            return new Post($data[0][0], $data[0][1], $data[0][2], $data[0][3], $data[0][4], $data[0][5], $data[0][6], $data[0][7], $data[0][8], $data[0][9]);
         }
         return null;
     }
@@ -117,5 +118,16 @@ class AdminPostModel extends DB
         $strTitle = str_replace('Đ', 'd', $strTitle);
         $strTitle = preg_replace("/[^-a-zA-Z0-9]/", '', $strTitle);
         return $strTitle;
+    }
+    //Update bài  viết hot
+    function UpdateHot($id)
+    {
+        $result = $this->mysql->query("update lph_post set PostHot = 1 where PostId = $id");
+        return $result;
+    }
+    function XoaHot($id)
+    {
+        $result = $this->mysql->query("update lph_post set PostHot = 0 where PostId = $id");
+        return $result;
     }
 }
