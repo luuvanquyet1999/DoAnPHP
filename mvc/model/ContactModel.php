@@ -19,6 +19,21 @@ class Contact1{
         $this->Active=$Active;
     }
 }
+
+class SendContact
+{
+    public $sendcontact_content;
+    public $sendcontact_fullname;
+    public $sendcontact_email;
+    public $hidden;
+    function __construct($sendcontact_content, $sendcontact_fullname, $sendcontact_email,$hidden)
+    {
+        $this->sendcontact_content = $sendcontact_content;
+        $this->sendcontact_fullname = $sendcontact_fullname;
+        $this->sendcontact_email = $sendcontact_email;
+        $this->hidden = $hidden;
+    }
+}
 class ContactModel extends  DB{
     function GetAll()
     {
@@ -29,5 +44,12 @@ class ContactModel extends  DB{
             array_push($data, new Contact1($value[0], $value[1], $value[2], $value[3], $value[4], $value[5],$value[6]));
         }
         return  $data;
+    }
+    function SendContact(SendContact $sendContact)
+    {
+        $query = "INSERT INTO lph_sendcontact(Content,Fullname,Email,Hidden) VALUES ('$sendContact->sendcontact_content','$sendContact->sendcontact_fullname',
+                                            '$sendContact->sendcontact_email',$sendContact->hidden)";
+        $result = $this->mysql->query($query);
+        return $result;
     }
 }

@@ -124,16 +124,16 @@ include_once './mvc/view/checkSeseson.php';
 
                     <!-- Contact Form Area -->
                     <div class="contact-form-area">
-                        <form action="#" method="post">
+                        <form action="<?php echo Home;?>contact/sendcontact" method="post">
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="name" placeholder="Name">
+                                        <input type="text" class="form-control" name="name" id="name" placeholder="Name">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" id="email" placeholder="E-mail">
+                                        <input type="email" class="form-control" name="email" id="email" placeholder="E-mail">
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -142,7 +142,7 @@ include_once './mvc/view/checkSeseson.php';
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn mag-btn mt-30" type="submit">Send</button>
+                                    <button class="btn mag-btn mt-30" type="submit" name="submit">Send</button>
                                 </div>
                             </div>
                         </form>
