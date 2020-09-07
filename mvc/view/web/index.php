@@ -61,7 +61,7 @@ include_once './mvc/view/checkSeseson.php';
 
         <!-- Sidebar Widget -->
         <div class="single-sidebar-widget">
-            <a href="#" class="add-img"><img src="<?php echo CSSDIR ?>img/bg-img/add.jpg" alt=""></a>
+            <a href="#" class="add-img"><img src="<?php echo CSSDIR ?>img/bg-img/locfuho_image.jpg" alt=""></a>
         </div>
 
         <!-- Sidebar Widget -->
@@ -294,7 +294,7 @@ include_once './mvc/view/checkSeseson.php';
         <div class="single-sidebar-widget p-30">
             <!-- Section Title -->
             <div class="section-heading">
-                <h5>Categories</h5>
+                <h5>Thể loại</h5>
             </div>
 
             <!-- Catagory Widget -->

@@ -21,7 +21,13 @@ class register extends Controller{
                 if (!empty($data1)){
                    $messager='Tài khoản đã tồn tại';
                 }else{
-                    $register->InsertUser($username,$password,$fullname,$gender);
+                    $image='';
+                    if ($gender==0){
+                        $image = 'public/img/bg-img/53.jpg';
+                    }else{
+                        $image='public/img/bg-img/55.jpg';
+                    }
+                    $register->InsertUser($username,$password,$fullname,$gender,$image);
                     $_SESSION['username'] = $username;
                     header('Location:/doanphp/website');
                 }

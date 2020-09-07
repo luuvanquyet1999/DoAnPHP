@@ -42,9 +42,9 @@ class UserModel extends DB{
         }
         return $data;
     }
-    function InsertUser($username,$password,$fullname,$gender){
-        $query="INSERT INTO lph_username(UserName,UsernameFull,UserNameGender,UsernamePassword ,Active ,Roles) VALUES (
-							'$username','$fullname',$gender,'$password',1,0)";
+    function InsertUser($username,$password,$fullname,$gender,$imgae){
+        $query="INSERT INTO lph_username(UserName,UsernameFull,UserNameGender,UsernamePassword ,Active ,Roles,Image) VALUES (
+							'$username','$fullname',$gender,'$password',1,0,'$imgae')";
         $result = $this->mysql->query($query);
         return $result;
     }

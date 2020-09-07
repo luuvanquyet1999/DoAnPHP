@@ -21,6 +21,10 @@ $statement = $connect->prepare($query);
 $statement->execute();
 $result = $statement->fetchAll();
 $output = '';
+if (empty($result)){
+    $output='<p>Bạn cảm thấy bài viết này thế nào ??? </p>
+            <a href="#comment_form" class="btn mag-btn mt-30" >Bình luận</a>';
+}
 foreach($result as $row)
 {
     $output .= '

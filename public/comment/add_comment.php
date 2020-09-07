@@ -13,7 +13,7 @@ if(empty($_POST["comment_post"]))
 { $error ='<p class="text-danger">'.$_POST["comment_post"].'</p>'; }
 if(empty($_POST["comment_name"]))
 {
-    $error .= '<p class="text-danger">Name is required</p>';
+    $error .= '<p class="text-danger">Vui lòng nhập tên</p>';
 }
 else
 {
@@ -22,7 +22,7 @@ else
 
 if(empty($_POST["comment_content"]))
 {
-    $error .= '<p class="text-danger">Comment is required</p>';
+    $error .= '<p class="text-danger">Hãy nhập cái gì đó</p>';
 }
 else
 {

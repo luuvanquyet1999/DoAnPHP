@@ -20,8 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17c2b371-4641-4c12-aa57-bdca905b3122" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/img/bg-img/locfuho_image.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/controller/web/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/controller/web/about.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/controller/web/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/controller/web/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/model/AboutModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/model/AboutModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/model/UserModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/model/UserModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mvc/view/web/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/view/web/about.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/view/web/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/view/web/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/comment/add_comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/comment/add_comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/comment/fetch_comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/comment/fetch_comment.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +92,7 @@
       <workItem from="1599395971967" duration="627000" />
       <workItem from="1599397013789" duration="1466000" />
       <workItem from="1599398566101" duration="11436000" />
-      <workItem from="1599438067237" duration="11360000" />
+      <workItem from="1599438067237" duration="14706000" />
     </task>
     <servers />
   </component>
