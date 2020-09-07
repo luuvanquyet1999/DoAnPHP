@@ -1,5 +1,5 @@
 <?php
-include_once 'config.php';
+require_once './mvc/view/config.php';
 include_once './mvc/view/setlink.php';
 include_once './mvc/view/checkSeseson.php';
 ?>
@@ -119,19 +119,6 @@ Như vậy, nếu thí sinh thích nghề báo và thấy đủ năng lực thì
                 <div class="col-12 col-md-6 col-lg-5 col-xl-4">
                     <div class="sidebar-area bg-white mb-30 box-shadow">
                         <!-- Sidebar Widget -->
-                        <div class="single-sidebar-widget p-30">
-                            <!-- Social Followers Info -->
-                            <div class="social-followers-info">
-                                <!-- Facebook -->
-                                <a href="#" class="facebook-fans"><i class="fa fa-facebook"></i> 4,360 <span>Fans</span></a>
-                                <!-- Twitter -->
-                                <a href="#" class="twitter-followers"><i class="fa fa-twitter"></i> 3,280 <span>Followers</span></a>
-                                <!-- YouTube -->
-                                <a href="#" class="youtube-subscribers"><i class="fa fa-youtube"></i> 1250 <span>Subscribers</span></a>
-                                <!-- Google -->
-                                <a href="#" class="google-followers"><i class="fa fa-google-plus"></i> 4,230 <span>Followers</span></a>
-                            </div>
-                        </div>
 
                         <!-- Sidebar Widget -->
                         <div class="single-sidebar-widget p-30">
