@@ -6,7 +6,7 @@ Licensed under the MIT license.
 Error bars are used to show standard deviation and other statistical
 properties in a plot.
 
-* Created by Rui Pereira  -  rui (dot) pereira (at) gmail (dot) com
+* Created by Rui Pereira  -  rui (dot) pereira (at) gmail (dot) comment
 
 This plugin allows you to plot error-bars over points. Set "errorbars" inside
 the points series to the axis name over which there will be error values in

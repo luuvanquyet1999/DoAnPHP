@@ -1,10 +1,9 @@
 <?php
-include_once './mvc/view/config.php';
-include_once './mvc/view/setlink.php';
+require_once './mvc/view/config.php';
+require_once './mvc/view/setlink.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="">
@@ -12,6 +11,7 @@ include_once './mvc/view/setlink.php';
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Mag - Video &amp; Magazine HTML Template</title>
     <?php include_once  './mvc/view/link.php'?>
+    <script src="<?php echo CSSDIR?>js/jquery/jquery-2.2.4.min.js"></script>
 </head>
 
 <body>
@@ -22,12 +22,9 @@ include_once './mvc/view/setlink.php';
         <div class="double-bounce2"></div>
     </div>
 </div>
-
-<!-- ##### Header Area Start ##### -->
+<!--header-->
 <?php require_once './mvc/view/pages/header.php'; ?>
-<!-- ##### Header Area End ##### -->
-
-<!-- ##### Breadcrumb Area Start ##### -->
+<!--header-->
 <section class="breadcrumb-area bg-img bg-overlay" style="background-image: url(<?php echo CSSDIR?>img/bg-img/49.jpg);">
     <div class="container h-100">
         <div class="row h-100 align-items-center">
@@ -39,10 +36,9 @@ include_once './mvc/view/setlink.php';
         </div>
     </div>
 </section>
-
 <!-- ##### Breadcrumb Area End ##### -->
 
-<!-- ##### Breadcrumb Area Start ##### -->
+<!--    Display Ul li Home-->
 <div class="mag-breadcrumb py-5">
     <div class="container">
         <div class="row">
@@ -58,18 +54,18 @@ include_once './mvc/view/setlink.php';
         </div>
     </div>
 </div>
-<!-- ##### Breadcrumb Area End ##### -->
+<!--    Display Ul li Home-->
+
 <!-- ##### Post Details Area Start ##### -->
 <section class="post-details-area">
     <div class="container">
         <div class="row justify-content-center">
-
+            <!-- Post Details Content Area -->
             <div class="col-12 col-xl-8">
-
                 <?php
                 foreach ($data[1] as $value) {
                 ?>
-                <div class="post-details-content bg-white p-30 box-shadow" style="overflow: auto">
+                <div class="post-details-content bg-white mb-30 p-30 box-shadow" style="overflow: auto">
                     <div class="blog-thumb mb-30">
                         <img src="<?php echo Home;?><?= $value[0]?>" alt="">
                     </div>
@@ -79,38 +75,25 @@ include_once './mvc/view/setlink.php';
                             <a href="<?php echo Home;?>post/<?= makeLink($value[2])?>"><?=$value[2]?></a>
                         </div>
                         <h4 class="post-title"><?=$value[3]?></h4>
-                        <!-- Post Meta -->
-                        <div class="post-meta-2">
-                            <p><?=$value[4]?>
-                            </p>
+                        <div class="post-meta-2" style="overflow: auto">
+                            <p style="overflow: auto"><?=$value[4]?></p>
                         </div>
-
+                        <?php foreach ($data[5] as $value) { ?>
+                        <div class="post-meta-2 mt-2" style="overflow: auto">
+                        <div class="post-author d-flex align-items-center" style="overflow: auto">
+                                <div class="post-author-thumb">
+                                    <img src="<?php echo Home;?><?= $value[1]?>" alt="">
+                                </div>
+                                <div class="post-author-desc pl-4">
+                                    <a href="#" class="author-name"><?= $value[0]?></a>
+                                    <p><?= $value[2]?></p>
+                                </div>
+                        </div>
+                        </div>
+                        <?php } ?>
                     </div>
-                    <?php
-                    foreach ($data[5] as $value) {
-                        ?>
-
-                        <div class="post-author d-flex align-items-center col-12 col-xl-12">
-                            <div class="post-author-thumb">
-                                <img src="<?php echo Home;?><?= $value[1]?>" alt="">
-                            </div>
-                            <div class="post-author-desc pl-4 ">
-                                <a href="#" class="author-name"><?= $value[0]?></a>
-                                <p><?= $value[2]?></p>
-                            </div>
-                        </div>
-                        <div class="like-dislike-share my-5">
-                            <h4 class="share">240<span>Share</span></h4>
-                            <a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i> Share on Facebook</a>
-                            <a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i> Share on Twitter</a>
-                        </div>
-                        <?php
-                    }
-                    ?>
                 </div>
-                    <?php
-                }
-                ?>
+                <?php } ?>
                 <!-- Related Post Area -->
                 <div class="related-post-area bg-white mb-30 px-30 pt-30 box-shadow">
                     <!-- Section Title -->
@@ -119,27 +102,27 @@ include_once './mvc/view/setlink.php';
                     </div>
 
                     <div class="row">
+                        <!-- Single Blog Post -->
                         <?php
                         foreach ($data[6] as $value) {
                         ?>
-                        <div class="col-12 col-md-6 col-lg-4">
-                            <div class="single-blog-post style-4 mb-30">
-                                <div class="post-thumbnail">
-                                    <img src="<?php echo Home;?><?=$value[0]?>" alt="">
-                                </div>
-                                <div class="post-content">
-                                    <a href="<?php echo Home;?><?= $value[2]?>" class="post-title"><?=$value[1]?></a>
-                                    <div class="post-meta d-flex">
-                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
-                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="single-blog-post style-4 mb-30">
+                                    <div class="post-thumbnail">
+                                        <img src="<?php echo Home;?><?=$value[0]?>" alt="">
+                                    </div>
+                                    <div class="post-content">
+                                        <a href="<?php echo Home;?>post/<?= $value[2]?>" class="post-title"><?=$value[1]?></a>
+                                        <div class="post-meta d-flex">
+                                            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
+                                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                            <?php
-                        }
-                        ?>
+                        <?php } ?>
+
                     </div>
                 </div>
 
@@ -147,84 +130,17 @@ include_once './mvc/view/setlink.php';
                 <div class="comment_area clearfix bg-white mb-30 p-30 box-shadow">
                     <!-- Section Title -->
                     <div class="section-heading">
-                        <h5>COMMENTS</h5>
+                        <h5>Bình luận bài viết</h5>
                     </div>
-
-                    <ol>
-                        <!-- Single Comment Area -->
-                        <li class="single_comment_area">
-                            <!-- Comment Content -->
-                            <div class="comment-content d-flex">
-                                <!-- Comment Author -->
-                                <div class="comment-author">
-                                    <img src="<?php echo CSSDIR?>img/bg-img/53.jpg" alt="author">
-                                </div>
-                                <!-- Comment Meta -->
-                                <div class="comment-meta">
-                                    <a href="#" class="comment-date">27 Aug 2019</a>
-                                    <h6>Tomas Mandy</h6>
-                                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius</p>
-                                    <div class="d-flex align-items-center">
-                                        <a href="#" class="like">like</a>
-                                        <a href="#" class="reply">Reply</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <ol class="children">
-                                <li class="single_comment_area">
-                                    <!-- Comment Content -->
-                                    <div class="comment-content d-flex">
-                                        <!-- Comment Author -->
-                                        <div class="comment-author">
-                                            <img src="<?php echo CSSDIR?>img/bg-img/54.jpg" alt="author">
-                                        </div>
-                                        <!-- Comment Meta -->
-                                        <div class="comment-meta">
-                                            <a href="#" class="comment-date">27 Aug 2019</a>
-                                            <h6>Britney Millner</h6>
-                                            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius</p>
-                                            <div class="d-flex align-items-center">
-                                                <a href="#" class="like">like</a>
-                                                <a href="#" class="reply">Reply</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ol>
-                        </li>
-
-                        <!-- Single Comment Area -->
-                        <li class="single_comment_area">
-                            <!-- Comment Content -->
-                            <div class="comment-content d-flex">
-                                <!-- Comment Author -->
-                                <div class="comment-author">
-                                    <img src="<?php echo CSSDIR?>img/bg-img/55.jpg" alt="author">
-                                </div>
-                                <!-- Comment Meta -->
-                                <div class="comment-meta">
-                                    <a href="#" class="comment-date">27 Aug 2019</a>
-                                    <h6>Simon Downey</h6>
-                                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius</p>
-                                    <div class="d-flex align-items-center">
-                                        <a href="#" class="like">like</a>
-                                        <a href="#" class="reply">Reply</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ol>
+                    <div id="display_comment"></div>
                 </div>
 
                 <!-- Post A Comment Area -->
                 <div class="post-a-comment-area bg-white mb-30 p-30 box-shadow clearfix">
                     <!-- Section Title -->
                     <div class="section-heading">
-                        <h5>LEAVE A REPLY</h5>
+                        <h5>Hãy để lại bình luận tại đây</h5>
                     </div>
-
-                    <!-- Reply Form -->
                     <div class="contact-form-area">
                         <form method="POST" id="comment_form">
                             <div class="form-group">
@@ -234,7 +150,9 @@ include_once './mvc/view/setlink.php';
                                 <textarea name="comment_content" id="comment_content" class="form-control" placeholder="Enter Comment" rows="5"></textarea>
                             </div>
                             <div class="form-group">
-                                <input type="hidden" name="comment_id" id="comment_id" value="0" />
+                                <input type="hidden" name="comment_post" id="comment_post"
+                                       value="<?=$data[7]?>" readonly="'readonly">
+                                <input type="hidden" name="comment_id" id="comment_id" value="0" readonly="readonly"/>
                                 <input type="submit" name="submit" id="submit" class="btn mag-btn mt-30" type="submit" value="Submit" />
                             </div>
                         </form>
@@ -247,45 +165,24 @@ include_once './mvc/view/setlink.php';
             <!-- Sidebar Widget -->
             <div class="col-12 col-md-6 col-lg-5 col-xl-4">
                 <div class="sidebar-area bg-white mb-30 box-shadow">
-                    <!-- Sidebar Widget -->
-                    <div class="single-sidebar-widget p-30">
-                        <!-- Social Followers Info -->
-                        <div class="social-followers-info">
-                            <!-- Facebook -->
-                            <a href="#" class="facebook-fans"><i class="fa fa-facebook"></i> 4,360 <span>Fans</span></a>
-                            <!-- Twitter -->
-                            <a href="#" class="twitter-followers"><i class="fa fa-twitter"></i> 3,280 <span>Followers</span></a>
-                            <!-- YouTube -->
-                            <a href="#" class="youtube-subscribers"><i class="fa fa-youtube"></i> 1250 <span>Subscribers</span></a>
-                            <!-- Google -->
-                            <a href="#" class="google-followers"><i class="fa fa-google-plus"></i> 4,230 <span>Followers</span></a>
-                        </div>
-                    </div>
 
-                    <!-- Sidebar Widget -->
                     <div class="single-sidebar-widget p-30">
                         <!-- Section Title -->
                         <div class="section-heading">
                             <h5>Categories</h5>
                         </div>
-
-                        <!-- Catagory Widget -->
                         <ul class="catagory-widgets">
-                            <?php
+                        <?php
                             $stt = 1;
-
                             foreach ($data[0] as $value) {
-                                ?>
+                         ?>
                                 <li><a href="<?php echo Home;?>archive/<?= makeLink($value[0])?>"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i> <?= $value[0]?></span> <span><?= $value[1]?></span></a></li>
-                                <?php
-                            }
-                            ?>
+                         <?php
+                            } ?>
                         </ul>
                     </div>
-
-                    <!-- Sidebar Widget -->
                     <div class="single-sidebar-widget">
-                        <a href="#" class="add-img"><img src="<?php echo CSSDIR?>img/bg-img/add2.png" alt=""></a>
+                        <a href="#" class="add-img"><img src="<?php echo CSSDIR?>img/bg-img/myteam.jpg" alt=""></a>
                     </div>
 
                     <!-- Sidebar Widget -->
@@ -294,23 +191,20 @@ include_once './mvc/view/setlink.php';
                         <div class="section-heading">
                             <h5>Subscribe</h5>
                         </div>
-
-                        <!-- Single YouTube Channel -->
                         <?php
                         $stt = 1;
-                        foreach ($data[4] as $value) {
-                            ?>
-                            <div class="single-youtube-channel d-flex">
-                                <div class="youtube-channel-thumbnail">
-                                    <img src="<?php echo Home; ?><?= $value[1] ?>" alt="">
-                                </div>
-                                <div class="youtube-channel-content">
-                                    <a href="single-post.html" class="channel-title"><?= $value[0] ?></a>
-                                    <a href="<?=$value[3]?>" class="btn subscribe-btn"><i class="fa fa-facebook" aria-hidden="true"></i>
-                                        Subscribe</a>
-                                </div>
+                        foreach ($data[4] as $value) { ?>
+                        <div class="single-youtube-channel d-flex">
+                            <div class="youtube-channel-thumbnail">
+                                <img src="<?php echo Home; ?><?= $value[1] ?>" alt="">
                             </div>
-                            <?php
+                            <div class="youtube-channel-content">
+                                <a href="single-post.html" class="channel-title"><?= $value[0] ?></a>
+                                <a href="<?=$value[3]?>" class="btn subscribe-btn"><i class="fa fa-facebook" aria-hidden="true"></i>
+                                    Subscribe</a>
+                            </div>
+                        </div>
+                        <?php
                         }
                         ?>
                     </div>
@@ -337,5 +231,55 @@ include_once './mvc/view/setlink.php';
 </section>
 <?php require_once './mvc/view/pages/footer.php'; ?>
 <?php require_once './mvc/view/script.php'?>
+<?php require_once './mvc/view/script1.php'?>
+<?php $_SESSION["baiviet"] = $data[7];?>
 </body>
 </html>
+<script>
+    $(document).ready(function(){
+        $('#comment_form').on('submit', function(event){
+            event.preventDefault();
+            var form_data = $(this).serialize();
+            $.ajax({
+                url:"http://localhost/doanphp/public/comment/add_comment.php",
+                method:"POST",
+                data:form_data,
+                dataType:"JSON",
+                success:function(data)
+                {
+                    console.log(data)
+                    if(data.error != '')
+                    {
+                        $('#comment_form')[0].reset();
+                        $('#comment_message').html(data.error);
+                        $('#comment_id').val('0');
+                        $('#comment_post').val();
+                        load_comment();
+                    }
+                }
+            })
+        });
+
+        load_comment();
+
+        function load_comment()
+        {
+            $.ajax({
+                url:"http://localhost/doanphp/public/comment/fetch_comment.php",
+                method:"POST",
+                success:function(data)
+                {
+                    $('#display_comment').html(data);
+                }
+            })
+        }
+
+        $(document).on('click', '.reply', function(){
+            var comment_id = $(this).attr("id");
+            $('#comment_id').val(comment_id);
+            $('#comment_name').focus();
+        });
+
+
+    });
+</script>

@@ -179,12 +179,12 @@ GROUP BY CategoryName  ORDER BY PostId DESC LIMIT 10";
     // get/post/baiviet
     function GetBaiViet($value)
     {
-        $query = "SELECT PostImage,PostCreateDate,CategoryName,PostTitle,PostContent ,Username FROM lph_post 
+        $query = "SELECT PostImage,PostCreateDate,CategoryName,PostTitle,PostContent ,Username , PostLink FROM lph_post 
                     WHERE PostLink='$value' ORDER BY PostId DESC LIMIT 1 ";
         $result = $this->mysql->query($query);
         $data = [];
         while ($row = mysqli_fetch_array($result)) {
-            array_push($data, [$row[0], $row[1], $row[2], $row[3], $row[4], $row[5]]);
+            array_push($data, [$row[0], $row[1], $row[2], $row[3], $row[4], $row[5],$row[6]]);
         }
         return $data;
     }
@@ -200,7 +200,7 @@ GROUP BY CategoryName  ORDER BY PostId DESC LIMIT 10";
     }
     function GetBaiVietTT($value){
             $query = "SELECT PostImage , PostTitle,PostLink FROM lph_post  WHERE
-                    CategoryName = '$value' AND Active =1 ORDER BY PostId DESC LIMIT 5";
+                    CategoryName = '$value' AND Active =1 ORDER BY PostId DESC LIMIT 3";
         $result = $this->mysql->query($query);
         $data = [];
         while ($row = mysqli_fetch_array($result)) {

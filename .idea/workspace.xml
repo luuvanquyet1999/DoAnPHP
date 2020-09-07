@@ -20,16 +20,71 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17c2b371-4641-4c12-aa57-bdca905b3122" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mvc/controller/web/admin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvc/controller/web/fetch_comment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/comment/add_comment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/comment/fetch_comment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fileUpload/Member/huyentri.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/fileUpload/Member/huyentri.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/assets/extra-libs/DataTables/DataTables-1.10.16/js/jquery.dataTables.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/assets/extra-libs/DataTables/DataTables-1.10.16/js/jquery.dataTables.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/assets/extra-libs/DataTables/datatables.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/assets/extra-libs/DataTables/datatables.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/assets/extra-libs/multicheck/datatable-checkbox-init.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/assets/extra-libs/multicheck/datatable-checkbox-init.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/assets/extra-libs/sparkline/sparkline.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/assets/extra-libs/sparkline/sparkline.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/assets/libs/chart/excanvas.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/assets/libs/chart/excanvas.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/assets/libs/flot.tooltip/js/excanvas.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/assets/libs/flot.tooltip/js/excanvas.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/assets/libs/flot/examples/axes-time-zones/date.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/assets/libs/flot/examples/axes-time-zones/date.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/assets/libs/flot/excanvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/assets/libs/flot/excanvas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/assets/libs/flot/excanvas.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/assets/libs/flot/excanvas.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/assets/libs/flot/jquery.flot.errorbars.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/assets/libs/flot/jquery.flot.errorbars.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/assets/libs/jquery-steps/steps.css" beforeDir="false" afterPath="$PROJECT_DIR$/asset/assets/libs/jquery-steps/steps.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/assets/libs/jquery-validation/dist/localization/messages_ge.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/assets/libs/jquery-validation/dist/localization/messages_ge.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/assets/libs/jquery-validation/dist/localization/messages_pt_BR.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/assets/libs/jquery-validation/dist/localization/messages_pt_BR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/assets/libs/jquery-validation/dist/localization/messages_pt_PT.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/assets/libs/jquery-validation/dist/localization/messages_pt_PT.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/assets/libs/magnific-popup/dist/jquery.magnific-popup.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/assets/libs/magnific-popup/dist/jquery.magnific-popup.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/assets/libs/quill/dist/quill.bubble.css" beforeDir="false" afterPath="$PROJECT_DIR$/asset/assets/libs/quill/dist/quill.bubble.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/assets/libs/quill/dist/quill.core.css" beforeDir="false" afterPath="$PROJECT_DIR$/asset/assets/libs/quill/dist/quill.core.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/assets/libs/quill/dist/quill.core.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/assets/libs/quill/dist/quill.core.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/assets/libs/quill/dist/quill.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/assets/libs/quill/dist/quill.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/assets/libs/quill/dist/quill.snow.css" beforeDir="false" afterPath="$PROJECT_DIR$/asset/assets/libs/quill/dist/quill.snow.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/build/summernote/lang/summernote-ca-ES.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/build/summernote/lang/summernote-ca-ES.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/build/summernote/lang/summernote-ca-ES.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/build/summernote/lang/summernote-ca-ES.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/build/summernote/lang/summernote-pt-BR.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/build/summernote/lang/summernote-pt-BR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/build/summernote/lang/summernote-pt-BR.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/build/summernote/lang/summernote-pt-BR.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/build/summernote/lang/summernote-pt-PT.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/build/summernote/lang/summernote-pt-PT.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/build/summernote/lang/summernote-pt-PT.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/build/summernote/lang/summernote-pt-PT.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/build/summernote/summernote-bs4.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/build/summernote/summernote-bs4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/build/summernote/summernote-bs4.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/build/summernote/summernote-bs4.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/build/summernote/summernote-lite.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/build/summernote/summernote-lite.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/build/summernote/summernote-lite.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/build/summernote/summernote-lite.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/build/summernote/summernote.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/build/summernote/summernote.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/build/summernote/summernote.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/build/summernote/summernote.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/dist/css/icons/material-design-iconic-font/css/materialdesignicons.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/asset/dist/css/icons/material-design-iconic-font/css/materialdesignicons.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/dist/css/icons/weather-icons/css/weather-icons.css" beforeDir="false" afterPath="$PROJECT_DIR$/asset/dist/css/icons/weather-icons/css/weather-icons.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/dist/css/icons/weather-icons/css/weather-icons.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/asset/dist/css/icons/weather-icons/css/weather-icons.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/dist/css/icons/weather-icons/less/weather-icons.less" beforeDir="false" afterPath="$PROJECT_DIR$/asset/dist/css/icons/weather-icons/less/weather-icons.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/dist/css/icons/weather-icons/less/weather-icons.min.less" beforeDir="false" afterPath="$PROJECT_DIR$/asset/dist/css/icons/weather-icons/less/weather-icons.min.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/dist/css/icons/weather-icons/sass/weather-icons.min.scss" beforeDir="false" afterPath="$PROJECT_DIR$/asset/dist/css/icons/weather-icons/sass/weather-icons.min.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/dist/css/icons/weather-icons/sass/weather-icons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/asset/dist/css/icons/weather-icons/sass/weather-icons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/dist/js/jquery.ui.touch-punch-improved.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/dist/js/jquery.ui.touch-punch-improved.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/dist/js/pages/dashboards/dashboard1.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/dist/js/pages/dashboards/dashboard1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/dist/js/pages/maps/map-google.init.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/dist/js/pages/maps/map-google.init.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/summernote/lang/summernote-ca-ES.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/summernote/lang/summernote-ca-ES.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/summernote/lang/summernote-ca-ES.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/summernote/lang/summernote-ca-ES.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/summernote/lang/summernote-pt-BR.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/summernote/lang/summernote-pt-BR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/summernote/lang/summernote-pt-BR.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/summernote/lang/summernote-pt-BR.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/summernote/lang/summernote-pt-PT.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/summernote/lang/summernote-pt-PT.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/summernote/lang/summernote-pt-PT.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/summernote/lang/summernote-pt-PT.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/summernote/summernote-bs4.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/summernote/summernote-bs4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/summernote/summernote-bs4.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/summernote/summernote-bs4.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/summernote/summernote-lite.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/summernote/summernote-lite.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/summernote/summernote-lite.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/summernote/summernote-lite.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/summernote/summernote.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/summernote/summernote.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/summernote/summernote.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/summernote/summernote.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/controller/web/fetch_comment.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mvc/controller/web/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/controller/web/post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/core/Index.php.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mvc/model/PostModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/model/PostModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/view/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/view/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/view/web/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/view/web/about.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/view/link.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/view/link.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mvc/view/web/singer-post.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/view/web/singer-post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/plugins/plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/plugins/plugins.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/summernote.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/summernote.min.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,12 +116,13 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/mvc/view/web" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Xam pp\htdocs\DoAnPHP\mvc\controller\web" />
       <recent name="D:\Xam pp\htdocs\DoAnPHP\mvc\view\web" />
       <recent name="D:\Xam pp\htdocs\DoAnPHP\mvc\view\pages" />
     </key>
@@ -85,7 +141,13 @@
       <workItem from="1599277184834" duration="1051000" />
       <workItem from="1599280703743" duration="6950000" />
       <workItem from="1599289227418" duration="2742000" />
-      <workItem from="1599310085613" duration="483000" />
+      <workItem from="1599310085613" duration="11263000" />
+      <workItem from="1599355573733" duration="15833000" />
+      <workItem from="1599380191616" duration="8770000" />
+      <workItem from="1599395971967" duration="627000" />
+      <workItem from="1599397013789" duration="1466000" />
+      <workItem from="1599398566101" duration="11436000" />
+      <workItem from="1599438067237" duration="10671000" />
     </task>
     <servers />
   </component>
@@ -112,17 +174,29 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="526" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1599310249533" />
+    <state x="554" y="188" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1599311140905">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="554" y="188" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1599311140905" />
     <state x="563" y="147" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599215925998">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="563" y="147" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1599215925998" />
-    <state x="655" y="123" key="NewPhpClassDialog" timestamp="1599310261024">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1599396597436">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="655" y="123" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1599310261024" />
-    <state x="946" y="255" key="NewPhpFileDialog" timestamp="1599283811086">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1599396597436" />
+    <state x="655" y="123" key="NewPhpClassDialog" timestamp="1599314989946">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="946" y="255" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1599283811086" />
+    <state x="655" y="123" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1599314989946" />
+    <state x="946" y="255" key="NewPhpFileDialog" timestamp="1599318376440">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="946" y="255" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1599318376440" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1599318339931">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1599318339931" />
   </component>
 </project>

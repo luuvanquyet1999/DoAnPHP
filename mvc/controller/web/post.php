@@ -13,17 +13,21 @@ class post extends Controller
         $data3 = "Mới nhất";
         $data4 = "";
         $y = '';
+        $data8='';
+        $data9='';
         foreach ($data2 as $value) {
             $data4 = $value[3];
             $y = $value[5];
+            $data8=$value[6];
+            $data9=$value[2];
         }
         $data5 = $about->GetAll();
         $data6 = $user->GetUserPost($y);
-        $data7 = $post->GetBaiVietTT($data3);
+        $data7 = $post->GetBaiVietTT($data9);
         if (empty($data6)) {
             array_push($data6, ['Admin ', 'fileUpload/Member/huyentri.jpg', 'Bài này mình xạo xạo thôi']);
         }
-        $this->getviewweb('singer-post', $data = [$data1, $data2, $data3, $data4, $data5, $data6,$data7]);
+        $this->getviewweb('singer-post', $data = [$data1, $data2, $data3, $data4, $data5, $data6,$data7,$data8]);
     }
 
     function BaiViet($value)
@@ -39,10 +43,12 @@ class post extends Controller
             $this->View();
         }
         $y = '';
+        $data8 = '';
         foreach ($data2 as $value) {
             $data4 = $value[3];
             $data3 = $value[2];
             $y = $value[5];
+            $data8 =$value[6];
         }
         $data6 = $user->GetUserPost($y);
         if (empty($data6)) {
@@ -52,7 +58,7 @@ class post extends Controller
         }
         $data5 = $about->GetAll();
         $data7 = $post->GetBaiVietTT($data3);
-        $this->getviewweb('singer-post', $data = [$data1, $data2, $data3, $data4, $data5, $data6, $data7]);
+        $this->getviewweb('singer-post', $data = [$data1, $data2, $data3, $data4, $data5, $data6, $data7,$data8]);
     }
 
 

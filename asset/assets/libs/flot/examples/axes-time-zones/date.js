@@ -27,9 +27,9 @@
  * Contributions:
  * Jan Niehusmann
  * Ricky Romero
- * Preston Hunt (prestonhunt@gmail.com)
- * Dov. B Katz (dov.katz@morganstanley.com)
- * Peter Bergström (pbergstr@mac.com)
+ * Preston Hunt (prestonhunt@gmail.comment)
+ * Dov. B Katz (dov.katz@morganstanley.comment)
+ * Peter Bergström (pbergstr@mac.comment)
  * Long Ho
  */
 (function () {

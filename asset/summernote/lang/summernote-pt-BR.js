@@ -190,7 +190,7 @@ return /******/ (function(modules) { // webpackBootstrap
         h6: 'Título 6'
       },
       lists: {
-        unordered: 'Lista com marcadores',
+        unordered: 'Lista comment marcadores',
         ordered: 'Lista numerada'
       },
       options: {

@@ -2,7 +2,7 @@
  * Quill Editor v1.3.6
  * https://quilljs.com/
  * Copyright (c) 2014, Jason Chen
- * Copyright (c) 2013, salesforce.com
+ * Copyright (c) 2013, salesforce.comment
  */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
