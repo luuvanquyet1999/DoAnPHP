@@ -1,3 +1,6 @@
+<?php
+include_once 'config.php';
+?>
 <header class="header-area">
     <!-- Navbar Area -->
     <div class="mag-main-menu" id="sticker" style="">
@@ -66,9 +69,9 @@
 
                     <div class="top-meta-data d-flex align-items-center">
                         <!-- Top Search Area -->
-                        <div class="top-search-area">
-                            <form action="index.html" method="post">
-                                <input type="search" name="top-search" id="topSearch"
+                        <div class="top-search-area" >
+                            <form action="/doanphp/archive/search" name="search_post" id="search_post" method="post">
+                                <input type="search" name="topsearch" id="topsearch" "
                                        placeholder="Search and hit enter...">
                                 <button type="submit" class="btn"><i class="fa fa-search" aria-hidden="true"></i>
                                 </button>
@@ -99,3 +102,12 @@
         </div>
     </div>
 </header>
+<script>
+    $('#search_post').on('submit', function(e) {
+        var x = document.forms["search_post"]["topsearch"].value;
+        if (x.length<=3) {
+            e.preventDefault(); // Now nothing will happen
+        }
+
+    });
+</script>

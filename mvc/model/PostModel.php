@@ -49,7 +49,7 @@ GROUP BY CategoryName  HAVING c > 0 order by c desc";
     function XuHuong()
     {
         $query = "SELECT PostTitle , CategoryName ,PostImage ,PostLink
-                FROM lph_post WHERE PostInfo = 'Xu hướng' AND Active = 1";
+                FROM lph_post WHERE PostInfo = 1 AND Active = 1";
         $result = $this->mysql->query($query);
         $data = [];
         while ($row = mysqli_fetch_array($result)) {
@@ -221,5 +221,28 @@ GROUP BY CategoryName  ORDER BY PostId DESC LIMIT 10";
         }
         return $data;
     }
+
+    //search
+    function Search1(){
+        $query = "SELECT CategoryName ,PostImage ,PostCreateDate, PostTitle ,PostSummary ,PostLink FROM lph_post
+        WHERE Active = 1 ORDER BY PostId DESC";
+        $result = $this->mysql->query($query);
+        $data = [];
+        while ($row = mysqli_fetch_array($result)) {
+            array_push($data, [$row[0], $row[1], $row[2], $row[3], $row[4],$row[5]]);
+        }
+        return $data;
+    }
+    function GetArchiveSearch($value){
+        $query = "SELECT CategoryName ,PostImage ,PostCreateDate, PostTitle ,PostSummary ,PostLink FROM lph_post  WHERE
+                    PostTitle = '$value' AND Active =1 ORDER BY PostId DESC";
+        $result = $this->mysql->query($query);
+        $data = [];
+        while ($row = mysqli_fetch_array($result)) {
+            array_push($data, [$row[0], $row[1], $row[2], $row[3], $row[4],$row[5]]);
+        }
+        return $data;
+    }
+    //search
 }
 

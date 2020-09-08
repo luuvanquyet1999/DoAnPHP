@@ -1,104 +1,109 @@
 <?php
-require SYSTEM_PATH . "/Model/AdminSlideModel.php";
+require SYSTEM_PATH . "/Model/AdminPostModel.php";
 class AdminSlideController
 {
     private $SlideModel;
 
     public function __construct()
     {
-        $this->SlideModel = new AdminSlideModel();
+        $this->SlideModel = new AdminPostModel();
     }
-    function View()
+    function ViewXuHuong()
     {
         if (isset($_SESSION['userAdmin'])) {
             $user = $_SESSION['userAdmin'];
-            $data = $this->SlideModel->GetAll();
+            $data = $this->SlideModel->GetSlide();
             require SYSTEM_PATH . "/View/Admin/Slide/List.php";
         } else {
             require_once SYSTEM_PATH . "/View/Admin/Login.php";
         }
     }
-    function Add()
+    function ViewHot()
     {
-        //session_start();
         if (isset($_SESSION['userAdmin'])) {
             $user = $_SESSION['userAdmin'];
-            $data = $this->SlideModel->GetAll();
+            $data = $this->SlideModel->GetSlide();
             require SYSTEM_PATH . "/View/Admin/Slide/Add.php";
         } else {
             require_once SYSTEM_PATH . "/View/Admin/Login.php";
         }
     }
-    function SaveAdd()
-    {
-        if ($_FILES['slide_image']['error'] > 0) {
-            echo 'Vui lòng chọn file';
-        } else {
-            $file_name = $_FILES['slide_image']['name'];
-            $size = $_FILES['slide_image']['size'];
-            $slide_id = $_POST["slide_id"];
-            $Active = $_POST["Active"];
-            //lấy đường dẫn tạm lưu nội dung file:
-            $file_tmp = $_FILES['slide_image']['tmp_name'];
-            //tạo đường dẫn lưu file trên host:
-            $path = "fileUpload/Slide/" . $file_name;
-            $slide_image = $path;
-            //upload nội dung file từ đường dẫn tạm vào đường dẫn vừa tạo:
-            move_uploaded_file($file_tmp, $path);
-            $result = $this->SlideModel->Insert(new Slide($slide_id, $slide_image, $Active));
-        }
-        if ($result == true)
-            header('location: index.php?c=AdminSlide&a=View&r=1');
-        else
-            header('location: index.php?c=AdminSlide&a=View&r=0');
-
-        require SYSTEM_PATH . "/View/Admin/Slide/Add.php";
-    }
-    function Delete()
-    {
-        $slide_id = $_GET["slide_id"];
-
-        $result = $this->SlideModel->Delete($slide_id);
-        if ($result == true)
-            header('location: index.php?c=AdminSlide&a=View&r=1');
-        else
-            header('location: index.php?c=AdminSlide&a=View&r=0');
-    }
-    function Update()
-    {
-        //session_start();
-        if (isset($_SESSION['userAdmin'])) {
-            $user = $_SESSION['userAdmin'];
-            $slide_id = $_GET['slide_id'];
-            $slide = $this->SlideModel->GetById($slide_id);
-            require SYSTEM_PATH . "/View/Admin/Slide/Update.php";
-        } else {
-            require_once SYSTEM_PATH . "/View/Admin/Login.php";
+    // Update Xu hướng
+    function UpdateXuHuong(){
+        if (!empty($_POST['duyet']))
+        {
+            if(!empty($_POST['array'])) {
+                foreach($_POST['array'] as $value){
+                    $result = $this->SlideModel->UpdateXuHuong($value);
+                    if ($result == true)
+                    {
+                        header('location:index.php?c=AdminSlide&a=ViewXuHuong&r=1');
+                    }else{
+                        header('location:index.php?c=AdminSlide&a=ViewXuHuong&r=0');
+                    }
+                }
+            }
+            else{
+                header('location:index.php?c=AdminSlide&a=ViewXuHuong&r=2');
+            }
+        }else{
+            $this->UpdateXuHuong2();
         }
     }
-    function SaveUpdate()
+    //---xóa khỏi bài phổ biến
+    function UpdateXuHuong2()
     {
-        if ($_FILES['slide_image']['error'] > 0) {
-            echo 'Vui lòng chọn file';
-        } else {
-            $file_name = $_FILES['slide_image']['name'];
-            $size = $_FILES['slide_image']['size'];
-            $slide_id = $_POST["slide_id"];
-            $Active = $_POST["Active"];
-            //lấy đường dẫn tạm lưu nội dung file:
-            $file_tmp = $_FILES['slide_image']['tmp_name'];
-            //tạo đường dẫn lưu file trên host:
-            $path = "fileUpload/Slide/" . $file_name;
-            $slide_image = $path;
-            // echo $slide_image;
-            // die();
-            //upload nội dung file từ đường dẫn tạm vào đường dẫn vừa tạo:
-            move_uploaded_file($file_tmp, $path);
-            $result = $this->SlideModel->Update(new Slide($slide_id, $slide_image, $Active));
+        if(!empty($_POST['array'])) {
+            foreach($_POST['array'] as $value){
+                $result = $this->SlideModel->XoaXuHuong($value);
+                if ($result == true)
+                {
+                    header('location:index.php?c=AdminSlide&a=ViewXuHuong&r=1');
+                }else{
+                    header('location:index.php?c=AdminSlide&a=ViewXuHuong&r=0');
+                }
+            }
+        }else{
+            header('location:index.php?c=AdminSlide&a=ViewXuHuong&r=2');
         }
-        if ($result == true)
-            header('location: index.php?c=AdminSlide&a=View&r=1');
-        else
-            header('location: index.php?c=AdminSlide&a=View&r=0');
+    }
+    // Update Xu hướng
+    function UpdateHot(){
+        if (!empty($_POST['duyet']))
+        {
+            if(!empty($_POST['array'])) {
+                foreach($_POST['array'] as $value){
+                    $result = $this->SlideModel->UpdateHot($value);
+                    if ($result == true)
+                    {
+                        header('location:index.php?c=AdminSlide&a=ViewHot&r=1');
+                    }else{
+                        header('location:index.php?c=AdminSlide&a=ViewHot&r=0');
+                    }
+                }
+            }
+            else{
+                header('location:index.php?c=AdminSlide&a=ViewHot&r=2');
+            }
+        }else{
+            $this->UpdateHot2();
+        }
+    }
+    //---xóa khỏi bài phổ biến
+    function UpdateHot2()
+    {
+        if(!empty($_POST['array'])) {
+            foreach($_POST['array'] as $value){
+                $result = $this->SlideModel->XoaHot($value);
+                if ($result == true)
+                {
+                    header('location:index.php?c=AdminSlide&a=ViewHot&r=1');
+                }else{
+                    header('location:index.php?c=AdminSlide&a=ViewHot&r=0');
+                }
+            }
+        }else{
+            header('location:index.php?c=AdminSlide&a=ViewHot&r=2');
+        }
     }
 }

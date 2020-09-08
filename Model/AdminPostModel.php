@@ -42,7 +42,7 @@ class AdminPostModel extends DB
         $result = $this->mysql->query($query);
         $data = [];
         foreach ($result->fetch_all() as $value) {
-            array_push($data, new Post($value[0], $value[1], $value[2], $value[3], $value[4], $value[5], $value[6], $value[7], $value[10], $value[12]));
+            array_push($data, new Post($value[0], $value[1], $value[2], $value[3], $value[4], $value[5], $value[6], $value[7], $value[10] ,$value[12]));
         }
         return $data;
     }
@@ -130,4 +130,28 @@ class AdminPostModel extends DB
         $result = $this->mysql->query("update lph_post set PostHot = 0 where PostId = $id");
         return $result;
     }
+    //Up date bài viet xu huong
+    function UpdateXuHuong($id)
+    {
+        $result = $this->mysql->query("update lph_post set PostInfo = 1 where PostId = $id");
+        printf("Query failed: %s\n", mysqli_connect_error());
+        return $result;
+    }
+    function XoaXuHuong($id)
+    {
+        $result = $this->mysql->query("update lph_post set PostInfo = 0 where PostId = $id");
+        return $result;
+    }
+    // slide
+    function GetSlide()
+    {
+        $query = "SELECT PostId , PostTitle ,PostCreateDate ,CategoryName , Username ,PostInfo ,PostHot FROM lph_post WHERE Active = 1 ORDER BY PostId DESC";
+        $result = $this->mysql->query($query);
+        $data = [];
+        while ($row = mysqli_fetch_array($result)) {
+            array_push($data, [$row[0], $row[1], $row[2], $row[3], $row[4],$row[5],$row[6]]);
+        }
+        return $data;
+    }
+    //slide
 }

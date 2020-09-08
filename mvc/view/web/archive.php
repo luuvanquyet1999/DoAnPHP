@@ -1,7 +1,7 @@
 <?php
-    include_once './mvc/view/config.php';
-    include_once './mvc/view/setlink.php';
-    include_once './mvc/view/checkSeseson.php';
+include_once './mvc/view/config.php';
+include_once './mvc/view/setlink.php';
+include_once './mvc/view/checkSeseson.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,6 +16,16 @@
     <link href="<?php echo CSSDIR?>css/buzina-pagination.min.css" rel="stylesheet" type="text/css">
     <!-- Favicon -->
     <?php include_once  './mvc/view/link.php'?>
+    <style>
+        .pagination {
+            margin-bottom: 20px;
+            display: -ms-flexbox;
+            display: flex;
+            padding-left: 0;
+            list-style: none;
+            border-radius: .25rem;
+        }
+    </style>
 </head>
 
 <body>

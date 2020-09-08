@@ -1,7 +1,7 @@
 <?php
-require_once './mvc/view/config.php';
-include_once './mvc/view/setlink.php';
-include_once './mvc/view/checkSeseson.php';
+    include_once './mvc/view/config.php';
+    include_once './mvc/view/setlink.php';
+    include_once './mvc/view/checkSeseson.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">

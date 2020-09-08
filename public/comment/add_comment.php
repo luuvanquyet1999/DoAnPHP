@@ -11,13 +11,18 @@ $comment_content = '';
 
 if(empty($_POST["comment_post"]))
 { $error ='<p class="text-danger">'.$_POST["comment_post"].'</p>'; }
-if(empty($_POST["comment_name"]))
-{
-    $error .= '<p class="text-danger">Vui lòng nhập tên</p>';
-}
-else
-{
-    $comment_name = $_POST["comment_name"];
+
+if (isset($_SESSION["username"])){
+    $comment_name = $_SESSION["username"];
+}else{
+    if(empty($_POST["comment_name"]))
+    {
+        $error .= '<p class="text-danger">Vui lòng nhập tên</p>';
+    }
+    else
+    {
+        $comment_name = $_POST["comment_name"];
+    }
 }
 
 if(empty($_POST["comment_content"]))
