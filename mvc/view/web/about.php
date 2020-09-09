@@ -1,7 +1,7 @@
 <?php
-    include_once './mvc/view/config.php';
-    include_once './mvc/view/setlink.php';
-    include_once './mvc/view/checkSeseson.php';
+include_once './mvc/view/config.php';
+include_once './mvc/view/setlink.php';
+include_once './mvc/view/checkSeseson.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Fuho Fc &amp; About</title>
-    <?php include_once  './mvc/view/link.php'?>
+    <?php include_once  './mvc/view/link.php' ?>
 </head>
 
 <body>
@@ -29,7 +29,7 @@
     <!-- ##### Header Area End ##### -->
 
     <!-- ##### Breadcrumb Area Start ##### -->
-    <section class="breadcrumb-area bg-img bg-overlay" style="background-image: url(<?php echo CSSDIR?>img/bg-img/40.jpg);">
+    <section class="breadcrumb-area bg-img bg-overlay" style="background-image: url(<?php echo CSSDIR ?>img/bg-img/40.jpg);">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
@@ -70,12 +70,12 @@
                         <?php
                         $stt = 1;
                         foreach ($data[2] as $value) {
-                            ?>
-                        <div class="section-heading">
-                                <h5><?=$value[1]?></h5>
-                        </div>
-                             <p><?=$value[2]?></p>
-                        <p><?=$value[3]?></p>
+                        ?>
+                            <div class="section-heading">
+                                <h5><?= $value[1] ?></h5>
+                            </div>
+                            <p><?= $value[2] ?></p>
+                            <p><?= $value[3] ?></p>
                             <img class="mt-15" src="<?php echo Home; ?><?= $value[4] ?>" alt="">
                         <?php
                         }
@@ -87,23 +87,23 @@
                         <?php
                         $stt = 1;
                         foreach ($data[1] as $value) {
-                            ?>
+                        ?>
                             <div class="single-team-member d-flex align-items-center">
                                 <div class="team-member-thumbnail">
                                     <img src="<?php echo Home; ?><?= $value[1] ?>" alt="">
                                     <div class="social-btn" id="linkfacebook">
-                                        <a href="<?=$value[3]?>"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                        <a href="<?= $value[3] ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                                         <a href="#linkfacebook"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                                         <a href="#linkfacebook"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                                 <div class="team-member-content">
-                                    <h6><?=$value[0]?></h6>
-                                    <span><?=$value[2]?></span>
-                                    <p><?=$value[4]?></p>
+                                    <h6><?= $value[0] ?></h6>
+                                    <span><?= $value[2] ?></span>
+                                    <p><?= $value[4] ?></p>
                                 </div>
                             </div>
-                            <?php
+                        <?php
                         }
                         ?>
                     </div>
@@ -126,9 +126,9 @@
                                 $stt = 1;
 
                                 foreach ($data[0] as $value) {
-                                    ?>
-                                    <li><a href="<?php echo Home;?>archive/<?= makeLink($value[0])?>"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i> <?= $value[0]?></span> <span><?= $value[1]?></span></a></li>
-                                    <?php
+                                ?>
+                                    <li><a href="<?php echo Home; ?>archive/<?= makeLink($value[0]) ?>"><span><i class="fa fa-angle-double-right" aria-hidden="true"></i> <?= $value[0] ?></span> <span><?= $value[1] ?></span></a></li>
+                                <?php
                                 }
                                 ?>
                             </ul>
@@ -140,28 +140,14 @@
                         </div>
 
                         <!-- Sidebar Widget -->
-                        <div class="single-sidebar-widget p-30">
-                            <!-- Section Title -->
-                            <div class="section-heading">
-                                <h5>Newsletter</h5>
-                            </div>
-
-                            <div class="newsletter-form">
-                                <p>Subscribe our newsletter gor get notification about new updates, information discount, etc.</p>
-                                <form action="#" method="get">
-                                    <input type="search" name="widget-search" placeholder="Enter your email">
-                                    <button type="submit" class="btn mag-btn w-100">Subscribe</button>
-                                </form>
-                            </div>
-
-                        </div>
+                        
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <?php require_once './mvc/view/pages/footer.php'; ?>
-    <?php require_once './mvc/view/script.php'?>
+    <?php require_once './mvc/view/script.php' ?>
 
 </body>
 
