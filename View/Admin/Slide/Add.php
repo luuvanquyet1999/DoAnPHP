@@ -90,7 +90,7 @@
                                                             <th>Ngày viết</th>
                                                             <th>Loại bài viết</th>
                                                             <th>Người viết</th>
-                                                            <th style="width:18%">Bài viết xu hot</th>
+                                                            <th style="width:18%">Bài viết phổ biến</th>
                                                         </tr>
                                                         </thead>
                                                         <tbody>
