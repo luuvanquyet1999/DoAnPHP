@@ -97,9 +97,7 @@ include_once './mvc/view/checkSeseson.php';
                                 <a href="<?php echo Home;?>post/<?= ($value[5])?>" class="post-title"><?= $value[3]?></a>
                                 <!-- Post Meta -->
                                 <div class="post-meta-2">
-                                    <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
-                                    <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
-                                    <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                                    <a href="<?php echo Home;?>post/<?= ($value[5])?>"><i class="fa fa-eye" aria-hidden="true"></i> Lượt Xem <?= $value[6]?> </a>
                                 </div>
                                 <p><?= $value[4]?></p>
                             </div>

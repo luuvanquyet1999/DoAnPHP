@@ -44,19 +44,22 @@ include_once 'config.php';
                                 <li><a href="#">Danh sách</a>
                                     <div class="megamenu">
                                         <ul class="single-mega cn-col-4">
-                                            <li><a href="<?php echo Home; ?>archive/tin-noi-bat">Tin nổi bật</a></li>
-                                            <li><a href="<?php echo Home; ?>archive/thoi-trang">Thời Trang</a></li>
-                                            <li><a href="<?php echo Home; ?>archive/thoi-trang">Thời Trang</a></li>
+                                            <li><a href="<?php echo Home; ?>archive/doi-song">Đời Sống</a></li>
+                                            <li><a href="<?php echo Home; ?>archive/the-thao">Thể Thao</a></li>
+                                            <li><a href="<?php echo Home; ?>archive/suc-khoe">Sức Khỏe</a></li>
+                                            <li><a href="<?php echo Home; ?>archive/chinh-tri">Chính Trị</a></li>
                                         </ul>
                                         <ul class="single-mega cn-col-4">
-                                            <li><a href="<?php echo Home; ?>archive/the-thao"">Thể Thao</a></li>
-                                            <li><a href="<?php echo Home; ?>archive">Bài viết</a></li>
-                                            <li><a href="video-post.html">Single Video Post</a></li>
+                                            <li><a href="<?php echo Home; ?>archive/the-thao"">Thời Trang</a></li>
+                                            <li><a href="<?php echo Home; ?>archive/xe">Xe</a></li>
+                                            <li><a href="<?php echo Home; ?>archive/phap-luat">Pháp Luật</a></li>
+                                            <li><a href="<?php echo Home; ?>archive/giai-tri">Thế Giới</a></li>
                                         </ul>
                                         <ul class="single-mega cn-col-4">
-                                            <li><a href="<?php echo Home; ?>archive/giai-tri">Giải Trí</a></li>
-                                            <li><a href="<?php echo Home; ?>archive"">Đọc ngay</a></li>
-                                            <li><a href="<?php echo Home; ?>login">Đăng nhập</a></li>
+                                            <li><a href="<?php echo Home; ?>archive/du-lich">Du Lịch</a></li>
+                                            <li><a href="<?php echo Home; ?>archive/quan-su">Quân Sự</a></li>
+                                            <li><a href="<?php echo Home; ?>archive/giao-duc">Giáo Dục</a></li>
+                                            <li><a href="<?php echo Home; ?>login">Đăng Nhập</a></li>
                                         </ul>
                                     </div>
                                 </li>
@@ -67,7 +70,7 @@ include_once 'config.php';
                         <!-- Nav End -->
                     </div>
 
-                    <div class="top-meta-data d-flex align-items-center">
+                    <div class="top-meta-data d-flex align-items-center" style="display: block">
                         <!-- Top Search Area -->
                         <div class="top-search-area" >
                             <form action="/doanphp/archive/search" name="search_post" id="search_post" method="post">
@@ -80,7 +83,7 @@ include_once 'config.php';
                     </div>
                     <div class="top-meta-data d-flex align-items-center">
                             <?php
-                            if (!isset($_SESSION["username"])){
+                            if (!isset($_SESSION["fullname"])){
                                 ?>
                                 <a href="<?php echo Home; ?>login" class="login-btn"><i class="fa fa-user"
                                                                                         aria-hidden="true"></i></a>
@@ -89,7 +92,7 @@ include_once 'config.php';
                                 ?>
                                 <a class="submit-video show " type="button" id="dropdownMenuButton" data-toggle="dropdown"
                                    aria-haspopup="true" aria-expanded="false">
-                                    <?= $_SESSION["username"] ?>
+                                    <?= $_SESSION["fullname"] ?>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                     <a class="dropdown-item" href="<?php echo Home; ?>logout">Đăng xuất</a>

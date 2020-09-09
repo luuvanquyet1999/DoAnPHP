@@ -48,8 +48,8 @@ class AdminPostModel extends DB
     }
     function Insert(Post $post)
     {
-        $query = "INSERT INTO lph_post (PostTitle, PostSummary, PostContent, PostImage, PostCreateDate, CategoryName, Username, PostStatus, Active, PostLink, PostHot) 
-        VALUES ('$post->post_title','$post->post_summary','$post->post_content','$post->post_image','$post->post_createdate','$post->category_name','$post->username','0','1','$post->post_link',0)";
+        $query = "INSERT INTO lph_post (PostTitle, PostSummary, PostContent, PostImage, PostCreateDate, CategoryName, Username, PostStatus, Active, PostLink, PostHot,PostView) 
+        VALUES ('$post->post_title','$post->post_summary','$post->post_content','$post->post_image','$post->post_createdate','$post->category_name','$post->username','0','1','$post->post_link',0,1)";
         $result = $this->mysql->query($query);
         // print_r($result);
         // die();

@@ -13,7 +13,7 @@ if(empty($_POST["comment_post"]))
 { $error ='<p class="text-danger">'.$_POST["comment_post"].'</p>'; }
 
 if (isset($_SESSION["username"])){
-    $comment_name = $_SESSION["username"];
+    $comment_name = $_SESSION["fullname"];
 }else{
     if(empty($_POST["comment_name"]))
     {
