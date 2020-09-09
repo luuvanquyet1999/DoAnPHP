@@ -63,7 +63,7 @@ GROUP BY CategoryName  HAVING c > 0 order by c desc";
         $query = "SELECT PostTitle ,PostImage ,PostLink
                         FROM lph_post
                         WHERE
-                    PostInfo = 'Hot' AND Active = 1";
+                    PostHot = 1 AND Active = 1";
         $result = $this->mysql->query($query);
         $data = [];
         while ($row = mysqli_fetch_array($result)) {
