@@ -36,17 +36,19 @@
 					<form class="form-horizontal m-t-20" id="loginform" method="post" action="index.php?c=AdminIndex&a=Login">
 						<div class="row p-b-30">
 							<div class="col-12">
-								<?php
-								if (isset($_GET['r'])) {
-									if ($_GET['r'] == 0) {
-										echo "Tên đăng nhập hoặc mật khẩu không đúng";
-									} else if ($_GET['r'] == 1) {
-										echo "Vui lòng không để trống";
-									} else if ($_GET['r'] == 2) {
-										echo "<script type='text/javascript'>alert('Success. Xin mời đăng nhập vào hệ thống!');</script>";
+								<p style="color:red">
+									<?php
+									if (isset($_GET['r'])) {
+										if ($_GET['r'] == 0) {
+											echo "Tên đăng nhập hoặc mật khẩu không đúng";
+										} else if ($_GET['r'] == 2) {
+											echo "<script type='text/javascript'>alert('Success. Xin mời đăng nhập vào hệ thống!');</script>";
+										}else if ($_GET['r'] == 1){
+											echo "<script type='text/javascript'>alert('Success. Bạn đã đăng nhập vào hệ thống!');</script>";
+										}
 									}
-								}
-								?>
+									?>
+								</p>
 								<div class="input-group mb-3">
 									<div class="input-group-prepend">
 										<span class="input-group-text bg-success text-white" id="basic-addon1"><i class="ti-user"></i></span>

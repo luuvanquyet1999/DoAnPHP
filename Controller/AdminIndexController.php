@@ -39,7 +39,7 @@ class AdminIndexController
         $result = $this->indexModel->loginRecord($user, $pass);
         if (mysqli_num_rows($result) > 0) {
             $_SESSION['userAdmin'] = $user;
-            header('location:index.php?c=AdminIndex&a=trangchu');
+            header('location:index.php?c=AdminIndex&a=trangchu&r=1');
         } else {
             header('location:index.php?c=AdminIndex&a=View&r=0');
         }

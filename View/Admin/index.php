@@ -32,6 +32,13 @@
         ?>
         <div class="page-wrapper">
             <div class="container-fluid">
+                <?php
+                if (isset($_GET['r'])) {
+                    if ($_GET['r'] == 1) {
+                        echo "<script type='text/javascript'>alert('Success. Bạn đã đăng nhập vào hệ thống!');</script>";
+                    }
+                }
+                ?>
                 <div class="row">
                     <div class="col-md-6 col-lg-2 col-xlg-3">
                         <div class="card card-hover">
@@ -80,7 +87,7 @@
                                     <div class="col-lg-9">
                                         <div class="flot-chart">
                                             <div class="img">
-                                            <img src="view/Admin/images/team_debug.jpg" alt="">
+                                                <img src="view/Admin/images/team_debug.jpg" alt="">
                                             </div>
                                         </div>
                                     </div>
