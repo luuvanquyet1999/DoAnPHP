@@ -5,7 +5,7 @@
             <div class="col-12 col-sm-6 col-lg-4">
                 <div class="footer-widget">
                     <!-- Logo -->
-                    <a href="index.html" class="foo-logo"><img src="<?php echo CSSDIR?>img/core-img/logo4.png" alt=""></a>
+                    <a href="<?php echo Home; ?>WebsiteHome" class="foo-logo"><img src="<?php echo CSSDIR?>img/core-img/logo4.png" alt=""></a>
                     <?php
                     $mysql = new mysqli('112.78.2.94', 'super_tranducbo', 'abc123#!', 'superfr_tranducbo');
                     $mysql->query("SET NAMES 'utf8'");
@@ -75,7 +75,7 @@
                     </p>
                 </div>
                 <div class="col-12 col-sm-3">
-                   <h6 class="copywrite-text" ><b>Thanks for watching</b></h6>
+                   <h6 class="copywrite-text" style="color: #ed3974;"><b>Thanks for watching</b></h6>
                 </div>
                 <div class="col-12 col-sm-4">
                     <nav class="footer-nav">
