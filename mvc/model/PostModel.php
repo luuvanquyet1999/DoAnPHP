@@ -63,7 +63,7 @@ GROUP BY CategoryName  HAVING c > 0 order by c desc";
         $query = "SELECT PostTitle ,PostImage ,PostLink
                         FROM lph_post
                         WHERE
-                    PostInfo = 'Hot' AND Active = 1";
+                    PostHot = 1 AND Active = 1";
         $result = $this->mysql->query($query);
         $data = [];
         while ($row = mysqli_fetch_array($result)) {
@@ -136,13 +136,13 @@ GROUP BY CategoryName  ORDER BY PostId DESC LIMIT 10";
 
     function GetMoiNhat()
     {
-        $query = "SELECT CategoryName ,PostImage ,PostCreateDate, PostTitle ,PostSummary ,PostLink
+        $query = "SELECT CategoryName ,PostImage ,PostCreateDate, PostTitle ,PostSummary ,PostLink ,PostView
                 FROM lph_post WHERE Active =1
                     ORDER BY PostId DESC ";
         $result = $this->mysql->query($query);
         $data = [];
         while ($row = mysqli_fetch_array($result)) {
-            array_push($data, [$row[0], $row[1], $row[2], $row[3], $row[4],$row[5]]);
+            array_push($data, [$row[0], $row[1], $row[2], $row[3], $row[4],$row[5],$row[6]]);
         }
         return $data;
     }
@@ -152,12 +152,12 @@ GROUP BY CategoryName  ORDER BY PostId DESC LIMIT 10";
     // get/archive/
     function GetArchive($value)
     {
-        $query = "SELECT CategoryName ,PostImage ,PostCreateDate, PostTitle ,PostSummary ,PostLink FROM lph_post  WHERE
+        $query = "SELECT CategoryName ,PostImage ,PostCreateDate, PostTitle ,PostSummary ,PostLink ,PostView FROM lph_post  WHERE
                     CategoryName = '$value' AND Active =1 ORDER BY PostId DESC";
         $result = $this->mysql->query($query);
         $data = [];
         while ($row = mysqli_fetch_array($result)) {
-            array_push($data, [$row[0], $row[1], $row[2], $row[3], $row[4],$row[5]]);
+            array_push($data, [$row[0], $row[1], $row[2], $row[3], $row[4],$row[5],$row[6]]);
         }
         return $data;
     }
@@ -244,5 +244,14 @@ GROUP BY CategoryName  ORDER BY PostId DESC LIMIT 10";
         return $data;
     }
     //search
+    //countview
+    //count view
+    function CountView($value)
+    {
+        $query = "UPDATE lph_post SET PostView=PostView+1
+        WHERE  PostLink ='$value'";
+        $result = $this->mysql->query($query);
+        return $result;
+    }
 }
 

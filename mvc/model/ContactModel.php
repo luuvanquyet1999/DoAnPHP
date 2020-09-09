@@ -37,7 +37,7 @@ class SendContact
 class ContactModel extends  DB{
     function GetAll()
     {
-        $query = "SELECT * FROM lph_contact ";
+        $query = "SELECT * FROM lph_contact WHERE Active =1 ";
         $result = $this->mysql->query($query);
         $data = [];
         foreach ($result->fetch_all() as $value) {

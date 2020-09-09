@@ -36,8 +36,9 @@ class login extends Controller
                    if ($username==$value[0]&&$password==$value[1]){
                        if ($value[2]==1){
                            $_SESSION['username'] = $username;
+                           $_SESSION['fullname'] = $value[4];
                            if (!$value[3]==0){
-                               header('Location:/doanphp/uploadpost');
+                               header('Location:/doanphp/WebsiteHome');
                            }else{
                                header('Location:/doanphp/WebsiteHome');
                                }

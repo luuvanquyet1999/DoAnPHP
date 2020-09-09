@@ -42,6 +42,7 @@ class post extends Controller
         if (empty($data2)) {
             $this->View();
         }
+        $countview = $post->CountView($value);
         $y = '';
         $data8 = '';
         foreach ($data2 as $value) {

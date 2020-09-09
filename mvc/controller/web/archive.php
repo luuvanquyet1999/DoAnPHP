@@ -26,7 +26,6 @@ class  Archive extends Controller
             foreach ($cate as $key) {
                 if (strlen(strstr($this->make($key[0]),$this->make($value) )) > 0) {
                         $value=$key[0];
-                        echo $value;
                 }
             }
         }
