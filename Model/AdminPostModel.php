@@ -14,7 +14,7 @@ class Post
     public $post_hot;
 
 
-    function __construct($post_id, $post_title, $post_summary, $post_content, $post_image, $post_createdate, $category_name, $username, $post_link,$post_hot)
+    function __construct($post_id, $post_title, $post_summary, $post_content, $post_image, $post_createdate, $category_name, $username, $post_link, $post_hot)
     {
         $this->post_id = $post_id;
         $this->post_title = $post_title;
@@ -42,7 +42,7 @@ class AdminPostModel extends DB
         $result = $this->mysql->query($query);
         $data = [];
         foreach ($result->fetch_all() as $value) {
-            array_push($data, new Post($value[0], $value[1], $value[2], $value[3], $value[4], $value[5], $value[6], $value[7], $value[10] ,$value[12]));
+            array_push($data, new Post($value[0], $value[1], $value[2], $value[3], $value[4], $value[5], $value[6], $value[7], $value[10], $value[12]));
         }
         return $data;
     }
@@ -149,9 +149,23 @@ class AdminPostModel extends DB
         $result = $this->mysql->query($query);
         $data = [];
         while ($row = mysqli_fetch_array($result)) {
-            array_push($data, [$row[0], $row[1], $row[2], $row[3], $row[4],$row[5],$row[6]]);
+            array_push($data, [$row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6]]);
         }
         return $data;
     }
     //slide
+
+    //func get id max post
+    function GetMaxID()
+    {
+        $query = "SELECT PostId FROM lph_post ORDER BY PostId DESC LIMIT 1";
+        $result = $this->mysql->query($query);
+        $data = [];
+        while ($row = mysqli_fetch_array($result)) {
+            array_push($data, [$row[0]]);
+        }
+        // $maxID = $data[0];
+        // return  $maxID;
+        return $data;
+    }
 }
