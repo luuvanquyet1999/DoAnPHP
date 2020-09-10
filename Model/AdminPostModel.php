@@ -143,9 +143,19 @@ class AdminPostModel extends DB
         return $result;
     }
     // slide
-    function GetSlide()
+    function GetXuHuong()
     {
-        $query = "SELECT PostId , PostTitle ,PostCreateDate ,CategoryName , Username ,PostInfo ,PostHot FROM lph_post WHERE Active = 1 ORDER BY PostId DESC";
+        $query = "SELECT PostId , PostTitle ,PostCreateDate ,CategoryName , Username ,PostInfo ,PostHot FROM lph_post WHERE Active = 1 ORDER BY PostInfo DESC, PostId DESC";
+        $result = $this->mysql->query($query);
+        $data = [];
+        while ($row = mysqli_fetch_array($result)) {
+            array_push($data, [$row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6]]);
+        }
+        return $data;
+    }
+    function GetPhoBien()
+    {
+        $query = "SELECT PostId , PostTitle ,PostCreateDate ,CategoryName , Username ,PostInfo ,PostHot FROM lph_post WHERE Active = 1 ORDER BY PostHot DESC, PostId DESC";
         $result = $this->mysql->query($query);
         $data = [];
         while ($row = mysqli_fetch_array($result)) {

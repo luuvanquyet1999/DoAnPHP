@@ -12,7 +12,7 @@ class AdminSlideController
     {
         if (isset($_SESSION['userAdmin'])) {
             $user = $_SESSION['userAdmin'];
-            $data = $this->SlideModel->GetSlide();
+            $data = $this->SlideModel->GetXuHuong();
             require SYSTEM_PATH . "/View/Admin/Slide/List.php";
         } else {
             require_once SYSTEM_PATH . "/View/Admin/Login.php";
@@ -22,7 +22,7 @@ class AdminSlideController
     {
         if (isset($_SESSION['userAdmin'])) {
             $user = $_SESSION['userAdmin'];
-            $data = $this->SlideModel->GetSlide();
+            $data = $this->SlideModel->GetPhoBien();
             require SYSTEM_PATH . "/View/Admin/Slide/Add.php";
         } else {
             require_once SYSTEM_PATH . "/View/Admin/Login.php";
