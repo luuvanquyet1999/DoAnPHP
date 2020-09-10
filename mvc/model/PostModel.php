@@ -179,12 +179,12 @@ GROUP BY CategoryName  ORDER BY PostId DESC LIMIT 10";
     // get/post/baiviet
     function GetBaiViet($value)
     {
-        $query = "SELECT PostImage,PostCreateDate,CategoryName,PostTitle,PostContent ,Username , PostLink FROM lph_post 
+        $query = "SELECT PostImage,PostCreateDate,CategoryName,PostTitle,PostContent ,Username , PostLink ,PostId FROM lph_post 
                     WHERE PostLink='$value' ORDER BY PostId DESC LIMIT 1 ";
         $result = $this->mysql->query($query);
         $data = [];
         while ($row = mysqli_fetch_array($result)) {
-            array_push($data, [$row[0], $row[1], $row[2], $row[3], $row[4], $row[5],$row[6]]);
+            array_push($data, [$row[0], $row[1], $row[2], $row[3], $row[4], $row[5],$row[6],$row[7]]);
         }
         return $data;
     }
@@ -234,12 +234,12 @@ GROUP BY CategoryName  ORDER BY PostId DESC LIMIT 10";
         return $data;
     }
     function GetArchiveSearch($value){
-        $query = "SELECT CategoryName ,PostImage ,PostCreateDate, PostTitle ,PostSummary ,PostLink FROM lph_post  WHERE
+        $query = "SELECT CategoryName ,PostImage ,PostCreateDate, PostTitle ,PostSummary ,PostLink ,PostView FROM lph_post  WHERE
                     PostTitle = '$value' AND Active =1 ORDER BY PostId DESC";
         $result = $this->mysql->query($query);
         $data = [];
         while ($row = mysqli_fetch_array($result)) {
-            array_push($data, [$row[0], $row[1], $row[2], $row[3], $row[4],$row[5]]);
+            array_push($data, [$row[0], $row[1], $row[2], $row[3], $row[4],$row[5],$row[6]]);
         }
         return $data;
     }

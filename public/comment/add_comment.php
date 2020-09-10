@@ -2,15 +2,15 @@
 <?php
 session_start();
 $linkpost='';
-    $connect = new PDO('mysql:host=112.78.2.94;dbname=superfr_tranducbo', 'super_tranducbo', 'abc123#!');
-array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'") ;
+    $connect = new PDO('mysql:host=112.78.2.94;dbname=superfr_tranducbo', 'super_tranducbo', 'abc123#!',
+    array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
 //$comment_post='';
 $error = '';
 $comment_name = '';
 $comment_content = '';
 
-if(empty($_POST["comment_post"]))
-{ $error ='<p class="text-danger">'.$_POST["comment_post"].'</p>'; }
+if(empty($_POST["comment_idpost"]))
+{ $error ='<p class="text-danger">'.$_POST["comment_idpost"].'</p>'; }
 
 if (isset($_SESSION["username"])){
     $comment_name = $_SESSION["fullname"];
@@ -32,15 +32,15 @@ if(empty($_POST["comment_content"]))
 else
 {
     $comment_content = $_POST["comment_content"];
-    $comment_post = $_POST["comment_post"];
+    $comment_idpost = $_POST["comment_idpost"];
 }
 
 if($error == '')
 {
     $query = "
  INSERT INTO lph_comment
- (parent_comment_id, comment, comment_sender_name,PostLink)
- VALUES (:parent_comment_id, :comment, :comment_sender_name,:linkpost)
+ (parent_comment_id, comment, comment_sender_name,IdPost)
+ VALUES (:parent_comment_id, :comment, :comment_sender_name,:comment_idpost)
  ";
     $statement = $connect->prepare($query);
     $statement->execute(
@@ -48,12 +48,12 @@ if($error == '')
             ':parent_comment_id' => $_POST["comment_id"],
             ':comment'    => $comment_content,
             ':comment_sender_name' => $comment_name,
-            ':linkpost'=>$comment_post
+            ':comment_idpost'=>$comment_idpost
         )
     );
 
     $error = '<label class="text-success">Đăng thành công</label>';
-    $_SESSION["baiviet"]=$comment_post;
+    $_SESSION["idbaiviet"]=$comment_idpost;
 }
 
 $data = array(

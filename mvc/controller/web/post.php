@@ -45,11 +45,13 @@ class post extends Controller
         $countview = $post->CountView($value);
         $y = '';
         $data8 = '';
+        $data9='';
         foreach ($data2 as $value) {
             $data4 = $value[3];
             $data3 = $value[2];
             $y = $value[5];
             $data8 =$value[6];
+            $data9=$value[7];
         }
         $data6 = $user->GetUserPost($y);
         if (empty($data6)) {
@@ -59,7 +61,7 @@ class post extends Controller
         }
         $data5 = $about->GetAll();
         $data7 = $post->GetBaiVietTT($data3);
-        $this->getviewweb('singer-post', $data = [$data1, $data2, $data3, $data4, $data5, $data6, $data7,$data8]);
+        $this->getviewweb('singer-post', $data = [$data1, $data2, $data3, $data4, $data5, $data6, $data7,$data8,$data9]);
     }
 
 

@@ -161,8 +161,8 @@ require_once './mvc/view/setlink.php';
                                           placeholder="Enter Comment" rows="5"></textarea>
                             </div>
                             <div class="form-group">
-                                <input type="hidden" name="comment_post" id="comment_post"
-                                       value="<?= $data[7] ?>" readonly="'readonly">
+                                <input type="hidden" name="comment_idpost" id="comment_idpost"
+                                       value="<?= $data[8] ?>" readonly="'readonly">
                                 <input type="hidden" name="comment_id" id="comment_id" value="0" readonly="readonly"/>
                                 <input type="submit" name="submit" id="submit" class="btn mag-btn mt-30" type="submit"
                                        value="Submit"/>
@@ -249,50 +249,6 @@ require_once './mvc/view/setlink.php';
 <?php require_once './mvc/view/pages/footer.php'; ?>
 <?php require_once './mvc/view/script.php' ?>
 <?php require_once './mvc/view/script1.php' ?>
-<?php $_SESSION["baiviet"] = $data[7]; ?>
+<?php $_SESSION["idbaiviet"] = $data[8]; ?>
 </body>
 </html>
-<script>
-    $(document).ready(function () {
-        $('#comment_form').on('submit', function (event) {
-            event.preventDefault();
-            var form_data = $(this).serialize();
-            $.ajax({
-                url: "http://localhost/doanphp/public/comment/add_comment.php",
-                method: "POST",
-                data: form_data,
-                dataType: "JSON",
-                success: function (data) {
-                    console.log(data)
-                    if (data.error != '') {
-                        $('#comment_form')[0].reset();
-                        $('#comment_message').html(data.error);
-                        $('#comment_id').val('0');
-                        $('#comment_post').val();
-                        load_comment();
-                    }
-                }
-            })
-        });
-
-        load_comment();
-
-        function load_comment() {
-            $.ajax({
-                url: "http://localhost/doanphp/public/comment/fetch_comment.php",
-                method: "POST",
-                success: function (data) {
-                    $('#display_comment').html(data);
-                }
-            })
-        }
-
-        $(document).on('click', '.reply', function () {
-            var comment_id = $(this).attr("id");
-            $('#comment_id').val(comment_id);
-            $('#comment_name').focus();
-        });
-
-
-    });
-</script>

@@ -44,7 +44,7 @@
                                 class="fas fa-newspaper"></i><span class="hide-menu">Quản lý Slide </span></a>
                     <ul aria-expanded="false" class="collapse  first-level">
                         <li class="sidebar-item"><a href="?c=AdminSlide&a=ViewXuHuong" class="sidebar-link"><i
-                                        class="fa fa-object-group" aria-hidden="true"></i><span class="hide-menu">Xu Hướng</span></a>
+                                        class="fa fa-object-group" aria-hidden="true"></i><span class="hide-menu">Thịnh Hành</span></a>
                         </li>
                         <li class="sidebar-item"><a href="?c=AdminSlide&a=ViewHot" class="sidebar-link"><i
                                         class="fas fa-file-alt"></i><span class="hide-menu">Phổ Biến</span></a></li>

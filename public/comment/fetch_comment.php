@@ -1,12 +1,13 @@
 <?php
 session_start();
-$connect = new PDO('mysql:host=112.78.2.94;dbname=superfr_tranducbo', 'super_tranducbo', 'abc123#!');
-array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'") ;
+$connect = new PDO('mysql:host=112.78.2.94;dbname=superfr_tranducbo',
+    'super_tranducbo', 'abc123#!',
+array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
 $post_id='';
 $post_parent_id='';
 $output = '';
-if (isset($_SESSION["baiviet"])) {
-    $linkpost = $_SESSION["baiviet"];
+if (isset($_SESSION["idbaiviet"])) {
+    $linkpost = $_SESSION["idbaiviet"];
 }else{
     $output ='<p>Bạn cảm thấy bài viết này thế nào ??? </p>
             <a href="#comment_form" class="btn mag-btn mt-30" >Bình luận</a>'
@@ -14,7 +15,7 @@ if (isset($_SESSION["baiviet"])) {
 }
 $query = "
 SELECT * FROM lph_comment 
-WHERE  PostLink ='$linkpost' AND parent_comment_id = '0' 
+WHERE  IdPost ='$linkpost' AND parent_comment_id = '0' 
 ORDER BY comment_id  DESC
 ";
 $statement = $connect->prepare($query);

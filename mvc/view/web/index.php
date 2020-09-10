@@ -97,7 +97,7 @@ include_once './mvc/view/checkSeseson.php';
         <div class="trending-now-posts mb-30">
             <!-- Section Title -->
             <div class="section-heading">
-                <h5>Xu hướng</h5>
+                <h5>Thịnh hành</h5>
             </div>
 
             <div class="trending-post-slides owl-carousel">
