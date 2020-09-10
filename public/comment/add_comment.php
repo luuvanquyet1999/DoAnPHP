@@ -39,8 +39,8 @@ if($error == '')
 {
     $query = "
  INSERT INTO lph_comment
- (parent_comment_id, comment, comment_sender_name,IdPost)
- VALUES (:parent_comment_id, :comment, :comment_sender_name,:comment_idpost)
+ (parent_comment_id, comment, comment_sender_name,IdPost,Active)
+ VALUES (:parent_comment_id, :comment, :comment_sender_name,:comment_idpost,1)
  ";
     $statement = $connect->prepare($query);
     $statement->execute(

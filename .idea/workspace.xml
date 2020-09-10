@@ -20,18 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17c2b371-4641-4c12-aa57-bdca905b3122" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/fileUpload/Admin/admin.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fileUpload/Admin/congvien.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fileUpload/Admin/huyentri.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fileUpload/Admin/vanhien.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/Admin/Slide/List.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/Admin/Slide/List.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/Admin/UserAdmin/Update.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/Admin/UserAdmin/Update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/controller/web/WebsiteHome.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/controller/web/WebsiteHome.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/model/PostModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/model/PostModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/view/pages/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/view/pages/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/view/web/archive.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/view/web/archive.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/view/web/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/view/web/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/comment/add_comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/comment/add_comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/comment/fetch_comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/comment/fetch_comment.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +100,8 @@
       <workItem from="1599659808145" duration="566000" />
       <workItem from="1599704302311" duration="8159000" />
       <workItem from="1599712620521" duration="144000" />
-      <workItem from="1599723360287" duration="1851000" />
+      <workItem from="1599723360287" duration="2010000" />
+      <workItem from="1599733343385" duration="624000" />
     </task>
     <servers />
   </component>

@@ -15,7 +15,7 @@ if (isset($_SESSION["idbaiviet"])) {
 }
 $query = "
 SELECT * FROM lph_comment 
-WHERE  IdPost ='$linkpost' AND parent_comment_id = '0' 
+WHERE  IdPost ='$linkpost'AND Active=1 AND parent_comment_id = '0' 
 ORDER BY comment_id  DESC
 ";
 $statement = $connect->prepare($query);
@@ -57,7 +57,7 @@ echo $output;
 function get_reply_comment($connect, $parent_id = 0, $marginleft = 0)
 {
     $query = "
- SELECT * FROM lph_comment WHERE parent_comment_id = '".$parent_id."'
+ SELECT * FROM lph_comment WHERE Active=1 AND parent_comment_id = '".$parent_id." '
  ";
     $output = '';
     $statement = $connect->prepare($query);
