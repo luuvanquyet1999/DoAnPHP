@@ -15,11 +15,13 @@ class post extends Controller
         $y = '';
         $data8='';
         $data9='';
+        $data10='';
         foreach ($data2 as $value) {
             $data4 = $value[3];
             $y = $value[5];
             $data8=$value[6];
             $data9=$value[2];
+            $data10=$value[7];
         }
         $data5 = $about->GetAll();
         $data6 = $user->GetUserPost($y);
@@ -27,7 +29,7 @@ class post extends Controller
         if (empty($data6)) {
             array_push($data6, ['Admin ', 'fileUpload/Member/huyentri.jpg', 'Bài này mình xạo xạo thôi']);
         }
-        $this->getviewweb('singer-post', $data = [$data1, $data2, $data3, $data4, $data5, $data6,$data7,$data8]);
+        $this->getviewweb('singer-post', $data = [$data1, $data2, $data3, $data4, $data5, $data6,$data7,$data8,$data10]);
     }
 
     function BaiViet($value)
