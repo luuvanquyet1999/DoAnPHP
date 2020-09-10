@@ -46,7 +46,7 @@ GROUP BY CategoryName  HAVING c > 0 order by c desc";
         return $data;
     }
 
-    function XuHuong()
+    function ThinhHanh()
     {
         $query = "SELECT PostTitle , CategoryName ,PostImage ,PostLink
                 FROM lph_post WHERE PostInfo = 1 AND Active = 1";
@@ -84,14 +84,14 @@ WHERE Active = 1 ORDER BY PostId DESC LIMIT 5 ";
     }
     function GetDanhChoBan()
     {
-        $query = "SELECT CategoryName ,PostImage ,PostCreateDate, PostTitle ,PostSummary 
+        $query = "SELECT CategoryName ,PostImage ,PostCreateDate, PostTitle ,PostSummary ,PostLink    
 FROM lph_post 
 WHERE Active =1
 ORDER BY PostId DESC LIMIT 1";
         $result = $this->mysql->query($query);
         $data = [];
         while ($row = mysqli_fetch_array($result)) {
-            array_push($data, [$row[0], $row[1], $row[2], $row[3], $row[4]]);
+            array_push($data, [$row[0], $row[1], $row[2], $row[3], $row[4],$row[5]]);
         }
         return $data;
     }
@@ -103,7 +103,7 @@ GROUP BY CategoryName  ORDER BY PostId DESC LIMIT 10";
         $result = $this->mysql->query($query);
         $data = [];
         while ($row = mysqli_fetch_array($result)) {
-            array_push($data, [$row[0], $row[1], $row[2], $row[3], $row[4]]);
+            array_push($data, [$row[0], $row[1], $row[2], $row[3], $row[4],$row[5]]);
         }
         return $data;
     }

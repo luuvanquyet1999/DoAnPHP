@@ -111,8 +111,8 @@
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="card card-hover text-center" style="background: transparent;">
-                                                    <div class="card-img">
-                                                        <img src="View/Admin/images/user.png" alt="">
+                                                    <div class="card-img" >
+                                                        <img src="View/Admin/images/user.png" style="width: 300px; height: 300px" alt="">
                                                     </div>
                                                 </div>
                                             </div>

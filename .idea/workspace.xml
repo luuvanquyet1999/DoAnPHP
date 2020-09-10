@@ -20,9 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17c2b371-4641-4c12-aa57-bdca905b3122" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/fileUpload/Admin/admin.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fileUpload/Admin/congvien.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fileUpload/Admin/huyentri.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fileUpload/Admin/vanhien.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/controller/web/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/controller/web/post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/Admin/Slide/List.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/Admin/Slide/List.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/Admin/UserAdmin/Update.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/Admin/UserAdmin/Update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/controller/web/WebsiteHome.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/controller/web/WebsiteHome.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mvc/model/PostModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/model/PostModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/view/pages/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/view/pages/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/view/web/archive.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/view/web/archive.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvc/view/web/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/view/web/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,12 +63,13 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/fileUpload/Admin" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Xam pp\htdocs\DoAnPHP\fileUpload\Admin" />
       <recent name="D:\Xam pp\htdocs\DoAnPHP\mvc\controller\web" />
       <recent name="D:\Xam pp\htdocs\DoAnPHP\mvc\view\web" />
       <recent name="D:\Xam pp\htdocs\DoAnPHP\mvc\view\pages" />
@@ -97,7 +107,9 @@
       <workItem from="1599653819518" duration="2601000" />
       <workItem from="1599657076482" duration="270000" />
       <workItem from="1599659808145" duration="566000" />
-      <workItem from="1599704302311" duration="6235000" />
+      <workItem from="1599704302311" duration="8159000" />
+      <workItem from="1599712620521" duration="144000" />
+      <workItem from="1599723360287" duration="1851000" />
     </task>
     <servers />
   </component>
@@ -140,10 +152,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="655" y="123" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1599575336738" />
-    <state x="946" y="255" key="NewPhpFileDialog" timestamp="1599640951876">
+    <state x="946" y="255" key="NewPhpFileDialog" timestamp="1599712126304">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="946" y="255" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1599640951876" />
+    <state x="946" y="255" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1599712126304" />
     <state x="478" y="11" width="579" height="801" key="find.popup" timestamp="1599560318666">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

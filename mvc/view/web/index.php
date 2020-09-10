@@ -149,7 +149,7 @@ include_once './mvc/view/checkSeseson.php';
                                     <a href="<?php echo Home; ?>archive/<?= makeLink($value[0]) ?>"><?= SetDate($value[2]) ?></a>
                                     <a href="<?php echo Home; ?>archive/<?= makeLink($value[0]) ?>"><?= $value[0] ?></a>
                                 </div>
-                                <a href="<?php echo Home; ?>post/<?= makeLink($value[3]) ?>"
+                                <a href="<?php echo Home; ?>post/<?=$value[5]?>"
                                    class="post-title"><?= $value[3] ?></a>
                                 <p><?= $value[4] ?></p>
                             </div>
@@ -177,7 +177,7 @@ include_once './mvc/view/checkSeseson.php';
                                             <img src="<?php echo Home; ?><?= $value[1] ?>" alt="">
                                         </div>
                                         <div class="post-content">
-                                            <a href="<?php echo Home; ?>post/<?= makeLink($value[3]) ?>"
+                                            <a href="<?php echo Home; ?>post/<?=$value[5]?>"
                                                class="post-title"><?= $value[3] ?></a>
                                         </div>
                                     </div>
@@ -197,7 +197,7 @@ include_once './mvc/view/checkSeseson.php';
                                             <img src="<?php echo Home; ?><?= $value[1] ?>" alt="">
                                         </div>
                                         <div class="post-content">
-                                            <a href="<?php echo Home; ?>post/<?= makeLink($value[3]) ?>"
+                                            <a href="<?php echo Home; ?>post/<?=$value[5]?>"
                                                class="post-title"><?= $value[3] ?></a>
                                         </div>
                                     </div>
@@ -273,7 +273,7 @@ include_once './mvc/view/checkSeseson.php';
                                 <a href="<?php echo Home; ?>archive/<?= makeLink($value[0]) ?>"><?= SetDate($value[2]) ?></a>
                                 <a href="<?php echo Home; ?>archive/<?= makeLink($value[0]) ?>"><?= $value[0] ?></a>
                             </div>
-                            <a href="<?php echo Home; ?>archive/<?= ($value[5]) ?>"
+                            <a href="<?php echo Home; ?>post/<?= ($value[5]) ?>"
                                class="post-title"><?= $value[3] ?></a>
                             <p><?= $value[4] ?></p>
                         </div>
