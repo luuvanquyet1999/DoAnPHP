@@ -42,6 +42,7 @@ class login extends Controller
                        if ($value[2]==1){
                            $_SESSION['username'] = $username;
                            $_SESSION['fullname'] = $value[4];
+                           $_SESSION['imageuser'] = $value[5];
                            if (isset($_SESSION['redirect_url'])){
                                header('Location:'.$_SESSION['redirect_url']);
                            }else{

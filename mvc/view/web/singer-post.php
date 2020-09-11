@@ -88,8 +88,7 @@ require_once './mvc/view/setlink.php';
                                             <img src="<?php echo Home; ?><?= $value[1] ?>" alt="">
                                         </div>
                                         <div class="post-author-desc pl-4">
-                                            <a href="#" class="author-name"><?= $value[0] ?></a>
-                                            <p><?= $value[2] ?></p>
+                                            <a href="#" class="author-name">Tác giả <strong style="color:#ed3974"><?= $value[0] ?></strong></a>
                                         </div>
                                     </div>
                                 </div>
@@ -118,9 +117,7 @@ require_once './mvc/view/setlink.php';
                                         <a href="<?php echo Home; ?>post/<?= $value[2] ?>"
                                            class="post-title"><?= $value[1] ?></a>
                                         <div class="post-meta d-flex">
-                                            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
-                                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
-                                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                                            <a href="<?php echo Home; ?>post/<?= $value[2] ?>"><i class="fa fa-eye" aria-hidden="true"></i> Lượt xem  <?=$value[3]?></a>
                                         </div>
                                     </div>
                                 </div>
@@ -150,7 +147,7 @@ require_once './mvc/view/setlink.php';
                             <div class="form-group">
                                 <?php
                                     if (!isset($_SESSION["username"])){
-                                    echo  '  <input type="text" name="comment_name" id="comment_name" class="form-control"
+                                    echo  '  <input type="hidden" name="comment_name" id="comment_name" class="form-control" readonly
                                        placeholder="Enter Name"/>';
                                     }
                                 ?>
@@ -223,23 +220,6 @@ require_once './mvc/view/setlink.php';
                             <?php
                         }
                         ?>
-                    </div>
-
-                    <!-- Sidebar Widget -->
-                    <div class="single-sidebar-widget p-30">
-                        <!-- Section Title -->
-                        <div class="section-heading">
-                            <h5>Newsletter</h5>
-                        </div>
-
-                        <div class="newsletter-form">
-                            <p>Subscribe our newsletter gor get notification about new updates, information discount,
-                                etc.</p>
-                            <form action="#" method="get">
-                                <input type="search" name="widget-search" placeholder="Enter your email">
-                                <button type="submit" class="btn mag-btn w-100">Subscribe</button>
-                            </form>
-                        </div>
                     </div>
                 </div>
             </div>

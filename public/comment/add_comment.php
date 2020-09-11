@@ -2,9 +2,7 @@
 <?php
 session_start();
 $linkpost='';
-    $connect = new PDO('mysql:host=112.78.2.94;dbname=superfr_tranducbo', 'super_tranducbo', 'abc123#!',
-    array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
-//$comment_post='';
+include_once 'DB.php';
 $error = '';
 $comment_name = '';
 $comment_content = '';
@@ -17,7 +15,7 @@ if (isset($_SESSION["username"])){
 }else{
     if(empty($_POST["comment_name"]))
     {
-        $error .= '<p class="text-danger">Vui lòng nhập tên</p>';
+        $error .= '<p class="text-danger">Vui lòng đăng nhập để bình luận</p>';
     }
     else
     {

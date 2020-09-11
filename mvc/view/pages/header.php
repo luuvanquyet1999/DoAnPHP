@@ -1,5 +1,4 @@
-
-<header class="header-area">
+<header class="header-area" xmlns="http://www.w3.org/1999/html">
     <!-- Navbar Area -->
     <div class="mag-main-menu" id="sticker" style="">
         <div class="classy-nav-container breakpoint-off">
@@ -32,7 +31,7 @@
                                 <li><a href="#">Trang</a>
                                     <ul class="dropdown">
                                         <li><a href="<?php echo Home; ?>WebsiteHome">Trang Chủ</a></li>
-                                        <li><a href="archive">Bài viết</a></li>
+                                        <li><a href="<?php echo Home; ?>archive">Bài viết</a></li>
                                         <li><a href="<?php echo Home; ?>post">Đọc ngay</a></li>
                                         <li><a href="<?php echo Home; ?>about">Đội ngũ</a></li>
                                         <li><a href="<?php echo Home; ?>contact">Liên Hệ</a></li>
@@ -88,8 +87,11 @@
                                 <?php
                             }else{
                                 ?>
-                                <img class="show rounded-circle" style="height: 50px;width: 50px;" src="/doanphp/fileUpload/Admin/huyentri.jpg" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+                                <img class="show rounded-circle" style="height: 50px;width: 50px;" src="<?php echo Home; ?><?php echo  $_SESSION['imageuser']?>" type="button" id="dropdownMenuButton" data-toggle="dropdown">
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" href="<?php echo Home; ?>logout">
+                                        Xin chào!!<strong style="color: #ed3974;" > <?= $_SESSION["fullname"]?></strong> </a>
+                                    <a class="dropdown-item" href="<?php echo Home; ?>profile">Thông tin cá nhân</a>
                                     <a class="dropdown-item" href="<?php echo Home; ?>logout">Đăng xuất</a>
                                 </div>
                                 <?php

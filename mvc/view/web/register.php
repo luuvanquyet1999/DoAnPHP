@@ -55,7 +55,10 @@ include_once './mvc/view/setlink.php';
 
                     <form action="<?php echo Home;?>register/failed" method="post">
                         <div class="form-group">
-                            <input type="text" class="form-control" name="username"  placeholder="Email or User Name" required>
+                            <input type="text" class="form-control" name="username"  placeholder="User Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="email"  placeholder="Email or User Name" required>
                         </div>
                         <div class="form-group">
                             <input type="password" class="form-control" name="password" placeholder="Password"required>

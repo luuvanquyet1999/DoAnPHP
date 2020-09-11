@@ -7,7 +7,7 @@
             event.preventDefault();
             var form_data = $(this).serialize();
             $.ajax({
-                url: "http://localhost/doanphp/public/comment/add_comment.php",
+                url: "/doanphp/public/comment/add_comment.php",
                 method: "POST",
                 data: form_data,
                 dataType: "JSON",
@@ -28,7 +28,7 @@
 
         function load_comment() {
             $.ajax({
-                url: "http://localhost/doanphp/public/comment/fetch_comment.php",
+                url: "/doanphp/public/comment/fetch_comment.php",
                 method: "POST",
                 success: function (data) {
                     $('#display_comment').html(data);

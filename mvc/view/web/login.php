@@ -33,7 +33,7 @@ include_once './mvc/view/setlink.php';
         <div class="row h-100 align-items-center">
             <div class="col-12">
                 <div class="breadcrumb-content">
-                    <h2>Login</h2>
+                    <h2>Đăng nhập</h2>
                 </div>
             </div>
         </div>
@@ -49,7 +49,7 @@ include_once './mvc/view/setlink.php';
                 <div class="login-content bg-white p-30 box-shadow">
                     <!-- Section Title -->
                     <div class="section-heading">
-                        <h5>Great to have you back!</h5>
+                        <h5>Thật tuyệt vời khi có bạn trở lại!</h5>
                     </div>
 
                     <form action="<?php echo Home;?>login/failed" method="post">

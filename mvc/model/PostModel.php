@@ -199,12 +199,12 @@ GROUP BY CategoryName  ORDER BY PostId DESC LIMIT 10";
         return $result;
     }
     function GetBaiVietTT($value){
-            $query = "SELECT PostImage , PostTitle,PostLink FROM lph_post  WHERE
+            $query = "SELECT PostImage , PostTitle,PostLink ,PostView FROM lph_post  WHERE
                     CategoryName = '$value' AND Active =1 ORDER BY PostId DESC LIMIT 3";
         $result = $this->mysql->query($query);
         $data = [];
         while ($row = mysqli_fetch_array($result)) {
-            array_push($data, [$row[0], $row[1], $row[2]]);
+            array_push($data, [$row[0], $row[1], $row[2],$row[3]]);
         }
         return $data;
     }

@@ -23,13 +23,13 @@ class User{
 
 class UserModel extends DB{
     function FindUser($username){
-        $query = "SELECT Username ,UsernamePassword ,Active ,Roles ,UsernameFull
+        $query = "SELECT Username ,UsernamePassword ,Active ,Roles ,UsernameFull,Image,UsernameEmail ,UsernameGender
                     FROM lph_username WHERE
-					Username = '$username' ";
+					Username = '$username' LIMIT 1 ";
         $result = $this->mysql->query($query);
         $data = [];
         while ($row = mysqli_fetch_array($result)) {
-            array_push($data, [$row[0], $row[1], $row[2],$row[3],$row[4]]);
+            array_push($data, [$row[0], $row[1], $row[2],$row[3],$row[4],$row[5],$row[6],$row[7]]);
         }
         return $data;
     }
@@ -42,9 +42,30 @@ class UserModel extends DB{
         }
         return $data;
     }
-    function InsertUser($username,$password,$fullname,$gender,$imgae){
-        $query="INSERT INTO lph_username(UserName,UsernameFull,UserNameGender,UsernamePassword ,Active ,Roles,Image) VALUES (
-							'$username','$fullname',$gender,'$password',1,0,'$imgae')";
+    function GetAdmin($value){
+        $query = "SELECT UsernameFull,Image FROM lph_adiminuser WHERE UserName='$value'  ";
+        $result = $this->mysql->query($query);
+        $data = [];
+        while ($row = mysqli_fetch_array($result)) {
+            array_push($data, [$row[0], $row[1]]);
+        }
+        return $data;
+    }
+    function InsertUser($username,$password,$fullname,$gender,$imgae,$email){
+        $query="INSERT INTO lph_username(UserName,UsernameFull,UserNameGender,UsernamePassword ,Active ,Roles,Image,UsernameEmail) VALUES (
+							'$username','$fullname',$gender,'$password',1,0,'$imgae','$email')";
+        $result = $this->mysql->query($query);
+        return $result;
+    }
+    function  Update($image ,$username){
+        $query="UPDATE lph_username SET Image ='$image'
+                WHERE Active =1 AND Username ='$username'";
+        $result = $this->mysql->query($query);
+        return $result;
+    }
+    function  UpdateTT($fullname ,$gender,$email ,$username){
+        $query="UPDATE lph_username SET UsernameFull ='$fullname',UserNameGender=$gender,UsernameEmail ='$email'
+                WHERE Active =1 AND Username ='$username'";
         $result = $this->mysql->query($query);
         return $result;
     }

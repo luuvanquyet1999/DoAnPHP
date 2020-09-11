@@ -55,11 +55,9 @@ class post extends Controller
             $data8 =$value[6];
             $data9=$value[7];
         }
-        $data6 = $user->GetUserPost($y);
+        $data6 = $user->GetAdmin($y);
         if (empty($data6)) {
-            array_push($data6, ['Admin ', 'fileUpload/Member/huyentri.jpg'
-                , 'Nghề làm báo của chúng tôi như làm bánh ấy ,sản phẩm chỉ thơm ngon lúc còn nóng hổi 
-                , sau 2 ngày thì lại cũ mèm và sau 1 tuần thì biến .... biến mất']);
+            array_push($data6, ['Admin ', 'fileUpload/Member/huyentri.jpg']);
         }
         $data5 = $about->GetAll();
         $data7 = $post->GetBaiVietTT($data3);

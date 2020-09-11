@@ -41,6 +41,7 @@ class UserAdminController
             $user = $_SESSION['userAdmin'];
             $UserAdmin_id = $_GET["UserAdminID"];
             $UserAdmin = $this->UserAdminModel->GetRecordById($UserAdmin_id);
+            print_r($UserAdmin);
             require SYSTEM_PATH . "/View/Admin/UserAdmin/Update.php";
         } else {
             require_once SYSTEM_PATH . "/View/Admin/Login.php";
