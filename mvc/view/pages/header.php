@@ -1,6 +1,4 @@
-<?php
-include_once 'config.php';
-?>
+
 <header class="header-area">
     <!-- Navbar Area -->
     <div class="mag-main-menu" id="sticker" style="">
@@ -90,10 +88,7 @@ include_once 'config.php';
                                 <?php
                             }else{
                                 ?>
-                                <a class="submit-video show " type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                                   aria-haspopup="true" aria-expanded="false">
-                                    <?= $_SESSION["fullname"] ?>
-                                </a>
+                                <img class="show rounded-circle" style="height: 50px;width: 50px;" src="/doanphp/fileUpload/Admin/huyentri.jpg" type="button" id="dropdownMenuButton" data-toggle="dropdown">
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                     <a class="dropdown-item" href="<?php echo Home; ?>logout">Đăng xuất</a>
                                 </div>
