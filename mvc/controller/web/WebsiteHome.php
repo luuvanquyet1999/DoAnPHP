@@ -12,7 +12,7 @@ class WebsiteHome extends Controller
         // catelogy
         $data1 = $slide->GetCategories();
         // xuhuong
-        $data2 = $slide->XuHuong();
+        $data2 = $slide->ThinhHanh();
         // tin moi
         $data3 = $slide->GetTinMoi();
         //danh cho ban
@@ -28,7 +28,6 @@ class WebsiteHome extends Controller
             if ($x >= 5)
                 array_push($data6, $getdcb[$x]);
         }
-//        $data6=[];
         // get thoi trang , thể thao
         $data7 = $slide->GetThoiTrang();
         $data8 = $slide->GetTheThao();

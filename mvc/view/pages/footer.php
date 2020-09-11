@@ -31,7 +31,7 @@
                             $query ="SELECT CategoryName FROM lph_category WHERE Active =1";
                             $result = $mysql->query($query);
                             while ($row = mysqli_fetch_array($result)) { ?>
-                                <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i> <?=$row[0]?></a></li>
+                                <li><a href="<?php echo Home;?>archive/<?= makeLink($row[0])?>"><i class="fa fa-angle-double-right" aria-hidden="true"></i> <?=$row[0]?></a></li>
                             <?php
                             }
                             ?>

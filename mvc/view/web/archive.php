@@ -152,7 +152,7 @@ include_once './mvc/view/checkSeseson.php';
                                     <img src="<?php echo Home; ?><?= $value[1] ?>" alt="">
                                 </div>
                                 <div class="youtube-channel-content">
-                                    <a href="single-post.html" class="channel-title"><?= $value[0] ?></a>
+                                    <a href="<?=$value[3]?>" class="channel-title"><?= $value[0] ?></a>
                                     <a href="<?=$value[3]?>" class="btn subscribe-btn"><i class="fa fa-facebook" aria-hidden="true"></i>
                                         Subscribe</a>
                                 </div>

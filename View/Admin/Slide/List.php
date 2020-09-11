@@ -54,8 +54,8 @@
                             <div class="col-md-12 col-sm-12 ">
                                 <div class="x_panel">
                                     <div class="x_title">
-                                        <input type="submit" name="duyet" class="btn btn-primary mt-2" value="Bài viết xu hướng" />
-                                        <input type="submit" name="koduyet" class="btn btn-danger mt-2" value="Xóa khỏi bài viết xu hướng" />
+                                        <input type="submit" name="duyet" class="btn btn-primary mt-2" value="Bài viết thịnh hành" />
+                                        <input type="submit" name="koduyet" class="btn btn-danger mt-2" value="Xóa khỏi bài viết thịnh hành" />
                                         <div class="clearfix"></div>
                                     </div>
                                     <div class="x_content">
@@ -90,7 +90,7 @@
                                                             <th>Ngày viết</th>
                                                             <th>Loại bài viết</th>
                                                             <th>Người viết</th>
-                                                            <th style="width:18%">Bài viết xu hướng</th>
+                                                            <th style="width:18%">Bài viết thịnh hành</th>
                                                         </tr>
                                                         </thead>
                                                         <tbody>
