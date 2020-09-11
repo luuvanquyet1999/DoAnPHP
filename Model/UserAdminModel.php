@@ -10,7 +10,8 @@ class UserAdmin
     public $UserAdmin_password;
     public $UserAdmin_dateofbirth;
     public $Active;
-    function __construct($UserAdmin_id, $UserAdmin_fullname, $UserAdmin_email, $UserAdmin_username, $UserAdmin_gender, $UserAdmin_password, $Active, $UserAdmin_dateofbirth)
+    public $image;
+    function __construct($UserAdmin_id, $UserAdmin_fullname, $UserAdmin_email, $UserAdmin_username, $UserAdmin_gender, $UserAdmin_password, $Active, $UserAdmin_dateofbirth, $image)
     {
         $this->UserAdmin_id = $UserAdmin_id;
         $this->UserAdmin_fullname = $UserAdmin_fullname;
@@ -20,6 +21,7 @@ class UserAdmin
         $this->UserAdmin_password = $UserAdmin_password;
         $this->Active = $Active;
         $this->UserAdmin_dateofbirth = $UserAdmin_dateofbirth;
+        $this->image = $image;
     }
 }
 class UserAdminModel extends DB
@@ -39,11 +41,11 @@ class UserAdminModel extends DB
                     UsernamePassword,(CASE
         WHEN Active =1 THEN 'Hiển thị'
         WHEN Active =0 THEN 'Ẩn'
-    END) as Active,DateOfBirth FROM lph_adiminuser WHERE Active ='1' ORDER BY UsernameId desc";
+    END) as Active,DateOfBirth, Image FROM lph_adiminuser WHERE Active ='1' ORDER BY UsernameId desc";
         $result = $this->mysql->query($query);
         $data = [];
         foreach ($result->fetch_all() as $value) {
-            array_push($data, new UserAdmin($value[0], $value[1], $value[2], $value[3], $value[4], $value[5], $value[6], $value[7]));
+            array_push($data, new UserAdmin($value[0], $value[1], $value[2], $value[3], $value[4], $value[5], $value[6], $value[7], $value[8]));
         }
         return $data;
     }
@@ -55,13 +57,13 @@ class UserAdminModel extends DB
         $result = $this->mysql->query($query);
         $data = $result->fetch_all();
         if (count($data)) {
-            return new UserAdmin($data[0][0], $data[0][1], $data[0][2], $data[0][3], $data[0][4], $data[0][5], $data[0][6], $data[0][7]);
+            return new UserAdmin($data[0][0], $data[0][1], $data[0][2], $data[0][3], $data[0][4], $data[0][5], $data[0][6], $data[0][7], $data[0][8]);
         }
         return null;
     }
     function Update(UserAdmin $userAdmin)
     {
-        $query = "UPDATE lph_adiminuser SET UserNameid = '$userAdmin->UserAdmin_id',
+        $query = "UPDATE lph_adiminuser SET
         UserNameFull = '$userAdmin->UserAdmin_fullname',
         UserNameEmail = '$userAdmin->UserAdmin_email',
         UserName = '$userAdmin->UserAdmin_username',

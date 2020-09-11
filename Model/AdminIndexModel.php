@@ -1,5 +1,5 @@
 <?php
-    include_once './Model/DB.php';
+include_once './Model/DB.php';
 class Admin
 {
     public $id;
@@ -91,19 +91,16 @@ class AdminIndexModel extends DB
         $query = "update tdb_adminuser set password ='$pass' where email ='$email'";
         $this->mysqli->query($query);
     }
-    function UpdateProfile($user)
+     //update profile
+    function UpdateProfile($UserAdmin_id)
     {
-        $query = "SELECT * FROM lph_adiminuser WHERE Username = '$user' AND Active = 1 LIMIT 1";
+        $query = "SELECT * FROM lph_adiminuser WHERE Username = '$UserAdmin_id' AND Active = 1 LIMIT 1";
         $result = $this->mysql->query($query);
         $data = $result->fetch_all();
-        $id = $data[0][0];
-        // echo $id;
-        // die();
-        // if (count($data)) {
-        //     return new Admin($data[0][0], $data[0][1], $data[0][2], $data[0][3], $data[0][4], $data[0][5], $data[0][6]);
-        //     print_r($data);
-        //     die();  
-        // }
-        return $id;
+        if (count($data)) {
+            return new UserAdmin($data[0][0], $data[0][1], $data[0][2], $data[0][3], $data[0][4], $data[0][5], $data[0][6], $data[0][7], $data[0][8]);
+        }
+        return null;
     }
+    
 }

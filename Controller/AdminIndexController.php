@@ -80,10 +80,10 @@ class AdminIndexController
         //session_start();
         if (isset($_SESSION['userAdmin'])) {
             $user = $_SESSION['userAdmin'];
-            $id = $this->indexModel->UpdateProfile($user);
+            $UserAdmin = $this->indexModel->UpdateProfile($user);
             //die();
-            $UserAdmin = $this->UserAdminModel->GetRecordById($id);
-            require SYSTEM_PATH . "/View/Admin/UserAdmin/Update.php";
+            //$UserAdmin = $this->UserAdminModel->GetRecordById($id);
+            require SYSTEM_PATH . "/View/Admin/profile.php";
             //require_once SYSTEM_PATH . "/View/Admin/profile.php";
         } else {
             require_once SYSTEM_PATH . "/View/Admin/Login.php";
