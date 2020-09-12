@@ -34,7 +34,7 @@ class UserModel extends DB{
         return $data;
     }
     function GetUserPost($value){
-        $query = "SELECT UsernameFull,Image, UserTitle FROM lph_username WHERE UserName='$value' ";
+        $query = "SELECT UsernameFull,Image, UserTitle FROM lph_username WHERE UserName='$value'AND  Active =1";
         $result = $this->mysql->query($query);
         $data = [];
         while ($row = mysqli_fetch_array($result)) {
@@ -69,4 +69,21 @@ class UserModel extends DB{
         $result = $this->mysql->query($query);
         return $result;
     }
+    function GetEmailUser(){
+        $query = "SELECT Username ,UsernameEmail ,Image FROM lph_username WHERE Active =1  ";
+        $result = $this->mysql->query($query);
+        $data = [];
+        while ($row = mysqli_fetch_array($result)) {
+            array_push($data, [$row[0], $row[1],$row[2]]);
+        }
+        return $data;
+    }
+    function UpdatePassword($username,$password){
+        $query = "UPDATE lph_username SET UsernamePassword = '$password'
+                WHERE Active =1 AND Username ='$username'  ";
+        $result = $this->mysql->query($query);
+        return $result;
+    }
+
+
 }

@@ -62,7 +62,8 @@ include_once './mvc/view/setlink.php';
 
                         <p class="text-danger"><?=$data[0]?></p>
                         <button  name="login" type="submit" class="btn mag-btn mt-30">Login</button>
-                        <p class="mt-30"><a  href="<?php echo Home;?>register">Đăng kí ngay</a></p>
+                        <p class="mt-30"><a  style="color: #ed3974;"  href="<?php echo Home;?>register">Đăng kí ngay</a></p>
+                        <p  class="mt-30"><a  style="color: #ed3974;" href="<?php echo Home;?>forgotpassword">Quên mật khẩu</a></p>
                     </form>
                 </div>
             </div>
