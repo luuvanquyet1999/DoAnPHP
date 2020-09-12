@@ -52,8 +52,8 @@ class AdminMemberController
     function Update()
     {
         //session_start();
-        if (isset($_SESSION['username'])) {
-            $user = $_SESSION['username'];
+        if (isset($_SESSION['userAdmin'])) {
+            $user = $_SESSION['userAdmin'];
             $member_id = $_GET["member_id"];
             $member = $this->AdminMemberModel->GetRecordById($member_id);
             require SYSTEM_PATH . "/View/Admin/Member/Update.php";

@@ -17,6 +17,27 @@
 </head>
 
 <body>
+    <style>
+        .btn-chang {
+            padding: 5px;
+            border: 0;
+            margin-left: 2px;
+            margin-right: 2px;
+            background-color: transparent;
+        }
+    </style>
+    <script>
+        function showPreview1(input) {
+            if (input.files && input.files[0]) {
+                var filerdr = new FileReader();
+                filerdr.onload = function(e) {
+                    $('#imgPreview1').attr('src', e.target.result);
+                    document.getElementById('avatars').click()
+                }
+                filerdr.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
     <script>
         window.onload = function() {
             var a = document.getElementById("gioitinh").value;
@@ -33,13 +54,7 @@
             <div class="lds-pos"></div>
         </div>
     </div>
-    <!-- ============================================================== -->
-    <!-- Main wrapper - style you can find in pages.scss -->
-    <!-- ============================================================== -->
     <div id="main-wrapper">
-        <!-- ============================================================== -->
-        <!-- Topbar header - style you can find in pages.scss -->
-        <!-- ============================================================== -->
         <?php
         include_once('./View/Admin/Share/Header.php');
         ?>
@@ -51,7 +66,7 @@
                 <div class="">
                     <div class="page-title">
                         <div class="title_left">
-                            <h3>CHỈNH SỬA TÀI KHOẢN QUẢN TRỊ VIÊN</h3>
+                            <h3>TÀI KHOẢN QUẢN TRỊ VIÊN</h3>
                         </div>
                     </div>
                     <div class="clearfix"></div>
@@ -103,7 +118,7 @@
                                                         <input type="date" min="1990-01-01" max="2020-01-01" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?= $UserAdmin->UserAdmin_dateofbirth ?>" name="UserAdmin_dateofbirth">
                                                     </div>
                                                     <div class="form-group row">
-                                                        <button type="submit" class="btn btn-success">Update</button>
+                                                        <button hidden type="submit" class="btn btn-success">Update</button>
                                                         <a href="index.php?c=UserAdmin&a=View" class="btn btn-warning">Cancel</a>
                                                     </div>
 
@@ -111,9 +126,15 @@
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="card card-hover text-center" style="background: transparent;">
-                                                    <div class="card-img">
-                                                        <img src="View/Admin/images/user.png" alt="">
-                                                    </div>
+                                                    <form method="post" enctype="multipart/form-data" action="?c=UserAdmin&a=updateAvatar">
+                                                        <div class="card-img" id="up1">
+                                                            <input type="file" hidden class="form-control-file" name="image" onchange="showPreview1(this)">
+                                                            <!-- <button type="button" class="btn-chang" onclick="clickavatar1()"> -->
+                                                                <img id="imgPreview1" src="<?= $UserAdmin->image ?>" style="max-width: 100%; height: 200px" />
+                                                            <!-- </button> -->
+                                                            <input hidden type="submit" name="image" id="avatars">
+                                                        </div>
+                                                    </form>
                                                 </div>
                                             </div>
 
@@ -126,12 +147,18 @@
                 </div>
             </div>
         </div>
+        
         <?php
         include_once('./View/Admin/Share/Footer.php');
         ?>
         <?php
         include 'asset/Scripts/ScriptFooter.php';
         ?>
+        <script type="text/javascript">
+            function clickavatar1() {
+                $("#up1 input[type=file]").click();
+            }
+        </script>
         <script>
             $(document).ready(function() {
                 $('.gender input[type="radio"]').click(function() {

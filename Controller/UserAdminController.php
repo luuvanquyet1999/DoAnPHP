@@ -41,6 +41,7 @@ class UserAdminController
             $user = $_SESSION['userAdmin'];
             $UserAdmin_id = $_GET["UserAdminID"];
             $UserAdmin = $this->UserAdminModel->GetRecordById($UserAdmin_id);
+            print_r($UserAdmin);
             require SYSTEM_PATH . "/View/Admin/UserAdmin/Update.php";
         } else {
             require_once SYSTEM_PATH . "/View/Admin/Login.php";
@@ -58,12 +59,11 @@ class UserAdminController
         $Active = $_POST["Active"];
         // echo $UserAdmin_username ." <br>".$UserAdmin_id ." <br>".$UserAdmin_fullname ." <br>".$UserAdmin_email ." <br>".$UserAdmin_gender
         //  ."<br> ".$UserAdmin_password."<br> ".$UserAdmin_dateofbirth." <br>".$Active;
-
-        $result = $this->UserAdminModel->Update(new UserAdmin($UserAdmin_id, $UserAdmin_fullname, $UserAdmin_email, $UserAdmin_username, $UserAdmin_gender, $UserAdmin_password, $Active, $UserAdmin_dateofbirth));
+        $result = $this->UserAdminModel->Update(new UserAdmin($UserAdmin_id, $UserAdmin_fullname, $UserAdmin_email, $UserAdmin_username, $UserAdmin_gender, $UserAdmin_password, $Active, $UserAdmin_dateofbirth, null));
         if ($result == true)
-            header('location: index.php?c=UserAdmin&a=View&r=1');
+            header('location: index.php?c=AdminIndex&a=Profile&r=1');
         else
-            header('location: index.php?c=UserAdmin&a=View&r=0');
+            header('location: index.php?c=AdminIndex&a=Profile&r=0');
     }
     function Delete()
     {
@@ -74,5 +74,25 @@ class UserAdminController
             header('location: index.php?c=UserAdmin&a=View&r=1');
         else
             header('location: index.php?c=UserAdmin&a=View&r=0');
+    }
+    function updateAvatar()
+    {
+        if (isset($_SESSION['userAdmin'])) {
+            $user = $_SESSION['userAdmin'];
+            $file_name = $_FILES["image"]["name"];
+            move_uploaded_file($_FILES["image"]["tmp_name"], "fileUpload/User/" . $_FILES["image"]["name"]);
+            $path = "fileUpload/User/" . $file_name;
+            $image = $path;
+            $query = "update lph_adiminuser set Image='$image' where Username = '$user'";
+            
+            $result = $this->UserAdminModel->mysql->query($query);
+            if ($result == true) {
+                header('location:index.php?c=AdminIndex&a=Profile');
+            } else {
+                header('location:index.php?c=AdminIndex&a=Profile');
+            }
+        } else {
+            require_once SYSTEM_PATH . "/View/Admin/Login.php";
+        }
     }
 }

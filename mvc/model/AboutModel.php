@@ -25,4 +25,14 @@ class  AboutModel extends DB{
         }
         return $data;
     }
+    function GetAboutUs()
+    {
+        $query = "SELECT * FROM `lph_introduce` LIMIT 1;";
+        $result = $this->mysql->query($query);
+        $data = [];
+        while ($row = mysqli_fetch_array($result)) {
+            array_push($data, [$row[0], $row[1], $row[2], $row[3],$row[4]]);
+        }
+        return $data;
+    }
 }

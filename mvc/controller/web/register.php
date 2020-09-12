@@ -12,6 +12,7 @@ class register extends Controller{
             $password = $_POST["password"];
             $passwordcf = $_POST["passwordcf"];
             $fullname = $_POST["fullname"];
+            $email = $_POST["email"];
             $gender = $_POST["gender"];
             if ($username == "" || $password == "" || $passwordcf == "" || $fullname == "" || $gender == "") {
                 $messager ="Vui lòng điền đầy đủ thông tin";
@@ -21,9 +22,17 @@ class register extends Controller{
                 if (!empty($data1)){
                    $messager='Tài khoản đã tồn tại';
                 }else{
-                    $register->InsertUser($username,$password,$fullname,$gender);
+                    $image='';
+                    if ($gender==0){
+                        $image = 'public/img/bg-img/53.jpg';
+                    }else{
+                        $image='public/img/bg-img/55.jpg';
+                    }
+                    $register->InsertUser($username,$password,$fullname,$gender,$image,$email);
                     $_SESSION['username'] = $username;
-                    header('Location:/doanphp/website');
+                    $_SESSION['fullname'] = $fullname;
+                    $_SESSION['imageuser'] = $image;
+                    header('Location:/doanphp/WebsiteHome');
                 }
 
             }else{

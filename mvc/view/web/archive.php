@@ -1,7 +1,7 @@
 <?php
-    include_once './mvc/view/config.php';
-    include_once './mvc/view/setlink.php';
-    include_once './mvc/view/checkSeseson.php';
+include_once './mvc/view/config.php';
+include_once './mvc/view/setlink.php';
+include_once './mvc/view/checkSeseson.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,6 +16,16 @@
     <link href="<?php echo CSSDIR?>css/buzina-pagination.min.css" rel="stylesheet" type="text/css">
     <!-- Favicon -->
     <?php include_once  './mvc/view/link.php'?>
+    <style>
+        .pagination {
+            margin-bottom: 20px;
+            display: -ms-flexbox;
+            display: flex;
+            padding-left: 0;
+            list-style: none;
+            border-radius: .25rem;
+        }
+    </style>
 </head>
 
 <body>
@@ -87,9 +97,7 @@
                                 <a href="<?php echo Home;?>post/<?= ($value[5])?>" class="post-title"><?= $value[3]?></a>
                                 <!-- Post Meta -->
                                 <div class="post-meta-2">
-                                    <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
-                                    <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
-                                    <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                                    <a href="<?php echo Home;?>post/<?= ($value[5])?>"><i class="fa fa-eye" aria-hidden="true"></i> Lượt Xem <?= $value[6]?> </a>
                                 </div>
                                 <p><?= $value[4]?></p>
                             </div>
@@ -144,7 +152,7 @@
                                     <img src="<?php echo Home; ?><?= $value[1] ?>" alt="">
                                 </div>
                                 <div class="youtube-channel-content">
-                                    <a href="single-post.html" class="channel-title"><?= $value[0] ?></a>
+                                    <a href="<?=$value[3]?>" class="channel-title"><?= $value[0] ?></a>
                                     <a href="<?=$value[3]?>" class="btn subscribe-btn"><i class="fa fa-facebook" aria-hidden="true"></i>
                                         Subscribe</a>
                                 </div>

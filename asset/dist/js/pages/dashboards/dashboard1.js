@@ -1,7 +1,7 @@
 /*
 Template Name: Admin Pro Admin
 Author: Wrappixel
-Email: niravjoshi87@gmail.com
+Email: niravjoshi87@gmail.comment
 File: js
 */
 $(function() {

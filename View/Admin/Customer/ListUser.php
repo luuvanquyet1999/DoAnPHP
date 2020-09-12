@@ -75,7 +75,7 @@
                                                             <tr>
                                                                 <th>STT</th>
                                                                 <th>User name</th>
-                                                                <th>Phone</th>
+                                                                <th>Full name</th>
                                                                 <th>Email</th>
                                                             </tr>
                                                         </thead>

@@ -1,7 +1,7 @@
 /*************************************************************************************/
 // -->Template Name: Bootstrap Press Admin
 // -->Author: Themedesigner
-// -->Email: niravjoshi87@gmail.com
+// -->Email: niravjoshi87@gmail.comment
 // -->File: google_map_init
 /*************************************************************************************/
 

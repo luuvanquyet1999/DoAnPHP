@@ -7,6 +7,7 @@ class About extends Controller
         $slide= $this->getmodel('AboutModel');
         $data1= $post-> GetCategories();
         $data2=$slide->GetAll();
-        $this->getviewweb('about',$data=[$data1,$data2]);
+        $data3=$slide->GetAboutUs();
+        $this->getviewweb('about',$data=[$data1,$data2,$data3]);
     }
 }

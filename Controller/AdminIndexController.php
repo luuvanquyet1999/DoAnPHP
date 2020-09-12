@@ -39,7 +39,7 @@ class AdminIndexController
         $result = $this->indexModel->loginRecord($user, $pass);
         if (mysqli_num_rows($result) > 0) {
             $_SESSION['userAdmin'] = $user;
-            header('location:index.php?c=AdminIndex&a=trangchu');
+            header('location:index.php?c=AdminIndex&a=trangchu&r=1');
         } else {
             header('location:index.php?c=AdminIndex&a=View&r=0');
         }
@@ -80,10 +80,10 @@ class AdminIndexController
         //session_start();
         if (isset($_SESSION['userAdmin'])) {
             $user = $_SESSION['userAdmin'];
-            $id = $this->indexModel->UpdateProfile($user);
+            $UserAdmin = $this->indexModel->UpdateProfile($user);
             //die();
-            $UserAdmin = $this->UserAdminModel->GetRecordById($id);
-            require SYSTEM_PATH . "/View/Admin/UserAdmin/Update.php";
+            //$UserAdmin = $this->UserAdminModel->GetRecordById($id);
+            require SYSTEM_PATH . "/View/Admin/profile.php";
             //require_once SYSTEM_PATH . "/View/Admin/profile.php";
         } else {
             require_once SYSTEM_PATH . "/View/Admin/Login.php";

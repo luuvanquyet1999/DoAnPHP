@@ -13,17 +13,23 @@ class post extends Controller
         $data3 = "Mới nhất";
         $data4 = "";
         $y = '';
+        $data8='';
+        $data9='';
+        $data10='';
         foreach ($data2 as $value) {
             $data4 = $value[3];
             $y = $value[5];
+            $data8=$value[6];
+            $data9=$value[2];
+            $data10=$value[7];
         }
         $data5 = $about->GetAll();
         $data6 = $user->GetUserPost($y);
-        $data7 = $post->GetBaiVietTT($data3);
+        $data7 = $post->GetBaiVietTT($data9);
         if (empty($data6)) {
             array_push($data6, ['Admin ', 'fileUpload/Member/huyentri.jpg', 'Bài này mình xạo xạo thôi']);
         }
-        $this->getviewweb('singer-post', $data = [$data1, $data2, $data3, $data4, $data5, $data6,$data7]);
+        $this->getviewweb('singer-post', $data = [$data1, $data2, $data3, $data4, $data5, $data6,$data7,$data8,$data10]);
     }
 
     function BaiViet($value)
@@ -38,21 +44,24 @@ class post extends Controller
         if (empty($data2)) {
             $this->View();
         }
+        $countview = $post->CountView($value);
         $y = '';
+        $data8 = '';
+        $data9='';
         foreach ($data2 as $value) {
             $data4 = $value[3];
             $data3 = $value[2];
             $y = $value[5];
+            $data8 =$value[6];
+            $data9=$value[7];
         }
-        $data6 = $user->GetUserPost($y);
+        $data6 = $user->GetAdmin($y);
         if (empty($data6)) {
-            array_push($data6, ['Admin ', 'fileUpload/Member/huyentri.jpg'
-                , 'Nghề làm báo của chúng tôi như làm bánh ấy ,sản phẩm chỉ thơm ngon lúc còn nóng hổi 
-                , sau 2 ngày thì lại cũ mèm và sau 1 tuần thì biến .... biến mất']);
+            array_push($data6, ['Admin ', 'fileUpload/Member/huyentri.jpg']);
         }
         $data5 = $about->GetAll();
         $data7 = $post->GetBaiVietTT($data3);
-        $this->getviewweb('singer-post', $data = [$data1, $data2, $data3, $data4, $data5, $data6, $data7]);
+        $this->getviewweb('singer-post', $data = [$data1, $data2, $data3, $data4, $data5, $data6, $data7,$data8,$data9]);
     }
 
 

@@ -5,6 +5,11 @@ class login extends Controller
 {
     function View()
     {
+            if (isset($_SERVER['HTTP_REFERER'])){
+                $_SESSION['redirect_url'] = $_SERVER['HTTP_REFERER'];
+            }else{
+                $_SESSION['redirect_url']=null;
+            }
         if (isset($_SESSION["username"])){
             header('Location:/doanphp/WebsiteHome');
         }
@@ -36,11 +41,13 @@ class login extends Controller
                    if ($username==$value[0]&&$password==$value[1]){
                        if ($value[2]==1){
                            $_SESSION['username'] = $username;
-                           if (!$value[3]==0){
-                               header('Location:/doanphp/uploadpost');
+                           $_SESSION['fullname'] = $value[4];
+                           $_SESSION['imageuser'] = $value[5];
+                           if (isset($_SESSION['redirect_url'])){
+                               header('Location:'.$_SESSION['redirect_url']);
                            }else{
                                header('Location:/doanphp/WebsiteHome');
-                               }
+                           }
                        }else{
                            $messager="Tài khoản đã bị khóa .";
                        }

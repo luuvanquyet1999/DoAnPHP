@@ -2,13 +2,13 @@
 include_once './Model/DB.php';
 class Customer
 {
-    public $username;
-    public $phone;
+    public $fullname;
     public $email;
-    function __construct($username, $phone, $email)
+    public $username;
+    function __construct($fullname, $email, $username )
     {
         $this->username = $username;
-        $this->phone = $phone;
+        $this->phone = $fullname;
         $this->email = $email;
     }
 }
@@ -22,11 +22,11 @@ class CustomerUserModel extends DB
     // }
     function GetAll()
     {
-        $query = "SELECT * FROM lph_customer WHERE Active =1";
+        $query = "SELECT * FROM lph_username WHERE Active =1 AND Roles =0";
         $result = $this->mysql->query($query);
         $data = [];
         foreach ($result->fetch_all() as $value) {
-            array_push($data, new Customer($value[1], $value[3], $value[4]));
+            array_push($data, new Customer($value[1], $value[2], $value[3]));
         }
         return $data;
     }
