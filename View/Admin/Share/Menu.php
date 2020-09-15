@@ -25,11 +25,11 @@
                         <li class="sidebar-item"><a href="?c=AdminComment&a=View" class="sidebar-link"><i class="fas fa-file-alt"></i><span class="hide-menu"> Bình luận </span></a></li>
                     </ul>
                 </li>
-                <li class="sidebar-item"><a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-newspaper"></i><span class="hide-menu">Quản lý Slide </span></a>
+                <li class="sidebar-item"><a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fas fa-newspaper"></i><span class="hide-menu">Quản lý trạng thái bài viết </span></a>
                     <ul aria-expanded="false" class="collapse  first-level">
-                        <li class="sidebar-item"><a href="?c=AdminSlide&a=ViewXuHuong" class="sidebar-link"><i class="fa fa-object-group" aria-hidden="true"></i><span class="hide-menu">Thịnh Hành</span></a>
+                        <li class="sidebar-item"><a href="?c=AdminSlide&a=ViewXuHuong" class="sidebar-link"><i class="fa fa-object-group" aria-hidden="true"></i><span class="hide-menu">Bài viết thịnh hành</span></a>
                         </li>
-                        <li class="sidebar-item"><a href="?c=AdminSlide&a=ViewHot" class="sidebar-link"><i class="fas fa-file-alt"></i><span class="hide-menu">Phổ Biến</span></a></li>
+                        <li class="sidebar-item"><a href="?c=AdminSlide&a=ViewHot" class="sidebar-link"><i class="fas fa-file-alt"></i><span class="hide-menu">Bài viết phổ biến</span></a></li>
                     </ul>
                 </li>
                 <li class="sidebar-item"><a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fa fa-users" aria-hidden="true"></i><span class="hide-menu">Quản lý thành viên </span></a>

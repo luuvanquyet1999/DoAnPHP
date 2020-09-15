@@ -55,8 +55,8 @@
                                     <div class="x_panel">
                                         <div class="x_title">
                                             <a href="?c=AdminPost&a=Add" class="btn btn-primary mt-2">Thêm mới</a>
-                                            <input type="submit" name="duyet" class="btn btn-primary mt-2" value="Bài viết phổ biến" />
-                                            <input type="submit" name="koduyet" class="btn btn-danger mt-2" value="Xóa khỏi bài viết phổ biến" />
+                                            <input hidden type="submit" name="duyet" class="btn btn-primary mt-2" value="Bài viết phổ biến" />
+                                            <input hidden type="submit" name="koduyet" class="btn btn-danger mt-2" value="Xóa khỏi bài viết phổ biến" />
                                             <div class="clearfix"></div>
                                         </div>
                                         <div class="x_content">
@@ -84,7 +84,7 @@
                                                         <table id="zero_config" class="table table-striped table-bordered">
                                                             <thead>
                                                                 <tr class="text-center">
-                                                                    <th></th>
+                                                                    <!-- <th></th> -->
                                                                     <th>STT</th>
                                                                     <th>Tiêu đề</th>
                                                                     <!-- <th>Tóm tắt</th> -->
@@ -102,7 +102,7 @@
                                                                 foreach ($data as $value) {
                                                                 ?>
                                                                     <tr>
-                                                                        <td class="text-center"><input type="checkbox" name='array[]' value="<?= $value->post_id ?>"></td>
+                                                                        <!-- <td class="text-center"><input type="checkbox" name='array[]' value="<?= $value->post_id ?>"></td> -->
                                                                         <td><?= $stt++ ?></td>
                                                                         <td><?= $value->post_title ?></td>
                                                                         <!-- <td><?= $value->post_summary ?></td> -->

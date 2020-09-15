@@ -53,7 +53,7 @@
                             <div class="col-md-12 col-sm-12 ">
                                 <div class="x_panel">
                                     <div class="x_title">
-                                        <a href="?c=AdminSlide&a=Add" class="btn btn-primary mt-2">Thêm mới</a>
+                                        <a hidden href="?c=AdminSlide&a=Add" class="btn btn-primary mt-2">Thêm mới</a>
                                         <div class="clearfix"></div>
                                     </div>
                                     <div class="x_content">
