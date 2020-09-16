@@ -124,25 +124,27 @@ include_once './mvc/view/checkSeseson.php';
 
                     <!-- Contact Form Area -->
                     <div class="contact-form-area">
-                        <form action="<?php echo Home;?>contact/sendcontact" method="post">
+                        <form action="<?php echo Home;?>contact/sendcontact"  method="post">
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+                                        <input type="text" class="form-control" name="name" id="name" placeholder="Name" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" name="email" id="email" placeholder="E-mail">
+                                        <input type="email" class="form-control" name="email" id="email" placeholder="E-mail"required>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                                        <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
                                     </div>
                                 </div>
+                                <div class="col-12"><span style="color:#ed3974;"><?=$data[2]?></span></div>
                                 <div class="col-12">
                                     <button class="btn mag-btn mt-30" type="submit" name="submit">Send</button>
+
                                 </div>
                             </div>
                         </form>

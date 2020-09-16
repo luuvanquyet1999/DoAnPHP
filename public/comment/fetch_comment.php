@@ -96,7 +96,7 @@ function get_reply_comment($connect, $parent_id = 0, $marginleft = 0)
 function SetDate($datetimeFromMysql)
 {
     $time = strtotime($datetimeFromMysql);
-    $myFormatForView = date("m-d-y H:i", $time);
+    $myFormatForView = date("d-m-y H:i", $time);
 
     return $myFormatForView;
 }

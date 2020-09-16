@@ -9,21 +9,25 @@ class contact extends Controller
 
         $slide= $this->getmodel('ContactModel');
         $data2=$slide->GetAll();
-        $this->getviewweb('contact',$data=[$data1,$data2]);
+        $messeger ='';
+        $this->getviewweb('contact',$data=[$data1,$data2,$messeger]);
     }
      function SendContact()
     {
+
         $content = $_POST["message"];
         $fullname = $_POST["name"];
         $email = $_POST["email"];
         $hidden = 0;
         $result  = $this->getmodel('ContactModel')->SendContact(new SendContact($content, $fullname, $email, $hidden));
         if ($result == true){
-            echo '<script language="javascript">';
-            echo 'alert("Đã gửi thành công")';
-            echo '</script>';
-            header('location: /doanphp/contact');
-           
+            $post= $this->getmodel('PostModel');
+            $data1= $post-> GetCategories();
+
+            $slide= $this->getmodel('ContactModel');
+            $data2=$slide->GetAll();
+            $messeger= '<script language="javascript">alert("Gửi thành công")</script>';
+            $this->getviewweb('contact',$data=[$data1,$data2,$messeger]);
         }
         else{
             header('location: /doanphp/contact');
