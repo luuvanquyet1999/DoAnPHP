@@ -9,7 +9,8 @@ class Admin
     public $genDer;
     public $email;
     public $DateofBirth;
-    public function __construct($id, $userName, $passWord, $fullName, $genDer, $email, $DateofBirth)
+    public $image;
+    public function __construct($id, $userName, $passWord, $fullName, $genDer, $email, $DateofBirth, $image)
     {
         $this->id = $id;
         $this->userName = $userName;
@@ -18,6 +19,7 @@ class Admin
         $this->genDer = $genDer;
         $this->email = $email;
         $this->DateofBirth = $DateofBirth;
+        $this->image=$image;
     }
 }
 class AdminIndexModel extends DB
@@ -41,8 +43,8 @@ class AdminIndexModel extends DB
             if (count($count)) {
                 return false;
             } else {
-                $sql1 = "INSERT INTO lph_adiminuser(Username,UsernamePassword,UsernameFull,UsernameEmail,UsernameGender,DateOfBirth,Active) 
-                VALUES ('$admin->userName','$admin->passWord','$admin->fullName','$admin->email','$admin->genDer','$admin->DateofBirth','1')";
+                $sql1 = "INSERT INTO lph_adiminuser(Username,UsernamePassword,UsernameFull,UsernameEmail,UsernameGender,DateOfBirth,Active, Image) 
+                VALUES ('$admin->userName','$admin->passWord','$admin->fullName','$admin->email','$admin->genDer','$admin->DateofBirth','1', '$admin->image')";
                 $result = $this->mysql->query($sql1);
                 return $result;
                 // print_r($result);
@@ -63,7 +65,7 @@ class AdminIndexModel extends DB
         $result = $this->mysqli->query($query);
         $data = $result->fetch_all();
         if (count($data)) {
-            return new Admin($data[0][0], $data[0][1], $data[0][2], $data[0][3], $data[0][4], $data[0][5], $data[0][6]);;
+            return new Admin($data[0][0], $data[0][1], $data[0][2], $data[0][3], $data[0][4], $data[0][5], $data[0][6], $data[0][7]);;
         }
         return null;
     }

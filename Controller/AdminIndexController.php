@@ -63,8 +63,9 @@ class AdminIndexController
         $genDer = $_POST["gioitinh"];
         // echo $fullname.$user.$pass.$confimpass.$dateofbirth.$gioitinh.$email;
         // die();
+        $image = "fileUpload/User/img.jpg";
         if ($passWord == $confimpass) {
-            $result = $this->indexModel->registerRecord(new Admin($id, $userName, $passWord, $fullName, $genDer, $email, $DateofBirth));
+            $result = $this->indexModel->registerRecord(new Admin($id, $userName, $passWord, $fullName, $genDer, $email, $DateofBirth, $image));
             if ($result == true) {
                 header('location:index.php?c=AdminIndex&a=View&r=2');
             } else {
