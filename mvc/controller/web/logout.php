@@ -14,6 +14,5 @@ class logout{
         }else{
             header("location:/doanphp/login");
         }
-
     }
 }

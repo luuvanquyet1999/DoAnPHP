@@ -5,19 +5,21 @@ class login extends Controller
 {
     function View()
     {
-            if (isset($_SERVER['HTTP_REFERER'])){
-                $_SESSION['redirect_url'] = $_SERVER['HTTP_REFERER'];
-            }else{
-                $_SESSION['redirect_url']=null;
-            }
-        if (isset($_SESSION["username"])){
+        if (isset($_SERVER['HTTP_REFERER'])) {
+            $_SESSION['redirect_url'] = $_SERVER['HTTP_REFERER'];
+        } else {
+            $_SESSION['redirect_url'] = null;
+        }
+        if (isset($_SESSION["username"])) {
             header('Location:/doanphp/WebsiteHome');
         }
-        $messager="";
-        $this->getviewweb('login',$data=[ $messager]);
+        $messager = "";
+        $this->getviewweb('login', $data = [$messager]);
     }
-    function Failed(){
-        $messager="";
+
+    function Failed()
+    {
+        $messager = "";
         // Kiểm tra nếu người dùng đã ân nút đăng nhập thì mới xử lý
         if (isset($_POST["login"])) {
             // lấy thông tin người dùng
@@ -31,30 +33,35 @@ class login extends Controller
             $password = addslashes($password);
             if ($username == "" || $password == "") {
                 $messager = "Username và password không được để trống";
-            }else{
-                $login= $this->getmodel('UserModel');
-                $data1=$login->FindUser($username);
-                foreach ($data1 as $value ){
-                    if ($username==$value[0]&&$password!=$value[1]){
-                        $messager="Password không chính xác";
+            } else {
+                $login = $this->getmodel('UserModel');
+                $data1 = $login->FindUser($username);
+                if (empty($data1)){
+                    $messager = "Tài khoản không chính xác";
+                }
+                foreach ($data1 as $value) {
+                    if ($username == $value[0] && $password != $value[1]) {
+                        $messager = "Password không chính xác";
                     }
-                   if ($username==$value[0]&&$password==$value[1]){
-                       if ($value[2]==1){
-                           $_SESSION['username'] = $username;
-                           $_SESSION['fullname'] = $value[4];
-                           $_SESSION['imageuser'] = $value[5];
-                           if (isset($_SESSION['redirect_url'])){
-                               header('Location:'.$_SESSION['redirect_url']);
-                           }else{
-                               header('Location:/doanphp/WebsiteHome');
-                           }
-                       }else{
-                           $messager="Tài khoản đã bị khóa .";
-                       }
-                   }
+                    if ($username == $value[0] && $password == $value[1]) {
+                        if ($value[2] == 1) {
+                            $_SESSION['username'] = $username;
+                            $_SESSION['fullname'] = $value[4];
+                            $_SESSION['imageuser'] = $value[5];
+                            $_SESSION['iduser'] = $value[8];
+                            if (isset($_SESSION['redirect_url'])) {
+                                header('Location:' . $_SESSION['redirect_url']);
+                            } else {
+                                header('Location:/doanphp/WebsiteHome');
+                            }
+                        } else {
+                            $messager = "Tài khoản đã bị khóa .";
+                        }
+                    }
+
                 }
             }
         }
-        $this->getviewweb('login',$data=[$messager]);
+        $this->getviewweb('login', $data = [$messager]);
     }
 }
