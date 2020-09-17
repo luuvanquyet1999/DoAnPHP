@@ -12,6 +12,7 @@ if(empty($_POST["comment_idpost"]))
 
 if (isset($_SESSION["username"])){
     $comment_name = $_SESSION["fullname"];
+    $comment_userid =$_SESSION["iduser"];
 }else{
     if(empty($_POST["comment_name"]))
     {
@@ -37,8 +38,8 @@ if($error == '')
 {
     $query = "
  INSERT INTO lph_comment
- (parent_comment_id, comment, comment_sender_name,IdPost,Active)
- VALUES (:parent_comment_id, :comment, :comment_sender_name,:comment_idpost,1)
+ (parent_comment_id, comment, comment_sender_name,IdPost,Active,UserID)
+ VALUES (:parent_comment_id, :comment, :comment_sender_name,:comment_idpost,1,:userid)
  ";
     $statement = $connect->prepare($query);
     $statement->execute(
@@ -46,7 +47,8 @@ if($error == '')
             ':parent_comment_id' => $_POST["comment_id"],
             ':comment'    => $comment_content,
             ':comment_sender_name' => $comment_name,
-            ':comment_idpost'=>$comment_idpost
+            ':comment_idpost'=>$comment_idpost,
+            ':userid'=>$comment_userid
         )
     );
 

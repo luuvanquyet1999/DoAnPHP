@@ -23,13 +23,13 @@ class User{
 
 class UserModel extends DB{
     function FindUser($username){
-        $query = "SELECT Username ,UsernamePassword ,Active ,Roles ,UsernameFull,Image,UsernameEmail ,UsernameGender
+        $query = "SELECT Username ,UsernamePassword ,Active ,Roles ,UsernameFull,Image,UsernameEmail ,UsernameGender,UsernameId
                     FROM lph_username WHERE
 					Username = '$username' LIMIT 1 ";
         $result = $this->mysql->query($query);
         $data = [];
         while ($row = mysqli_fetch_array($result)) {
-            array_push($data, [$row[0], $row[1], $row[2],$row[3],$row[4],$row[5],$row[6],$row[7]]);
+            array_push($data, [$row[0], $row[1], $row[2],$row[3],$row[4],$row[5],$row[6],$row[7],$row[8]]);
         }
         return $data;
     }

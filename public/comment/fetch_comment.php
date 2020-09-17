@@ -11,8 +11,12 @@ if (isset($_SESSION["idbaiviet"])) {
             <a href="#comment_form" class="btn mag-btn mt-30" >Bình luận</a>';
 }
 $query = "
-SELECT * FROM lph_comment 
-WHERE  IdPost ='$linkpost' AND Active =1 AND parent_comment_id = '0' 
+SELECT comment_id ,parent_comment_id ,UsernameFull ,`comment` ,date , Image
+FROM lph_comment 
+INNER JOIN lph_username  ON lph_username.UsernameId=lph_comment.UserId
+WHERE  IdPost ='$linkpost' 
+AND lph_comment.Active =1
+AND parent_comment_id ='0'
 ORDER BY comment_id  DESC
 ";
 $statement = $connect->prepare($query);
@@ -30,12 +34,12 @@ foreach ($result as $row) {
                                         <div class="comment-content d-flex">
                                             <!-- Comment Author -->
                                             <div class="comment-author">
-                                                <img src="http://localhost/doanphp/public/img/bg-img/54.jpg" alt="author">
+                                                <img src="/doanphp/'. $row["Image"] . '" alt="author">
                                             </div>
                                             <!-- Comment Meta -->
                                             <div class="comment-meta">
                                                 <a href="#" class="comment-date">' . SetDate($row["date"]) . '</a>
-                                                <h6>' . $row["comment_sender_name"] . '</h6>
+                                                <h6>' . $row["UsernameFull"] . '</h6>
                                                 <p>' . $row["comment"] . '</p>
                                                 <div class="d-flex align-items-center">
                                                     <a href="#comment_form" class="reply" id=' . $row["comment_id"] . ' >Reply</a>
@@ -51,7 +55,10 @@ echo $output;
 function get_reply_comment($connect, $parent_id = 0, $marginleft = 0)
 {
     $query = "
- SELECT * FROM lph_comment WHERE parent_comment_id = '" . $parent_id . " ' AND Active =1
+SELECT comment_id ,parent_comment_id ,UsernameFull ,`comment` ,date , Image
+FROM lph_comment
+INNER JOIN lph_username  ON lph_username.UsernameId=lph_comment.UserId
+WHERE parent_comment_id = '" . $parent_id . " 'AND lph_comment.Active =1
  ";
     $output = '';
     $statement = $connect->prepare($query);
@@ -72,12 +79,12 @@ function get_reply_comment($connect, $parent_id = 0, $marginleft = 0)
                                         <div class="comment-content d-flex">
                                             <!-- Comment Author -->
                                             <div class="comment-author">
-                                                <img src="http://localhost/doanphp/public/img/bg-img/54.jpg" alt="author">
+                                                <img src="/doanphp/'. $row["Image"] . '" alt="author">
                                             </div>
                                             <!-- Comment Meta -->
                                             <div class="comment-meta">
                                                 <a href="#" class="comment-date">' . SetDate($row["date"]) . '</a>
-                                                <h6>' . $row["comment_sender_name"] . '</h6>
+                                                <h6>' . $row["UsernameFull"] . '</h6>
                                                 <p>' . $row["comment"] . '</p>
                                                 <div class="d-flex align-items-center">
                                                     <a href="#" class="like">like</a>
